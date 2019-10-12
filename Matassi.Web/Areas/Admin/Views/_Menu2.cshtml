@@ -1,0 +1,69 @@
+﻿<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Matassi</a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<!--<li class="active"><a href="#">@Html.ActionLink("Modelos", "Index", "AdminModelo", new { Area = "Admin" }, null) <span class="sr-only">(current)</span></a></li>-->
+				<li>@Html.ActionLink("Modelos", "Index", "AdminModelo", new { Area = "Admin" }, null)</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Autoahorro <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<!--<li>@Html.ActionLink("Archivos", "CargaArchivos", "AutoAhorro", new { Area = "Admin" }, null)</li>-->
+						<li>@Html.ActionLink("Archivos de Ofertas", "ListarArchivos", "AutoAhorro", new { Area = "Admin", Tipo = 1 }, null)</li>
+						<li>@Html.ActionLink("Archivos de Emisiones", "ListarArchivos", "AutoAhorro", new { Area = "Admin", Tipo = 2 }, null)</li>
+						<li>@Html.ActionLink("Archivos de Ganadores", "ListarArchivos", "AutoAhorro", new { Area = "Admin", Tipo = 3 }, null)</li>
+						<!--<li><a href="#">Vencimiento de Cuota</a></li>
+						<li><a href="#">Servicios Mantenimiento</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Accesorios Amarok</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Accesorios</a></li>
+						<li><a href="#">Garantía</a></li>-->
+						<li><a href="#">@Html.ActionLink("Planes", "Planes", "AutoAhorro", new { Area = "Admin" }, null)</a></li>
+					</ul>
+				</li>
+				<li class="dropdown oculto">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li>@Html.ActionLink("Accesos", "AccesosHome_Listar", "Home", new { Area = "Admin" }, null)</li>
+						<li><a href="#">imagen</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Servicios <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<!--<li><a href="#">Yo cuido a mi VW</a></li>
+						<li><a href="#">Ventas Corporativas</a></li>
+						<li><a href="#">Autoahorro - Qué es</a></li>-->
+						<li><a href="#">@Html.ActionLink("Servicios de Inspección", "ServiciosInspeccion_Lista", "PostVenta", new { Area = "Admin" }, null)</a></li>
+						<li><a href="#">@Html.ActionLink("Seminuevos", "Seminuevo_Lista", "Seminuevo", new { Area = "Admin" }, null)</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Club Matassi <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">@Html.ActionLink("Catálogo de premios", "ClubMatassiCatalogo_Lista", "ClubMatassi", new { Area = "Admin" }, null)</a></li>
+						<li><a href="#">@Html.ActionLink("Puntos por cliente", "ClubMatassiPuntosCliente_Lista", "ClubMatassi", new { Area = "Admin" }, null)</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li>@Html.ActionLink("Usuarios", "GetAllUsers", "Admin", new { Area = "Admin" }, new { })</li>
+						<!--<li>@Html.ActionLink("Nuevo Usuario", "Register", "Admin", new { Area = "Admin" }, new { })</li>
+						<li><a href="#">Borrar Caché</a></li>-->
+						<li>@Html.ActionLink("Cerrar Sessión", "LogOff", "Admin", new { Area = "Admin" }, new { })</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

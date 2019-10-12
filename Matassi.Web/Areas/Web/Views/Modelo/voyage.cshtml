@@ -1,0 +1,579 @@
+﻿@{
+	ViewBag.Title = "up";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+	@Styles.Render("~/bundles/estilosCSSModelo")
+	@Scripts.Render("~/bundles/funcionesModelo")
+}
+
+<div id="divBannerTituloModelo">
+	<span id="spnTituloModelo">
+		Voyage
+	</span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+	<ul id="ulListaCaracteristicasModelo">
+		<li class="liDestacados" data-divmodelos="divDestacados">Destacados</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+<div id="divImagenModelo">
+	<img src="~/Content/info_modelos/voyage/voyage.jpg" class="imgResponsiva" />
+</div>
+
+<div id="divTituloModelo">
+	Voyage, el significado de un buen viaje.<br /><br />
+</div>
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+	<div class="iconoDesplegar">
+		<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+		<span>
+			Selecciona categoria
+		</span>
+	</div>
+	<ul class="oculto">
+		<li class="liDestacados" data-divmodelos="divDestacados">Destacados</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+
+<!----------------------------------DESTACADOS---------------------------------->
+<div id="divDestacados" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Las principales características que van a hacer que no te<br />quieras bajar nunca.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Diseño</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/voyage/Destacados/Destacados01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>Diseño</h5>
+				<h3>Refinado</h3>
+				<p>Sus líneas pronunciadas lo destacan frente al resto.</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/voyage/Destacados/Destacados01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Tecnología</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/voyage/Destacados/Destacados02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/voyage/Destacados/Destacados02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>Tecnología</h5>
+				<h3>Conectado</h3>
+				<p>El Voyage cuenta con App Connect, un sistema que te permite conectar tu teléfono a la radio y disfrutar de tus datos y aplicaciones.</p>
+			</div>
+		</div>
+
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Confort</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/voyage/Destacados/Destacados03.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>Confort</h5>
+				<h3>Novedades</h3>
+				<p>Con su gran habitáculo y espacio de baúl, está listo para emprender cualquier viaje.</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/voyage/Destacados/Destacados03.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Motor</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/voyage/Destacados/Destacados04.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/voyage/Destacados/Destacados04.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>Motor</h5>
+				<h3>Performance</h3>
+				<p>Equipado con un motor de 1.6L de 101 CV de potencia y una caja manual de 5 velocidades, de excelente performance y respuesta.</p>
+			</div>
+		</div>
+
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+
+<!----------------------------------VERSIONES---------------------------------->
+<div id="divVersiones" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Versiones
+	</div>
+
+	<!-- TRENDLINE -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/voyage/Versiones/Versiones01.png" class="imgResponsiva" />
+			<h4>Trendline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Dirección asistida</li>
+				<li>Asiento de conductor con ajuste de altura</li>
+				<li>Soporte porta celular “Dockstation”</li>
+				<li>Aire Acondicionado</li>
+				<li>Computadora de abordo</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Trendline1">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Trendline1">
+		<h1>Trendline</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/voyage/InfoTecnica/InfoTecnica01.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Dirección asistida </li>
+					<li>Asiento de conductor con ajuste de altura </li>
+					<li>Soporte porta celular “Dockstation” </li>
+					<li>Aire Acondicionado </li>
+					<li>Computadora de abordo </li>
+					<li>Sistema de audio “Composition Media Plus” con CD, AM/FM, Bluetooth, Aux-in, USB y SD-card</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Voyage Trendline 1.6l Nafta 101 CV Manual 4P</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de acero 5J x 14</li>
+
+					<li><b>Interior</b></li>
+					<li>Portaobjetos 1</li>
+					<li>Sin paquete aluminio/cromo</li>
+					<li>Techo moldeado en una pieza, confort</li>
+					<li>Pomo/empuñadura de la palanca de cambio en plástico</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tubo de escape final detrás (estándar)</li>
+					<li>Componentes sin superficie especial</li>
+					<li>Sin barras longitudinales del techo ni barras portaequipajes</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Sin spoiler posterior</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Sin embellecedores adicionales4 puertas</li>
+
+					<li><b>Espejos</b></li>
+					<li>Regulación interna manual espejos exter.</li>
+					<li>Espejo interior de seguridad antideslumbrante</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Sin activación especial de las luces de marcha</li>
+					<li>Faros principales halógenosSin regulación alcance faros</li>
+					<li>Sin faros antiniebla</li>
+					<li>Conjunto pilotos posteriores de color oscuro</li>
+					<li>Limpiaparabrisas a intervalos, sin regulación</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Suspensión/amortiguación estándar</li>
+					<li>Sin ayuda de aparcamiento</li>
+					<li>Sin regulador de velocidad (GRA)</li>
+					<li>Sin sistema de cámaras/vigilancia sensorial del entorno</li>
+					<li>PDS</li>
+					<li>Soporte porta celular “Dockstation”</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Asiento posterior y respaldo no partido</li>
+					<li>Aire Acondicionado</li>
+					<li>Asiento de conductor con ajuste de altura</li>
+					<li>Asientos no calefaccionables</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Inserciones</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Sin multimedia" en el vehículo</li>
+					<li>Sin interface eléctrico</li>
+					<li>4 altavoces (pasivos) y 2 altavoces para agudos</li>
+					<li>Sistema de audio “Composition Media Plus” con CD, AM/FM, Bluetooth, Aux-in, USB y SD-card</li>
+
+					<li><b>Navegación</b></li>
+					<li>Computadora de abordo</li>
+					<li>Soporte porta celular “Dockstation”</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante</li>
+					<li>Frenos de tambor posteriores</li>
+					<li>PAK</li>
+					<li>Aire Acondicionado</li>
+					<li>Sistema de audio “Composition Media Plus” con CD, AM/FM, Bluetooth, Aux-in, USB y SD-card</li>
+					<li>Dirección asistida</li>
+					<li>Filtro de polvo y polen</li>
+					<li>Frenos de disco anteriores, con soporte integrado</li>
+					<li>Alternador trifásico 90 A</li>
+					<li>Inmovilizador electrónico</li>
+					<li>Sin control de presión de los neumáticos</li>
+					<li>Sin airbag lateral</li>
+					<li>Sin marco protector</li>
+					<li>Sin cierre centralizado</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/voyage/Colores/Colores01.png" class="imgResponsiva" /><br />Plata Sirius</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/voyage/Colores/Colores02.png" class="imgResponsiva" /><br />Gris Platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/voyage/Colores/Colores03.png" class="imgResponsiva" /><br />Rojo Flash</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/voyage/Colores/Colores04.png" class="imgResponsiva" /><br />Negro Ninja</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/voyage/Colores/Colores05.png" class="imgResponsiva" /><br />Blanco Cristal</li>
+
+					<li style="clear:both;">&nbsp;</li>
+
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>P15P7A</li>
+
+					<li><b>Iluminación</b></li>
+					<li>P7F</li>
+					<li>Faros antiniebla (integrados)</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>P7S</li>
+					<li>Aire Acondicionado</li>
+					<li>Filtro de polvo y polen</li>
+					<li>Alternador trifásico 90 A</li>
+
+					<li><b>Seguridad</b></li>
+					<li>W7C</li>
+					<li>Frenos de disco anteriores, con soporte integrado</li>
+					<li>Alternador trifásico 90 A</li>
+					<li>Cierre centralizado</li>
+					<li>Filtro de polvo y polen</li>
+					<li>Alzacristales, anteriores eléctrico y posteriores mecánico</li>
+					<li>Aire Acondicionado</li>
+					<li>Luz interior con interruptores de contacto/puertas</li>
+					<li>Sistema de audio “Composition Media Plus” con CD, AM/FM, Bluetooth, Aux-in, USB y SD-card</li>
+					<li>Llave para sistema de cierre</li>
+					<li>Dirección asistida</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<!-- COMFORTLINE -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/voyage/Versiones/Versiones02.png" class="imgResponsiva" />
+			<h4>Comfortline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Dirección asistida</li>
+				<li>Asiento de conductor con ajuste de altura</li>
+				<li>Soporte porta celular “Dockstation”</li>
+				<li>Aire Acondicionado</li>
+				<li>Computadora de abordo</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Trendline2">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Trendline2">
+		<h1>Comfortline</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/voyage/InfoTecnica/InfoTecnica02.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Dirección asistida </li>
+					<li>Asiento de conductor con ajuste de altura </li>
+					<li>Soporte porta celular “Dockstation” </li>
+					<li>Aire Acondicionado </li>
+					<li>Computadora de abordo </li>
+					<li>Llantas de acero de 14" </li>
+					<li>Sistema de audio "Composition Media Plus" con CD, AM/FM, Bluetooth, Aux-in, USB y SD-card</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Voyage Trendline 1.6l Nafta 101 CV Manual 4 P</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de acero de 14"</li>
+
+					<li><b>Interior</b></li>
+					<li>Portaobjetos 1</li>
+					<li>Sin paquete aluminio/cromo</li>
+					<li>Techo moldeado en una pieza, confort</li>
+					<li>Pomo/empuñadura de la palanca de cambio en plástico</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tubo de escape final detrás (estándar)</li>
+					<li>Componentes sin superficie especial</li>
+					<li>Sin barras longitudinales del techo ni barras portaequipajes</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Sin spoiler posterior</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Sin embellecedores adicionales4 puertas</li>
+
+					<li><b>Espejos</b></li>
+					<li>Regulación interna manual espejos exter.</li>
+					<li>Espejo interior de seguridad antideslumbrante</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Sin activación especial de las luces de marcha</li>
+					<li>Faros principales halógenos</li>
+					<li>Sin regulación alcance faros</li>
+					<li>Sin faros antiniebla</li>
+					<li>Conjunto pilotos posteriores de color oscuro</li>
+					<li>Limpiaparabrisas a intervalos, sin regulación</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Suspensión/amortiguación estándar</li>
+					<li>Sin ayuda de aparcamiento</li>
+					<li>Sin regulador de velocidad (GRA)</li>
+					<li>Sin sistema de cámaras/vigilancia sensorial del entorno</li>
+					<li>PDS</li>
+					<li>Soporte porta celular “Dockstation”</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Asiento posterior y respaldo no partido</li>
+					<li>Aire Acondicionado</li>
+					<li>Asiento de conductor con ajuste de altura</li>
+					<li>Asientos no calefaccionables</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Inserciones</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Sin multimedia" en el vehículo</li>
+					<li>Sin interface eléctrico</li>
+					<li>4 altavoces (pasivos) y 2 altavoces para agudos</li>
+					<li>Sistema de audio "Composition Media Plus" con CD, AM/FM, Bluetooth, Aux-in, USB y SD-card</li>
+
+					<li><b>Navegación</b></li>
+					<li>Computadora de abordo</li>
+					<li>Soporte porta celular “Dockstation”</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante</li>
+					<li>Frenos de tambor posteriores</li>
+					<li>PAK</li>
+					<li>Sistema de audio "Composition Media Plus" con CD, AM/FM, Bluetooth, Aux-in, USB y SD-card</li>
+					<li>Frenos de disco anteriores, con soporte integrado</li>
+					<li>Dirección asistida</li>
+					<li>Filtro de polvo y polen</li>
+					<li>Aire Acondicionado</li>
+					<li>Alternador trifásico 90 A</li>
+					<li>Inmovilizador electrónico</li>
+					<li>Sin control de presión de los neumáticos</li>
+					<li>Sin airbag lateral</li>
+					<li>Sin marco protector</li>
+					<li>Sin cierre centralizado</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/voyage/Colores/Colores01.png" class="imgResponsiva" /><br />Plata Sirius</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/voyage/Colores/Colores02.png" class="imgResponsiva" /><br />Gris Platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/voyage/Colores/Colores03.png" class="imgResponsiva" /><br />Rojo Flash</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/voyage/Colores/Colores04.png" class="imgResponsiva" /><br />Negro Ninja</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/voyage/Colores/Colores05.png" class="imgResponsiva" /><br />Blanco Cristal</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/voyage/Colores/Colores06.png" class="imgResponsiva" /><br />Azul Laguna</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/voyage/Colores/Colores07.png" class="imgResponsiva" /><br />Gris Tungsteno</li>
+
+					<li style="clear:both;">&nbsp;</li>
+
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>P15P7A</li>
+
+					<li><b>Iluminación</b></li>
+					<li>P7F</li>
+					<li>Faros antiniebla (integrados)</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>P7S</li>
+					<li>Filtro de polvo y polen</li>
+					<li>Alternador trifásico 90 A</li>
+					<li>Aire Acondicionado</li>
+
+					<li><b>Seguridad</b></li>
+					<li>W7C</li>
+					<li>Alzacristales, anteriores eléctrico y posteriores mecánico</li>
+					<li>Luz interior con interruptores de contacto/puertas</li>
+					<li>Llave para sistema de cierre</li>
+					<li>Alternador trifásico 90 A</li>
+					<li>Cierre centralizado</li>
+					<li>Filtro de polvo y polen</li>
+					<li>Sistema de audio "Composition Media Plus" con CD, AM/FM, Bluetooth, Aux-in, USB y SD-card</li>
+					<li>Frenos de disco anteriores, con soporte integrado</li>
+					<li>Dirección asistida</li>
+					<li>Aire Acondicionado</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<p class="paginadorVersiones visibleCelular">
+		<a href="#1" class="active">&nbsp;</a>
+		<a href="#2">&nbsp;</a>
+	</p>
+</div>
+
+
+<!--BROCHURE-->
+<div id="divBrochure">
+	<div id="div-Brochure-Info">
+		<h2>Brochure<br />de Voyage</h2>
+		<a href="~/Content/info_modelos/voyage/Brochure/Brochure.pdf" rel="external" class="linkDescargarBrochure" target="_blank">
+			<div id="div-Brochure-Boton">
+				<div id="div-Brochure-Boton-Inner">Descargalo</div>
+			</div>
+		</a>
+	</div>
+
+	<div id="div-Brochure-Imagen">
+		<img src="~/Content/info_modelos/voyage/Brochure/Brochure.jpg" class="imgResponsiva" />
+	</div>
+</div>
+
+@section footerModelo
+{
+	<div class="md-modal md-effect-12">
+		<div class="md-content">
+			<div id="divGaleriaPopup-Imagenes">
+				<div class="slick-div-aux"><img src="~/Content/info_modelos/voyage/Galeria/Galeria01.jpg" class="imgResponsiva" /></div>
+				<div class="slick-div-aux"><img src="~/Content/info_modelos/voyage/Galeria/Galeria02.jpg" class="imgResponsiva" /></div>
+				<div class="slick-div-aux"><img src="~/Content/info_modelos/voyage/Galeria/Galeria03.jpg" class="imgResponsiva" /></div>
+			</div>
+		</div>
+		<div id="divCerrarGaleria">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg cruzCerrar" />
+		</div>
+	</div>
+	<div class="md-overlay"></div>
+	<br /><br />
+}

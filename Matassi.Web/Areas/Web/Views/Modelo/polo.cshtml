@@ -1,0 +1,454 @@
+﻿@{
+	ViewBag.Title = "up";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+	@Styles.Render("~/bundles/estilosCSSModelo")
+	@Scripts.Render("~/bundles/funcionesModelo")
+}
+
+<div id="divBannerTituloModelo">
+	<span id="spnTituloModelo">
+		Polo
+	</span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+	<ul id="ulListaCaracteristicasModelo">
+		<li class="liConfort" data-divmodelos="divConfort">Confort</li>
+		<li class="liEquipamiento" data-divmodelos="divEquipamiento">Equipamiento</li>
+		<li class="liDestacados" data-divmodelos="divDestacados">Destacados</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+<div id="divImagenModelo">
+	<img src="~/Content/info_modelos/polo/Polo.jpg" class="imgResponsiva" />
+</div>
+
+<div id="divTituloModelo">
+	Otra forma de llegar.
+</div>
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+	<div class="iconoDesplegar">
+		<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+		<span>
+			Selecciona categoria
+		</span>
+	</div>
+	<ul class="oculto">
+		<li class="liConfort" data-divmodelos="divConfort">Confort</li>
+		<li class="liEquipamiento" data-divmodelos="divEquipamiento">Equipamiento</li>
+		<li class="liDestacados" data-divmodelos="divDestacados">Destacados</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+
+<!----------------------------------CONFORT---------------------------------->
+<div id="divConfort" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Pensado a tu medida
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Equilibrio</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/polo/Confort/Confort01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Equilibrio
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Interior
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					La disposición de sus controles está pensada a la medida del conductor. Sus materiales de excelente calidad y el amplio confort del habitáculo destacan su diseño único.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/polo/Confort/Confort01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Innovador</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/polo/Confort/Confort02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/polo/Deportividad/Deportividad02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Innovador
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Exterior
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Su combinación de líneas le otorgan fluidez a una silueta con estilo único y personalidad diferente.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+
+</div>
+
+<!----------------------------------FUNCIONAL---------------------------------->
+<div id="divEquipamiento" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Funcional
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>La combinación perfecta</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/polo/Funcional/Funcional01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					La combinación perfecta
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Detalles
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Creado para sentir el placer al volante, incorpora un moderno Sistema de Audio con CD/MP3, Bluetooth, USB/SD Card, Aux In y entrada para iPod, con controles al volante.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/polo/Funcional/Funcional01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Sentite cómodo</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/polo/Funcional/Funcional02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/polo/Funcional/Funcional02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Sentite cómodo
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Espacio
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Cuenta con un maletero de 454 litros de capacidad para que del Polo un auto a tu medida.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------DESTACADOS---------------------------------->
+<div id="divDestacados" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Calidad Superior
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Tenerlo todo</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/polo/Destacados/Destacados01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/polo/Destacados/Destacados01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Tenerlo todo
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Características
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					En su interior cuenta con climatizador automático digital, apoyabrazos central, comandos eléctricos de ventanas y puertas, y un estilo único.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Dinámico</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/polo/Destacados/Destacados02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Dinámico
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Estética
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					En su exterior se destacan las llantas de aleación de 15", los faros antiniebla y un diseño armónico.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/polo/Destacados/Destacados02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------VERSIONES---------------------------------->
+<div id="divVersiones" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Versiones
+	</div>
+
+	<!-- COMFORTLINE -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/polo/Versiones/Versiones01.png" class="imgResponsiva" />
+			<h4>Comfortline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Volante multifuncion regulable</li>
+				<li>Control de velocidad crucero</li>
+				<li>Faros antiniebla</li>
+				<li>Climatizador automatico Digital</li>
+				<li>Sistema de Audio RCD230G</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Comfortline">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Comfortline">
+		<h1>Comfortline</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/polo/InfoTecnica/InfoTecnica01.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Volante multifuncion regulable</li>
+					<li>Control de velocidad crucero</li>
+					<li>Faros antiniebla</li>
+					<li>Climatizador automatico Digital</li>
+					<li>Sistema de Audio RCD230G</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Polo Comfortline 1.6 Nafta 105 CV Tiptronic 4P</li>
+					<li class="sin-borde">Polo Comfortline 1.6 Nafta 105 CV Manual 4P</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación ligera 6J x 15</li>
+
+					<li><b>Interior</b></li>
+					<li>Paquete Cromo</li>
+					<li>Techo moldeado en una pieza</li>
+					<li>Pomo/empuñadura de la palanca de cambio en cuero</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tubo de escape final con embellecedor</li>
+					<li>Sin dispositivo de remolque</li>
+					<li>Carcasa del retrovisor exterior pintada</li>
+					<li>Sin barras longitudinales del techo ni barras portaequipajes</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>4 puertas</li>
+
+					<li><b>Espejos</b></li>
+					<li>Retrovisor exterior con ajuste eléctrico</li>
+					<li>Espejo interior de seguridad antideslumbrante</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Activación de las luces de marcha diurna</li>
+					<li>Faros dobles, circulación por la derecha, con faros de largo alcance integrados</li>
+					<li>Regulación alcance faros</li>
+					<li>Faros antiniebla</li>
+					<li>Conjunto pilotos posteriores, versión normal, con 2 luces de marcha atrás</li>
+					<li>Sin limpialavafaros</li>
+					<li>Conexión de limpiaparabrisas con intervalos, con potenciómetro (4 niveles)</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Sin ayuda de aparcamiento</li>
+					<li>Control de velocidad crucero</li>
+					<li>Sin sistema de cámaras/vigilancia sensorial del entorno</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta asiento posterior y respaldo partido, abatibles por separado</li>
+					<li>Climatizador automatico Digital</li>
+					<li>Sin apoyo lumbar en los respaldos de los asientos</li>
+					<li>Reposabrazos central delante</li>
+					<li>Regulación en altura manual de los asientos anteriores</li>
+					<li>Asientos no calefaccionables</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Sin multimedia" en el vehículo</li>
+					<li>Sin interface eléctrico</li>
+					<li>4 altavoces</li>
+					<li>Sistema de Audio RCD230G</li>
+
+					<li><b>Navegación</b></li>
+					<li>Indicador multifunciones/computadora de a bordo</li>
+					<li>Sin sistema de navegación</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifuncion regulable</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante</li>
+					<li>Frenos de tambor posteriores</li>
+					<li>Frenos de disco anteriores (Geomet D)</li>
+					<li>Inmovilizador electrónico con sistema de alarma antirrobo, control habitáculo y back-up-horn</li>
+					<li>Sin control de presión de los neumáticos</li>
+					<li>Sin airbag lateral</li>
+					<li>Cierre centralizado por control remoto, con accionamiento desde el interior sin cierre de seguridad</li>
+					<li>Dirección asistida, dependiente de la velocidad (Servotronic)</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/polo/Colores/Colores01.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/polo/Colores/Colores02.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/polo/Colores/Colores03.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/polo/Colores/Colores04.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/polo/Colores/Colores05.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/polo/Colores/Colores06.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/polo/Colores/Colores07.png" class="imgResponsiva" /><br />??</li>
+
+					<li style="clear:both;">&nbsp;</li>
+					<li><b>Confort de marcha</b></li>
+					<li>Con sistema de cámara de marcha atrás (versión 1)</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<p class="paginadorVersiones visibleCelular">
+		<a href="#1" class="active">&nbsp;</a>
+	</p>
+</div>
+
+
+<!--BROCHURE-->
+<div id="divBrochure">
+	<div id="div-Brochure-Info">
+		<h2>Brochure<br />de Polo</h2>
+		<a href="~/Content/info_modelos/polo/Brochure/Brochure.pdf" rel="external" class="linkDescargarBrochure" target="_blank">
+			<div id="div-Brochure-Boton">
+				<div id="div-Brochure-Boton-Inner">Descargalo</div>
+			</div>
+		</a>
+	</div>
+	<div id="div-Brochure-Imagen">
+		<img src="~/Content/info_modelos/polo/Brochure/Brochure.jpg" class="imgResponsiva" />
+	</div>
+</div>

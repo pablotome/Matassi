@@ -1,0 +1,555 @@
+﻿@{
+	ViewBag.Title = "Medios de Pago";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+<script type="text/javascript">
+	function MostrarInfoAmpliada(idObjeto) {
+		$("#" + idObjeto).toggle();
+	}
+</script>
+
+<style type="text/css">
+	p {
+		font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		line-height: 15px;
+		text-align: justify;
+		padding: 10px;
+	}
+
+	.tituloMedioDePago {
+		color: black;
+		font-family: 'VWHeadWeb-Bold', Arial, Helvetica, 'Sans Serif';
+		font-size: 14px;
+		height: auto;
+		line-height: 15px;
+		margin: 0px;
+		padding: 0px;
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	.descripcionMedioDePago {
+		font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		font-weight: normal;
+		line-height: 15px;
+		/*display: list-item !important;
+		list-style-type: disc;
+		list-style-position: outside;*/
+		margin-bottom: 5px;
+		margin-left: 15px;
+	}
+
+	.tblMediosPago
+	{
+		padding: 0px;
+		border-spacing: 0px;
+		border-collapse: collapse;
+		border-width: 0px;
+		width: 100%;
+	}
+
+	.tblMediosPago td {
+		vertical-align: top;
+	}
+
+	.informacionAmpliadaMedioDePago
+	{
+		display:none;
+	}
+
+	.ULNivel1 {
+		margin-bottom: 3px;
+		margin-left: 15px;
+	}
+
+	.LINivel1 {
+		font-family: 'VWHeadWeb-Bold', Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		display: list-item !important;
+		list-style-image: url('../../../../Content/images/arrow_orange.gif') !important;
+		list-style-position: outside;
+		line-height: 15px;
+		margin-left: 15px;
+		margin-top: 15px;
+	}
+
+	.ULNivel2 {
+		margin-left: 15px;
+	}
+
+	.LINivel2 {
+		font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		font-weight: normal;
+		display: list-item !important;
+		list-style-type: disc;
+		list-style-position: outside;
+		margin-bottom: 5px;
+		margin-left: 15px;
+		margin-top: 15px;
+	}
+
+	.separadorFormaPago {
+		width: 100%;
+		line-height: 1px;
+		border-top: solid 1px #E6E6EB;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+</style>
+
+<div class="infoModelo">
+	<a href="#" class="modeloActual">@ViewBag.Title</a>
+	<div class="infoModeloTitulos">
+		<ul class="">
+			<li>|</li>
+			<li>
+				<span></span>
+			</li>
+		</ul>
+	</div>
+</div>
+<div style="margin: 10px 9px 9px 9px; display:block; position: relative; height: auto; overflow:hidden;">
+	<div class="columnaIzquierda">
+		&nbsp;
+	</div>
+	<div class="columnaDerecha">
+		<div style="text-align:center;">
+			<img src="~/Content/images/Autoahorro20170809.jpg" />
+		</div>
+		<div class="TituloPagina">@ViewBag.Title</div>
+
+		<table class="tblMediosPago">
+			<tr>
+				<td width="25%">
+					<img src="~/Content/images/pago_facil.gif" alt="Pago Facil" />
+				</td>
+				<td>
+					<span class="tituloMedioDePago">Pago Fácil</span>
+					<div class="descripcionMedioDePago">
+						A través de la Red Pago Fácil podrás abonar de manera cómoda y segura la cuota de tu plan de ahorro.
+						<br />
+						<div class="ampliarMedioDePago"><img src="~/Content/images/button_ampliar.gif" alt="Ampliar">&nbsp;&nbsp;<a href="javascript:MostrarInfoAmpliada('infoAmpliadaPagoFacil');">Ampliar información</a></div>
+						<div class="informacionAmpliadaMedioDePago" id="infoAmpliadaPagoFacil">
+							<p>A través de la Red Pago Fácil podrás abonar de manera cómoda y segura la cuota de tu plan de ahorro. Este sistema te permitirá abonar sin demoras, ya que cuenta con 1.850 lugares de pago a lo largo de todo el país, ubicados en supermercados Disco, Carrefour, Norte adheridos, Plaza Vea, WAL-MART, La Anónima, Best, Libertad, Mariano Max, Coto, Auchan, Eki, Shopping Liniers, Devoto Shopping, Del Parque Shopping, Farmacias Farmacity, C&A,; Banco Piano, Banco Columbia, estaciones de servicios Esso adheridas, comercios minoristas, centros de servicios y sucursales del Correo Argentino, los cuales cuentan con amplios horarios de atención y con la posibilidad de que pueda pagar también sábados y domingos.</p>
+							<p>Además Pago Fácil no tiene costo adicional ni necesita realizar trámites previos.</p>
+							<p>Para consultar lugares habilitados podrás comunicarte con Línea Fácil al 0800-444-3224.</p>
+						</div>
+						<p><a href="http://www.pagofacil.com.ar" target="_blank">www.pagofacil.com.ar</a>&nbsp;<img src="~/Content/images/btn_popup_10x10.gif" /></p>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="separadorFormaPago">&nbsp;</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="~/Content/images/rapipago.gif" alt="Rapipago" />
+				</td>
+				<td>
+					<div class="tituloMedioDePago">Rapipago</div>
+					<div class="descripcionMedioDePago">
+						Podés pagar las cuotas en toda la Red Rapipago, de manera rápida y sencilla, con gran amplitud de horarios, sucursales cercanas y personal calificado.<br />
+						Para mayor información sobre los lugares de pago podes consultar en <a href="http://www.rapipago.com.ar" target="_blank">www.rapipago.com.ar</a>, o a Mesa de Ayuda al teléfono 0810-333-0990.
+						<p><a href="http://www.rapipago.com.ar" target="_blank">www.rapipago.com.ar</a>&nbsp;<img src="~/Content/images/btn_popup_10x10.gif" /></p>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="separadorFormaPago">&nbsp;</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="~/Content/images/bapro_pagos.gif" alt="Bapro Pagos" />
+				</td>
+				<td>
+					<div class="tituloMedioDePago">Bapro Pagos</div>
+					<div class="descripcionMedioDePago">
+						Es una red de cobranza extrabancaria que te permitirá abonar la cuota de tu plan de una manera cómoda, ágil y segura, ya que el sistema Bapro Pagos cuenta con una amplia red de comercios adheridos que está a tu disposición. Además, posee una extensa cobertura geográfica, atención personalizada y flexibilidad horaria.<br />
+						<p><a href="http://www.bapropagos.com.ar" target="_blank">www.bapropagos.com.ar</a>&nbsp;<img src="~/Content/images/btn_popup_10x10.gif" /></p>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="separadorFormaPago">&nbsp;</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="~/Content/images/cobro_express.gif" alt="Cobro Express" />
+				</td>
+				<td>
+					<div class="tituloMedioDePago">Cobro Express </div>
+					<div class="descripcionMedioDePago">
+						Es una red nacional de cobranza que se encuentra distribuida en centros comerciales, clubes, farmacias, locutorios, comercios minoristas y en todas las sucursales de la Red Megatone. A través de este servicio podrás abonar la cuota de tu plan de ahorro en cualquier momento. Para mayor información, o para conocer el local de Cobro Express más cercano a tu domicilio, podrás ingresar a <a href="http://www.cobroexpress.com.ar" target="_blank">www.cobroexpress.com.ar</a>.
+						<p><a href="http://www.cobroexpress.com.ar" target="_blank">www.cobroexpress.com.ar  </a>&nbsp;<img src="~/Content/images/btn_popup_10x10.gif" /></p>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="separadorFormaPago">&nbsp;</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="~/Content/images/ripsa.gif" alt="Ripsa" />
+				</td>
+				<td>
+					<div class="tituloMedioDePago">Ripsa</div>
+					<div class="descripcionMedioDePago">
+						RIPSA (Red Informática de Pagos S.A.) es un sistema de bocas recaudadoras instaladas en múltiples comercios de la República Argentina donde los usuarios pueden pagar sus impuestos y servicios en forma ágil y segura.
+						<div class="ampliarMedioDePago"><img src="~/Content/images/button_ampliar.gif" alt="Ampliar">&nbsp;&nbsp;<a href="javascript:MostrarInfoAmpliada('infoAmpliadaRipsa');">Ampliar información</a></div>
+						<div class="informacionAmpliadaMedioDePago" id="infoAmpliadaRipsa">
+							<p>RIPSA (Red Informática de Pagos S.A.) es un sistema de bocas recaudadoras instaladas en múltiples comercios de la República Argentina donde los usuarios pueden pagar sus impuestos y servicios en forma ágil y segura. Estos puntos de cobro -centros comerciales, estaciones de servicio, locutorios, farmacias, agencias de lotería, bancos, etc.- están provistos de recursos informáticos confiables, lo que te permitirán abonar sin pérdida de tiempo y en horarios extendidos la cuota de tu plan de ahorro presentando el cupón de pago respectivo.</p>
+							<p>Y si no llegaras a tener el Cupón de Pago, igualmente podés abonar tu cuota de dos maneras: 1) Con el número de Grupo y Orden de tu plan: dirigite a cualquiera de los Centros de Pago de la Red RIPSA. Ahí mismo podrás abonarlo sin pérdida de tiempo. 2) Ingresando a www.ripsa.com.ar, podés imprimir tu cupón (también necesitás tener tu número de Grupo y Orden), y abonarlo en cualquiera de los Centros de Pago adheridos.</p>
+							<p>Para más información o para conocer los centros de pago, ingresá a www.ripsa.com.ar o comunicate a los siguientes teléfonos: en Mar del Plata, Casa Central (0223)496-1500 / 1600.</p>
+							<p>En Ciudad Autónoma de Buenos Aires: 5252-0662 / 0663.</p>
+						</div>
+						<p><a href="http://www.ripsa.com.ar" target="_blank">www.ripsa.com.ar  </a>&nbsp;<img src="~/Content/images/btn_popup_10x10.gif" /></p>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="separadorFormaPago">&nbsp;</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="~/Content/images/cajero_automatico.gif" alt="Cajero Automático" />
+				</td>
+				<td>
+					<div class="tituloMedioDePago">Cajero Automático</div>
+					<div class="descripcionMedioDePago">
+						En Cajeros Automáticos de la <a htef="http://www.redlink.com.ar" target="_blank">Red Link</a> o <a href="http://www.banelco.com.ar" target="_blank">Banelco</a>.
+						<div class="ampliarMedioDePago"><img src="~/Content/images/button_ampliar.gif" alt="Ampliar">&nbsp;&nbsp;<a href="javascript:MostrarInfoAmpliada('infoAmpliadaLinkBanelco');">Ampliar información</a></div>
+						<div class="informacionAmpliadaMedioDePago" id="infoAmpliadaLinkBanelco">
+							<p>Si poseés una Tarjeta de Débito emitida por alguna de las entidades adheridas a la Red Link o Banelco, podrás abonar las cuotas de tu plan de ahorro de manera cómoda, rápida y sencilla. El ticket que emite el cajero automático es válido como comprobante de pago.</p>
+							<p>
+								<ul class="ULNivel1">
+									<li class="LINivel1">
+										Link
+										<ul class="ULNivel2">
+											<li class="LINivel2">Ingresar su tarjeta y PIN en un cajero Link.</li>
+											<li class="LINivel2">Seleccionela opción "Pagos Link" del menú principal.</li>
+											<li class="LINivel2">Seleccione "Pago de Impuestos y Servicios".</li>
+											<li class="LINivel2">Ingrese en "Ingrese el Código de Pagos Link" la Clave de Pago Electrónico de 13 dígitos que figura en el casillero.</li>
+											<li class="LINivel2">"Lugares de Pago" del cupón de pago.</li>
+											<li class="LINivel2">Seleccione "Confirmar".</li>
+											<li class="LINivel2">Defina la cuenta desde la que desea realizar el débito.</li>
+											<li class="LINivel2">Retire el ticket (es válido como constancia de pago).</li>
+										</ul>
+									</li>
+								</ul>
+								<br />
+								<ul class="ULNivel1">
+									<li class="LINivel1">
+										Banelco
+										<ul class="ULNivel2">
+											<li class="LINivel2">Seleccione"Pagos".</li>
+											<li class="LINivel2">Seleccione"Pago Electrónico de Servicios".</li>
+											<li class="LINivel2">Seleccione"Seleccione el servicio que desea pagar".</li>
+											<li class="LINivel2">Seleccione"Seleccione la Opción" Ingresela identificación de la cuota.</li>
+											<li class="LINivel2">Seleccione la cuenta desde la que desea realizar el débito.</li>
+											<li class="LINivel2">Retire el ticket (es válido como constancia de pago).</li>
+										</ul>
+									</li>
+								</ul>
+							</p>
+						</div>
+						<p>
+							<a href="http://www.redlink.com.ar" target="_blank">www.redlink.com.ar</a>&nbsp;<img src="~/Content/images/btn_popup_10x10.gif" /><br />
+							<a href="http://www.banelco.com.ar" target="_blank">www.banelco.com.ar</a>&nbsp;<img src="~/Content/images/btn_popup_10x10.gif" /><br />
+						</p>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="separadorFormaPago">&nbsp;</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="~/Content/images/internet.gif" alt="Internet" />
+				</td>
+				<td>
+					<div class="tituloMedioDePago">Internet</div>
+					<div class="descripcionMedioDePago">
+						Sin colas ni demoras, es la forma más segura de pagar. Si poseés una tarjeta de débito de algún banco adherido a la Red Link o a la Red Banelco, podés abonar la cuota desde una PC por Internet, desde tu casa o trabajo. Previamente deberás retirar una clave de acceso en el cajero automático para poder operar.
+						<div class="ampliarMedioDePago"><img src="~/Content/images/button_ampliar.gif" alt="Ampliar">&nbsp;&nbsp;<a href="javascript:MostrarInfoAmpliada('infoAmpliadaInternet');">Ampliar información</a></div>
+						<div class="informacionAmpliadaMedioDePago" id="infoAmpliadaInternet">
+							<p>Sin colas ni demoras, es la forma más segura de pagar. Si poseés una tarjeta de débito de algún banco adherido a la Red Link o a la Red Banelco, podés abonar la cuota desde una PC por Internet, desde tu casa o trabajo.</p>
+							<p>Previamente deberás retirar una clave de acceso en el cajero automático para poder operar.</p>
+							<p>
+								<b>pagomiscuentas.com.ar</b>
+								<ul class="ULNivel1">
+									<li class="LINivel1">
+										¿Cómo obtener la clave de acceso?
+										<ul class="ULNivel2">
+											<li class="LINivel2">Ingresá tu Tarjeta Banelco en cualquier cajero de la red.</li>
+											<li class="LINivel2">Ingresá "Código de Identificación Personal (CIP)".</li>
+											<li class="LINivel2">Seleccioná "Otras operaciones".</li>
+											<li class="LINivel2">Seleccioná "Clave de Acceso Home Banking".</li>
+											<li class="LINivel2">Seleccioná "Tipo de documento".</li>
+											<li class="LINivel2">Ingresá "Número de documento".</li>
+											<li class="LINivel2">Ingresá "Clave de acceso" (a tu elección. Debe ser de 8 dígitos).</li>
+											<li class="LINivel2">Confirmá "Clave de acceso".</li>
+											<li class="LINivel2">Transacción terminada.</li>
+											<li class="LINivel2">Retirá el Ticket.</li>
+											<li class="LINivel2">Ya podés operar a través de Internet.</li>
+										</ul>
+									</li>
+								</ul>
+
+								<br />
+
+								<ul class="ULNivel1">
+									<li class="LINivel1">
+										¿Cómo pagar?
+										<ul class="ULNivel2">
+											<li class="LINivel2">Ingresá a <a href="http://www.pagomiscuentas.com.ar" target="_blank">www.pagomiscuentas.com.ar</a></li>
+											<li class="LINivel2">Seleccioná "Banco".</li>
+											<li class="LINivel2">Seleccioná "Documento".</li>
+											<li class="LINivel2">Ingresá "Clave".</li>
+											<li class="LINivel2">Seleccioná "Otras Cuentas".</li>
+											<li class="LINivel2">Seleccioná "Rubro": "Plan de Ahorro".</li>
+											<li class="LINivel2">Seleccioná "Empresa": "Autoahorro Volkswagen".</li>
+											<li class="LINivel2">Ingresá "Clave de Adherente": utilizar la Clave de Pago Electrónico de 13 dígitos que figura en el casillero "Lugares de Pago" del cupón de pago. Seleccioná "Nº de cuenta".</li>
+											<li class="LINivel2">Reconfirmá "Nº de cuenta".</li>
+											<li class="LINivel2">Seleccioná "Pagar".</li>
+											<li class="LINivel2">Imprimí el ticket.</li>
+											<li class="LINivel2">Operación terminada.</li>
+										</ul>
+									</li>
+								</ul>
+
+								<br />
+
+								<b>linkpagos.com.ar</b>
+								<ul class="ULNivel1">
+									<li class="LINivel1">
+										¿Cómo obtener la clave de acceso?
+										<ul class="ULNivel2">
+											<li class="LINivel2">Ingresá tu Tarjeta Link en cualquier cajero de la red.</li>
+											<li class="LINivel2">Ingresá "Código de Identificación Personal".</li>
+											<li class="LINivel2">Seleccioná "Claves".</li>
+											<li class="LINivel2">Seleccioná "Clave de Internet Home Banking".</li>
+											<li class="LINivel2">Ingresá "Nueva clave de acceso a Home Banking" (6 dígitos).</li>
+											<li class="LINivel2">Reingresá "Nueva clave de acceso a Home Banking".</li>
+											<li class="LINivel2">Transacción terminada.</li>
+											<li class="LINivel2">Ya podés operar a través de Internet.</li>
+										</ul>
+									</li>
+								</ul>
+								
+								<br />
+								
+								<ul class="ULNivel1">
+									<li class="LINivel1">
+										¿Cómo pagar?
+										<ul class="ULNivel2">
+											<li class="LINivel2">Ingresá a <a href="http://www.pagoslink.com.ar" target="_blank">www.pagoslink.com.ar</a></li>
+											<li class="LINivel2">Ingresá a la opción "Pague desde aquí sus impuestos y servicios".</li>
+											<li class="LINivel2">Accederás a un listado de entidades habilitadas.</li>
+											<li class="LINivel2">Seleccioná tu entidad y luego ingresá tu usuario y clave.</li>
+											<li class="LINivel2">Una vez dentro del sistema seleccioná la opción "Pagos".</li>
+											<li class="LINivel2">Seleccioná "Pagar".</li>
+											<li class="LINivel2">Deberás localizar el rubro (Préstamo, Seguros y Aportes AFJP) y el servicio (Autoahorro Volkswagen).</li>
+											<li class="LINivel2">Ingresá el Código de Servicio o Código Abreviado (número de 2 dígitos que genera el sistema al realizar un pago por primera vez).</li>
+											<li class="LINivel2">Con este código abreviado podrás abonar en el futuro evitando ingresar el código de servicio completo.</li>
+											<li class="LINivel2">Finalmente, ingresá tu clave.</li>
+											<li class="LINivel2">Imprimí el ticket.</li>
+											<li class="LINivel2">Operación terminada.</li>
+										</ul>
+									</li>
+								</ul>
+								
+							</p>
+						</div>
+						<p>
+							<a href="http://www.pagomiscuentas.com.ar" target="_blank">www.pagomiscuentas.com.ar</a>&nbsp;<img src="~/Content/images/btn_popup_10x10.gif" /><br />
+							<a href="http://www.linkpagos.com.ar" target="_blank">www.linkpagos.com.ar</a>&nbsp;<img src="~/Content/images/btn_popup_10x10.gif" /><br />
+						</p>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="separadorFormaPago">&nbsp;</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="~/Content/images/debito_automatico.gif" alt="Débito automático" />
+				</td>
+				<td>
+					<div class="tituloMedioDePago">Débito Automático en las tarjetas Mastercard, Argencard, Visa, American Express, Tarjeta Naranja, Italcred, Más, CMR, Nativa y Cabal.</div>
+					<div class="descripcionMedioDePago">
+						Si poseés una tarjeta de crédito Mastercard, Argencard, Visa, American Express, Tarjeta Naranja, Italcred, Más, CMR, Nativa o Cabal, podés solicitar sin costo adicional la adhesión a este servicio. Solamente deberás completar y firmar el correspondiente formulario en cualquier Concesionario Oficial Volkswagen o en el Centro de Atención al Cliente de Autoahorro. Una vez aprobada la adhesión, el importe de la cuota se verá reflejado en el resumen de tu tarjeta de crédito, el cual será la única constancia de pago.
+						<p>
+							<a href="http://www.mastercard.com.ar" target="_blank">www.mastercard.com.ar</a>&nbsp;<img src="~/Content/images/btn_popup_10x10.gif" /><br />
+							<a href="http://www.argencard.com.ar" target="_blank">www.argencard.com.ar</a>&nbsp;<img src="~/Content/images/btn_popup_10x10.gif" /><br />
+							<a href="http://www.visa.com.ar" target="_blank">www.visa.com.ar</a>&nbsp;<img src="~/Content/images/btn_popup_10x10.gif" /><br />
+							<a href="http://www.americanexpress.com.ar" target="_blank">www.americanexpress.com.ar</a>&nbsp;<img src="~/Content/images/btn_popup_10x10.gif" /><br />
+							<a href="http://www.tarjetanaranja.com.ar" target="_blank">www.tarjetanaranja.com.ar</a>&nbsp;<img src="~/Content/images/btn_popup_10x10.gif" /><br />
+							<a href="http://www.italcred.com.ar" target="_blank">www.italcred.com.ar</a>&nbsp;<img src="~/Content/images/btn_popup_10x10.gif" /><br />
+							<a href="http://www.tarjetasmas.com.ar" target="_blank">www.tarjetasmas.com.ar</a>&nbsp;<img src="~/Content/images/btn_popup_10x10.gif" /><br />
+							<a href="http://www.cmrfalabella.com.ar" target="_blank">www.cmrfalabella.com.ar</a>&nbsp;<img src="~/Content/images/btn_popup_10x10.gif" /><br />
+							<a href="http://www.nativanacion.com.ar" target="_blank">www.nativanacion.com.ar</a>&nbsp;<img src="~/Content/images/btn_popup_10x10.gif" /><br />
+							<a href="http://www.cabal.coop" target="_blank">www.cabal.coop</a>&nbsp;<img src="~/Content/images/btn_popup_10x10.gif" /><br />
+						</p>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="separadorFormaPago">&nbsp;</div>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<div class="tituloMedioDePago">Pago Directo</div>
+					<div class="descripcionMedioDePago">
+						Podés abonar las cuotas de tu plan utilizando el Servicio de Pago Directo a través del Sistema Nacional de Pagos. Para ello deberás completar y firmar el formulario de adhesión en cualquier Concesionario Oficial Volkswagen o en las oficinas de Autoahorro. El débito correspondiente entrará en vigencia en el momento en que en el cupón de pago aparezca la leyenda que indique: "El presente cupón será debitado de su Cuenta Corriente o Caja de Ahorro". El extracto bancario será suficiente constancia de pago.
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="separadorFormaPago">&nbsp;</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="~/Content/images/pago_facil.gif" alt="e-Billing" />
+				</td>
+				<td>
+					<div class="tituloMedioDePago">e-Billing</div>
+					<div class="descripcionMedioDePago">
+						Es un servicio gratuito que te permite abonar la cuota de tu plan aunque el cupón no te haya llegado, solicitando la impresión del mismo en cualquier sucursal de Pago Fácil, o imprimiéndolo vos mismo ingresando a <a href="http://www.e-pagofacil.com.ar" target="_blank">www.e-pagofacil.com.ar</a>.
+						<p><a href="http://www.e-pagofacil.com.ar" target="_blank">www.e-pagofacil.com.ar</a>&nbsp;<img src="~/Content/images/btn_popup_10x10.gif" /></p>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="separadorFormaPago">&nbsp;</div>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<div class="tituloMedioDePago">Pago por ventanilla sin cupón</div>
+					<div class="descripcionMedioDePago">
+						Podrás abonar la cuota mensual de tu plan únicamente con el Número de Grupo y Orden, sin necesidad de llevar el cupón de pago.
+						<div class="ampliarMedioDePago"><img src="~/Content/images/button_ampliar.gif" alt="Ampliar">&nbsp;&nbsp;<a href="javascript:MostrarInfoAmpliada('infoAmpliadaVentaqnillaSinCupon');">Ampliar información</a></div>
+						<div class="informacionAmpliadaMedioDePago" id="infoAmpliadaVentaqnillaSinCupon">
+							<p>Podrás abonar la cuota mensual de tu plan únicamente con el Número de Grupo y Orden, sin necesidad de llevar el cupón de pago, en las siguientes alternativas de pago:</p>
+							<ul class="ULNivel2">
+								<li class="LINivel2">Banco Galicia</li>
+								<li class="LINivel2">Banco Patagonia</li>
+								<li class="LINivel2">Banco Santander Río (además del Grupo y Orden, deberás llevar el número de acuerdo: 3056133268800101)</li>
+								<li class="LINivel2">Rapipago</li>
+								<li class="LINivel2">Pago Fácil</li>
+								<li class="LINivel2">Pago Telefónico con tarjeta</li>
+								<li class="LINivel2">RIPSA</li>
+								<li class="LINivel2">Pagos en Autoahorro Volkswagen</li>
+							</ul>
+							<p>Por otra parte, si abonás a través de Link y Banelco, deberás ingresar la Clave de Pago Electrónico de 13 dígitos que figura impresa en el casillero "Lugares de Pago" del cupón.</p>
+
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="separadorFormaPago">&nbsp;</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="~/Content/images/pago_telefonico.gif" alt="Pago Telefónico" />
+				</td>
+				<td>
+					<div class="tituloMedioDePago">Pago telefónico</div>
+					<div class="descripcionMedioDePago">
+						Llamá al (011) 4126-4500 ó al (011) 4819-3333 durante las 24 horas. El sistema te guiará de manera automática para efectuar el pago. Sólo necesitás tu tarjeta de crédito Visa o Mastercard y el número de Grupo y Orden de tu plan. Una vez efectuado el pago, se asignará un código de seguridad y podrás obtener la constancia de la operación al día siguiente de realizarla, ingresando a <a href="http://www.bapropagos.com.ar" target="_blank">www.bapropagos.com.ar</a>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="separadorFormaPago">&nbsp;</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="~/Content/images/autoahorro.gif" alt="Autoahorro" />
+				</td>
+				<td>
+					<div class="tituloMedioDePago">Autoahorro VW</div>
+					<div class="descripcionMedioDePago">
+						Pagos en Autoahorro Volkswagen:
+						<ul>
+							<li>Efectivo</li>
+							<li>Cheques propios y de terceros</li>
+							<li>Tarjeta de Débito Maestro</li>
+							<li>Tarjeta de Crédito Mastercard</li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="separadorFormaPago">&nbsp;</div>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<div class="tituloMedioDePago">Red de Recaudación Bancaria</div>
+					<div class="descripcionMedioDePago">
+						Pagos en efectivo o con cheque propio.
+						<div class="ampliarMedioDePago"><img src="~/Content/images/button_ampliar.gif" alt="Ampliar">&nbsp;&nbsp;<a href="javascript:MostrarInfoAmpliada('infoAmpliadaRecaudacionBancaria');">Ampliar información</a></div>
+						<div class="informacionAmpliadaMedioDePago" id="infoAmpliadaRecaudacionBancaria">
+							<ul class="ULNivel2">
+								<li class="LINivel2">Banco Patagonia</li>
+								<li class="LINivel2">Banco Galicia</li>
+								<li class="LINivel2">Banco Macro Bansud S.A. (para las provincias de Jujuy, Misiones y Salta)</li>
+								<li class="LINivel2">Banco Itaú Buen Ayre</li>
+								<li class="LINivel2">Banco de la Provincia de Buenos Aires</li>
+								<li class="LINivel2">Banco Credicoop</li>
+								<li class="LINivel2">Banco Santander Río (nº de acuerdo Autoahorro Volkswagen: 3056133268800101)</li>
+								<li class="LINivel2">Banco de la Nación Argentina</li>
+								<li class="LINivel2">Banco de la Provincia de Córdoba</li>
+								<li class="LINivel2">Banco de la Provincia de Santa Cruz</li>
+								<li class="LINivel2">BBVA Banco Francés</li>
+								<li class="LINivel2">Banco de San Juan</li>
+								<li class="LINivel2">Banco Supervielle</li>
+								<li class="LINivel2">Banco de Chubut</li>
+								<li class="LINivel2">Banco de Neuquén</li>
+								<li class="LINivel2">Banco de Formosa</li>
+								<li class="LINivel2">Banco Comafi SA</li>
+								<li class="LINivel2">Nuevo Banco del Chaco</li>
+								<li class="LINivel2">Banco de Santiago del Estero</li>
+								<li class="LINivel2">Banco de Tucumán</li>
+							</ul>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+
+	</div>
+</div>

@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Matassi e Imperiale</title>
+	<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<meta name="viewport" content="width=device-width" />
+	<link href="/Content/lightslider.css" rel="stylesheet" />
+
+	<script src="/Scripts/jquery-1.11.3.js"></script>
+
+
+	<script src="/Scripts/lightSlider.js"></script>
+
+
+
+
+</head>
+<body>
+	<div id="pagina">
+		<header>
+			<a href="http://www.matassi.com.ar/" id="logo"><img src="/Content/images/Logo4.png" alt="logo" id="logo_header" /></a>
+
+			<nav id="navMenu">
+				<ul id="menu">
+					<li class="itemMenu dropdown">
+						<a href="#">Modelos</a>
+						<ul class="sub-menu" style="display: none;">
+							<li><a href="/Modelos/up" class="itemSubMenu">up!</a></li>
+							<li><a href="#" class="itemSubMenu">Gol Trend</a></li>
+							<li><a href="#" class="itemSubMenu">Saveiro</a></li>
+							<li><a href="#" class="itemSubMenu">Voyage</a></li>
+							<li><a href="#" class="itemSubMenu">Fox</a></li>
+							<li><a href="#" class="itemSubMenu">Crossfox</a></li>
+							<li><a href="#" class="itemSubMenu">Suran</a></li>
+							<li><a href="#" class="itemSubMenu">Suran Cross</a></li>
+							<li><a href="#" class="itemSubMenu">Nuevo Golf</a></li>
+							<li><a href="#" class="itemSubMenu">Golf Variant</a></li>
+							<li><a href="#" class="itemSubMenu">Volkswagen Vento</a></li>
+						</ul>
+					</li>
+					<li class="itemMenu dropdown">
+						<a href="#">Empresa</a>
+						<ul class="sub-menu" style="display: none;">
+							<li><a href="#" class="itemSubMenu">Horarios de atención</a></li>
+							<li><a href="#" class="itemSubMenu">Listado de Internos</a></li>
+							<li><a href="#" class="itemSubMenu">Trabaja con nosotros</a></li>
+							<li><a href="#" class="itemSubMenu">Encuesta de satisfac. de venta</a></li>
+							<li><a href="#" class="itemSubMenu">Encuesta de satisfac. de post-venta</a></li>
+						</ul>
+					</li>
+					<li class="itemMenu">
+						<a href="#">Ventas Corporativas</a>
+					</li>
+					<li class="itemMenu dropdown">
+						<a href="#">PostVenta</a>
+						<ul class="sub-menu" style="display: none;">
+							<li><a href="#" class="itemSubMenu">Solicite su turno</a></li>
+							<li><a href="#" class="itemSubMenu">Accesorios</a></li>
+							<li><a href="#" class="itemSubMenu">Garantía Volkswagen</a></li>
+							<li><a href="#" class="itemSubMenu">Horarios de atención</a></li>
+							<li><a href="#" class="itemSubMenu">Servicios de Inspección</a></li>
+							<li><a href="#" class="itemSubMenu">Yo Cuido a mi Volkswagen</a></li>
+						</ul>
+					</li>
+					<li class="itemMenu dropdown">
+						<a href="#" class="">Autoahorro</a>
+						<ul class="sub-menu" style="display: none;">
+							<li><a href="#" class="itemSubMenu">Información General</a></li>
+							<li><a href="#" class="itemSubMenu">¿Qué es?</a></li>
+							<li><a href="#" class="itemSubMenu">Medios de Pago</a></li>
+							<li><a href="#" class="itemSubMenu">Ganadores</a></li>
+							<li><a href="#" class="itemSubMenu">Planes</a></li>
+							<li><a href="#" class="itemSubMenu">Ofertas y emisiones de cuota</a></li>
+							<li><a href="#" class="itemSubMenu">Pago puntual</a></li>
+							<li><a href="#" class="itemSubMenu">Cómo licitar</a></li>
+							<li><a href="#" class="itemSubMenu">Formularios</a></li>
+						</ul>
+					</li>
+					<li class="itemMenu">
+						<a href="#">Seminuevos</a>
+					</li>
+				</ul>
+			</nav>
+
+			<ul class="menuSuperior">
+				<li><a href="#">Home</a></li>
+				<li>|</li>
+				<li><a href="#">Contáctenos</a></li>
+			</ul>
+
+		</header>
+		<div id="body">
+
+			<script type="text/javascript">
+
+				$(document).ready(function () {
+					alert($('#image-gallery'))
+					$('#image-gallery').lightSlider({
+						gallery: true,
+						item: 1,
+						thumbItem: 9,
+						slideMargin: 0,
+						speed: 500,
+						auto: true,
+						loop: true,
+						onSliderLoad: function () {
+							$('#image-gallery').removeClass('cS-hidden');
+						}
+					});
+				});
+
+			</script>
+
+			<div class="infoModelo">
+				<a href="#" class="modeloActual">up!</a>
+				<div class="infoModeloTitulos">
+					<ul class="">
+						<li>|</li>
+						<li>
+							<a href="http://www.volkswagen.com.ar/es/modelos/vw--up/galeria.html"><span>Galería</span></a>
+						</li>
+						<li>|</li>
+						<li>
+							<a href="http://www.volkswagen.com.ar/es/modelos/vw--up/versiones.html"><span>Versiones</span></a>
+						</li>
+						<li>|</li>
+						<li>
+							<a href="http://www.volkswagen.com.ar/es/modelos/vw--up/asesoramiento01.html"><span>Asesoramiento Comercial</span></a>
+						</li>
+						<li>|</li>
+						<li>
+							<a href="http://www.volkswagen.com.ar/es/modelos/vw--up/accesorios.html"><span>Accesorios</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="infoModeloImagen">
+				<div class="demo">
+					<div class="item">
+						<div class="clearfix" style="max-width:957px;">
+							<ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+								<li data-thumb="~/Content/Modelos/Amarok/AmarokChica_01.jpg">
+									<img src="/Content/Modelos/Amarok/AmarokGrande_01.jpg" />
+								</li>
+								<li data-thumb="~/Content/Modelos/Amarok/AmarokChica_02.jpg">
+									<img src="/Content/Modelos/Amarok/AmarokGrande_02.jpg" />
+								</li>
+								<li data-thumb="~/Content/Modelos/Amarok/AmarokChica_03.jpg">
+									<img src="/Content/Modelos/Amarok/AmarokGrande_03.jpg" />
+								</li>
+								<li data-thumb="~/Content/Modelos/Amarok/AmarokChica_04.jpg">
+									<img src="/Content/Modelos/Amarok/AmarokGrande_04.jpg" />
+								</li>
+								<li data-thumb="~/Content/Modelos/Amarok/AmarokChica_05.jpg">
+									<img src="/Content/Modelos/Amarok/AmarokGrande_05.jpg" />
+								</li>
+								<li data-thumb="~/Content/Modelos/Amarok/AmarokChica_06.jpg">
+									<img src="/Content/Modelos/Amarok/AmarokGrande_06.jpg" />
+								</li>
+								<li data-thumb="~/Content/Modelos/Amarok/AmarokChica_07.jpg">
+									<img src="/Content/Modelos/Amarok/AmarokGrande_07.jpg" />
+								</li>
+								<li data-thumb="~/Content/Modelos/Amarok/AmarokChica_08.jpg">
+									<img src="/Content/Modelos/Amarok/AmarokGrande_08.jpg" />
+								</li>
+								<li data-thumb="~/Content/Modelos/Amarok/AmarokChica_09.jpg">
+									<img src="/Content/Modelos/Amarok/AmarokGrande_09.jpg" />
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div><!--<h3>up</h3><h3>0</h3>-->
+
+		</div>
+		<footer>
+			<ul class="footerIzq">
+				<li>(*) Las imágenes publicadas en este sitio son de carácter ilustrativo. Consulte equipamientos y especificaciones técnicas en nuestra red de concesionarios oficiales. *FOTO NO CONTRACTUAL.</li>
+			</ul>
+			<ul class="footerDer">
+				<li>© Matassi e Imperiale 2015</li>
+				<li>|</li>
+				<li><a href="#">Términos y Condiciones</a></li>
+				<li>|</li>
+				<li><a href="#">Políticas de privacidad</a></li>
+			</ul>
+		</footer>
+	</div>
+
+
+
+	<!-- Visual Studio Browser Link -->
+	<script type="application/json" id="__browserLink_initializationData">
+		{"appName":"Chrome","requestId":"d3eb65d1287c47f0b4e70fed8ce01fba"}
+	</script>
+	<script type="text/javascript" src="http://localhost:3866/bffb3513562e46bcafe493e82baf53e1/browserLink" async="async"></script>
+	<!-- End Browser Link -->
+
+</body>
+</html>

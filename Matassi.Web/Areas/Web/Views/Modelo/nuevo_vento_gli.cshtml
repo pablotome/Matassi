@@ -1,0 +1,708 @@
+﻿@{
+	ViewBag.Title = "up";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+	@Styles.Render("~/bundles/estilosCSSModelo")
+	@Scripts.Render("~/bundles/funcionesModelo")
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#divExterior').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+			$('#divSeguridad').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+
+			$(window).on("orientationchange", function () {
+				//window.location.reload();
+				setTimeout(function () {
+					$('#divExterior').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+				}, 500);
+
+				setTimeout(function () {
+					$('#divSeguridad').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+				}, 500);
+			});
+		});
+	</script>
+}
+
+
+<div id="divBannerTituloModelo">
+	<span id="spnTituloModelo">
+		Nuevo Vento GLI
+	</span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+	<ul id="ulListaCaracteristicasModelo">
+		<li class="liExterior" data-divmodelos="divExterior">Exterior</li>
+		<li class="liInterior" data-divmodelos="divInterior">Interior</li>
+		<li class="liPerformance" data-divmodelos="divPerformance">Performance</li>
+		<li class="liSeguridad" data-divmodelos="divSeguridad">Seguridad</li>
+		<li class="liTecnologiaConfort" data-divmodelos="divTecnologiaConfort">Tecnología y Confort</li>
+	</ul>
+</div>
+
+<div id="divImagenModelo">
+	<img src="~/Content/info_modelos/nuevo_vento_gli/vento_gli.jpg" class="imgResponsiva" style="margin-top: 75px;" />
+</div>
+
+<div id="divTituloModelo">
+	Racionalmente impulsivo
+</div>
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+	<div class="iconoDesplegar">
+		<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+		<span>
+			Selecciona categoria
+		</span>
+	</div>
+	<ul class="oculto">
+		<li class="liExterior" data-divmodelos="divExterior">Exterior</li>
+		<li class="liInterior" data-divmodelos="divInterior">Interior</li>
+		<li class="liPerformance" data-divmodelos="divPerformance">Performance</li>
+		<li class="liSeguridad" data-divmodelos="divSeguridad">Seguridad</li>
+		<li class="liTecnologiaConfort" data-divmodelos="divTecnologiaConfort">Tecnología y Confort</li>
+	</ul>
+</div>
+
+
+<!----------------------------------EXTERIOR---------------------------------->
+<div id="divExterior" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Deportivo por fuera
+	</div>
+	<!--<div class="SubTituloSeccion">
+		&nbsp;
+	</div>-->
+	<div class="listaHorizontalImagenes">
+		<ul>
+			<li data-pos="1" class="linkCarouselApagado linkCarouselEncendido">Llantas de 18"</li>
+			<li data-pos="2" class="linkCarouselApagado">Doble escape deportivo</li>
+			<li data-pos="3" class="linkCarouselApagado">Emblemas GLI</li>
+			<li data-pos="4" class="linkCarouselApagado">Alerón deportivo</li>
+			<li data-pos="5" class="linkCarouselApagado">Techo panorámico</li>
+			<li data-pos="6" class="linkCarouselApagado">Faros Full LED</li>
+		</ul>
+
+		<!-- Carrousel -->
+		<div class="divCarousel">
+			<div>
+				<ul>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_vento_gli/Exterior/Exterior01.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_vento_gli/Exterior/Exterior02.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_vento_gli/Exterior/Exterior03.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_vento_gli/Exterior/Exterior04.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_vento_gli/Exterior/Exterior05.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_vento_gli/Exterior/Exterior06.jpg" class="imgResponsiva" />
+					</li>
+				</ul>
+			</div>
+
+			<div class="divFlechaIzquierda">
+				<img src="~/Content/img/iconos/flechaIzquierda.svg" class="svg" />
+			</div>
+			<div class="divFlechaDerecha">
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+			</div>
+
+		</div>
+	</div>
+	<div class="divPaginador"><ul class="ulIndice"></ul></div>
+
+	<div class="InfoCarousel">
+		<ul>
+			<li data-pos="1">
+				<h5>
+					Llantas de 18”
+				</h5>
+				<h3>
+					Deportividad en cada detalle
+				</h3>
+				<p>
+					El Nuevo Vento GLI viene equipado con llantas de aluminio pulido de 18”, para arrancar miradas donde sea que vayas.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="2">
+				<h5>
+					Doble escape deportivo
+				</h5>
+				<h3>
+					Diseñado para liberar tu potencia
+				</h3>
+				<p>
+					El doble escape es el distintivo que hace al Nuevo Vento GLI un auto naturalmente deportivo.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="3">
+				<h5>
+					Emblemas GLI
+				</h5>
+				<h3>
+					Un símbolo inconfundible
+					<br>
+				</h3>
+				<p>
+					Así es como el Nuevo Vento GLI se distingue entre los demás: con su emblema GLI.
+				</p>
+			</li>
+
+			<li data-pos="4">
+				<h5>
+					Alerón deportivo
+				</h5>
+				<h3>
+					Detalles que resaltan
+					<br>
+				</h3>
+				<p>
+					El alerón en la tapa del baúl es el detalle que va a convertir tus viajes en una verdadera experiencia con estilo.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="5">
+				<h5>
+					Techo panorámico
+				</h5>
+				<h3>
+					Sentí la luz del día
+					<br>
+				</h3>
+				<p>
+					El techo corredizo del Nuevo Vento GLI es perfecto para darte la oportunidad de mirar mejor el paisaje mientras manejás.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="6">
+				<h5>
+					Faros Full LED
+				</h5>
+				<h3>
+					Una luz en el camino
+					<br>
+				</h3>
+				<p>
+					Los faros delanteros y traseros en LED son perfectos para hacer brillar tu noche arriba del Nuevo Vento GLI.
+					<br>
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<!----------------------------------GALERIA---------------------------------->
+<div class="divGaleria">
+	<a href="#">
+		<img src="~/Content/info_modelos/nuevo_vento_gli/Galeria/Galeria01.jpg" class="imgResponsiva" />
+		<div class="divIconoGaleria1">
+			<div class="divIconoGaleria2">
+				<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+			</div>
+		</div>
+	</a>
+</div>
+
+
+
+
+<!----------------------------------INTERIOR---------------------------------->
+<div id="divInterior" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Sofisticado por dentro
+	</div>
+	<!--<div class="SubTituloSeccion">
+		Un auto que se adapta a vos.
+	</div>-->
+
+	<hr class="hrSeparadorItemsSeccion" />
+	<div class="Imagenes2Columnas">
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Pedales en aluminio</span>
+		</div>
+		<div class="Imagenes2Columnas-Izquierda">
+			<div>
+				<img src="~/Content/info_modelos/nuevo_vento_gli/Interior/Interior01.jpg" class="imgResponsiva" />
+			</div>
+			<h5>Pedales en aluminio</h5>
+			<h3>Sentí la máxima potencia</h3>
+			<p>Con los pedales en aluminio del Nuevo Vento GLI vas a darles a tus pies la emoción de aumentar o disminuir el ritmo de tu viaje.</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Estribos iluminados</span>
+		</div>
+		<div class="Imagenes2Columnas-Derecha">
+			<div>
+				<img src="~/Content/info_modelos/nuevo_vento_gli/Interior/Interior02.jpg" class="imgResponsiva" />
+			</div>
+			<h5>Estribos iluminados</h5>
+			<h3>Una entrada única</h3>
+			<p>Nadie quiere bajarse del Nuevo Vento GLI, pero los estribos iluminados te van a ayudar a dar el primer paso y continuar tu camino.</p>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes3Columnas">
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Interior</span>
+		</div>
+		<div class="Imagenes3Columnas-Izquierda">
+			<img src="~/Content/info_modelos/nuevo_vento_gli/Interior/Interior03.jpg" class="imgResponsiva" />
+			<h5>
+				Transmisión DSG
+			</h5>
+			<h3>
+				Dinámico y potente
+			</h3>
+			<p>
+				La transmisión DSG de doble embrague de 6 velocidades te dará la fuerza que buscás con un rendimiento óptimo.
+			</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Interior</span>
+		</div>
+		<div class="Imagenes3Columnas-Centro">
+			<img src="~/Content/info_modelos/nuevo_vento_gli/Interior/Interior04.jpg" class="imgResponsiva" />
+			<h5>
+				Volante deportivo
+			</h5>
+			<h3>
+				Eficiencia en tus manos
+			</h3>
+			<p>
+				Con las levas de cambios al alcance de tus manos vas a vivir un viaje de una comodidad inigualable.
+			</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Interior</span>
+		</div>
+		<div class="Imagenes3Columnas-Derecha">
+			<img src="~/Content/info_modelos/nuevo_vento_gli/Interior/Interior05.jpg" class="imgResponsiva" />
+			<h5>
+				Asientos de cuero perforado
+			</h5>
+			<h3>
+				Más refinado que nunca
+			</h3>
+			<p>
+				El Nuevo Vento GLI te permite disfrutar una experiencia más cómoda con su tapizado de cuero perforado.
+			</p>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+
+<!----------------------------------GALERIA---------------------------------->
+<div class="divGaleria">
+	<a href="#">
+		<img src="~/Content/info_modelos/nuevo_vento_gli/Galeria/Galeria04.jpg" class="imgResponsiva" />
+		<div class="divIconoGaleria1">
+			<div class="divIconoGaleria2">
+				<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+			</div>
+		</div>
+	</a>
+</div>
+
+
+
+<!----------------------------------PERFORMANCE---------------------------------->
+<div id="divPerformance" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Más adrenalina
+	</div>
+	<!--<div class="SubTituloSeccion">
+		Además de estar más conectado que nunca, el Nuevo up! suma elementos únicos en el segmento como limpiaparabrisas automáticos con sensor de lluvia, faros antiniebla con “Cornering light”, sensor crepuscular con activación de luces automáticas y función “Coming &amp; Leaving Home”.
+	</div>-->
+
+	<hr class="hrSeparadorItemsSeccion">
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13" id="icon-arrow-right" width="100%" height="100%" class="svg imgResponsiva replaced-svg"><path d="M4.5.1l6.1 6.1c.2.2.2.6 0 .8l-6.1 6.1c-.1.1-.2.1-.3 0l-1.8-1.8c-.1-.1-.1-.2 0-.3l4.4-4.4-4.4-4.5c-.1 0-.1-.1 0-.2L4.2.1c.1-.1.2-.1.3 0z"></path></svg>
+			<span>Performance</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/nuevo_vento_gli/Performance/Performance01.jpg" class="imgResponsiva">
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Performance
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Sentí toda su potencia desde el arranque
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Con una motorización excepcional y una respuesta instantánea, el Nuevo Vento GLI entrega una potencia total de 230 CV y un excelente torque de 350Nm en revoluciones bajas.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/nuevo_vento_gli/Performance/Performance01.jpg" class="imgResponsiva">
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion">
+
+</div>
+
+
+
+
+
+<!----------------------------------SEGURIDAD---------------------------------->
+<div id="divSeguridad" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Confiable y robusto
+	</div>
+	<div class="SubTituloSeccion">
+		Total conectividad.
+	</div>
+	<div class="listaHorizontalImagenes">
+		<ul>
+			<li data-pos="1" class="linkCarouselApagado linkCarouselEncendido">Modos de conducción</li>
+			<li data-pos="2" class="linkCarouselApagado">Dirección electromecánica progresiva</li>
+			<li data-pos="3" class="linkCarouselApagado">Airbags</li>
+			<li data-pos="4" class="linkCarouselApagado">Cámara de visión trasera</li>
+			<li data-pos="5" class="linkCarouselApagado">ESC</li>
+			<li data-pos="6" class="linkCarouselApagado">Light Assist</li>
+			<li data-pos="7" class="linkCarouselApagado">Bloqueo deportivo del diferencial</li>
+		</ul>
+
+		<!-- Carrousel -->
+		<div class="divCarousel">
+			<div>
+				<ul>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_vento_gli/Seguridad/Seguridad01.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_vento_gli/Seguridad/Seguridad02.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_vento_gli/Seguridad/Seguridad03.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_vento_gli/Seguridad/Seguridad04.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_vento_gli/Seguridad/Seguridad05.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_vento_gli/Seguridad/Seguridad06.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_vento_gli/Seguridad/Seguridad07.jpg" class="imgResponsiva" />
+					</li>
+				</ul>
+			</div>
+
+			<div class="divFlechaIzquierda">
+				<img src="~/Content/img/iconos/flechaIzquierda.svg" class="svg" />
+			</div>
+			<div class="divFlechaDerecha">
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+			</div>
+
+		</div>
+	</div>
+	<div class="divPaginador"><ul class="ulIndice"></ul></div>
+
+	<div class="InfoCarousel">
+		<ul>
+			<li data-pos="1">
+				<h5>
+					Modos de conducción
+				</h5>
+				<h3>
+					Adecuado para cada momento
+				</h3>
+				<p>
+					Cada camino es diferente. Con el selector de modos de conducción vas a tener la libertad de elegir mejor desempeño o menor consumo de combustible según tu camino.
+				</p>
+			</li>
+
+			<li data-pos="2">
+				<h5>
+					Dirección electromecánica progresiva
+				</h5>
+				<h3>
+					Reacción inmediata
+				</h3>
+				<p>
+					La dirección progresiva brinda un manejo más dinámico y preciso al reducir los ángulos de dirección cuando hacés una curva sin necesidad de girar completamente el volante.
+				</p>
+			</li>
+
+			<li data-pos="3">
+				<h5>
+					Airbags
+				</h5>
+				<h3>
+					Seguridad para todos
+				</h3>
+				<p>
+					El Nuevo Vento GLI es uno de los más seguros de su categoría por sus aceros de alta resistencia y sus seis airbags.
+				</p>
+			</li>
+
+			<li data-pos="4">
+				<h5>
+					Cámara de visión trasera
+				</h5>
+				<h3>
+					Sensores de estacionamiento
+				</h3>
+				<p>
+					El Nuevo Vento GLI cuenta con sensores traseros de estacionamiento para que estaciones de forma más práctica.
+				</p>
+			</li>
+
+			<li data-pos="5">
+				<h5>
+					ESC
+				</h5>
+				<h3>
+					Control de estabilidad
+				</h3>
+				<p>
+					El Control Electrónico de Estabilidad mantiene el vehículo en posición incluso en los caminos más complejos.
+				</p>
+			</li>
+
+			<li data-pos="6">
+				<h5>
+					Light Assist
+				</h5>
+				<h3>
+					Tu guía hacia el futuro
+				</h3>
+				<p>
+					El Sistema Light Assist te permite iluminar hasta el más mínimo detalle, activando y desactivando las luces altas en momentos claves
+				</p>
+			</li>
+
+			<li data-pos="7">
+				<h5>
+					Bloqueo deportivo del diferencial
+				</h5>
+				<h3>
+					Las curvas no son un problema
+				</h3>
+				<p>
+					El bloqueo deportivo del diferencial XDS+ ayudará a distribuir la velocidad de cada llanta para que siempre mantengas el control.
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<!----------------------------------GALERIA---------------------------------->
+<div class="divGaleria">
+	<a href="#">
+		<img src="~/Content/info_modelos/nuevo_vento_gli/Galeria/Galeria05.jpg" class="imgResponsiva" />
+		<div class="divIconoGaleria1">
+			<div class="divIconoGaleria2">
+				<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+			</div>
+		</div>
+	</a>
+</div>
+
+
+<!----------------------------------TECNOLOGÍA Y CONFORT---------------------------------->
+<div id="divTecnologiaConfort" class="SeccionModelo">
+	<div class="TituloSeccion">
+		El más avanzado en su clase
+	</div>
+	<!--<div class="SubTituloSeccion">
+		Único desde cualquier ángulo.
+	</div>-->
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes3Columnas">
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Cargador de celular inalámbrico</span>
+		</div>
+		<div class="Imagenes3Columnas-Izquierda">
+			<img src="~/Content/info_modelos/nuevo_vento_gli/Tecnologia/Tecnologia01.jpg" class="imgResponsiva" />
+			<h5>
+				Cargador de celular inalámbrico
+			</h5>
+			<h3>
+				Cargado de conectividad
+			</h3>
+			<p>
+				El Nuevo Vento GLI viene equipado con un sistema inalámbrico para que siempre mantengas tu celular con carga.
+			</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Ambient Light</span>
+		</div>
+		<div class="Imagenes3Columnas-Centro">
+			<img src="~/Content/info_modelos/nuevo_vento_gli/Tecnologia/Tecnologia02.jpg" class="imgResponsiva" />
+			<h5>
+				Ambient Light
+			</h5>
+			<h3>
+				Elegí tu propia iluminación
+			</h3>
+			<p>
+				La luz ambiental elegible en colores es perfecta para ponerle tu toque personal a cualquier momento.
+			</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Discover Media</span>
+		</div>
+		<div class="Imagenes3Columnas-Derecha">
+			<img src="~/Content/info_modelos/nuevo_vento_gli/Tecnologia/Tecnologia03.jpg" class="imgResponsiva" />
+			<h5>
+				Discover Media
+			</h5>
+			<h3>
+				Lo último en tecnología
+			</h3>
+			<p>
+				Con el sistema Discover Media podrás estar conectado en todo momento y manejar las principales funciones del Nuevo Vento GLI.
+			</p>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes3Columnas">
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Butacas climatizadas</span>
+		</div>
+		<div class="Imagenes3Columnas-Izquierda">
+			<img src="~/Content/info_modelos/nuevo_vento_gli/Tecnologia/Tecnologia04.jpg" class="imgResponsiva" />
+			<h5>
+				Butacas climatizadas
+			</h5>
+			<h3>
+				Sentite siempre en casa
+			</h3>
+			<p>
+				Las butacas climatizadas de forma individual logran que disfrutes tu viaje de la forma más cómoda posible.
+			</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Climatizador bi-zona</span>
+		</div>
+		<div class="Imagenes3Columnas-Centro">
+			<img src="~/Content/info_modelos/nuevo_vento_gli/Tecnologia/Tecnologia05.jpg" class="imgResponsiva" />
+			<h5>
+				Climatizador bi-zona
+			</h5>
+			<h3>
+				Tu propio mundo
+			</h3>
+			<p>
+				El climatizador regula de forma automática la temperatura interior y permite personalizar la zona del piloto y copiloto por separado.
+			</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Active Info Display</span>
+		</div>
+		<div class="Imagenes3Columnas-Derecha">
+			<img src="~/Content/info_modelos/nuevo_vento_gli/Tecnologia/Tecnologia06.jpg" class="imgResponsiva" />
+			<h5>
+				Active Info Display
+			</h5>
+			<h3>
+				Tablero Digital
+			</h3>
+			<p>
+				El Active Info Display es el tablero 100% digital de Volkswagen. Este cockpit de alta resolución configurable te mostrará datos de consumo de combustible, velocidad, marcha seleccionada, aceleración y hasta la combinación de luz ambiental.
+			</p>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+</div>
+
+
+
+
+<!--BROCHURE-->
+<div id="divBrochure">
+	<div id="div-Brochure-Info">
+		<h2>Brochure<br />de Nuevo Vento GLI</h2>
+		<a href="~/Content/info_modelos/nuevo_vento_gli/Brochure/Brochure.pdf" rel="external" class="linkDescargarBrochure" target="_blank">
+			<div id="div-Brochure-Boton">
+				<div id="div-Brochure-Boton-Inner">Descargalo</div>
+			</div>
+		</a>
+	</div>
+
+	<div id="div-Brochure-Imagen">
+		<img src="~/Content/info_modelos/nuevo_vento_gli/Brochure/Brochure.jpg" class="imgResponsiva" />
+	</div>
+</div>
+
+@section footerModelo
+{
+
+	<div class="md-modal md-effect-12">
+		<div class="md-content">
+			<div id="divGaleriaPopup-Imagenes">
+				<div class="slick-div-aux"><img src="~/Content/info_modelos/nuevo_vento_gli/Galeria/Galeria01.jpg" class="imgResponsiva" /></div>
+				<div class="slick-div-aux"><img src="~/Content/info_modelos/nuevo_vento_gli/Galeria/Galeria04.jpg" class="imgResponsiva" /></div>
+				<div class="slick-div-aux"><img src="~/Content/info_modelos/nuevo_vento_gli/Galeria/Galeria05.jpg" class="imgResponsiva" /></div>
+			</div>
+		</div>
+		<div id="divCerrarGaleria">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg cruzCerrar" />
+		</div>
+	</div>
+	<div class="md-overlay"></div>
+	<br /><br />
+}

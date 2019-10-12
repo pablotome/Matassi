@@ -1,0 +1,139 @@
+﻿@model Matassi.Dominio.Modelo
+@using Matassi.Web.Clases
+
+@{
+	ViewBag.Title = "AccesoriosModelo";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+
+<style type="text/css">
+	#MainBox_form_cm {
+		font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		color: #0b0b0b;
+		width: 920px;
+		margin: 10px auto;
+	}
+
+		#MainBox_form_cm .cm_copete {
+			border-bottom: 1px #cfd7d9 solid;
+			padding-bottom: 6px;
+			font-family: 'VWHeadWeb-Regular';
+			font-size: 15px;
+		}
+
+		#MainBox_form_cm .cm_titulo {
+			padding: 18px 0 4px 0;
+			font-family: 'VWHeadWeb-Regular';
+			font-size: 24px;
+		}
+
+		#MainBox_form_cm UL.box_modelos_acc {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			margin-top: 0px;
+		}
+
+			#MainBox_form_cm UL.box_modelos_acc LI {
+				display: inline;
+				padding: 10px;
+			}
+
+	.accesorio {
+		display: block;
+		margin-bottom: 15px;
+	}
+
+	#MainBox_form_cm .box_item_acc {
+		border: 1px #d0d8da solid;
+		padding: 10px;
+	}
+
+		#MainBox_form_cm .box_item_acc .item_img {
+			float: left;
+			margin-right: 20px;
+			border: 1px #d0d8da solid;
+		}
+
+		#MainBox_form_cm .box_item_acc .item_datos {
+			float: left;
+			width: 460px;
+			height: 180px;
+			padding: 10px 20px 10px 40px;
+			background-color: #eaeeed;
+		}
+
+		#MainBox_form_cm .box_item_acc .item_datos .tit {
+			text-align: left;
+			font-family: 'VWHeadWeb-Regular';
+			font-size: 15px;
+			margin-bottom: 40px;
+		}
+
+	.CleanFloats {
+		clear: both;
+		float: none;
+		height: 0px;
+	}
+	#pagina {
+		position: relative;
+		width: 962px;
+		margin: 0 auto;
+		padding: 0 0px 20px 15px;
+	}
+</style>
+
+<div class="infoModelo">
+	<a href="#" class="modeloActual">@Html.DisplayTextFor(model => model.Nombre)</a>
+	<div class="infoModeloTitulos">
+		<ul class="">
+			<li>|</li>
+			<li>
+				<a href="~/Modelo/@Html.DisplayTextFor(model => model.NombreClave)">Galería</a>
+			</li>
+			<li>|</li>
+			<li>
+				<a href="~/Modelo/Versiones/@Html.DisplayTextFor(model => model.NombreClave)">Versiones</a>
+			</li>
+			<li>|</li>
+			<li>
+				<a href="~/Modelo/Asesoramiento/@Html.DisplayTextFor(model => model.NombreClave)">Asesoramiento Comercial</a>
+			</li>
+			<li>|</li>
+			<li>
+				<span>Accesorios</span>
+			</li>
+		</ul>
+	</div>
+</div>
+<div id="MainBox_form_cm">
+	@foreach (var accesorio in Model.Accesorios)
+	{
+		<div class="accesorio">
+			<div class="box_item_acc">
+				<div class="item_img">
+					<img src='@Url.Action("VerImagenAccesorioModelo", new { id = accesorio.CodAccesorioModelo })' />
+				</div>
+				<div class="item_datos">
+					<div class="tit">
+						@Html.DisplayFor(accesorioItem => accesorio.Titulo)
+					</div>
+					<ul class="item_datos_p">
+						<li>
+							<p><strong>Pieza N°:</strong></p>
+							<p>
+								@Html.DisplayWithBreaksFor(accesorioItem => accesorio.Descripcion)
+							</p><br>
+
+						</li>
+					</ul>
+				</div>
+				<div class="CleanFloats"></div>
+			</div>
+		</div>
+	}
+
+
+</div>

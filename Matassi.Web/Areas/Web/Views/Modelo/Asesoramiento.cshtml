@@ -1,0 +1,59 @@
+﻿@model Matassi.Dominio.Modelo
+
+@{
+    ViewBag.Title = "Asesoramiento";
+    Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+<h2>Asesoramiento</h2>
+
+<div>
+    <h4>Modelo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CodModelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodModelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreClave)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreClave)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bajada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bajada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vigente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vigente)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

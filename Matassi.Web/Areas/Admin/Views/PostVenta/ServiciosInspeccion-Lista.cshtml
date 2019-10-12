@@ -1,0 +1,58 @@
+﻿@using Matassi.Dominio
+@model IEnumerable<Matassi.Dominio.ServicioMantenimiento>
+
+@{
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			<h2>@ViewBag.Title</h2>
+
+			<p class="nuevoItem">
+				@Html.ActionLink("Nuevo Servicio", "ServiciosInspeccion_Crear", null, new { @class = "btn btn-primary" })
+			</p>
+		</td>
+	</tr>
+</table>
+
+<table class="table tabla-centrada">
+	<tr>
+		<th class="oculto">
+			CodServicioMantenimiento
+		</th>
+		<th>
+			Descripción
+		</th>
+		<th>
+			Orden
+		</th>
+		<th>
+			Vigente
+		</th>
+		<th></th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td class="oculto">
+				@Html.DisplayFor(modelItem => item.CodServicioMantenimiento)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.DesServicioMantenimiento)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Orden)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Vigente)
+			</td>
+			<td align="center">
+				@Html.ActionLink("Editar", "ServiciosInspeccion_Editar", new { codServicioMantenimiento = item.CodServicioMantenimiento }) |
+				@Html.ActionLink("Eliminar", "ServiciosInspeccion_Borrar", new { codServicioMantenimiento = item.CodServicioMantenimiento }, new { onclick = string.Format("return confirm('¿Seguro de eliminar el servicio de inspección \"{0}\"?');", item.DesServicioMantenimiento) })
+			</td>
+		</tr>
+	}
+</table>

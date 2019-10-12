@@ -1,0 +1,430 @@
+﻿@model Matassi.Web.Areas.Web.Models.EncuestaPostVentas
+@using Matassi.Web.Clases
+@using Matassi.Web.Areas.Web.Models
+
+@{
+	ViewBag.Title = "Encuesta de satisfacción de clientes - Sector Post-venta";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+<style type="text/css">
+	.btn_enviar {
+		width: 85px;
+		height: 24px;
+		float: right;
+		background: url('../../../../Content/images/btn_enviar.png') no-repeat 0 0;
+		margin-top: 10px;
+	}
+
+		.btn_enviar:hover {
+			width: 85px;
+			height: 24px;
+			background: url('../../../../Content/images/btn_enviar.png') no-repeat 0 -25px;
+		}
+
+
+	dt {
+		font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+		font-size: 14px;
+	}
+
+	dd {
+		display: block;
+		font-family: 'VWHeadWeb-Regular';
+		font-size: 12px;
+		margin-bottom: 20px;
+	}
+
+	.field-validation-error {
+		display: block;
+		font-family: 'VWHeadWeb-Regular';
+		color: #F00;
+		padding-top: 5px;
+		font-size: 12px;
+	}
+
+	.tblOpciones{
+		width:100%;
+	}
+
+	.tblOpciones tr td
+	{
+		text-align:center;
+	}
+	
+	.tblOpciones tr td:first-child
+	{
+		text-align:left;
+	}
+</style>
+
+<div class="infoModelo">
+	<a href="#" class="modeloActual">@ViewBag.Title</a>
+	<div class="infoModeloTitulos">
+		<ul class="">
+			<li>|</li>
+			<li>
+				<span></span>
+			</li>
+		</ul>
+	</div>
+</div>
+<div style="margin: 10px 9px 9px 9px; display:block; position: relative; height: auto; overflow:hidden;">
+	<div class="columnaIzquierda">
+		&nbsp;
+	</div>
+	<div class="columnaDerecha">
+		<img src="~/Content/images/FoxAsesoramiento.jpg" />
+		<div class="TituloPagina">@ViewBag.Title</div>
+		<div>
+			@using (Html.BeginForm("EncuestaSatisfaccionPostVenta", "Empresa", FormMethod.Post))
+			{
+				@Html.AntiForgeryToken()
+
+				<dl class="dl-horizontal">
+					<dt>
+						@Html.DisplayNameFor(Model => Model.SatisfaccionGeneral)
+					</dt>
+
+					<dd>
+						@foreach (NivelSatisfaccionPostVenta1 nivelSatisfaccionPostVenta1 in NivelSatisfaccionPostVenta1.NivelesSatisfaccion(0))
+						{
+							<label>
+								@Html.RadioButton("SatisfaccionGeneral", nivelSatisfaccionPostVenta1.Nivel)
+								@nivelSatisfaccionPostVenta1.Nivel
+							</label>
+							<br />
+						}
+						<br />
+						@Html.ValidationMessageFor(model => model.SatisfaccionGeneral)
+					</dd>
+
+
+					<dt>
+						@Html.DisplayNameFor(model => model.Recomendaria)
+					</dt>
+
+					<dd>
+						@foreach (NivelSatisfaccionPostVenta2 nivelSatisfaccionPostVenta2 in NivelSatisfaccionPostVenta2.NivelesSatisfaccion(0))
+						{
+							<label>
+								@Html.RadioButton("Recomendaria", nivelSatisfaccionPostVenta2.Nivel)
+								@nivelSatisfaccionPostVenta2.Nivel
+							</label>
+							<br />
+						}
+						<br />
+						@Html.ValidationMessageFor(model => model.Recomendaria)
+					</dd>
+
+
+					<dt>
+						@Html.DisplayNameFor(model => model.Llevaria)
+					</dt>
+
+					<dd>
+						@foreach (NivelSatisfaccionPostVenta2 nivelSatisfaccionPostVenta2 in NivelSatisfaccionPostVenta2.NivelesSatisfaccion(0))
+						{
+							<label>
+								@Html.RadioButton("Llevaria", nivelSatisfaccionPostVenta2.Nivel)
+								@nivelSatisfaccionPostVenta2.Nivel
+							</label>
+							<br />
+					<!--, new { onclick = "changeImage(this);", -arroba-class = "radioID" })-->
+						}
+						<br />
+						@Html.ValidationMessageFor(model => model.Llevaria)
+					</dd>
+
+
+					<dt>
+						@Html.DisplayNameFor(model => model.GradoSatisfaccion)
+					</dt>
+
+					<dd>
+						@foreach (NivelSatisfaccionPostVenta1 nivelSatisfaccionPostVenta1 in NivelSatisfaccionPostVenta1.NivelesSatisfaccion(0))
+						{
+							<label>
+								@Html.RadioButton("NivelSatisfaccion", nivelSatisfaccionPostVenta1.Nivel)
+								@nivelSatisfaccionPostVenta1.Nivel
+							</label>
+							<br />
+					<!--, new { onclick = "changeImage(this);", -arroba-class = "radioID" })-->
+						}
+						<br />
+						@Html.ValidationMessageFor(model => model.GradoSatisfaccion)
+					</dd>
+
+
+					<dt>
+						@Html.DisplayNameFor(model => model.ConsejoProximosServicios)
+					</dt>
+
+					<dd>
+						@Html.RadioButton("ConsejoProximosServicios", true, false) Si<br />
+						@Html.RadioButton("ConsejoProximosServicios", false, false) No
+						<br />
+						@Html.ValidationMessageFor(model => model.ConsejoProximosServicios)
+					</dd>
+
+
+					<dt>
+						@Html.DisplayNameFor(model => model.SatisfaccionExplicacion)
+					</dt>
+
+					<dd>
+						@foreach (NivelSatisfaccionPostVenta1 nivelSatisfaccionPostVenta1 in NivelSatisfaccionPostVenta1.NivelesSatisfaccion(0))
+						{
+							<label>
+								@Html.RadioButton("SatisfaccionExplicacion", nivelSatisfaccionPostVenta1.Nivel)
+								@nivelSatisfaccionPostVenta1.Nivel
+							</label>
+							<br />
+					<!--, new { onclick = "changeImage(this);", -arroba-class = "radioID" })-->
+						}
+						<br />
+						@Html.ValidationMessageFor(model => model.SatisfaccionExplicacion)
+					</dd>
+
+
+					<dt>
+						@Html.DisplayNameFor(model => model.CumplioPlazo)
+					</dt>
+
+					<dd>
+						@Html.RadioButton("CumplioPlazo", true, false) Si<br />
+						@Html.RadioButton("CumplioPlazo", false, false) No
+						<br />
+						@Html.ValidationMessageFor(model => model.CumplioPlazo)
+					</dd>
+
+
+					<dt>
+						@Html.DisplayNameFor(model => model.TrabajoIncompleto)
+					</dt>
+
+					<dd>
+						@Html.RadioButton("TrabajoIncompleto", true, false) Si<br />
+						@Html.RadioButton("TrabajoIncompleto", false, false) No
+						<br />
+						@Html.ValidationMessageFor(model => model.TrabajoIncompleto)
+					</dd>
+
+
+					<dt>
+						¿Cuál es el grado de satisfacción con su taller en relación con los siguientes aspectos?
+					</dt>
+
+					<dd>
+						<table class="tblOpciones">
+							<tr>
+								<td></td>
+								<td>Sumamente<br />Satisfecho</td>
+								<td>Muy<br />Satisfecho</td>
+								<td>Satisfecho</td>
+								<td>Poco<br />Satisfecho</td>
+								<td>Nada<br />Satisfecho</td>
+								<td>No<br />Responde</td>
+							</tr>
+							<tr>
+								<td>
+									@Html.DisplayNameFor(model => model.AspectosAmabilidad)<br />
+									@Html.ValidationMessageFor(model => model.AspectosAmabilidad)
+								</td>
+								@foreach (NivelSatisfaccionPostVenta1 nivelSatisfaccionPostVenta1 in NivelSatisfaccionPostVenta1.NivelesSatisfaccion(0))
+								{
+									<td>
+										@Html.RadioButton("AspectosAmabilidad", nivelSatisfaccionPostVenta1.Nivel)
+									</td>
+								}
+							</tr>
+							<tr>
+								<td>
+									@Html.DisplayNameFor(model => model.AspectosAsesoramiento)<br />
+									@Html.ValidationMessageFor(model => model.AspectosAsesoramiento)
+								</td>
+								@foreach (NivelSatisfaccionPostVenta1 nivelSatisfaccionPostVenta1 in NivelSatisfaccionPostVenta1.NivelesSatisfaccion(0))
+								{
+									<td>
+										@Html.RadioButton("AspectosAsesoramiento", nivelSatisfaccionPostVenta1.Nivel)
+									</td>
+								}
+							</tr>
+							<tr>
+								<td>
+									@Html.DisplayNameFor(model => model.AspectosDisposicion)<br />
+									@Html.ValidationMessageFor(model => model.AspectosDisposicion)
+								</td>
+								@foreach (NivelSatisfaccionPostVenta1 nivelSatisfaccionPostVenta1 in NivelSatisfaccionPostVenta1.NivelesSatisfaccion(0))
+								{
+									<td>
+										@Html.RadioButton("AspectosDisposicion", nivelSatisfaccionPostVenta1.Nivel)
+									</td>
+								}
+							</tr>
+							<tr>
+								<td>
+									@Html.DisplayNameFor(model => model.AspectosConfianza)<br />
+									@Html.ValidationMessageFor(model => model.AspectosConfianza)
+								</td>
+								@foreach (NivelSatisfaccionPostVenta1 nivelSatisfaccionPostVenta1 in NivelSatisfaccionPostVenta1.NivelesSatisfaccion(0))
+								{
+									<td>
+										@Html.RadioButton("AspectosConfianza", nivelSatisfaccionPostVenta1.Nivel)
+									</td>
+								}
+							</tr>
+							<tr>
+								<td>
+									@Html.DisplayNameFor(model => model.AspectosRealizacionCorrecta)<br />
+									@Html.ValidationMessageFor(model => model.AspectosRealizacionCorrecta)
+								</td>
+								@foreach (NivelSatisfaccionPostVenta1 nivelSatisfaccionPostVenta1 in NivelSatisfaccionPostVenta1.NivelesSatisfaccion(0))
+								{
+									<td>
+										@Html.RadioButton("AspectosRealizacionCorrecta", nivelSatisfaccionPostVenta1.Nivel)
+									</td>
+								}
+							</tr>
+							<tr>
+								<td>
+									@Html.DisplayNameFor(model => model.AspectosTiempoEsperaEntrega)<br />
+									@Html.ValidationMessageFor(model => model.AspectosTiempoEsperaEntrega)
+								</td>
+								@foreach (NivelSatisfaccionPostVenta1 nivelSatisfaccionPostVenta1 in NivelSatisfaccionPostVenta1.NivelesSatisfaccion(0))
+								{
+									<td>
+										@Html.RadioButton("AspectosTiempoEsperaEntrega", nivelSatisfaccionPostVenta1.Nivel)
+									</td>
+								}
+							</tr>
+							<tr>
+								<td>
+									@Html.DisplayNameFor(model => model.AspectosTiempoEsperaRetira)<br />
+									@Html.ValidationMessageFor(model => model.AspectosTiempoEsperaRetira)
+								</td>
+								@foreach (NivelSatisfaccionPostVenta1 nivelSatisfaccionPostVenta1 in NivelSatisfaccionPostVenta1.NivelesSatisfaccion(0))
+								{
+									<td>
+										@Html.RadioButton("AspectosTiempoEsperaRetira", nivelSatisfaccionPostVenta1.Nivel)
+									</td>
+								}
+							</tr>
+							<tr>
+								<td>
+									@Html.DisplayNameFor(model => model.AspectosLimpieza)<br />
+									@Html.ValidationMessageFor(model => model.AspectosLimpieza)
+								</td>
+								@foreach (NivelSatisfaccionPostVenta1 nivelSatisfaccionPostVenta1 in NivelSatisfaccionPostVenta1.NivelesSatisfaccion(0))
+								{
+									<td>
+										@Html.RadioButton("AspectosLimpieza", nivelSatisfaccionPostVenta1.Nivel)
+									</td>
+								}
+							</tr>
+							<tr>
+								<td>
+									@Html.DisplayNameFor(model => model.AspectosApariencia)<br />
+									@Html.ValidationMessageFor(model => model.AspectosApariencia)
+								</td>
+								@foreach (NivelSatisfaccionPostVenta1 nivelSatisfaccionPostVenta1 in NivelSatisfaccionPostVenta1.NivelesSatisfaccion(0))
+								{
+									<td>
+										@Html.RadioButton("AspectosApariencia", nivelSatisfaccionPostVenta1.Nivel)
+									</td>
+								}
+							</tr>
+							<tr>
+								<td>
+									@Html.DisplayNameFor(model => model.AspectosRelacionPrecioPrestaciones)<br />
+									@Html.ValidationMessageFor(model => model.AspectosRelacionPrecioPrestaciones)
+								</td>
+								@foreach (NivelSatisfaccionPostVenta1 nivelSatisfaccionPostVenta1 in NivelSatisfaccionPostVenta1.NivelesSatisfaccion(0))
+								{
+									<td>
+										@Html.RadioButton("AspectosRelacionPrecioPrestaciones", nivelSatisfaccionPostVenta1.Nivel)
+									</td>
+								}
+							</tr>
+						</table>
+
+					</dd>
+
+
+					<dt>
+						@Html.DisplayNameFor(model => model.ContactoSatisfaccion)
+					</dt>
+
+					<dd>
+						@Html.RadioButton("ContactoSatisfaccion", true, false) Si<br />
+						@Html.RadioButton("ContactoSatisfaccion", false, false) No
+						<br />
+						@Html.ValidationMessageFor(model => model.ContactoSatisfaccion)
+					</dd>
+
+
+					<dt>
+						@Html.DisplayNameFor(model => model.ComprariaEnMEI)
+					</dt>
+
+					<dd>
+						@foreach (NivelSatisfaccionPostVenta2 nivelSatisfaccionPostVenta2 in NivelSatisfaccionPostVenta2.NivelesSatisfaccion(0))
+						{
+							<label>
+								@Html.RadioButton("ComprariaEnMEI", nivelSatisfaccionPostVenta2.Nivel)
+								@nivelSatisfaccionPostVenta2.Nivel
+							</label>
+							<br />
+					<!--, new { onclick = "changeImage(this);", -arroba-class = "radioID" })-->
+						}
+						<br />
+						@Html.ValidationMessageFor(model => model.ComprariaEnMEI)
+					</dd>
+
+
+					<dt>
+						@Html.DisplayNameFor(model => model.Comentarios)
+					</dt>
+
+					<dd>
+						@Html.TextAreaFor(model => model.Comentarios, new { @cols = "50", @rows = "5" })
+					</dd>
+
+
+
+					<dt>
+						@Html.DisplayNameFor(model => model.Nombre)
+					</dt>
+
+					<dd>
+						@Html.TextBoxFor(model => model.Nombre)
+						<br />
+						@Html.ValidationMessageFor(model => model.Nombre)
+					</dd>
+
+					<dt>
+						@Html.DisplayNameFor(model => model.EMail)
+					</dt>
+
+					<dd>
+						@Html.TextBoxFor(model => model.EMail)
+						<br />
+						@Html.ValidationMessageFor(model => model.EMail)
+					</dd>
+
+					<dt>
+						@Html.DisplayNameFor(model => model.Telefono)
+					</dt>
+
+					<dd>
+						@Html.TextBoxFor(model => model.Telefono)
+						<br />
+						@Html.ValidationMessageFor(model => model.Telefono)
+					</dd>
+
+				</dl>
+				<input type="image" class="btn_enviar" src="~/Content/images/0.gif" value="Enviar" />
+			}
+		</div>
+	</div>
+</div>

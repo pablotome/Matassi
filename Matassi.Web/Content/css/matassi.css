@@ -1,0 +1,724 @@
+﻿* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+body, h1 {
+	font-family: "Raleway", sans-serif;
+}
+
+body {
+	margin: 0 !important;
+	padding: 0 !important;
+	background-color: #FFF;
+}
+
+.oculto {
+	display: none;
+}
+
+.visible {
+	display: block;
+}
+
+
+@font-face {
+	font-family: "VWHeadWeb-Bold";
+	src: url("../fonts/VWHeadWeb-Bold/VWHeadWeb-Bold.woff") format("woff"),url("../fonts/VWHeadWeb-Bold/VWHeadWeb-Bold.woff2") format("woff2");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "VWTextWeb-Bold";
+	src: url("../fonts/VWTextWeb-Bold/VWTextWeb-Bold.woff") format("woff"),url("../fonts/VWTextWeb-Bold/VWTextWeb-Bold.woff2") format("woff2");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "VWTextWeb-Regular";
+	src: url("../fonts/VWTextWeb-Regular/VWTextWeb-Regular.woff") format("woff"),url("../fonts/VWTextWeb-Regular/VWTextWeb-Regular.woff2") format("woff2");
+	font-weight: bold;
+	font-style: normal;
+}
+
+/*En tablet la imagen se va muy arriba
+	#content
+	{
+		margin-left: 96px;
+		margin-top: -64px;
+		overflow: auto;
+	}
+*/
+
+@media only screen and (min-width:768px) {
+	header {
+		background-color: yellow;
+	}
+
+	#divMenuCelular, #divIconoVWCell, #divIconoMenuCell {
+		display: none;
+	}
+
+	#menu {
+		top: 0px;
+		position: fixed;
+		width: 96px;
+		height: 100%;
+		-webkit-box-shadow: 3px 9px 19px -1px rgba(0,0,0,0.27);
+		-moz-box-shadow: 3px 9px 19px -1px rgba(0,0,0,0.27);
+		box-shadow: 3px 9px 19px -1px rgba(0,0,0,0.27);
+	}
+
+	#menu_nav {
+		top: 0;
+		z-index: 1000;
+		display: block;
+		min-width: 96px;
+		max-width: 116px;
+		height: 100%;
+		padding: 0;
+		box-shadow: 5px -10px 20px rgba(0,0,0,0.1);
+		font: 12px/13px "VWHeadWeb-Regular";
+	}
+
+	#menu_ul {
+		height: 50px;
+		width: 100%;
+		z-index: 1000;
+		background-color: #fff;
+		padding: 0px;
+		margin: 0px;
+	}
+
+		#menu_ul li {
+			position: relative;
+			display: block;
+		}
+
+			#menu_ul li:first-child {
+				border-top: 0;
+				height: 122px;
+				margin-left: 2px;
+				min-width: 96px;
+			}
+
+			#menu_ul li:not(:first-child) {
+				border-top: 1px solid #dee1e3;
+				min-height: 85px;
+			}
+
+	/*#menu_ul li:last-child {
+				display: none;
+			}*/
+
+
+	.liIcono:hover path {
+		fill: #0099DA;
+		color: #000;
+		border-bottom: 1px solid #DEE1E3;
+	}
+
+	.divIcono {
+		box-sizing: border-box;
+		display: table;
+		height: 85px;
+		width: 96px;
+	}
+
+	.aIcono {
+		box-sizing: border-box;
+		display: table-cell;
+		text-decoration: none;
+	}
+
+	.divImagenIcono {
+		box-sizing: border-box;
+		display: inline-block;
+		display: table;
+		height: 85px;
+		width: 100%;
+		text-align: center;
+		padding-top: 16px;
+		height: 30px;
+	}
+
+	.imgImagenIcono {
+		max-width: 96px;
+		vertical-align: middle;
+		width: 50px;
+		height: 30px;
+		fill: #808890;
+	}
+
+	.spnIcono {
+		font-family: 'VWHeadWeb-Bold';
+		letter-spacing: -0.25px;
+		background-color: #FFFFFF;
+		display: block;
+		margin-top: 9px;
+		text-align: center;
+		font-size: 12px;
+		color: #808890;
+	}
+
+	#content {
+		margin-left: 96px;
+		/*overflow: auto;*/
+		padding-bottom: 50px;
+	}
+
+	#divContenedorImagenes1 {
+		overflow: hidden;
+		cursor: pointer;
+		max-height: 780px;
+		position: relative;
+		margin-top: -180px;
+	}
+
+	#divLinksTop {
+		height: 50px;
+		/*background-color: #F00;*/
+		margin-top: 190px;
+		position: absolute;
+		right: 100px;
+		z-index: 10;
+	}
+
+		#divLinksTop .contenedorIcono {
+			float: left;
+			margin-left: 100px;
+		}
+
+			#divLinksTop .contenedorIcono a {
+				text-decoration: none;
+			}
+
+			#divLinksTop .contenedorIcono .icono {
+				background-color: rgba(0,0,0,.3);
+				border-radius: 30px;
+				display: block;
+				height: 30px;
+				width: 30px;
+				fill: #fff;
+				margin: 0 auto;
+			}
+
+				#divLinksTop .contenedorIcono .icono:hover {
+					background-color: rgba(0,0,0,.4);
+				}
+
+
+			#divLinksTop .contenedorIcono .tituloIcono {
+				font-family: "VWTextWeb-Regular";
+				color: #FFF;
+				font-size: 12px;
+				line-height: 13px;
+				text-align: center;
+			}
+
+	.divImagenesNivel1 {
+		/*height: 20.28%;*/ /*56.25%;*/ /* 16:9 Aspect Ratio */
+		position: absolute;
+	}
+
+	.paginador {
+		width: 36px;
+		height: 80px;
+		display: block;
+		position: absolute;
+		background-color: rgba(29,31,32,0.3);
+		top: 50%;
+		z-index: 1;
+		border: 0;
+		padding: 0;
+		margin: -40px 0 0 0;
+		overflow: hidden;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	.paginadorIzquierda {
+		left: 0;
+		border-radius: 0 4px 4px 0/0 4px 4px 0;
+	}
+
+	.paginadorDerecha {
+		right: 0;
+		border-radius: 4px 0 0 4px/4px 0 0 4px;
+	}
+
+	.paginadorImagen {
+		/*padding-top: 25px;*/
+		fill: #FFF;
+		width: 32px;
+	}
+
+	/*.divFilaBotonConocelo
+	{
+		position: absolute;
+		left: 50%;
+		--margin-top: -80px;
+		text-align: center;
+		height: 36px;
+		margin-left: -77px;
+		cursor: pointer;
+	}*/
+
+	.divBotonConocelo {
+		position: absolute;
+		width: 250px;
+		height: 36px;
+		border-radius: 6px;
+		z-index: 1;
+		background-color: #0099da;
+		/*margin: 0 auto;*/
+		bottom: 30px;
+		left: 50%;
+		margin-left: -77px;
+		letter-spacing: -0.25px;
+		text-align: center;
+	}
+
+		.divBotonConocelo:hover {
+			background-color: #0068aa;
+		}
+
+	.divBotonConoceloInner {
+		margin-top: 5px;
+	}
+
+	.aBotonConocelo {
+		font-family: 'VWTextWeb-Bold';
+		color: #FFFFFF;
+		font-size: 16px;
+		text-decoration: none;
+		vertical-align: middle;
+	}
+
+
+	/******************** Tres imágenes con accesos directos **********************/
+	.divContenedorAccesosDirecto1 {
+		width: 100%;
+		margin-top: 50px;
+		overflow: auto;
+	}
+
+	.divAccesosDirecto1 {
+		width: 95%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.divImagenAccesoDirecto1 {
+		width: 31.33%;
+		overflow: hidden;
+		float: left;
+		margin-left: 10px;
+		cursor: pointer;
+	}
+
+		.divImagenAccesoDirecto1 img {
+			height: auto;
+			width: 100%;
+		}
+
+		.divImagenAccesoDirecto1 span {
+			font-family: 'VWHeadWeb-Bold';
+			letter-spacing: -0.7px;
+			display: block;
+			margin-top: 9px;
+			text-align: center;
+			font-size: 28px;
+			color: #000;
+		}
+
+	/******************** Elegí tu Volkswagen **********************/
+	#divTodosLosModelos {
+		background-color: #f3f5f6;
+		margin-bottom: 50px;
+		margin-top: 100px;
+		padding-bottom: 50px;
+		padding-top: 50px;
+	}
+
+	.divElegiTuVW {
+		clear: both;
+		font-family: 'VWHeadWeb-Bold';
+		letter-spacing: -0.7px;
+		display: block;
+		text-align: center;
+		font-size: 48px;
+		color: #000;
+	}
+
+	/******************** Fotos chiquitas de cada modelo **********************/
+	.divListaModelos {
+		cursor: pointer;
+		margin-top: 30px;
+		width: 100%;
+	}
+
+	.divModelo {
+		/*width: 5.55556%;*/
+		width: 4%;
+		height: auto;
+	}
+
+		.divModelo img {
+			width: 100%;
+			height: auto;
+		}
+
+		.divModelo span {
+			font-family: 'VWHeadWeb-Bold';
+			letter-spacing: -0.7px;
+			display: block;
+			margin-top: 9px;
+			text-align: center;
+			font-size: 24px;
+			color: #000;
+		}
+
+	.divListaModelos > div.slick-list {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+
+	/******************** Queres saber mas **********************/
+	#divSaberMas {
+		width: 100%;
+		margin-top: 130px;
+		overflow: auto;
+	}
+
+	#divQueresSaberMas {
+		width: 95%;
+		margin: 0 auto;
+		font-family: 'VWHeadWeb-Bold';
+		letter-spacing: -0.7px;
+		display: block;
+		text-align: center;
+		font-size: 48px;
+		color: #000;
+	}
+
+	#divSaberMas3Cosas {
+		width: 95%;
+		margin: 0 auto;
+		margin-top: 30px;
+	}
+
+	.divIconoSaberMas {
+		width: 31.33%;
+		overflow: hidden;
+		float: left;
+		margin-left: 10px;
+		cursor: pointer;
+		text-align: center;
+	}
+
+		.divIconoSaberMas img, .imgSaberMas {
+			height: auto;
+			width: 15%;
+			display: inline-block;
+			fill: #0099DA;
+		}
+
+		.divIconoSaberMas span {
+			font-size: 28px;
+			line-height: 33px;
+			letter-spacing: -0.025em;
+			color: #1d1f20;
+			font-family: "VWHeadWeb-Bold";
+		}
+
+			.divIconoSaberMas span:before {
+				content: ' ';
+				display: block;
+			}
+
+
+	/******************** Footer **********************/
+	#footer {
+		margin-left: 96px;
+		overflow: auto;
+	}
+
+	#divBarraSeparadora {
+		background-color: #DEE1E3;
+		display: table;
+		vertical-align: middle;
+		height: 3vh;
+		width: 100%;
+		margin-top: 50px;
+	}
+
+	#divBarraInfoDireccion {
+		height: 3vh;
+		width: 100%;
+		margin-top: 50px;
+		text-align: center;
+		font-weight: bold;
+		font-family: "VWTextWeb-Regular";
+	}
+
+	#divTextoVolver {
+		background-color: #DEE1E3;
+		display: table-cell;
+		vertical-align: middle;
+		height: 3vh;
+		width: 100%;
+		padding-right: 30pt;
+		text-align: right;
+		font-family: "VWTextWeb-Regular";
+		font-size: 14px;
+	}
+
+	.imgFlechitaArriba {
+		height: auto;
+		width: 0.6%;
+	}
+
+	#divInfoFooter {
+		vertical-align: middle;
+	}
+
+	#divItemsInfoFooter {
+		width: 95%;
+		margin: 0 auto;
+		margin-top: 30px;
+	}
+
+	.divItemInfoFooter {
+		width: 31.33%;
+		overflow: hidden;
+		float: left;
+		margin-left: 10px;
+		cursor: pointer;
+		text-align: center;
+		font-family: "VWTextWeb-Regular";
+		color: #2f3538;
+		padding-left: 10px;
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+		.divItemInfoFooter a {
+			text-decoration: none;
+			font-family: "VWTextWeb-Regular";
+			color: #2f3538;
+		}
+
+
+	/******************** Todos los modelos **********************/
+	#divBannerModelos {
+		position: fixed;
+		top: 0px;
+		height: 55px;
+		background-color: #bdc3c6;
+		width: 100%;
+	}
+
+	#ulListaTiposModelos, #ulListaCaracteristicasModelo, #ulListaPaginasHermanas {
+		margin-left: 80px;
+		margin-top: 7px;
+	}
+
+		#ulListaPaginasHermanas li a {
+			color: #000;
+			text-decoration: none;
+		}
+
+		#ulListaTiposModelos li, #ulListaCaracteristicasModelo li, #ulListaPaginasHermanas li {
+			display: inline-block;
+			border-bottom: 0;
+			margin-right: 27px;
+			font-size: 16px;
+			line-height: 33px;
+			float: left;
+			font-family: "VWTextWeb-Bold";
+			cursor: pointer;
+		}
+
+			#ulListaTiposModelos li.seleccionado,
+			#ulListaCaracteristicasModelo li.seleccionado,
+			#ulListaPaginasHermanas li.seleccionado {
+				color: #FFF;
+			}
+
+	#divTodosLosModelos2 {
+		margin-top: 65px;
+		width: 100%;
+	}
+
+	.divFilaTodosLosModelos {
+		/*margin-left: 80px;*/
+		width: 95%;
+		margin-left: auto;
+		margin-right: auto;
+		overflow: auto;
+	}
+
+	.divTodosLosModelosModeloIzquierda, .divTodosLosModelosModeloDerecha {
+		cursor: pointer;
+		float: left;
+		margin-bottom: 40px;
+		text-align: center;
+		width: 50%;
+	}
+
+	.divTodosLosModelosModeloIzquierdaYDerecha {
+		cursor: pointer;
+		margin-bottom: 40px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+	}
+
+		.divTodosLosModelosModeloIzquierda img, .divTodosLosModelosModeloDerecha img, .divTodosLosModelosModeloIzquierdaYDerecha img {
+			width: 90%;
+		}
+
+	.divNombreModelo {
+		font-size: 24px;
+		line-height: 29px;
+		letter-spacing: -0.025em;
+		margin: 0;
+		color: #1d1f20;
+		font-family: "VWHeadWeb-Bold";
+		text-align: center;
+	}
+
+	.divTituloModelos {
+		font-family: "VWHeadWeb-Bold";
+		text-align: center;
+		line-height: 65px;
+		font-size: 60px;
+		margin-top: 70px;
+	}
+
+	#divCompactos {
+		background-color: #FFF;
+	}
+
+	#divSedanes {
+		background-color: #f3f5f6;
+	}
+
+	#divFamiliares {
+		background-color: #FFF;
+	}
+
+	#divSuv {
+		background-color: #f3f5f6;
+	}
+
+	#divSmallPickUp {
+		background-color: #FFF;
+	}
+
+	#divComerciales {
+		background-color: #f3f5f6;
+	}
+}
+
+.imgResponsiva {
+	height: auto;
+	width: 100%;
+}
+
+.bulet {
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 28px;
+}
+
+.linkModeloHome {
+	text-decoration: none;
+}
+
+@media only screen and (min-width:1360px)
+{
+	#divContenedorImagenes1 {
+		overflow: hidden;
+		cursor: pointer;
+		max-height: 780px;
+		position: relative;
+		margin-top: -64px;
+	}
+
+	#divLinksTop {
+		/*height: 50px;*/
+		/*background-color: #F00;*/
+		margin-top: -40px;
+		position: absolute;
+		right: 100px;
+		opacity: 1.0;
+		z-index: 30;
+	}
+
+	#divBarraSuperior {
+		display: block;
+		background: rgba(0,153,218,0.95);
+		height: 150px;
+		position: absolute;
+		width: 100%;
+		z-index: 10;
+	}
+
+	#divTituloMatassi {
+		/*display: inline-block;
+		position: relative;*/
+		font-size: 40px;
+		font-weight: bold;
+		margin-top: 80px;
+		font-family: VWHeadWeb-Bold;
+		padding-left: 50px;
+		color: #FFF;
+	}
+}
+
+/*@media only screen and (max-width:1359px) {*/
+@media only screen and (max-width:1359px) {
+	/*#divContenedorImagenes1 {
+		overflow: hidden;
+		cursor: pointer;
+		max-height: 780px;
+		position: relative;
+		margin-top: -64px;
+	}*/
+
+	/*#divLinksTop {
+		margin-top: -40px;
+		position: absolute;
+		right: 100px;
+		opacity: 1.0;
+		z-index: 30;
+	}*/
+
+	#divBarraSuperior {
+		display: block;
+		height: 30px;
+		position: absolute;
+		width: 50%;
+		z-index: 10;
+		top: -40px;
+		left: 62px;
+	}
+
+	#divTituloMatassi {
+		font-size: 19px;
+		font-weight: bold;
+		margin-top: 4px;
+		font-family: VWHeadWeb-Bold;
+		padding-left: 11px;
+		color: rgba(0,153,218,1);
+	}
+}

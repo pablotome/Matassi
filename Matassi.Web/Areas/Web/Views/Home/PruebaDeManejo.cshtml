@@ -1,0 +1,215 @@
+﻿@using Matassi.Dominio;
+@using Matassi.Web.Areas.Web.Models
+@model Matassi.Web.Areas.Web.Models.PruebaDeManejo
+
+@{
+    ViewBag.Title = "PruebaDeManejo";
+    Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+<link href="/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+<style type="text/css">
+	.btn_enviar {
+		width: 85px;
+		height: 24px;
+		float: right;
+		background: url('../../../../Content/images/btn_enviar.png') no-repeat 0 0;
+		margin-top: 10px;
+	}
+
+		.btn_enviar:hover {
+			width: 85px;
+			height: 24px;
+			background: url('../../../../Content/images/btn_enviar.png') no-repeat 0 -25px;
+		}
+
+	.columnaIzquierda {
+		width: 235px;
+		float: left;
+		display: block;
+		position: relative;
+		display: none;
+	}
+
+	.columnaDerecha {
+		/*width: 705px;
+		 float: right; */
+		width: 100%;
+		display: block;
+		position: relative;
+		background-color: #eaeeed;
+		padding-left: 20px;
+		padding-bottom: 20px;
+		padding-top: 20px;
+	}
+
+		.columnaDerecha textarea,
+		.columnaDerecha input[type=text], 
+		.columnaDerecha input[type=number], 
+		.columnaDerecha input[type=email], 
+		.columnaDerecha select {
+			border: #a0a0a2 1px solid;
+			font-size: 12px;
+			background: #efeff4;
+			color: #000000;
+			font-family: 'VWHeadWeb-Regular', Tahoma, Arial;
+			text-align: left;
+		}
+
+		.columnaDerecha input[type=text] {
+			height: 16px;
+		}
+
+	#tblConsultas {
+		border-spacing: 10px;
+		border-collapse: separate;
+	}
+
+	.field-validation-error {
+		display: block;
+		font-family: 'VWHeadWeb-Regular', Verdana;
+		color: #F00;
+		padding-top: 5px;
+		font-size: 12px;
+	}
+
+	.TituloPaginaGracias {
+		font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+		font-size: 24px;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		color: #0F0;
+	}
+
+	.w100 {
+		width: 100%;
+	}
+
+	.w80 {
+		width: 80%;
+	}
+
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		/* display: none; <- Crashes Chrome on hover */
+		-webkit-appearance: none;
+		margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+	}
+</style>
+
+<script type="text/javascript">
+	$.validator.addMethod("enforcetrue", function (value, element, param) {
+		return element.checked;
+	});
+	$.validator.unobtrusive.adapters.addBool("enforcetrue");
+	$(function () {
+		$(".datefield").datepicker({
+			minDate: 0,
+			maxDate: "+1M +10D",
+			numberOfMonths: 2,
+			dateFormat: 'dd/mm/yy',
+			monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+			monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'Mar', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+			dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+			dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+			dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa']
+		});
+	});
+</script>
+
+<div class="infoModelo">
+	<a href="#" class="modeloActual">@ViewBag.Title</a>
+	<div class="infoModeloTitulos">
+		<ul class="">
+			<li>|</li>
+			<li>
+				<span></span>
+			</li>
+		</ul>
+	</div>
+</div>
+<div style="margin: 10px 9px 9px 9px; display:block; position: relative; height: auto; overflow:hidden;">
+	<div class="columnaIzquierda">
+		&nbsp;
+	</div>
+	<div class="columnaDerecha">
+		<div class="TituloPagina">Prueba de Manejo</div>
+
+		<div style="text-align:center;">
+			<img src='' />
+		</div>
+
+		@using (Html.BeginForm("PruebaDeManejo", "Home", FormMethod.Post))
+		{
+			@Html.AntiForgeryToken()
+
+			<table id="tblConsultas" border="1" style="width:95%;">
+				<tr>
+					<td class="TituloFormulario" width="50%" colspan="2">Modelo</td>
+					<td class="TituloFormulario" width="50%" colspan="2">Nombre y Apellido</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						@Html.DropDownListFor(model => model.Modelo, ((List<SelectListItem>)ViewBag.Modelos), new { @class = "w100" })
+					</td>
+					<td colspan="2">
+						@Html.TextBoxFor(model => model.NombreYApellido, new { @maxlength = "100", @size = "35", @class = "w100" })
+						@Html.ValidationMessageFor(model => model.NombreYApellido)
+					</td>
+				</tr>
+				<tr>
+					<td class="TituloFormulario" width="50%" colspan="2">Fecha</td>
+					<td class="TituloFormulario" width="25%">Característica</td>
+					<td class="TituloFormulario" width="25%">Teléfono</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						@Html.TextBoxFor(model => model.Fecha, new { @class = "form-control datefield w100", value = "@Model.Fecha.ToString('dd/MM/yyyy')" })
+						<!-- Html.HiddenFor(model => model.Fecha, new { value = Model.CodConsulta }) -->
+					</td>
+					<td>
+						@Html.TextBoxFor(model => model.Caracteristica, new { @class = "w100", @type = "number" })
+					</td>
+					<td>
+						@Html.TextBoxFor(model => model.Telefono, new { @class = "w100", @type = "number" })
+					</td>
+				</tr>
+				<tr>
+					<td class="TituloFormulario" width="50%" colspan="2">Hora</td>
+					<td class="TituloFormulario" width="50%" colspan="2">E-Mail</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						@Html.DropDownListFor(model => model.Hora, ((List<SelectListItem>)ViewBag.Horas), new { @class = "w100" })
+					</td>
+					<td colspan="2">
+						@Html.TextBoxFor(model => model.EMail, new { @class = "w100", @type = "email" })
+					</td>
+				</tr>
+				<tr>
+					<td class="TituloFormulario" colspan="4">Comentarios</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						@Html.TextAreaFor(model => model.Comentarios, new { @cols = 161, @rows = 10, @class = "w100" })
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" class="TituloPaginaGracias">
+						@ViewBag.TextoGracias
+					</td>
+
+					<td>
+						<input type="image" class="btn_enviar" src="~/Content/images/0.gif" value="Enviar" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="TituloFormulario" style="padding-top: 40px;">
+						Matassi e Imperiale S.A. - Hipolito Yrigoyen 1603 - 2600 Venado Tuerto - Teléfono : (03462)-437500
+					</td>
+				</tr>
+			</table>
+		}
+	</div>
+</div>
+

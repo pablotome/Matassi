@@ -1,0 +1,878 @@
+﻿@{
+	ViewBag.Title = "up";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+	@Styles.Render("~/bundles/estilosCSSModelo")
+	@Scripts.Render("~/bundles/funcionesModelo")
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#divNovedades').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+			$('#divTecnologia').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+
+			$(window).on("orientationchange", function () {
+				//window.location.reload();
+				setTimeout(function () {
+					$('#divNovedades').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+				}, 500);
+
+				setTimeout(function () {
+					$('#divTecnologia').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+				}, 500);
+			});
+		});
+	</script>
+}
+
+
+<div id="divBannerTituloModelo">
+	<span id="spnTituloModelo">
+		Nuevo Vento
+	</span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+	<ul id="ulListaCaracteristicasModelo">
+		<li class="liNovedades" data-divmodelos="divNovedades">Novedades</li>
+		<li class="liTecnologia" data-divmodelos="divTecnologia">Tecnología</li>
+		<li class="liDisenio" data-divmodelos="divDisenio">Diseño</li>
+		<li class="liCaracteristicas" data-divmodelos="divCaracteristicas">Características</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+		<li class="liContrato" data-divmodelos="divContrato">Contrato</li>
+	</ul>
+</div>
+
+<div id="divImagenModelo">
+	<img src="~/Content/info_modelos/nuevo_vento/vento.jpg" class="imgResponsiva" />
+</div>
+
+<div id="divTituloModelo">
+	Tecnología que te moviliza
+</div>
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+	<div class="iconoDesplegar">
+		<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+		<span>
+			Selecciona categoria
+		</span>
+	</div>
+	<ul class="oculto">
+		<li class="liNovedades" data-divmodelos="divNovedades">Novedades</li>
+		<li class="liTecnologia" data-divmodelos="divTecnologia">Tecnología</li>
+		<li class="liDisenio" data-divmodelos="divDisenio">Diseño</li>
+		<li class="liCaracteristicas" data-divmodelos="divCaracteristicas">Características</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+		<li class="liContrato" data-divmodelos="divContrato">Contrato</li>
+	</ul>
+</div>
+
+
+<!----------------------------------NOVEDADES---------------------------------->
+<div id="divNovedades" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Novedades
+	</div>
+	<div class="SubTituloSeccion">
+		El presente es digital y el Nuevo Vento lo sabe.
+	</div>
+	<div class="listaHorizontalImagenes">
+		<ul>
+			<li data-pos="1" class="linkCarouselApagado linkCarouselEncendido">Tecnología</li>
+			<li data-pos="2" class="linkCarouselApagado">Tecnología</li>
+			<li data-pos="3" class="linkCarouselApagado">Diseño</li>
+			<li data-pos="4" class="linkCarouselApagado">Confort</li>
+		</ul>
+
+		<!-- Carrousel -->
+		<div class="divCarousel">
+			<div>
+				<ul>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_vento/Novedades/Novedades01.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_vento/Novedades/Novedades02.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_vento/Novedades/Novedades03.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_vento/Novedades/Novedades04.jpg" class="imgResponsiva" />
+					</li>
+				</ul>
+			</div>
+
+			<div class="divFlechaIzquierda">
+				<img src="~/Content/img/iconos/flechaIzquierda.svg" class="svg" />
+			</div>
+			<div class="divFlechaDerecha">
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+			</div>
+
+		</div>
+	</div>
+	<div class="divPaginador"><ul class="ulIndice"></ul></div>
+
+	<div class="InfoCarousel">
+		<ul>
+			<li data-pos="1">
+				<h5>
+					Tecnología
+				</h5>
+				<h3>
+					Innovación en todos tus viajes
+				</h3>
+				<p>
+					El Nuevo Vento incorpora la segunda generación del tablero digital Active Info Display.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="2">
+				<h5>
+					Tecnología
+				</h5>
+				<h3>
+					Cargado de conectividad
+				</h3>
+				<p>
+					Con el sistema Discover Media podrás estar conectado en todo momento y manejar las principales funciones del Nuevo Vento.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="3">
+				<h5>
+					Diseño
+				</h5>
+				<h3>
+					Viajar con estilo
+					<br>
+				</h3>
+				<p>
+					Diseño cautivante en todas sus líneas. Sus terminaciones confluyen en un diseño deportivo y más elegante que nunca.
+				</p>
+			</li>
+
+			<li data-pos="4">
+				<h5>
+					Confort
+				</h5>
+				<h3>
+					Calidad vayas donde vayas.
+					<br>
+				</h3>
+				<p>
+					Toda la tecnología incorporada en el Nuevo Vento tiene un único sentido: mejorar tu experiencia al volante.
+					<br>
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<!----------------------------------GALERIA---------------------------------->
+<div class="divGaleria">
+	<a href="#">
+		<img src="~/Content/info_modelos/nuevo_vento/Galeria/Galeria01.jpg" class="imgResponsiva" />
+		<div class="divIconoGaleria1">
+			<div class="divIconoGaleria2">
+				<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+			</div>
+		</div>
+	</a>
+</div>
+
+
+<!----------------------------------TECNOLOGÍA---------------------------------->
+<div id="divTecnologia" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Tecnología
+	</div>
+	<div class="SubTituloSeccion">
+		Total conectividad.
+	</div>
+	<div class="listaHorizontalImagenes">
+		<ul>
+			<li data-pos="1" class="linkCarouselApagado linkCarouselEncendido">App Connect</li>
+			<li data-pos="2" class="linkCarouselApagado">Active Info Display</li>
+			<li data-pos="3" class="linkCarouselApagado">Estacionamiento inteligente</li>
+			<li data-pos="4" class="linkCarouselApagado">Climatronic Bi-Zona</li>
+			<li data-pos="5" class="linkCarouselApagado">Keyless Access</li>
+		</ul>
+
+		<!-- Carrousel -->
+		<div class="divCarousel">
+			<div>
+				<ul>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_vento/Tecnologia/Tecnologia01.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_vento/Tecnologia/Tecnologia02.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_vento/Tecnologia/Tecnologia03.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_vento/Tecnologia/Tecnologia04.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_vento/Tecnologia/Tecnologia05.jpg" class="imgResponsiva" />
+					</li>
+				</ul>
+			</div>
+
+			<div class="divFlechaIzquierda">
+				<img src="~/Content/img/iconos/flechaIzquierda.svg" class="svg" />
+			</div>
+			<div class="divFlechaDerecha">
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+			</div>
+
+		</div>
+	</div>
+	<div class="divPaginador"><ul class="ulIndice"></ul></div>
+
+	<div class="InfoCarousel">
+		<ul>
+			<li data-pos="1">
+				<h5>
+					Tecnología
+				</h5>
+				<h3>
+					App Connect
+				</h3>
+				<p>
+					En todas sus versiones, el Nuevo Vento está cargado de conectividad. Los sistemas Composition Media y Discover Media pueden accederse a través de una pantalla táctil de 8”.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="2">
+				<h5>
+					Tecnología
+				</h5>
+				<h3>
+					Active Info Display
+				</h3>
+				<p>
+					El tablero de instrumentos digital Active Info Display de 10.2” te brinda información personalizada sobre la autonomía, kilometraje y navegador de tu auto.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="3">
+				<h5>
+					Tecnología
+				</h5>
+				<h3>
+					Estacionamiento inteligente
+					<br>
+				</h3>
+				<p>
+					Equipado con sensores y cámara de retroceso para que los obstáculos a la hora de estacionar sean cosa del pasado
+				</p>
+			</li>
+
+			<li data-pos="4">
+				<h5>
+					Tecnología
+				</h5>
+				<h3>
+					Climatronic Bi-Zona
+					<br>
+				</h3>
+				<p>
+					El climatizador regula de forma automática la temperatura interior del Nuevo Vento y permite personalizar la zona del piloto y copiloto por separado.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="5">
+				<h5>
+					Tecnología
+				</h5>
+				<h3>
+					Keyless Access
+					<br>
+				</h3>
+				<p>
+					Para ingresar al Nuevo Vento lo único que necesitas es acercarte a la puerta, accionar la manija y listo. El sistema Keyless Start Engine también permite encender y apagar el motor con un botón.
+					<br>
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<!----------------------------------GALERIA---------------------------------->
+<div class="divGaleria">
+	<a href="#">
+		<img src="~/Content/info_modelos/nuevo_vento/Galeria/Galeria02.jpg" class="imgResponsiva" />
+		<div class="divIconoGaleria1">
+			<div class="divIconoGaleria2">
+				<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+			</div>
+		</div>
+	</a>
+</div>
+
+
+<!----------------------------------DISEÑO---------------------------------->
+<div id="divDisenio" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Diseño
+	</div>
+	<div class="SubTituloSeccion">
+		Único desde cualquier ángulo.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+	<div class="Imagenes3Columnas">
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Exterior</span>
+		</div>
+		<div class="Imagenes3Columnas-Izquierda">
+			<img src="~/Content/info_modelos/nuevo_vento/Disenio/Disenio01.jpg" class="imgResponsiva" />
+			<h5>
+				Exterior
+			</h5>
+			<h3>
+				Faros y luces LED
+			</h3>
+			<p>
+				La nueva mirada del Vento está compuesta por sus faros delanteros de última generación y sus luces traseras, resaltando su diseño elegante y moderno.
+			</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Interior </span>
+		</div>
+		<div class="Imagenes3Columnas-Centro">
+			<img src="~/Content/info_modelos/nuevo_vento/Disenio/Disenio02.jpg" class="imgResponsiva" />
+			<h5>
+				Interior
+			</h5>
+			<h3>
+				Un ambiente distinto todos los días
+			</h3>
+			<p>
+				Sus detalles hacen que el Nuevo Vento sea perfecto. Disfrutá sus 10 colores de iluminación ambiental LED y su butaca con regulación eléctrica.
+			</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Llantas</span>
+		</div>
+		<div class="Imagenes3Columnas-Derecha">
+			<img src="~/Content/info_modelos/nuevo_vento/Disenio/Disenio03.jpg" class="imgResponsiva" />
+			<h5>
+				Llantas
+			</h5>
+			<h3>
+				Llantas de doble tono
+			</h3>
+			<p>
+				El Nuevo Vento incorpora las llantas de aleación ligera de doble tono de 16” y 17” en sus dos versiones.
+			</p>
+		</div>
+	</div>
+	<hr class="hrSeparadorItemsSeccion" />
+</div>
+
+
+<!----------------------------------GALERIA---------------------------------->
+<div class="divGaleria">
+	<a href="#">
+		<img src="~/Content/info_modelos/nuevo_vento/Galeria/Galeria03.jpg" class="imgResponsiva" />
+		<div class="divIconoGaleria1">
+			<div class="divIconoGaleria2">
+				<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+			</div>
+		</div>
+	</a>
+</div>
+
+
+<!----------------------------------CARACTERISTICAS---------------------------------->
+<div id="divCaracteristicas" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Características
+	</div>
+	<div class="SubTituloSeccion">
+		Un auto que se adapta a vos.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+	<div class="Imagenes2Columnas">
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Tecnología TSI</span>
+		</div>
+		<div class="Imagenes2Columnas-Izquierda">
+			<div>
+				<img src="~/Content/info_modelos/nuevo_vento/Caracteristicas/Caracteristicas01.jpg" class="imgResponsiva" />
+			</div>
+			<h5>Tecnología TSI</h5>
+			<h3>Motor</h3>
+			<p>El motor TSI está diseñado para lograr altos niveles de potencia a bajo consumo. Todas sus versiones tienen cuatro modos de manejo: Eco, Sport, Normal y personalizada.</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Sentite seguro</span>
+		</div>
+		<div class="Imagenes2Columnas-Derecha">
+			<div>
+				<img src="~/Content/info_modelos/nuevo_vento/Caracteristicas/Caracteristicas02.jpg" class="imgResponsiva" />
+			</div>
+			<h5>Sentite seguro</h5>
+			<h3>Seguridad</h3>
+			<p>El Nuevo Vento incorpora sistemas de seguridad de serie en todas sus versiones: ABS, ESC, ASR, HHC (Asistente de arranque en pendiente) y muchos más.</p>
+		</div>
+	</div>
+	<hr class="hrSeparadorItemsSeccion" />
+</div>
+
+
+<!----------------------------------VERSIONES---------------------------------->
+<div id="divVersiones" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Versiones
+	</div>
+
+	<!-- COMFORTLINE -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/nuevo_vento/Versiones/Versiones02.png" class="imgResponsiva" />
+			<h4>Comfortline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Caja Tiptronic 6 velocidades</li>
+				<li>Discover Media 8”</li>
+				<li>App Connect</li>
+				<li>Cargador de celular inalámbrico</li>
+				<li>Iluminación ambiental</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Comfortline">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Comfortline">
+		<h1>Comfortline</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/nuevo_vento/InfoTecnica/InfoTecnica02.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Caja Tiptronic 6 velocidades</li>
+					<li>Discover Media 8”</li>
+					<li>App Connect</li>
+					<li>Cargador de celular inalámbrico</li>
+					<li>Iluminación ambiental</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Nuevo Vento Comfortline 1.4 TSI Nafta 150CV Tiptronic (6 Marchas) 4P</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación ligera 6 1/2J x 16</li>
+					<li>Paquete Llantas "Rama" 16"</li>
+
+					<li><b>Interior</b></li>
+					<li>Sin paquete Aluminio/Cromo</li>
+					<li>Techo moldeado en una pieza</li>
+					<li>Volante multifuncion de cuero</li>
+					<li>Pomo/empuñadura de la palanca de cambio en cuero</li>
+					<li>Volante multifuncional de cuero</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tubo de escape final detrás (estándar)</li>
+					<li>Sin dispositivo de remolque</li>
+					<li>Carcasas espejos exteriores y diversos componentes en color carrocería</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Sin spoiler posterior</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Inscripción "TSI"</li>
+					<li>Sin embellecedores adicionales</li>
+					<li>4 puertas</li>
+
+					<li><b>Sistema de asistencia</b></li>
+					<li>Sin sistema de asistencia en caso de cambio de carril</li>
+					<li>Sin Front Assist /sin control automático de distancia (ANB)</li>
+
+					<li><b>Espejos</b></li>
+					<li>6YA</li>
+					<li>Espejo interior de seguridad antideslumbrante</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Luz de marcha diurna con asistente de luz de marcha y función "coming home"</li>
+					<li>Faros principales LED</li>
+					<li>Iluminación ambiental</li>
+					<li>Sin asistente para el cambio de luces</li>
+					<li>Regulación alcance faros</li>
+					<li>Faros antiniebla y luz de giro</li>
+					<li>Conjunto de pilotos posteriores en técnica LED</li>
+					<li>Sin limpialavafaros</li>
+					<li>Conexión de intervalos de barrido del limpiaparabrisas, con sensor de luz y lluvia</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Paquete Comfortline Plus</li>
+					<li>Iluminación ambiental</li>
+					<li>Selección del modo de conducción y amortiguadores convencionales</li>
+					<li>Con sistema de cámara de marcha atrás (versión 1)</li>
+					<li>Ayuda de aparcamiento delante y detrás</li>
+					<li>Función ECO</li>
+					<li>Luces interiores en el suelo</li>
+					<li>Sistema de regulación de velocidad (GRA) electrónico</li>
+					<li>Sin cámara ni sensor de distancia (sistema de asistencia al conductor)</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta trasera de asientos no divididos y respaldos abatibles por separado</li>
+					<li>Climatronic, con recirculación de aire libre de FCC</li>
+					<li>Sin ventilación del asiento/masaje</li>
+					<li>Sin apoyo lumbar en los respaldos de los asientos</li>
+					<li>Reposabrazos central delante</li>
+					<li>Regulación en altura manual del asiento anterior izquierdo</li>
+					<li>Asientos no calefaccionables</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Inserciones</li>
+
+					<li><b>Infotainment</b></li>
+					<li>App Connect</li>
+					<li>Radio Composition Media</li>
+					<li>Antena de luna para búsqueda automática de emisora (diversidad de frecuencia)</li>
+					<li>6 altavoces (pasivos)</li>
+					<li>Control por voz</li>
+					<li>Interfaz eléctrica para uso externo, USB con AMI</li>
+
+					<li><b>Navegación</b></li>
+					<li>Display multifuncional/ ordenador de a bordo "Medium"</li>
+					<li>Sistema de navegacion Discover Media</li>
+					<li>Discover Media 8”</li>
+					<li>App Connect</li>
+					<li>Cargador de celular inalámbrico</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifuncional de cuero</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante, el del acompañante con desactivación del airbag</li>
+					<li>Frenos de disco posteriores</li>
+					<li>Frenos de disco anteriores (Geomet D)</li>
+					<li>Alarma antirrobo con vigilancia del habitáculo, sirena de alarma y protección contra remolque</li>
+					<li>Sin sistema de seguridad ampliado</li>
+					<li>Indicador para el control de los neumáticos</li>
+					<li>Airbags laterales anteriores con airbag de cabeza</li>
+					<li>Cierre centralizado por control remoto, con accionamiento desde el interior sin cierre de seguridad</li>
+					<li>Dirección asistida, dependiente de la velocidad (Servotronic)</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_vento/Colores/Colores01.png" class="imgResponsiva" /><br />2B2B</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_vento/Colores/Colores02.png" class="imgResponsiva" /><br />Plata Blanca</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_vento/Colores/Colores03.png" class="imgResponsiva" /><br />Gris platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_vento/Colores/Colores04.png" class="imgResponsiva" /><br />Negro Profundo</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_vento/Colores/Colores05.png" class="imgResponsiva" /><br />Blanco puro</li>
+
+					<li style="clear:both;">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+
+	<!-- Highline -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/nuevo_vento/Versiones/Versiones01.png" class="imgResponsiva" />
+			<h4>Highline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Active Info Display</li>
+				<li>Discover Media 8”</li>
+				<li>Iluminación ambiental</li>
+				<li>Cargador de celular inalámbrico</li>
+				<li>App Connect</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Highline">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Highline">
+		<h1>Highline</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/nuevo_vento/InfoTecnica/InfoTecnica01.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Active Info Display</li>
+					<li>Discover Media 8”</li>
+					<li>Iluminación ambiental</li>
+					<li>Cargador de celular inalámbrico</li>
+					<li>App Connect</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Nuevo Vento Highline 1.4 TSI Nafta 150CV Tiptronic (6 Marchas) 4P</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación ligera 7J x 17</li>
+
+					<li><b>Interior</b></li>
+					<li>Sin paquete Aluminio/Cromo</li>
+					<li>Techo moldeado en una pieza</li>
+					<li>Pomo/empuñadura de la palanca de cambio en cuero</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tubo de escape final detrás (estándar)</li>
+					<li>Sin dispositivo de remolque</li>
+					<li>Carcasas espejos exteriores y diversos componentes en color carrocería</li>
+					<li>Techo con alerón</li>
+					<li>Sin spoiler posterior</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Inscripción "TSI"</li>
+					<li>Embellecedores4 puertas</li>
+
+					<li><b>Sistema de asistencia</b></li>
+					<li>Sin sistema de asistencia en caso de cambio de carril</li>
+					<li>Sin Front Assist /sin control automático de distancia (ANB)</li>
+
+					<li><b>Espejos</b></li>
+					<li>Retrovisor exterior con función de memoria, con ajuste eléctrico y térmico</li>
+					<li>Espejo interior de seguridad antideslumbramiento automático</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Luz de marcha diurna con asistente de luz de marcha y función "coming home"</li>
+					<li>Faros principales LED con lente</li>
+					<li>Iluminación ambiental</li>
+					<li>Sin asistente para el cambio de luces</li>
+					<li>Regulación alcance faros</li>
+					<li>Faros antiniebla y luz de giro</li>
+					<li>Conjunto de pilotos posteriores en técnica LED</li>
+					<li>Sin limpialavafaros</li>
+					<li>Conexión de intervalos de barrido del limpiaparabrisas, con sensor de luz y lluvia</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Paquete Highline Plus</li>
+					<li>Iluminación ambiental</li>
+					<li>Con sistema de cámara de marcha atrás (versión 1)</li>
+					<li>Ayuda de aparcamiento delante y detrás</li>
+					<li>Selección del modo de conducción y amortiguadores convencionales</li>
+					<li>Función ECOLuces interiores en el suelo</li>
+					<li>Sistema de regulación de velocidad (GRA) electrónico</li>
+					<li>Sin cámara ni sensor de distancia (sistema de asistencia al conductor)</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta trasera no dividida, respaldo dividido y abatible, con reposabrazos central</li>
+					<li>Climatronic, con recirculación de aire libre de FCC</li>
+					<li>Paquete Interior Highline</li>
+					<li>Active Info Display</li>
+					<li>Ventilación de asientos delante</li>
+					<li>Ambos asientos anteriores calefaccionables regulables por separado</li>
+					<li>Regulación del asiento: eléctrica y con memoria para el asiento izquierdo y no ajustable en altura el derecho</li>
+					<li>Molduras de entrada en los bordes de las puertas</li>
+					<li>Tapizado de asientos en cuero</li>
+					<li>Retrovisor exterior con función de memoria, con ajuste eléctrico y térmico</li>
+					<li>Apoyo lumbar con ajuste eléctrico en el respaldo del asiento delantero izq., con función de 2 posiciones</li>
+					<li>Reposabrazos central delante</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Insertos</li>
+
+					<li><b>Infotainment</b></li>
+					<li>App Connect</li>
+					<li>Radio Composition Media</li>
+					<li>Antena de luna para búsqueda automática de emisora (diversidad de frecuencia)</li>
+					<li>6 altavoces (pasivos)</li>
+					<li>Control por voz</li>
+					<li>Interfaz eléctrica para uso externo, USB con AMI</li>
+
+					<li><b>Navegación</b></li>
+					<li>Active Info Display</li>
+					<li>Sistema de navegacion Discover Media</li>
+					<li>Discover Media 8”</li>
+					<li>pp Connect</li>
+					<li>Cargador de celular inalámbrico</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifuncional de cuero</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante, el del acompañante con desactivación del airbag</li>
+					<li>Frenos de disco posteriores</li>
+					<li>Frenos de disco anteriores (Geomet D)</li>
+					<li>Alarma antirrobo con vigilancia del habitáculo, sirena de alarma y protección contra remolque</li>
+					<li>Sin sistema de seguridad ampliado</li>
+					<li>Indicador para el control de los neumáticos</li>
+					<li>Airbags laterales anteriores con airbag de cabeza</li>
+					<li>Cierre centralizado "Keyless-Entry" sin cierre de seguridad</li>
+					<li>Dirección asistida, dependiente de la velocidad (Servotronic)</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_vento/Colores/Colores01.png" class="imgResponsiva" /><br />2B2B</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_vento/Colores/Colores02.png" class="imgResponsiva" /><br />Plata Blanca</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_vento/Colores/Colores03.png" class="imgResponsiva" /><br />Gris platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_vento/Colores/Colores04.png" class="imgResponsiva" /><br />Negro Profundo</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_vento/Colores/Colores05.png" class="imgResponsiva" /><br />Blanco puro</li>
+
+					<li style="clear:both;">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<p class="paginadorVersiones visibleCelular">
+		<a href="#1" class="active">&nbsp;</a>
+		<a href="#2">&nbsp;</a>
+	</p>
+</div>
+
+
+<!----------------------------------CONTRATO---------------------------------->
+<div id="divContrato" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Contratos de mantenimiento.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Contratos de mantenimiento.</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/nuevo_vento/Tecnologia/Tecnologia01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Contratos de mantenimiento.
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Disfrutá beneficios para mantener tu Vento como nuevo.
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Comprando un Nuevo Vento tenés 10% de descuento y hasta 6 cuotas sin interés con Visa en los 3 primeros Servicios de Mantenimiento.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/nuevo_vento/Contrato/Contrato01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+<!--BROCHURE-->
+<div id="divBrochure">
+	<div id="div-Brochure-Info">
+		<h2>Brochure<br />de Vento</h2>
+		<a href="~/Content/info_modelos/nuevo_vento/Brochure/Brochure.pdf" rel="external" class="linkDescargarBrochure" target="_blank">
+			<div id="div-Brochure-Boton">
+				<div id="div-Brochure-Boton-Inner">Descargalo</div>
+			</div>
+		</a>
+	</div>
+
+	<div id="div-Brochure-Imagen">
+		<img src="~/Content/info_modelos/nuevo_vento/Brochure/Brochure.jpg" class="imgResponsiva" />
+	</div>
+</div>
+
+@section footerModelo
+{
+
+	<div class="md-modal md-effect-12">
+		<div class="md-content">
+			<div id="divGaleriaPopup-Imagenes">
+				<div class="slick-div-aux"><img src="~/Content/info_modelos/nuevo_vento/Galeria/Galeria01.jpg" class="imgResponsiva" /></div>
+				<div class="slick-div-aux"><img src="~/Content/info_modelos/nuevo_vento/Galeria/Galeria02.jpg" class="imgResponsiva" /></div>
+				<div class="slick-div-aux"><img src="~/Content/info_modelos/nuevo_vento/Galeria/Galeria03.jpg" class="imgResponsiva" /></div>
+			</div>
+		</div>
+		<div id="divCerrarGaleria">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg cruzCerrar" />
+		</div>
+	</div>
+	<div class="md-overlay"></div>
+	<br /><br />}

@@ -1,0 +1,62 @@
+﻿@using System.Web.WebPages.Html;
+@model IEnumerable<Matassi.Dominio.Modelo>
+
+@{
+	ViewBag.Title = "Modelos";
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			<h2>@ViewBag.Title</h2>
+
+			<p class="nuevoItem">
+				@Html.ActionLink("Nuevo Modelo", "Modelo_Crear", null, new { @class = "btn btn-primary" })
+			</p>
+		</td>
+	</tr>
+</table>
+
+<table class="table tabla-centrada">
+	<tr>
+		<th class="oculto">
+			Código
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Nombre)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Bajada)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Vigente)
+		</th>
+		<th></th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td class="oculto">
+				@Html.DisplayFor(modelItem => item.CodModelo)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Nombre)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Bajada)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Vigente)
+			</td>
+			<td align="center">
+				@Html.ActionLink("Editar", "Modelo_Editar", new { id = item.CodModelo }) |
+				@Html.ActionLink("Versiones", "Version_Lista", new { codModelo = item.CodModelo }) |
+				@Html.ActionLink("Imagenes", "Imagen_Lista", new { codModelo = item.CodModelo }) |
+				@Html.ActionLink("Accesorios", "Accesorio_Lista", new { codModelo = item.CodModelo })
+			</td>
+		</tr>
+	}
+</table>
+

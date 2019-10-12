@@ -1,0 +1,488 @@
+﻿@{
+	ViewBag.Title = "up";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+	@Styles.Render("~/bundles/estilosCSSModelo")
+	@Scripts.Render("~/bundles/funcionesModelo")
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#divNovedades').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+			$('#divTecnologiaConfort').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+
+			$(window).on("orientationchange", function () {
+				//window.location.reload();
+				setTimeout(function () {
+					$('#divNovedades').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+				}, 500);
+
+				setTimeout(function () {
+					$('#divTecnologiaConfort').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+				}, 500);
+			});
+		});
+	</script>
+}
+
+<div id="divBannerTituloModelo">
+	<span id="spnTituloModelo">
+		T-Cross
+	</span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+	<ul id="ulListaCaracteristicasModelo">
+		<li class="liNovedades" data-divmodelos="divNovedades">Novedades</li>
+		<li class="liTecnologiaConfort" data-divmodelos="divTecnologiaConfort">Tecnología y confort</li>
+		<li class="liSeguridad" data-divmodelos="divSeguridad">Seguridad</li>
+	</ul>
+</div>
+
+<div id="divImagenModelo">
+	<img src="~/Content/info_modelos/t_cross/t_cross.jpg" class="imgResponsiva" />
+</div>
+
+<div id="divTituloModelo">
+	El nuevo SUV de Volkswagen
+</div>
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+	<div class="iconoDesplegar">
+		<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+		<span>
+			Selecciona categoria
+		</span>
+	</div>
+	<ul class="oculto">
+		<li class="liNovedades" data-divmodelos="divNovedades">Novedades</li>
+		<li class="liTecnologiaConfort" data-divmodelos="divTecnologiaConfort">Tecnología y confort</li>
+		<li class="liSeguridad" data-divmodelos="divSeguridad">Seguridad</li>
+	</ul>
+</div>
+
+
+<!----------------------------------NOVEDADES---------------------------------->
+<div id="divNovedades" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Lo mejor de T-Cross
+	</div>
+	<div class="SubTituloSeccion">
+		El Nuevo T-Cross fue creado para brindarte toda la conectividad, versatilidad y seguridad que necesitás.
+	</div>
+	<div class="listaHorizontalImagenes">
+		<ul>
+			<li data-pos="1" class="linkCarouselApagado linkCarouselEncendido">Tablero digital</li>
+			<li data-pos="2" class="linkCarouselApagado">Park Assist</li>
+			<li data-pos="3" class="linkCarouselApagado">Conectividad</li>
+			<li data-pos="4" class="linkCarouselApagado">Panoramic Sunroof</li>
+			<li data-pos="5" class="linkCarouselApagado">Keyless Entry & Go</li>
+		</ul>
+
+		<!-- Carrousel -->
+		<div class="divCarousel">
+			<div>
+				<ul>
+					<li>
+						<img src="~/Content/info_modelos/t_cross/Novedades/Novedades01.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/t_cross/Novedades/Novedades02.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/t_cross/Novedades/Novedades03.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/t_cross/Novedades/Novedades04.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/t_cross/Novedades/Novedades05.jpg" class="imgResponsiva" />
+					</li>
+				</ul>
+			</div>
+
+			<div class="divFlechaIzquierda">
+				<img src="~/Content/img/iconos/flechaIzquierda.svg" class="svg" />
+			</div>
+			<div class="divFlechaDerecha">
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+			</div>
+
+		</div>
+	</div>
+	<div class="divPaginador"><ul class="ulIndice"></ul></div>
+
+	<div class="InfoCarousel">
+		<ul>
+			<li data-pos="1">
+				<h5>
+					Tablero digital
+				</h5>
+				<h3>
+					Toda la información a tu alcance
+				</h3>
+				<p>
+					Con el tablero digital Active Info Display de 10” del Nuevo T-Cross tenés la información más importante del vehículo al alcance de tu mano.
+				</p>
+			</li>
+
+			<li data-pos="2">
+				<h5>
+					Park Assist
+				</h5>
+				<h3>
+					Estacioná fácil y rápido
+				</h3>
+				<p>
+					El Park Assist 3.0 permite un estacionamiento semiautomático y un frenado automático al activarse los sensores de proximidad.
+				</p>
+			</li>
+
+			<li data-pos="3">
+				<h5>
+					Conectividad
+				</h5>
+				<h3>
+					Confort a donde sea que vayas
+				</h3>
+				<p>
+					Con App Connect, vas a contar con todas las aplicaciones de tu smartphone en la pantalla táctil del sistema de infoentretenimiento.
+				</p>
+			</li>
+
+			<li data-pos="4">
+				<h5>
+					Panoramic Sunroof
+				</h5>
+				<h3>
+					Iluminá tu destino
+				</h3>
+				<p>
+					El techo solar panorámico del Nuevo T-Cross está formado por dos paneles de vidrio y una persiana con control eléctrico.
+				</p>
+			</li>
+
+			<li data-pos="5">
+				<h5>
+					Keyless Entry & Go
+				</h5>
+				<h3>
+					Arranque automático
+				</h3>
+				<p>
+					Comenzá tus viajes con el sistema de desbloqueo y arranque automático que detecta las llaves por proximidad.
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<!----------------------------------TECNOLOGÍA Y CONFORT---------------------------------->
+<div id="divTecnologiaConfort" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Tecnología y confort
+	</div>
+	<div class="SubTituloSeccion">
+		Poné primera con lo último en tecnología
+	</div>
+	<div class="listaHorizontalImagenes">
+		<ul>
+			<li data-pos="1" class="linkCarouselApagado linkCarouselEncendido">Espejos rebatibles automáticos</li>
+			<li data-pos="2" class="linkCarouselApagado">LED Ambient lightning</li>
+			<li data-pos="3" class="linkCarouselApagado">DRL LED y Coming & Leaving Home</li>
+			<li data-pos="4" class="linkCarouselApagado">Asientos de cuero</li>
+			<li data-pos="5" class="linkCarouselApagado">Climatizador automático</li>
+		</ul>
+
+		<!-- Carrousel -->
+		<div class="divCarousel">
+			<div>
+				<ul>
+					<li>
+						<img src="~/Content/info_modelos/t_cross/Tecnologia/Tecnologia01.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/t_cross/Tecnologia/Tecnologia02.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/t_cross/Tecnologia/Tecnologia03.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/t_cross/Tecnologia/Tecnologia04.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/t_cross/Tecnologia/Tecnologia05.jpg" class="imgResponsiva" />
+					</li>
+				</ul>
+			</div>
+
+			<div class="divFlechaIzquierda">
+				<img src="~/Content/img/iconos/flechaIzquierda.svg" class="svg" />
+			</div>
+			<div class="divFlechaDerecha">
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+			</div>
+
+		</div>
+	</div>
+	<div class="divPaginador"><ul class="ulIndice"></ul></div>
+
+	<div class="InfoCarousel">
+		<ul>
+			<li data-pos="1">
+				<h5>
+					Espejos rebatibles automáticos
+				</h5>
+				<h3>
+					Disfrutá de las pequeñas cosas
+				</h3>
+				<p>
+					El nuevo SUV cuenta con espejos rebatibles automáticos para que mantengas tu confort cuando estés fuera de tu vehículo.
+				</p>
+			</li>
+
+			<li data-pos="2">
+				<h5>
+					LED Ambient Lighting
+				</h5>
+				<h3>
+					Un living dentro de tu auto
+				</h3>
+				<p>
+					El interior del Nuevo T-Cross contiene iluminación ambiental para ofrecer no solo un alto nivel de confort sino también un viaje personalizado.
+				</p>
+			</li>
+
+			<li data-pos="3">
+				<h5>
+					DRL LED y Coming & Leaving Home
+				</h5>
+				<h3>
+					Iluminá tu camino
+				</h3>
+				<p>
+					Las luces del nuevo SUV se apagan tras un determinado retardo (Coming Home) y se encienden cuando el conductor desbloquea las puertas con la llave (Leaving Home).
+				</p>
+			</li>
+
+			<li data-pos="4">
+				<h5>
+					Asientos de cuero
+				</h5>
+				<h3>
+					El confort de viajar a cualquier lugar
+				</h3>
+				<p>
+					El Nuevo T-Cross te permite disfrutar de un confort superior con sus modernos asientos de cuero de primer nivel.
+				</p>
+			</li>
+
+			<li data-pos="5">
+				<h5>
+					La temperatura perfecta dentro de tu SUV
+				</h5>
+				<h3>
+					No importa como esté el tiempo fuera, con el climatizador automático
+				</h3>
+				<p>
+					la temperatura interior de tus viajes será ideal.
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+
+<!----------------------------------GALERIA---------------------------------->
+<div class="divGaleria">
+	<a href="#">
+		<img src="~/Content/info_modelos/t_cross/Galeria/Galeria01.jpg" class="imgResponsiva" />
+		<div class="divIconoGaleria1">
+			<div class="divIconoGaleria2">
+				<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+			</div>
+		</div>
+	</a>
+</div>
+
+
+
+
+<!----------------------------------BE INTUITIVE---------------------------------->
+<div id="divSeguridad" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Seguridad
+	</div>
+	<div class="SubTituloSeccion">
+		El más seguro de su categoría
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Airbags</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/t_cross/Seguridad/Seguridad01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Airbags
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Protección en todo momento
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Además de los airbags frontales del conductor y el pasajero delantero, el T-Cross también cuenta con airbags laterales.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/t_cross/Seguridad/Seguridad01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes3Columnas">
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>
+				Anclajes ISOFIX
+			</span>
+		</div>
+		<div class="Imagenes3Columnas-Izquierda">
+			<img src="~/Content/info_modelos/t_cross/Seguridad/Seguridad02.jpg" class="imgResponsiva" />
+			<h5>
+				Anclajes ISOFIX
+			</h5>
+			<h3>
+				Más seguridad para los más chicos
+			</h3>
+			<p>
+				El Nuevo T-Cross está pensado para proteger a cada miembro de tu familia, por eso sus asientos están equipados con anclajes ISOFIX.
+			</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Detector de fatiga</span>
+		</div>
+		<div class="Imagenes3Columnas-Centro">
+			<img src="~/Content/info_modelos/t_cross/Seguridad/Seguridad03.jpg" class="imgResponsiva" />
+			<h5>
+				Detector de fatiga
+			</h5>
+			<h3>
+				Tomate un descanso
+			</h3>
+			<p>
+				El Nuevo T-Cross es capaz de detectar si estás cansado y avisarte cuando deberías detenerte y descansar.
+			</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Alerta de presión de neumáticos</span>
+		</div>
+		<div class="Imagenes3Columnas-Derecha">
+			<img src="~/Content/info_modelos/t_cross/Seguridad/Seguridad04.jpg" class="imgResponsiva" />
+			<h5>
+				Alerta de presión de neumáticos
+			</h5>
+			<h3>
+				Manejá más seguro que nunca
+			</h3>
+			<p>
+				El Nuevo T-Cross te alertará en el caso de que una de las ruedas del vehículo no tenga la presión adecuada.
+			</p>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Cornering Light</span>
+		</div>
+		<div class="Imagenes2Columnas-Izquierda">
+			<div>
+				<img src="~/Content/info_modelos/t_cross/Seguridad/Seguridad05.jpg" class="imgResponsiva" />
+			</div>
+			<h5>
+				Cornering Light
+			</h5>
+			<h3>
+				Faros antiniebla
+			</h3>
+			<p>
+				Las luces del Nuevo T-Cross giran automáticamente hacia cada uno de sus lados, lo que permitirá iluminar curvas y cunetas.
+			</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>
+				¡Conocé el T-Cross!
+			</span>
+		</div>
+		<div class="Imagenes2Columnas-Derecha">
+			<div>
+				<img src="~/Content/info_modelos/t_cross/Seguridad/Seguridad06.jpg" class="imgResponsiva" />
+			</div>
+			<h5>
+				¡Conocé el T-Cross!
+			</h5>
+			<h3>
+				App de realidad aumentada
+			</h3>
+			<p>
+				Por primera vez en nuestro país, vas a tener la posibilidad de conocer un vehículo a través de la realidad aumentada. La app de nuestro nuevo SUV te va a permitir conocer todos sus detalles, configurar sus colores, descubrir las increíbles características tecnológicas, ¡y hasta manejarlo!
+			</p>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+
+
+<!----------------------------------LATIN NCAP---------------------------------->
+<div class="SeccionModelo">
+	<div>
+		<img src="~/Content/info_modelos/t_cross/Galeria/Galeria02.jpg" class="imgResponsiva" />
+	</div>
+	<div class="TituloSeccion">
+		Latin NCAP
+	</div>
+	<div class="SubTituloSeccion">
+		El Nuevo T-Cross obtuvo la calificación máxima en las pruebas Latin NCAP, convirtiéndose en uno de los vehículos más seguros de la región, con 5 estrellas en la protección para adultos y la misma cantidad en seguridad para niños.
+	</div>
+</div>
+
+
+<!----------------------------------POST COLLISION BRAKE---------------------------------->
+<div class="SeccionModelo">
+	<div>
+		<img src="~/Content/info_modelos/t_cross/Galeria/Galeria03.jpg" class="imgResponsiva" />
+	</div>
+	<div class="TituloSeccion">
+		Post Collision Brake
+	</div>
+	<div class="SubTituloSeccion">
+		El sistema de frenado automático tiene como función detener el auto paulatinamente después de un accidente.
+	</div>
+</div>

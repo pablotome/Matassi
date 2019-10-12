@@ -1,0 +1,118 @@
+﻿@model Matassi.Web.Areas.Admin.Models.ArchivosAutoahorro
+@using Matassi.Dominio
+
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("CargaArchivos", "AutoAhorro", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+	@Html.AntiForgeryToken()
+	@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+	<table border="1" style="width:85%; margin-left:auto; margin-right:auto;">
+		<tr>
+			<td>Ofertas</td>
+			<td>Emisiones</td>
+			<td>Ganadores</td>
+		</tr>
+		<tr>
+			<td valign="top">
+				<table border="1" style="width:100%">
+					<tr>
+						<td colspan="4">
+							@Html.TextBoxFor(m => m.ArchivoOfertas, new { type = "file" })
+							@Html.ValidationMessageFor(m => m.ArchivoOfertas, "", new { @class = "text-danger" })
+							<input type="submit" value="Cargar" class="btn btn-default" />
+						</td>
+					</tr>
+					@foreach (ArchivoAutoahorro archivoAutoahorro in ViewBag.ArchivosOfertas)
+					{
+						<tr>
+							<td>
+								@Html.Raw(archivoAutoahorro.NombreArchivo)
+							</td>
+							<td align="right">
+								@Html.Raw(archivoAutoahorro.CantidadRegistros)
+							</td>
+							<td align="center">
+								@Html.Raw(archivoAutoahorro.FechaAlta.ToString("dd/MM/yyyy HH:mm"))
+							</td>
+							<td>
+								<a class="btn btn-default btn-xs" href="@Url.Action("EliminarArchivo", "AutoAhorro", new { @CodArchivo = archivoAutoahorro.CodArchivoAutoahorro })">
+									<span class="glyphicon glyphicon-star" aria-hidden="true"></span> Eliminar
+								</a>
+							</td>
+						</tr>
+					}
+				</table>
+			</td>
+			<td valign="top">
+				<table border="1" style="width:100%">
+					<tr>
+						<td colspan="4">
+							@Html.TextBoxFor(m => m.ArchivoEmisiones, new { type = "file" })
+							@Html.ValidationMessageFor(m => m.ArchivoEmisiones, "", new { @class = "text-danger" })
+							<input type="submit" value="Cargar" class="btn btn-default" />
+						</td>
+					</tr>
+					@foreach (ArchivoAutoahorro archivoAutoahorro in ViewBag.ArchivosEmisiones)
+					{
+						<tr>
+							<td>
+								@Html.Raw(archivoAutoahorro.NombreArchivo)
+							</td>
+							<td align="right">
+								@Html.Raw(archivoAutoahorro.CantidadRegistros)
+							</td>
+							<td align="center">
+								@Html.Raw(archivoAutoahorro.FechaAlta.ToString("dd/MM/yyyy HH:mm"))
+							</td>
+							<td>
+								<a class="btn btn-default btn-xs" href="@Url.Action("EliminarArchivo", "AutoAhorro", new { @CodArchivo = archivoAutoahorro.CodArchivoAutoahorro })">
+									<span class="glyphicon glyphicon-star" aria-hidden="true"></span> Eliminar
+								</a>
+							</td>
+						</tr>
+					}
+				</table>
+			</td>
+			<td valign="top">
+				<table border="1" style="width:100%">
+					<tr>
+						<td colspan="4">
+							@Html.TextBoxFor(m => m.ArchivoGanadores, new { type = "file" })
+							@Html.ValidationMessageFor(m => m.ArchivoGanadores, "", new { @class = "text-danger" })
+							<input type="submit" value="Cargar" class="btn btn-default" />
+						</td>
+					</tr>
+					@foreach (ArchivoAutoahorro archivoAutoahorro in ViewBag.ArchivosGanadores)
+					{
+						<tr>
+							<td>
+								@Html.Raw(archivoAutoahorro.NombreArchivo)
+							</td>
+							<td align="right">
+								@Html.Raw(archivoAutoahorro.CantidadRegistros)
+							</td>
+							<td align="center">
+								@Html.Raw(archivoAutoahorro.FechaAlta.ToString("dd/MM/yyyy HH:mm"))
+							</td>
+							<td>
+								<a class="btn btn-default btn-xs" href="@Url.Action("EliminarArchivo", "AutoAhorro", new { @CodArchivo = archivoAutoahorro.CodArchivoAutoahorro })">
+									<span class="glyphicon glyphicon-star" aria-hidden="true"></span> Eliminar
+								</a>
+							</td>
+						</tr>
+					}
+				</table>
+			</td>
+		</tr>
+		<tr></tr>
+		<tr></tr>
+	</table>
+
+}

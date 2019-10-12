@@ -1,0 +1,496 @@
+﻿@{
+	ViewBag.Title = "up";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+	@Styles.Render("~/bundles/estilosCSSModelo")
+	@Scripts.Render("~/bundles/funcionesModelo")
+}
+
+<div id="divBannerTituloModelo">
+	<span id="spnTituloModelo">
+		Scirocco
+	</span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+	<ul id="ulListaCaracteristicasModelo">
+		<li class="liDisenio" data-divmodelos="divDisenio">Diseño</li>
+		<li class="liPerformance" data-divmodelos="divPerformance">Performance</li>
+		<li class="liConfort" data-divmodelos="divConfort">Confort</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+<div id="divImagenModelo">
+	<img src="~/Content/info_modelos/scirocco/Scirocco.jpg" class="imgResponsiva" />
+</div>
+
+<div id="divTituloModelo">
+	Único en su especie
+</div>
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+	<div class="iconoDesplegar">
+		<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+		<span>
+			Selecciona categoria
+		</span>
+	</div>
+	<ul class="oculto">
+		<li class="liDisenio" data-divmodelos="divDisenio">Diseño</li>
+		<li class="liPerformance" data-divmodelos="divPerformance">Performance</li>
+		<li class="liConfort" data-divmodelos="divConfort">Confort</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+
+<!----------------------------------DISEÑO---------------------------------->
+<div id="divDisenio" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Aerodinámico y deportivo
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Diseño</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/scirocco/Disenio/Disenio01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Diseño
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Abrí la puerta al carácter.
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Si ves que los demás vehículos se dejan adelantar o los peatones siempre frenan para mirarte, tranquilo, es lo que suele pasar cuando estás al volante de un Scirocco.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/scirocco/Disenio/Disenio01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Faros Xenón</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/scirocco/Disenio/Disenio02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/scirocco/Disenio/Disenio02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Faros Xenón
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Brilla con luz propia
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Los faros de Xenón del Scirocco mejoran la visibilidad y el aspecto, permitiéndote tener una visión clara, incluso en condiciones climáticas difíciles o en caminos complicados.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+
+</div>
+
+<!----------------------------------PERFORMANCE---------------------------------->
+<div id="divPerformance" class="SeccionModelo">
+	<div class="TituloSeccion">
+		La potencia en todo su esplendor.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Motor</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/scirocco/Performance/Performance01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Motor
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Bajo consumo, altas prestaciones.
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					¿Usás mucho el auto y te encanta manejar, pero querés mantener un consumo de combustible bajo? El motor 2.0 TSI te va a permitir obtener gran potencia con niveles óptimos de consumo.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/scirocco/Performance/Performance01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Transmisión DSG</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/scirocco/Performance/Performance02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/scirocco/Performance/Performance02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Transmisión DSG
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Sin pasar cambios, pero con la misma adrenalina
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					La caja de cambios de doble embrague DSG te permite cambiar de marcha de forma imperceptible y sin interrupciones en la tracción. En ella se combinan las ventajas de las cajas de cambio manuales y automáticas.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------CONFORT---------------------------------->
+<div id="divConfort" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Sentate y sentí la comodidad.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Interior</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/scirocco/Confort/Confort01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Interior
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Donde empieza lo bueno.
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Junto con un elegante diseño, en el interior del Scirocco vas a encontrar lo último en tecnología. El sistema “Keyless Access” (acceso sin llave) es el sistema de bloqueo y arranque automático de Volkswagen. Ofrece la máxima comodidad, ya que basta con llevar la llave encima para comenzar a disfrutar tu viaje.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/scirocco/Confort/Confort01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Asientos deportivos</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/scirocco/Confort/Confort02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/scirocco/Confort/Confort02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Asientos deportivos
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Máxima estabilidad
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					¿Estás cómodo? En el asiento del Scirocco, la respuesta es un rotundo sí. Sus asientos deportivos proporcionan una estabilidad increíble, incluso en caminos sinuosos. El diseño se completa con elementos decorativos de alta calidad y el infoentretenimiento más intuitivo.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Climatronic</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/scirocco/Confort/Confort03.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Climatronic
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Creá un microclima individualizado para tu viaje
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					¿Demasiado frío? ¿Demasiado calor? ¿Demasiado... intermedio? Encontrar la temperatura adecuada no siempre es fácil, especialmente cuando viajan varias personas en el auto. Con el sistema de aire acondicionado bizona Climatronic, las discusiones son cosa del pasado.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/scirocco/Confort/Confort03.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+
+
+<!----------------------------------VERSIONES---------------------------------->
+<div id="divVersiones" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Versiones
+	</div>
+
+	<!-- GTS -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/scirocco/Versiones/Versiones01.png" class="imgResponsiva" />
+			<h4>GTS</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Sistema de audio Touchscreen con navegador Discover Media</li>
+				<li>Sensores de estacionamiento delanteros y traseros.</li>
+				<li>Sistema “Keyless Access“</li>
+				<li>Ópticas traseras oscurecidas con tecnología LED</li>
+				<li>Transmisión automática DSG (velocidades) 6</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="GTS">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-GTS">
+		<h1>GTS</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/scirocco/InfoTecnica/InfoTecnica01.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Sistema de audio Touchscreen con navegador Discover Media</li>
+					<li>Sensores de estacionamiento delanteros y traseros.</li>
+					<li>Sistema “Keyless Access“</li>
+					<li>Ópticas traseras oscurecidas con tecnología LED</li>
+					<li>Transmisión automática DSG (velocidades) 6</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">
+						Scirocco GTS 211 CV DSG (6 Marchas) 3 Puertas
+					</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación de 18“ “Norwich“</li>
+
+					<li><b>Interior</b></li>
+					<li>Paquete Cromo (Versión 2)</li>
+					<li>Techo moldeado en una pieza</li>
+					<li>Pomo/empuñadura de la palanca de cambio en aluminio</li>
+
+					<li><b>Exterior</b></li>
+					<li>Sin dispositivo de remolque</li>
+					<li>Carcasa del retrovisor exterior negra</li>
+					<li>Techo de cristal</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Inscripción GTS</li>
+					<li>2 puertas</li>
+
+					<li><b>Sistema de asistencia</li>
+					<li>Sin sistema de asistencia en caso de cambio de carril</li>
+
+					<li><b>Espejos</b></li>
+					<li>Retrovisor exterior con ajuste eléctrico/térmico por separado</li>
+					<li>Espejo interior de seguridad antideslumbramiento automático</li>
+
+					<li><b>Iluminación</b></li>
+					<li>PLA</li>
+					<li>Limpiaparabrisas a intervalos con sensor de lluvia</li>
+					<li>Luces interiores en el suelo</li>
+					<li>Espejo interior de seguridad antideslumbramiento automático</li>
+					<li>Luz de marcha diurna con asistente de luz de marcha y función "coming home"</li>
+					<li>PXF</li>
+					<li>Indicador de nivel del agua del limpiaparabrisas</li>
+					<li>Con limpialavafaros</li>
+					<li>Regulación del alcance de las luces, automática/dinámica con luz de conducción en curva(AFS 1)</li>
+					<li>Faros Bi-Xenón con luz de conducción en curva</li>
+					<li>Sin asistente para el cambio de luces</li>
+					<li>Faros antiniebla (integrados)</li>
+					<li>Ópticas traseras oscurecidas con tecnología LED</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Sin "drive select"</li>
+					<li>Sensores de estacionamiento delanteros y traseros</li>
+					<li>Sistema de regulación de velocidad (GRA) electrónico</li>
+					<li>Sin sistema de cámaras/vigilancia sensorial del entorno</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta trasera de asientos no divididos y respaldos abatibles por separado</li>
+					<li>Climatronic, con recirculación de aire libre de FCC</li>
+					<li>Sin apoyo lumbar en los respaldos de los asientos</li>
+					<li>Reposabrazos central delante</li>
+					<li>Regulación en altura manual de los asientos anteriores</li>
+					<li>Asientos no calefaccionables</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Insertos en pintura de piano</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Mirror Link</li>
+					<li>Interfaz eléctrica para uso externo, AUX-IN, USB (compatible con iPod) MDI gama baja Gen2</li>
+					<li>8 altavoces (pasivos)</li>
+					<li>PRC</li>
+					<li>Radio para sistema de navegación</li>
+					<li>Sistema de audio Touchscreen con navegador Discover Media</li>
+
+					<li><b>Navegación</b></li>
+					<li>Display multifuncional con mando</li>
+					<li>Sistema de audio Touchscreen con navegador Discover Media</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifuncional deportivo en cuero con Tiptronic</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante, el del acompañante con desactivación del airbag</li>
+					<li>Frenos de disco posteriores (Geomet D)</li>
+					<li>Frenos delanteros de disco</li>
+					<li>Alarma antirrobo con vigilancia del habitáculo, sirena de alarma y protección contra remolque</li>
+					<li>Indicador para el control de los neumáticos</li>
+					<li>Airbags laterales anteriores con airbag de cabeza</li>
+					<li>Sistema “Keyless Access“</li>
+					<li>Dirección asistida, dependiente de la velocidad (Servotronic)</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/scirocco/Colores/Colores01.png" class="imgResponsiva" /><br />Gris Indy  </li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/scirocco/Colores/Colores02.png" class="imgResponsiva" /><br />Gris Urano  </li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/scirocco/Colores/Colores03.png" class="imgResponsiva" /><br />Rojo Flash  </li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/scirocco/Colores/Colores04.png" class="imgResponsiva" /><br />Blanco Puro  </li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/scirocco/Colores/Colores05.png" class="imgResponsiva" /><br />Negro Profundo</li>
+
+					<li style="clear:both">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+</div>
+
+<!--BROCHURE-->
+<div id="divBrochure">
+	<div id="div-Brochure-Info">
+		<h2>Brochure<br />de Scirocco</h2>
+		<a href="~/Content/info_modelos/scirocco/Brochure/Brochure.pdf" rel="external" class="linkDescargarBrochure" target="_blank">
+			<div id="div-Brochure-Boton">
+				<div id="div-Brochure-Boton-Inner">Descargalo</div>
+			</div>
+		</a>
+	</div>
+
+	<div id="div-Brochure-Imagen">
+		<img src="~/Content/info_modelos/scirocco/Brochure/Brochure.jpg" class="imgResponsiva" />
+	</div>
+</div>

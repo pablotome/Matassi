@@ -1,0 +1,63 @@
+﻿@using Matassi.Dominio
+@model IEnumerable<Matassi.Dominio.ValorCuotaPlanAutoahorro>
+
+@{
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			<h2>@ViewBag.Title</h2>
+
+			<p class="nuevoItem">
+				@Html.ActionLink("Nueva Cuota", "NuevoValorCuota", new { CodPlanAutoahorro = int.Parse(Request["CodPlanAutoahorro"].ToString()) }, new { @class = "btn btn-primary" })
+			</p>
+		</td>
+	</tr>
+</table>
+
+<table class="table tabla-centrada">
+	<tr>
+		<th class="oculto">
+			CodValorCuotaPlanAutoahorro
+		</th>
+		<th>
+			RangoCuota
+		</th>
+		<th>
+			Valor
+		</th>
+		<th>
+			Orden
+		</th>
+		<th></th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td class="oculto">
+				@Html.DisplayFor(modelItem => item.CodValorCuotaPlanAutoahorro)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.RangoCuota)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Valor)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Orden)
+			</td>
+			<td align="center">
+				@Html.ActionLink("Editar", "ValorCuota_Editar", new { codValorCuotaPlanAutoahorro = item.CodValorCuotaPlanAutoahorro }) |
+				@Html.ActionLink("Eliminar", "ValorCuota_Borrar", new { codValorCuotaPlanAutoahorro = item.CodValorCuotaPlanAutoahorro }, new { onclick = string.Format("return confirm('¿Seguro de eliminar el rango de cuota \"{0}\"?');", item.RangoCuota ) })
+			</td>
+		</tr>
+	}
+	<tr>
+		<td colspan="4">
+			@Html.ActionLink("<< Volver a la lista de Planes", "Planes")
+		</td>
+	</tr>
+</table>
+

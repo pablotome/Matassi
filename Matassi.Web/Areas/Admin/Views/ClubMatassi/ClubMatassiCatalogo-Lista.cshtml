@@ -1,0 +1,60 @@
+﻿@using Matassi.Dominio
+@model IEnumerable<Matassi.Dominio.ClubMatassiCatalogo>
+@{
+    ViewBag.Title = "Club Matassi - Catalogo de Premios";
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			<h2>@ViewBag.Title</h2>
+
+			<p class="nuevoItem">
+				@Html.ActionLink("Nuevo Premio", "ClubMatassiCatalogo_Crear", null, new { @class = "btn btn-primary" })
+			</p>
+		</td>
+	</tr>
+</table>
+
+<table class="table tabla-centrada">
+	<tr>
+		<th class="oculto">
+			CodClubMatassiCatalogo
+		</th>
+		<th>
+			Título
+		</th>
+		<th>
+			Descripción
+		</th>
+		<th>
+			Puntos
+		</th>
+		<th></th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td class="oculto">
+				@Html.DisplayFor(modelItem => item.CodClubMatassiCatalogo)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.TituloPremio)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.DescripcionPremio)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.CantidadPuntos)
+			</td>
+			<td align="center">
+				@Html.ActionLink("Editar", "ClubMatassiCatalogo_Editar", new { codClubMatassiCatalogo = item.CodClubMatassiCatalogo }) |
+				@Html.ActionLink("Eliminar", "ClubMatassiCatalogo_Borrar", new { codClubMatassiCatalogo = item.CodClubMatassiCatalogo }, new { onclick = string.Format("return confirm('¿Seguro de eliminar el premio \"{0}\"?');", item.TituloPremio) })
+			</td>
+		</tr>
+	}
+</table>
+
+

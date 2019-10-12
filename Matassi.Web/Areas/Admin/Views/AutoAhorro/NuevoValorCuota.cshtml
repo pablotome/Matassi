@@ -1,0 +1,59 @@
+﻿@using Matassi.Dominio
+@model Matassi.Dominio.ValorCuotaPlanAutoahorro
+
+@{
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			<h2>@ViewBag.Title</h2>
+		</td>
+	</tr>
+</table>
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			@using (Html.BeginForm("NuevoValorCuota", "AutoAhorro", FormMethod.Post, new { @class = "form-horizontal" }))
+			{
+				@Html.AntiForgeryToken()
+
+				@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.RangoCuota, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-md-8">
+						@Html.EditorFor(model => model.RangoCuota, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.RangoCuota, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Valor, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-md-8">
+						@Html.EditorFor(model => model.Valor, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.Valor, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Orden, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-md-8">
+						@Html.EditorFor(model => model.Orden, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.Orden, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-md-offset-2 col-md-10">
+						@Html.Hidden("codPlanAutoahorro", Model.PlanAutoahorro.CodPlanAutoahorro)
+						<input type="submit" value="Guardar" class="btn btn-primary" />
+						@Html.ActionLink("Cancelar", "Cuotas", new { codPlanAutoahorro = Model.PlanAutoahorro.CodPlanAutoahorro }, new { @class = "btn btn-default" })
+					</div>
+				</div>
+			}
+		</td>
+	</tr>
+</table>

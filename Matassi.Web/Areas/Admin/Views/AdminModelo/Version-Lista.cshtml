@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Matassi.Dominio.VersionModelo>
+
+@{
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			<h2>@ViewBag.Title</h2>
+
+			<p class="nuevoItem">
+				@Html.ActionLink("Nueva Versión", "Version_Crear", new { codModelo = int.Parse(Request["codModelo"]) }, new { @class = "btn btn-primary" })
+			</p>
+		</td>
+	</tr>
+</table>
+
+<table class="table tabla-centrada">
+	<thead>
+
+		<tr>
+			<th class="oculto">
+				CodVersionModelo
+			</th>
+			<th>
+				Nombre
+			</th>
+			<th>
+				Bajada de Título
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td class="oculto">
+					@Html.DisplayFor(modelItem => item.CodVersionModelo)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Nombre)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Bajada)
+				</td>
+				<td align="center">
+					@Html.ActionLink("Editar", "Version_Editar", new { idVersion = item.CodVersionModelo }) |
+					@Html.ActionLink("Caracteristicas", "Caracteristica_Lista", new { codVersion = item.CodVersionModelo })
+				</td>
+			</tr>
+		}
+	</tbody>
+	<tfoot>
+		<tr>
+			<td colspan="4">
+				@Html.ActionLink("<< Volver a la lista de Modelos", "Index")
+			</td>
+		</tr>
+	</tfoot>
+</table>

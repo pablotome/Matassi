@@ -1,0 +1,67 @@
+﻿@using Matassi.Dominio
+@model List<Modelo>
+
+@{
+	ViewBag.Title = "Accesorios";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+<style type="text/css">
+	#MainBox_form_cm {
+		font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		color: #0b0b0b;
+		width: 920px;
+		margin: 10px auto;
+	}
+
+		#MainBox_form_cm .cm_copete {
+			border-bottom: 1px #cfd7d9 solid;
+			padding-bottom: 6px;
+			font-family: 'VWHeadWeb-Regular';
+			font-size: 15px;
+		}
+
+		#MainBox_form_cm .cm_titulo {
+			padding: 18px 0 4px 0;
+			font-family: 'VWHeadWeb-Regular';
+			font-size: 24px;
+		}
+
+		#MainBox_form_cm UL.box_modelos_acc {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			margin-top: 20px;
+		}
+
+			#MainBox_form_cm UL.box_modelos_acc LI {
+				display: inline;
+				padding: 10px;
+			}
+</style>
+
+<div class="infoModelo">
+	<div class="modeloActual">PostVenta / Accesorios</div>
+</div>
+<div id="MainBox_form_cm">
+	<div class="cm_copete">Accesorios Originales</div>
+	<p>&nbsp;</p>
+	<div class="cm_titulo">Catálogo de accesorios Volkswagen</div>
+	<div>
+
+		<ul class="box_modelos_acc">
+			
+			@{
+				foreach (Modelo modelo in Model)
+				{
+					<li>
+						<a href='@Url.Action("Modelo", "Accesorios", new { @id = modelo.NombreClave} )'>
+							<img src='@Url.Action("VerImagenHomeAccesorioModelo", "Modelo", new { id = modelo.CodModelo })' width="153" height="120" alt="@modelo.Nombre" border="0" />
+						</a>
+					</li>
+				}
+			}
+		</ul>
+	</div>
+</div>

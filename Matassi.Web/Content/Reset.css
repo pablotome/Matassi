@@ -1,0 +1,72 @@
+﻿@charset "UTF-8";
+/** 
+ * (Id: reset.css 566 2009-07-29 18:09:49Z hst564 ) 
+ */
+/**
+ * Reset style sheet from Eric Meyer
+ *
+ * @copyright       Eric Meyer
+ * @license         Public Domain
+ * @link            http://meyerweb.com/eric/tools/css/reset/
+ * @project         Volkswagen
+ * @package         css
+ * @version         (Revision: 566 )
+ * @author          (Author: hst564 )
+ * @lastmodified    (Date: 2009-07-29 20:09:49 +0200  )
+ */
+ 
+/* v1.0 | 20080212 */
+
+@media all
+{
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, font, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		background: transparent;
+		text-align: left; /* speciality */
+	}
+	body {
+		line-height: 1;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+	}
+
+	/* remember to define focus styles! */
+	:focus {
+		outline: 0;
+	}
+
+	/* remember to highlight inserts somehow! */
+	ins {
+		text-decoration: none;
+	}
+	del {
+		text-decoration: line-through;
+	}
+
+	/* tables still need 'cellspacing="0"' in the markup */
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+}

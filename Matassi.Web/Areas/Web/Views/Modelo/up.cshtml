@@ -1,0 +1,1258 @@
+﻿@{
+	ViewBag.Title = "up";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+	@Styles.Render("~/bundles/estilosCSSModelo")
+	@Scripts.Render("~/bundles/funcionesModelo")
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#divDestacados').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+			$('#divDisenio').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+
+			$(window).on("orientationchange", function () {
+				//window.location.reload();
+				setTimeout(function () {
+					$('#divDestacados').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+				}, 500);
+
+				setTimeout(function () {
+					$('#divDisenio').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+				}, 500);
+			});
+		});
+	</script>
+}
+
+<div id="divBannerTituloModelo">
+	<span id="spnTituloModelo">
+		up!
+	</span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+	<ul id="ulListaCaracteristicasModelo">
+		<li class="liDestacados" data-divmodelos="divDestacados">Destacados</li>
+		<li class="liConectividad" data-divmodelos="divConectividad">Conectividad</li>
+		<li class="liPerformance" data-divmodelos="divPerformance">Performance</li>
+		<li class="liSeguridad" data-divmodelos="divSeguridad">Seguridad</li>
+		<li class="liDisenio" data-divmodelos="divDisenio">Diseño</li>
+		<li class="liTecnologia" data-divmodelos="divTecnologia">Tecnología</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+<div id="divImagenModelo">
+	<img src="~/Content/info_modelos/up/up.jpg" class="imgResponsiva" />
+</div>
+
+<div id="divTituloModelo">
+	Con el mismo poder de reacción que tenés vos.
+</div>
+<div id="divBajadaTituloModelo">
+	El Nuevo up! logra un rendimiento excepcional en ciudad y en ruta. Inspirado en quienes buscan emociones frescas, su diseño y performance te permiten alcanzar nuevos horizontes
+</div>
+
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+	<div class="iconoDesplegar">
+		<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+		<span>
+			Selecciona categoria
+		</span>
+	</div>
+	<ul class="oculto">
+		<li class="liDestacados" data-divmodelos="divDestacados">Destacados</li>
+		<li class="liConectividad" data-divmodelos="divConectividad">Conectividad</li>
+		<li class="liPerformance" data-divmodelos="divPerformance">Performance</li>
+		<li class="liSeguridad" data-divmodelos="divSeguridad">Seguridad</li>
+		<li class="liDisenio" data-divmodelos="divDisenio">Diseño</li>
+		<li class="liTecnologia" data-divmodelos="divTecnologia">Tecnología</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+
+
+
+
+<!----------------------------------DESTACADOS---------------------------------->
+<div id="divDestacados" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Destacados
+	</div>
+	<div class="SubTituloSeccion">
+		Todo en el Nuevo up! se enfoca en ofrecer una experiencia de manejo única.
+	</div>
+	<div class="listaHorizontalImagenes">
+		<ul>
+			<li data-pos="1" class="linkCarouselApagado linkCarouselEncendido">Conectividad</li>
+			<li data-pos="2" class="linkCarouselApagado">Performance</li>
+			<li data-pos="3" class="linkCarouselApagado">Seguridad</li>
+			<li data-pos="4" class="linkCarouselApagado">Diseño</li>
+			<li data-pos="5" class="linkCarouselApagado">Tecnología</li>
+		</ul>
+
+		<!-- Carrousel -->
+		<div class="divCarousel">
+			<div>
+				<ul>
+					<li>
+						<img src="~/Content/info_modelos/up/Destacados/Destacados-01-Conectividad.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/up/Destacados/Destacados-02-Performance.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/up/Destacados/Destacados-03-Seguridad.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/up/Destacados/Destacados-04-Disenio.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/up/Destacados/Destacados-05-Tecnologia.jpg" class="imgResponsiva" />
+					</li>
+				</ul>
+			</div>
+
+			<div class="divFlechaIzquierda">
+				<img src="~/Content/img/iconos/flechaIzquierda.svg" class="svg" />
+			</div>
+			<div class="divFlechaDerecha">
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+			</div>
+
+		</div>
+	</div>
+	<div class="divPaginador"><ul class="ulIndice"></ul></div>
+
+	<div class="InfoCarousel">
+		<ul>
+			<li data-pos="1">
+				<h5>
+					Conectividad
+				</h5>
+				<h3>
+					Conectado con tu mundo.
+				</h3>
+				<p>
+					Moderno y adaptado a los tiempos que corren, el Nuevo up! estrena un sistema de radio “Composition Phone”, con pantalla multifunción color de 5”.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="2">
+				<h5>
+					Performance.
+				</h5>
+				<h3>
+					Nuevos horizontes.
+				</h3>
+				<p>
+					El Nuevo up! llega equipado con el motor 1.0l TSI con 101 cv de potencia y 165 Nm de torque.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="3">
+				<h5>
+					Seguridad
+				</h5>
+				<h3>
+					Una referencia en su segmento.
+					<br>
+				</h3>
+				<p>
+					El Nuevo up! viene con más seguridad que su ya premiado antecesor. Viajá tranquilo sabiendo que estás en buenas manos.
+				</p>
+			</li>
+
+			<li data-pos="4">
+				<h5>
+					Diseño
+				</h5>
+				<h3>
+					El equilibrio perfecto.
+					<br>
+				</h3>
+				<p>
+					Con un renovado interior y exterior, el Nuevo up! es poseedor de un look atractivo, cómodo y confiable.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="5">
+				<h5>
+					Tecnología
+				</h5>
+				<h3>
+					Increíble por donde lo mires.
+					<br>
+				</h3>
+				<p>
+					El Nuevo up! suma elementos únicos en el segmento, brindándote lo último en tecnología para tus viajes.
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<!----------------------------------GALERIA---------------------------------->
+<div class="divGaleria">
+	<a href="#">
+		<img src="~/Content/info_modelos/up/Galeria/Galeria0.jpg" class="imgResponsiva" />
+		<div class="divIconoGaleria1">
+			<div class="divIconoGaleria2">
+				<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+			</div>
+		</div>
+	</a>
+</div>
+
+
+<!----------------------------------CONECTIVIDAD---------------------------------->
+<div id="divConectividad" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Conectividad
+	</div>
+	<div class="SubTituloSeccion">
+		El Nuevo up! estrena un sistema de radio “Composition Phone”, con pantalla multifunción color de 5”. Su soporte porta celulares "Dockstation" cuenta con conexión Bluetooth y entrada USB.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+	<div class="Imagenes2Columnas">
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Sistema de radio</span>
+		</div>
+		<div class="Imagenes2Columnas-Izquierda">
+			<div>
+				<img src="~/Content/info_modelos/up/Conectividad/Conectividad02.jpg" class="imgResponsiva" />
+			</div>
+			<h5>Sistema de radio</h5>
+			<h3>Think Blue Trainer</h3>
+			<p>Este novedoso sistema de radio te permite conectar tu celular al vehículo y disfrutar de la app “Maps + More”, descargable de forma gratuita tanto para Android como para iOS.</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>App Connect</span>
+		</div>
+		<div class="Imagenes2Columnas-Derecha">
+			<div>
+				<img src="~/Content/info_modelos/up/Conectividad/Conectividad01.jpg" class="imgResponsiva" />
+			</div>
+			<h5>App Connect</h5>
+			<h3>Maps + More</h3>
+			<p>En esta aplicación están disponibles: informaciones de viaje, datos reales de revoluciones y temperatura, música descargada en el teléfono, agenda de contactos y sistema de navegación GPS.</p>
+		</div>
+	</div>
+	<hr class="hrSeparadorItemsSeccion" />
+</div>
+
+<div class="divGaleria">
+	<a href="#">
+		<img src="~/Content/info_modelos/up/Galeria/Galeria1.jpg" class="imgResponsiva" />
+		<div class="divIconoGaleria1">
+			<div class="divIconoGaleria2">
+				<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+			</div>
+		</div>
+	</a>
+</div>
+
+
+<!----------------------------------PERFORMANCE---------------------------------->
+<div id="divPerformance" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Performance
+	</div>
+	<div class="SubTituloSeccion">
+		La motorización del Nuevo up! Pepper ha sido reconocida mundialmente por la precisión de la inyección directa de combustible, los comandos de válvulas variables y el alto desempeño del turbocompresor.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>TSI</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div>
+				<img src="~/Content/info_modelos/up/Performance/Performance01.jpg" class="imgResponsiva" />
+			</div>
+			<h5>TSI</h5>
+			<h3>Inspirado en quienes buscan nuevas emociones.</h3>
+			<p>Con su velocidad máxima de 180 km/h, aceleración de 0-100 km/h en 9,7 s y consumo combinado de 5,48 l/100km, el Nuevo up! Pepper es la combinación perfecta de potencia, velocidad y bajo consumo de combustible.</p>
+		</div>
+
+		<hr class="hrSeparadorItemsSeccion" />
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>MPI</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha">
+			<div>
+				<img src="~/Content/info_modelos/up/Performance/Performance02.jpg" class="imgResponsiva" />
+			</div>
+			<h5>MPI</h5>
+			<h3>Motor clásico.</h3>
+			<p>El motor 1.0l MPI es un motor de 3 cilindros de 75 cv que proporciona un comportamiento dinámico a un muy bajo consumo de combustible. Velocidad máxima de 160 km/h en 12,7 s y consumo combinado de 5,47 l/100km.</p>
+		</div>
+
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<div class="divGaleria">
+	<a href="#">
+		<img src="~/Content/info_modelos/up/Galeria/Galeria2.jpg" class="imgResponsiva" />
+		<div class="divIconoGaleria1">
+			<div class="divIconoGaleria2">
+				<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+			</div>
+		</div>
+	</a>
+</div>
+
+
+<!----------------------------------SEGURIDAD---------------------------------->
+<div id="divSeguridad" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Seguridad
+	</div>
+	<div class="SubTituloSeccion">
+		Además del equipamiento de serie de frenos ABS y airbags frontales, también ofrece control de tracción en la versión Pepper.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes3Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Seguridad</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Izquierda">
+			<img src="~/Content/info_modelos/up/Seguridad/Seguridad01.jpg" class="imgResponsiva" />
+			<h5>
+				Seguridad
+			</h5>
+			<h3>
+				Airbag frontal
+			</h3>
+			<p>
+				Doble airbag para proteger al conductor y al pasajero.
+			</p>
+		</div>
+
+		<hr class="hrSeparadorItemsSeccion" />
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Seguridad</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Centro">
+			<img src="~/Content/info_modelos/up/Seguridad/Seguridad02.jpg" class="imgResponsiva" />
+			<h5>
+				Seguridad
+			</h5>
+			<h3>
+				Faros anti niebla
+			</h3>
+			<p>
+				La función "Cornering Light" permite que el faro antiniebla se encienda hacia el lado de giro en baja velocidad.
+			</p>
+		</div>
+
+		<hr class="hrSeparadorItemsSeccion" />
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Seguridad</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Derecha">
+			<img src="~/Content/info_modelos/up/Seguridad/Seguridad03.jpg" class="imgResponsiva" />
+			<h5>
+				Seguridad
+			</h5>
+			<h3>
+				Luz de giro
+			</h3>
+			<p>
+				Indicador visual de giro en los espejos exteriores.
+			</p>
+		</div>
+	</div>
+	<hr class="hrSeparadorItemsSeccion" />
+</div>
+
+<div class="divGaleria">
+	<a href="#">
+		<img src="~/Content/info_modelos/up/Galeria/Galeria3.jpg" class="imgResponsiva" />
+		<div class="divIconoGaleria1">
+			<div class="divIconoGaleria2">
+				<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+			</div>
+		</div>
+	</a>
+</div>
+
+
+
+<!----------------------------------DISEÑO---------------------------------->
+<div id="divDisenio" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Diseño
+	</div>
+	<div class="SubTituloSeccion">
+		Hay una creencia que dice que la funcionalidad y la belleza no podían ser unidas a la perfección. El Nuevo up! viene a desafiar estas viejas ideas.
+	</div>
+	<div class="listaHorizontalImagenes">
+		<ul>
+			<li data-pos="1" class="linkCarouselApagado linkCarouselEncendido">Llantas</li>
+			<li data-pos="2" class="linkCarouselApagado">Espejo retrovisor</li>
+			<li data-pos="3" class="linkCarouselApagado">Interior</li>
+			<li data-pos="4" class="linkCarouselApagado">Capacidad</li>
+			<li data-pos="5" class="linkCarouselApagado">Tablero</li>
+		</ul>
+
+		<!-- Carrousel -->
+		<div class="divCarousel">
+			<div>
+				<ul>
+					<li><img src="~/Content/info_modelos/up/Disenio/Disenio-01-Llantas.jpg" class="imgResponsiva" /></li>
+					<li><img src="~/Content/info_modelos/up/Disenio/Disenio-02-Espejo-Retrovisor.jpg" class="imgResponsiva" /></li>
+					<li><img src="~/Content/info_modelos/up/Disenio/Disenio-03-Interior.jpg" class="imgResponsiva" /></li>
+					<li><img src="~/Content/info_modelos/up/Disenio/Disenio-04-Capacidad.jpg" class="imgResponsiva" /></li>
+					<li><img src="~/Content/info_modelos/up/Disenio/Disenio-05-Tablero.jpg" class="imgResponsiva" /></li>
+				</ul>
+			</div>
+
+			<div class="divFlechaIzquierda">
+				<img src="~/Content/img/iconos/flechaIzquierda.svg" class="svg" />
+			</div>
+			<div class="divFlechaDerecha">
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="divPaginador"><ul class="ulIndice"></ul></div>
+
+	<div class="InfoCarousel">
+		<ul>
+			<li data-pos="1">
+				<h5>
+					Llantas
+				</h5>
+				<h3>
+					Look deportivo.
+				</h3>
+				<p>
+					Sus llantas de aleación 15" le brindan un aspecto deportivo.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="2">
+				<h5>
+					Espejo retrovisor
+				</h5>
+				<h3>
+					El secreto está en los detalles.
+				</h3>
+				<p>
+					El espejo retrovisor tiene función "Tilt Down".
+				</p>
+			</li>
+
+			<li data-pos="3">
+				<h5>
+					Interior
+				</h5>
+				<h3>
+					Moderno y tecnológico.
+					<br>
+				</h3>
+				<p>
+					Cuenta con un renovado interior con una luz ambiental de LED.
+				</p>
+			</li>
+
+			<li data-pos="4">
+				<h5>
+					Capacidad
+				</h5>
+				<h3>
+					Espacio para todo lo que más querés.
+				</h3>
+				<p>
+					Asientos traseros reclinables y piso de baúl con posiciones variables.
+				</p>
+			</li>
+
+			<li data-pos="5">
+				<h5>
+					Tablero
+				</h5>
+				<h3>
+					Todo lo que necesitás al alcance de tu mano.
+				</h3>
+				<p>
+					Nuevo tablero de instrumentos y volante multifunción.
+				</p>
+			</li>
+		</ul>
+	</div>
+
+	<div class="divGaleria">
+		<div class="divGaleria-Izquierda">
+			<a href="#">
+				<img src="~/Content/info_modelos/up/Galeria/Galeria4.jpg" class="imgResponsiva" />
+				<div class="divIconoGaleria1">
+					<div class="divIconoGaleria2">
+						<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="divGaleria-Derecha">
+			<a href="#">
+				<img src="~/Content/info_modelos/up/Galeria/Galeria5.jpg" class="imgResponsiva" />
+				<div class="divIconoGaleria1">
+					<div class="divIconoGaleria2">
+						<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!----------------------------------TECNOLOGIA---------------------------------->
+<div id="divTecnologia" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Tecnología
+	</div>
+	<div class="SubTituloSeccion">
+		Además de estar más conectado que nunca, el Nuevo up! suma elementos únicos en el segmento como limpiaparabrisas automáticos con sensor de lluvia, faros antiniebla con “Cornering light”, sensor crepuscular con activación de luces automáticas y función “Coming & Leaving Home”.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Tecnología</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/up/Tecnologia/Tecnologia01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Tecnología.
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Volante Multifunción.
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Sea tu música, tus llamadas o la información del tablero, controlá todas las funciones del sistema sin despegar las manos del volante.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/up/Tecnologia/Tecnologia01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes3Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Tecnología</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Izquierda">
+			<img src="~/Content/info_modelos/up/Tecnologia/Tecnologia02.jpg" class="imgResponsiva" />
+			<h5>
+				Tecnología
+			</h5>
+			<h3>
+				Tilt Down
+			</h3>
+			<p>
+				El espejo retrovisor exterior derecho se inclina automáticamente al poner marcha atrás, para poder ver el cordón de la vereda cuando estacionás.
+			</p>
+		</div>
+
+		<hr class="hrSeparadorItemsSeccion" />
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Tecnología</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Centro">
+			<img src="~/Content/info_modelos/up/Tecnologia/Tecnologia03.jpg" class="imgResponsiva" />
+			<h5>
+				Tecnología
+			</h5>
+			<h3>
+				Sensor de lluvia
+			</h3>
+			<p>
+				El limpiaparabrisas se accionará automáticamente en caso de lluvias.
+			</p>
+		</div>
+
+		<hr class="hrSeparadorItemsSeccion" />
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Tecnología</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Derecha">
+			<img src="~/Content/info_modelos/up/Tecnologia/Tecnologia04.jpg" class="imgResponsiva" />
+			<h5>
+				Tecnología
+			</h5>
+			<h3>
+				Sensor crepuscular
+			</h3>
+			<p>
+				Cuando oscurece, los faros del Nuevo up! se prenden automáticamente.
+			</p>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+
+</div>
+
+<!--VERSIONES-->
+<div id="divVersiones" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Versiones
+	</div>
+
+	<!-- CROSS UP! -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/up/Versiones/Version01.png" class="imgResponsiva" />
+			<h4>cross up!</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Volante multifuncional de cuero</li>
+				<li>Barras longitudinales del techo, brillante</li>
+				<li>Llantas de aleación ligera 5 1/2J x 15</li>
+				<li>6YA</li>
+				<li>Ayuda de aparcamiento</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="cross-up">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-cross-up">
+		<h1>cross up!</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/up/InfoTecnica/InfoTecnica01.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Volante multifuncional de cuero</li>
+					<li>Barras longitudinales del techo, brillante</li>
+					<li>Llantas de aleación ligera 5 1/2J x 15</li>
+					<li>6YA</li>
+					<li>Ayuda de aparcamiento</li>
+					<li>Inmovilizador electrónico, con alarma antirrobo y control del habitáculo</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">cross up! 1.0l Nafta 75 CV Manual 5P</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación ligera 5 1/2J x 15</li>
+
+					<li><b>Interior</b></li>
+					<li>Sin paquete Aluminio/Cromo</li>
+					<li>Techo moldeado en una pieza</li>
+					<li>Pomo/empuñadura de la palanca de cambio en cuero</li>
+
+					<li><b>Exterior</b></li>
+					<li>Carcasa del retrovisor exterior en cromo</li>
+					<li>Barras longitudinales del techo, brillante</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Sin spoiler posterior</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Sin juego de siglas y emblemas (sin denominación de tipo)</li>
+					<li>4 puertas</li>
+
+					<li><b>Espejos</b></li>
+					<li>6YA</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Luz de marcha diurna con asistente de luz de marcha y función "coming home"</li>
+					<li>Faros principales halógenos</li>
+					<li>Sin luces adicionales (ilum. interior)</li>
+					<li>Faros antiniebla y luz de giro</li>
+					<li>Conexión de intervalos de barrido del limpiaparabrisas, con sensor de luz y lluvia</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Ayuda de aparcamiento</li>
+					<li>Sistema de regulación de velocidad (GRA) electrónico</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta trasera y respaldo, no abatible</li>
+					<li>Aire acondicionado con regulación mecánica</li>
+					<li>Regulación en altura manual del asiento anterior izquierdo</li>
+					<li>Asientos no calefaccionables</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Aplicaciones decorativas en cromo</li>
+					<li>Insertos efecto granito</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Interfaz eléctrica para uso externo, USB (compatible con iPod)</li>
+					<li>6 altavoces (pasivos)</li>
+					<li>MIB2 básico PQ radio</li>
+
+					<li><b>Navegación</b></li>
+					<li>Display multifuncional con mando</li>
+					<li>Preparación para sistema de navegación</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifuncional de cuero</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante</li>
+					<li>Frenos de tambor posteriores</li>
+					<li>Frenos de disco anteriores</li>
+					<li>Inmovilizador electrónico, con alarma antirrobo y control del habitáculo</li>
+					<li>Sin sistema de seguridad ampliado</li>
+					<li>Sin airbag lateral</li>
+					<li>Cierre centralizado por control remoto, con accionamiento desde el interior sin cierre de seguridad</li>
+					<li>Dirección asistida, dependiente de la velocidad (Servotronic)</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color01.png" class="imgResponsiva" /><br />Azul Laguna</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color02.png" class="imgResponsiva" /><br />Plata Sirus</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color03.png" class="imgResponsiva" /><br />Gris Platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color04.png" class="imgResponsiva" /><br />Negro Universal</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color05.png" class="imgResponsiva" /><br />Rojo Flash</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color06.png" class="imgResponsiva" /><br />Blanco Cristal</li>
+
+					<li class="sin-borde"><b>Exterior</b></li>
+					<li class="sin-borde">Carcasa del retrovisor exterior en el color de la carrocería</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<!-- UP! PEPPER -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/up/Versiones/Version02.png" class="imgResponsiva" />
+			<h4>up! pepper</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Volante multifuncional de cuero</li>
+				<li>Llantas de aleación ligera 5 1/2J x 15</li>
+				<li>Ayuda de aparcamiento</li>
+				<li>Inmovilizador electrónico, con alarma antirrobo y control del habitáculo</li>
+				<li>Motor Otto 3 cilindros 1,0 L/74 KW TSI motor básico: T26</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="up-pepper">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-up-pepper">
+		<h1>up! pepper</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/up/InfoTecnica/InfoTecnica02.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<!--
+					<img src="~/Content/img/iconos/flechaDerecha.svg" class="imgResponsiva" style="height: 10px;" />
+				-->
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Volante multifuncional de cuero</li>
+					<li>Llantas de aleación ligera 5 1/2J x 15</li>
+					<li>Ayuda de aparcamiento</li>
+					<li>Inmovilizador electrónico, con alarma antirrobo y control del habitáculo</li>
+					<li>Motor Otto 3 cilindros 1,0 L/74 KW TSI motor básico: T26</li>
+				</ul>
+			</div>
+			<h3>Datos técnicos</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">up! pepper 1.0l TSI Nafta 101 CV Manual 5P</li>
+				</ul>
+			</div>
+			<h3>Equipamiento de serie</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación ligera 5 1/2J x 15</li>
+
+					<li><b>Interior</b></li>
+					<li>Sin paquete Aluminio/Cromo</li>
+					<li>Techo moldeado en una pieza</li>
+					<li>Pomo/empuñadura de la palanca de cambio en plástico</li>
+
+					<li><b>Exterior</b></li>
+					<li>Carcasa del retrovisor exterior y asidero del portón del maletero en el color de la carrocería</li>
+					<li>Sin barras longitudinales del techo ni barras portaequipajes</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Sin spoiler posterior</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Inscripción "TSI"</li>
+					<li>4 puertas</li>
+
+					<li><b>Espejos</b></li>
+					<li>Retrovisor exterior con ajuste eléctrico</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Luz de marcha diurna con asistente de luz de marcha y función "coming home"</li>
+					<li>Faros principales halógenos</li>
+					<li>Iluminación indirecta para indicadores y unidades de mando</li>
+					<li>Faros antiniebla y luz de giro</li>
+					<li>Conexión de intervalos de barrido del limpiaparabrisas, con sensor de luz y lluvia</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Ayuda de aparcamiento</li>
+					<li>Sistema de regulación de velocidad (GRA) electrónico</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta trasera y respaldo, no abatible</li>
+					<li>Aire acondicionado con regulación mecánica</li>
+					<li>Regulación en altura manual del asiento anterior izquierdo</li>
+					<li>Asientos no calefaccionables</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Aplicaciones decorativas en cromo</li>
+					<li>Insertos en madera de mirto, oscura</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Interfaz eléctrica para uso externo, USB (compatible con iPod)</li>
+					<li>6 altavoces (pasivos)</li>
+					<li>MIB2 básico PQ radio</li>
+
+					<li><b>Navegación</b></li>
+					<li>Display multifuncional con mando</li>
+					<li>Preparación para sistema de navegación</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifuncional de cuero</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante</li>
+					<li>Frenos de tambor posteriores</li>
+					<li>Frenos de disco anteriores, con soporte integrado</li>
+					<li>Inmovilizador electrónico, con alarma antirrobo y control del habitáculo</li>
+					<li>Sin sistema de seguridad ampliado</li>
+					<li>Sin airbag lateral</li>
+					<li>Cierre centralizado por control remoto, con accionamiento desde el interior sin cierre de seguridad</li>
+					<li>Dirección asistida, dependiente de la velocidad (Servotronic)</li>
+				</ul>
+			</div>
+			<h3>Equipamiento opcional</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color01.png" class="imgResponsiva" /><br />Azul Laguna</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color02.png" class="imgResponsiva" /><br />Plata Sirus</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color03.png" class="imgResponsiva" /><br />Gris Platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color04.png" class="imgResponsiva" /><br />Negro Universal</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color05.png" class="imgResponsiva" /><br />Rojo Flash</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color06.png" class="imgResponsiva" /><br />Blanco Cristal</li>
+
+					<li class="sin-borde">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<!-- TAKE UP! -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/up/Versiones/Version03.png" class="imgResponsiva" />
+			<h4>take up!</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Regulación en altura manual del asiento anterior izquierdo</li>
+				<li>Radio versión 3</li>
+				<li>Aire acondicionado con regulación mecánica</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="take-up">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-take-up">
+		<h1>take up!</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/up/InfoTecnica/InfoTecnica03.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<!--
+					<img src="~/Content/img/iconos/flechaDerecha.svg" class="imgResponsiva" style="height: 10px;" />
+				-->
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Regulación en altura manual del asiento anterior izquierdo</li>
+					<li>Radio versión 3</li>
+					<li>Aire acondicionado con regulación mecánica</li>
+				</ul>
+			</div>
+			<h3>Datos técnicos</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">take up! 1.0l Nafta 75 CV Manual 5P</li>
+				</ul>
+			</div>
+			<h3>Equipamiento de serie</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de acero 5J x 14</li>
+
+					<li><b>Interior</b></li>
+					<li>Sin paquete Aluminio/Cromo</li>
+					<li>Techo moldeado en una pieza</li>
+					<li>Pomo/empuñadura de la palanca de cambio en plástico</li>
+
+					<li><b>Exterior</b></li>
+					<li>Componentes sin superficie especial</li>
+					<li>Sin barras longitudinales del techo ni barras portaequipajes</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Sin spoiler posterior</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Sin juego de siglas y emblemas (sin denominación de tipo)</li>
+					<li>4 puertas</li>
+
+					<li><b>Espejos</b></li>
+					<li>Regulación interna manual espejos exter.</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Activación de las luces de marcha diurna</li>
+					<li>Faros halógenos</li>
+					<li>Sin luces adicionales (ilum. interior)</li>
+					<li>Sin faros antiniebla</li>
+					<li>Limpiaparabrisas a intervalos, sin regulación</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Sin ayuda de aparcamiento</li>
+					<li>Sin regulador de velocidad (GRA)</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta trasera y respaldo, no abatible</li>
+					<li>Aire acondicionado con regulación mecánica</li>
+					<li>Regulación en altura manual del asiento anterior izquierdo</li>
+					<li>Asientos no calefaccionables</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Sin aplicaciones decorativas</li>
+					<li>Sin insertos decorativos</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Sin interface eléctrico 6 altavoces (pasivos)</li>
+					<li>Radio versión 3</li>
+
+					<li><b>Navegación</b></li>
+					<li>Sin indicador multifunciones/computadora de a bordo</li>
+					<li>Sin sistema de navegación</li>
+					<li>Sin preparación/montaje de auto-teléfono</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante</li>
+					<li>Frenos de tambor posteriores</li>
+					<li>Frenos de disco anteriores</li>
+					<li>Inmovilizador electrónico</li>
+					<li>Sin sistema de seguridad ampliado</li>
+					<li>Sin airbag lateral</li>
+					<li>Sin cierre centralizado</li>
+					<li>Dirección asistida, dependiente de la velocidad (Servotronic)</li>
+				</ul>
+			</div>
+			<h3>Equipamiento opcional</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color01.png" class="imgResponsiva" /><br />Azul Laguna</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color02.png" class="imgResponsiva" /><br />Plata Sirus</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color03.png" class="imgResponsiva" /><br />Gris Platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color04.png" class="imgResponsiva" /><br />Negro Universal</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color05.png" class="imgResponsiva" /><br />Rojo Flash</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color06.png" class="imgResponsiva" /><br />Blanco Cristal</li>
+					<li class="sin-borde">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<!-- MOVE UP! -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/up/Versiones/Version04.png" class="imgResponsiva" />
+			<h4>move up!</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Alfombrillas delante y detrás</li>
+				<li>Dirección asistida, dependiente de la velocidad (Servotronic)</li>
+				<li>Sistema de carga variable</li>
+				<li>Sistema de navegación</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="move-up">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-move-up">
+		<h1>move up!</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/up/InfoTecnica/InfoTecnica04.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<!--
+					<img src="~/Content/img/iconos/flechaDerecha.svg" class="imgResponsiva" style="height: 10px;" />
+				-->
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Alfombrillas delante y detrás</li>
+					<li>Dirección asistida, dependiente de la velocidad (Servotronic)</li>
+					<li>Sistema de carga variable</li>
+					<li>Sistema de navegación</li>
+				</ul>
+			</div>
+			<h3>Datos técnicos</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">move up! 1.0l Nafta 75 CV Manual 5P</li>
+				</ul>
+			</div>
+			<h3>Equipamiento de serie</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de acero 5J x 14</li>
+
+					<li><b>Interior</b></li>
+					<li>Sin paquete Aluminio/Cromo</li>
+					<li>Techo moldeado en una pieza</li>
+					<li>Pomo/empuñadura de la palanca de cambio en plástico</li>
+
+					<li><b>Exterior</b></li>
+					<li>Carcasa del retrovisor exterior en el color de la carrocería</li>
+					<li>Sin barras longitudinales del techo ni barras portaequipajes</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Sin spoiler posterior</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Sin juego de siglas y emblemas (sin denominación de tipo)</li>
+					<li>4 puertas</li>
+
+					<li><b>Espejos</b></li>
+					<li>Retrovisor exterior con ajuste eléctrico</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Activación de las luces de marcha diurna</li>
+					<li>Faros principales halógenos</li>
+					<li>Sin luces adicionales (ilum. interior)</li>
+					<li>Faros antiniebla (integrados)</li>
+					<li>Limpiaparabrisas a intervalos, sin regulación</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Sin ayuda de aparcamiento</li>
+					<li>Sin regulador de velocidad (GRA)</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta trasera y respaldo, no abatible</li>
+					<li>Aire acondicionado con regulación mecánica</li>
+					<li>Regulación en altura manual del asiento anterior izquierdo</li>
+					<li>Asientos no calefaccionables</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Sin aplicaciones decorativas Inserciones</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Sin interface eléctrico</li>
+					<li>6 altavoces (pasivos)</li>
+					<li>Radio versión 2</li>
+
+					<li><b>Navegación</b></li>
+					<li>Indicador multifunciones/computadora de a bordo</li>
+					<li>Sistema de navegación</li>
+					<li>Sin preparación/montaje de auto-teléfono</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante</li>
+					<li>Frenos de tambor posteriores</li>
+					<li>Frenos de disco anteriores</li>
+					<li>Inmovilizador electrónico, con alarma antirrobo y control del habitáculo</li>
+					<li>Sin sistema de seguridad ampliado</li>
+					<li>Sin airbag lateral</li>
+					<li>Cierre centralizado por control remoto, con accionamiento desde el interior sin cierre de seguridad</li>
+					<li>Dirección asistida, dependiente de la velocidad (Servotronic)</li>
+				</ul>
+			</div>
+			<h3>Equipamiento opcional</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color01.png" class="imgResponsiva" /><br />Azul Laguna</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color02.png" class="imgResponsiva" /><br />Plata Sirus</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color03.png" class="imgResponsiva" /><br />Gris Platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color04.png" class="imgResponsiva" /><br />Negro Universal</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color05.png" class="imgResponsiva" /><br />Rojo Flash</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/up/Color/Color06.png" class="imgResponsiva" /><br />Blanco Cristal</li>
+					<li class="sin-borde">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<!-- HIGH UP!-->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/up/Versiones/Version05.png" class="imgResponsiva" />
+			<h4>high up!</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Volante multifuncional de cuero</li>
+				<li>Llantas de aleación ligera 5 1/2J x 15</li>
+				<li>Ayuda de aparcamiento</li>
+				<li>Luz de marcha diurna con asistente de luz de marcha y función "coming home"</li>
+				<li>Conexión de intervalos de barrido del limpiaparabrisas, con sensor de luz y lluvia</li>
+			</ul>
+		</div>
+		<!--INCOMPLETO
+			<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica">
+				<div>Información Técnica</div>
+			</div>
+		</div>-->
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-high-up">
+	</div>
+
+	<p class="paginadorVersiones visibleCelular">
+		<a href="#1" class="active">&nbsp;</a>
+		<a href="#2">&nbsp;</a>
+		<a href="#3">&nbsp;</a>
+		<a href="#4">&nbsp;</a>
+		<a href="#5">&nbsp;</a>
+	</p>
+</div>
+
+<!--BROCHURE-->
+<div id="divBrochure">
+	<div id="div-Brochure-Info">
+		<h2>Brochure<br />del Nuevo up!</h2>
+		<a href="~/Content/info_modelos/up/Brochure/Brochure-Up.pdf" rel="external" class="linkDescargarBrochure" target="_blank">
+			<div id="div-Brochure-Boton">
+				<div id="div-Brochure-Boton-Inner">Descargalo</div>
+			</div>
+		</a>
+	</div>
+	<div id="div-Brochure-Imagen">
+		<img src="~/Content/info_modelos/up/Brochure/Brochure.jpg" class="imgResponsiva" />
+	</div>
+</div>
+

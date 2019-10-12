@@ -1,0 +1,264 @@
+﻿@using Matassi.Dominio
+
+@{
+	ViewBag.Title = "Garantia Volkswagen";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+<style type="text/css">
+	p {
+		font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		line-height: 15px;
+		text-align: justify;
+		padding: 10px;
+	}
+
+	.tablaGarantia {
+		font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 90%;
+	}
+
+	.trTitulo {
+		background-color: #CCCCD1;
+		line-height: 20px;
+	}
+
+	.trImpar {
+		background-color: #F0F0F5;
+		line-height: 20px;
+	}
+
+	.trPar {
+		background-color: #FFF;
+		line-height: 20px;
+	}
+
+	.tblTituloGarantia {
+		font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+		line-height: 25px;
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+		border: 1px solid #000;
+	}
+
+	.trTituloGarantia {
+		background-color: #134B9E;
+		color: #FFF;
+		font-size: 16px;
+	}
+
+	.trSubTituloGarantia {
+		background-color: #8DACCB;
+		font-size: 14px;
+	}
+
+		.trTituloGarantia td,
+		.trSubTituloGarantia td {
+			text-align: center;
+			font-family: 'VWHeadWeb-Bold', Arial, Helvetica, sans-serif;
+			border: 1px solid #000;
+		}
+
+	.trDatoGarantia ul li {
+		list-style-type: disc;
+		list-style-position: inside;
+		padding-left: 15px;
+		font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+		font-size: 14px;
+	}
+
+	.trDatoGarantia td {
+		font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		border: 1px solid #000;
+		text-align: center;
+	}
+
+	.textoVertical {
+		-webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		transform: rotate(270deg);
+		padding-top: 20px;
+	}
+</style>
+
+<div class="infoModelo">
+	<a href="#" class="modeloActual">@ViewBag.Title</a>
+	<div class="infoModeloTitulos">
+		<ul class="">
+			<li>|</li>
+			<li>
+				<span></span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div style="margin: 10px 9px 9px 9px; display:block; position: relative; height: auto; overflow:hidden;">
+	<div class="columnaIzquierda">
+		&nbsp;
+	</div>
+	<div class="columnaDerecha">
+		<img src="~/Content/images/ScirocoAsesoramiento.png" />
+		<div class="TituloPagina">Preguntas Frecuentes</div>
+
+		<p>
+			<b>Pregunta</b>. ¿Cuál es el período de garantía de los vehículos Volkswagen?
+			<br />
+			<b>Respuesta:</b> En el cuadro siguiente se detallan los períodos de garantía de los distintos modelos de la Gama Volkswagen
+		</p>
+
+		<p style="text-align:center;">
+			<img src="~/Content/images/GarantiaModelos.jpg" />
+		</p>
+
+		<p>
+			Es importante recordar que la garantía cubre las reparaciones necesarias que surjan como consecuencia de desperfectos de material, montaje o fabricación estando todo ello condicionado por el cumplimiento de los mantenimientos recomendados por Volkswagen.
+		</p>
+
+		<br />
+
+		<p>
+			<b>Pregunta</b>. ¿Existen componentes del vehículo con garantía limitada?
+			<br />
+			<b>Respuesta:</b> Si, existen algunas piezas que son consideradas de mantenimiento normal que cuentan con una garantía limitada. Ellas son:
+		</p>
+		<p style="text-align:center;">
+
+			<table class="tblTituloGarantia">
+				<tr class="trTituloGarantia">
+					<td>
+						Componentes con Garantía Limitada
+					</td>
+				</tr>
+				<tr class="trSubTituloGarantia">
+					<td>6 meses de cobertura contra defectos o<br/>10.000 km (lo que se cumpla primero)</td>
+				</tr>
+				<tr class="trDatoGarantia">
+					<td>
+						<ul>
+							<li>Lámparas (no incluye Xenon y Led) y fusibles</li>
+							<li>Pastillas, discos y zapatas de freno</li>
+							<li>Filtros</li>
+							<li>Neumáticos</li>
+							<li>Bujias</li>
+							<li>Escobillas</li>
+							<li>Escobillas limpiaparabrisas y luneta</li>
+							<li>Correas (No incluye correa de distribución)</li>
+						</ul>
+					</td>
+				</tr>
+				<tr class="trSubTituloGarantia">
+					<td>1 año de cobertura contra defectos o<br />20.000 km (lo que se cumpla primero)</td>
+				</tr>
+				<tr class="trDatoGarantia">
+					<td>
+						<ul>
+							<li>Amortiguadores de suspensión (no incluye amortiguadores neumáticos)</li>
+						</ul>
+					</td>
+				</tr>
+				<tr class="trSubTituloGarantia">
+					<td>1 año de cobertura contra defectos o<br />30.000 km (lo que se cumpla primero)</td>
+				</tr>
+				<tr class="trDatoGarantia">
+					<td>
+						<ul>
+							<li>Volante motor, collarin, placa y disco de embrague</li>
+						</ul>
+					</td>
+				</tr>
+				<tr class="trSubTituloGarantia">
+					<td>1 año de cobertura contra defectos<br />(kilometraje ilimitado)</td>
+				</tr>
+				<tr class="trDatoGarantia">
+					<td>
+						<ul>
+							<li>Batería</li>
+						</ul>
+					</td>
+				</tr>
+				<tr class="trSubTituloGarantia">
+					<td>Sólo en Pre entrega</td>
+				</tr>
+				<tr class="trDatoGarantia">
+					<td>
+						<ul>
+							<li>Alineacón de ejes</li>
+							<li>Balanceo de ruedas</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+
+		</p>
+
+		<p>
+			<b>Pregunta</b>. Si el vehículo presenta algún problema, ¿qué debo hacer?
+			<br />
+			<b>Respuesta:</b> En caso de que el vehículo sufra algún problema, debe ser llevado al Concesionario Volkswagen de su preferencia, para realizarle las revisiones o reparaciones que fueran necesarias. No es necesario aguardar hasta el Service establecido en el Plan de Asistencia Técnica /Garantía para solucionar el inconveniente.
+		</p>
+
+		<br />
+
+		<p>
+			<b>Pregunta</b>. ¿Puedo realizar los servicios establecidos en el Manual de Garantía en cualquier Concesionario Volkswagen o debo dirigirme al mismo en donde realicé la compra del vehículo?
+			<br />
+			<b>Respuesta:</b> La garantía dada a los vehículos Volkswagen puede ser ejercida en todo el territorio nacional, independientemente de donde fue adquirido el vehículo. Por lo tanto, basta con presentar el Manual de Plan de Asistencia Técnica - Garantía (debidamente firmado por el concesionario vendedor) que acompaña al vehículo
+		</p>
+
+		<br />
+
+		<p>
+			<b>Pregunta</b>. ¿Cuál es el intervalo de kilometraje para realizar las revisiones establecidas en el Manual de Plan de Asistencia Técnica - Garantía?
+			<br />
+			<b>Respuesta:</b> El plan de mantenimiento tiene en consideración dos factores básicos: El tiempo de uso del vehículo y el kilometraje recorrido. Básicamente las revisiones son realizadas cada 12 meses o también cada 7.500 Km. o 15.000 Km. dependiendo del tipo de motorización del vehículo. El cuadro siguiente resume los diferentes servicios dependiendo del tipo de motorización:
+		</p>
+
+		<p style="text-align:center;">
+			<table class="tblTituloGarantia" style="width: 80%">
+				<tr class="trSubTituloGarantia">
+					<td colspan="2"></td>
+					<td>SERVICIO DE INSPECCION</td>
+					<td>SERVICIO DE MANTENIMIENTO PREVENTIVO</td>
+				</tr>
+				<tr class="trDatoGarantia">
+					<td rowspan="2" class="textoVertical" style="width:1%;">AUTOMOVILES</td>
+					<td>motor nafta</td>
+					<td>
+						<b>cada 15.000 km</b><br />
+						(ó 12 meses como máximo)
+					</td>
+					<td>
+						<b>cada 30.000 km</b><br />
+						(ó 24 meses como máximo)
+					</td>
+				</tr>
+				<tr class="trDatoGarantia">
+					<td>motor diesel</td>
+					<td>
+						<b>cada 7.500 km</b><br />
+						(ó 12 meses como máximo)
+					</td>
+					<td>
+						<b>cada 30.000 km</b><br />
+						(ó 48 meses como máximo)
+					</td>
+				</tr>
+			</table>
+		</p>
+
+		<p>
+			<b>NOTA IMPORTANTE:</b> para los vehículos AMAROK, el intervalo de cambio de aceite es cada 10.000 Km o 12 meses (lo que ocurra primero).<br />
+			Aplicable para unidades 0 km comercializadas a partir del 1/1/2014 (excepto Amarok)<br />
+			Si el Plan de Inspección y mantenimiento fuera hecho con negligencia o no fuera realizado, la validez de la Garantía se considerará anulada.
+		</p>
+	</div>
+</div>

@@ -1,0 +1,43 @@
+﻿@using Matassi.Dominio
+@model Matassi.Dominio.CaracteristicaModelo
+
+@{
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			<h2>@ViewBag.Title</h2>
+		</td>
+	</tr>
+</table>
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			@using (Html.BeginForm("Caracteristica_Crear_Muchas", "AdminModelo", FormMethod.Post, new { @class = "form-horizontal" }))
+			{
+				@Html.AntiForgeryToken()
+
+				@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.MuchasCarcteristicas, htmlAttributes: new { @class = "col-md-3 control-label" })
+					<div class="col-md-8">
+						@Html.EditorFor(model => model.MuchasCarcteristicas, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.MuchasCarcteristicas, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group btnGuardar">
+					<div class="col-md-offset-2 col-md-8">
+						<input type="submit" value="Guardar" class="btn btn-primary" />
+						@Html.HiddenFor(codVersionModelo => Model.Versiones[0].CodVersionModelo)
+						@Html.ActionLink("Cancelar", "Caracteristica_Lista", new { codVersion = Model.Versiones[0].CodVersionModelo }, new { @class = "btn btn-default" })
+					</div>
+				</div>
+			}
+		</td>
+	</tr>
+</table>

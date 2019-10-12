@@ -1,0 +1,242 @@
+﻿@{
+	ViewBag.Title = "Inicio";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+	@Styles.Render("~/bundles/estilosCSSModelo")
+	@Scripts.Render("~/bundles/funcionesModelo")
+}
+
+<div id="divBannerTituloModelo">
+	<span id="spnTituloModelo">
+		Listado de internos y mails
+	</span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+	<ul id="ulListaPaginasHermanas">
+		<li><a href="/empresa/inicio" rel="external">Horarios</a></li>
+		<li class="seleccionado">Internos</li>
+		<li><a href="/empresa/encuesta_venta" rel="external">Encuesta satisfacción venta</a></li>
+		<li><a href="/empresa/encuesta_posventa" rel="external">Encuesta satisfacción posventa</a></li>
+		<li><a href="/empresa/prueba_manejo" rel="external">Prueba de manejo</a></li>
+	</ul>
+</div>
+
+<div id="divImagenEncabezado">
+	<img src="img/Empresa01.jpg" class="imgResponsiva" />
+</div>
+
+<div id="divTituloModelo">
+	Listado de internos y mails
+</div>
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+	<div class="iconoDesplegar">
+		<img src="../../Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+		<span>
+			Más información
+		</span>
+	</div>
+	<ul class="oculto">
+		<li><a href="/empresa/inicio" rel="external">Horarios</a></li>
+		<li class="seleccionado">Internos</li>
+		<li><a href="/empresa/encuesta_venta" rel="external">Encuesta satisfacción venta</a></li>
+		<li><a href="/empresa/encuesta_posventa" rel="external">Encuesta satisfacción posventa</a></li>
+		<li><a href="/empresa/prueba_manejo" rel="external">Prueba de manejo</a></li>
+	</ul>
+</div>
+
+
+<!----------------------------------QUE ES---------------------------------->
+<div id="divTecnologia" class="SeccionModelo">
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes3Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="../../Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Linea de Contacto</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Izquierda">
+			<img src="img/Empresa06.jpg" class="imgResponsiva" />
+			<h5>
+				Linea de Contacto
+			</h5>
+			<h5>
+				Linea de Contacto:<br />
+				03462 - 437500
+			</h5>
+			<p>
+
+			</p>
+		</div>
+
+		<hr class="hrSeparadorItemsSeccion" />
+
+		<div class="iconoDesplegarSeccion">
+			<img src="../../Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Ventas</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Centro">
+			<img src="img/Empresa07.jpg" class="imgResponsiva" />
+			<h5>
+				Ventas
+			</h5>
+			<h5>
+				Internos: 16-27 y 25<br />
+				E-Mail: ventas@matassi.com.ar
+			</h5>
+			<p>
+
+			</p>
+		</div>
+
+		<hr class="hrSeparadorItemsSeccion" />
+
+		<div class="iconoDesplegarSeccion">
+			<img src="../../Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Administración</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Derecha">
+			<img src="img/Empresa08.jpg" class="imgResponsiva" />
+			<h5>
+				Administración
+			</h5>
+			<h5>
+				Internos: 18 y 22<br />
+				E-Mail: gerenciaadministracion@matassi.com.ar
+			</h5>
+			<p>
+
+			</p>
+		</div>
+
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes3Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="../../Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Gestoría</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Izquierda">
+			<img src="img/Empresa09.jpg" class="imgResponsiva" />
+			<h5>
+				Gestoría
+			</h5>
+			<h5>
+				Internos: 21 y 24<br />
+				E-Mail: gestoria@matassi.com.ar
+			</h5>
+			<p>
+
+			</p>
+		</div>
+
+		<hr class="hrSeparadorItemsSeccion" />
+
+		<div class="iconoDesplegarSeccion">
+			<img src="../../Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Repuestos</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Centro">
+			<img src="img/Empresa06.jpg" class="imgResponsiva" />
+			<h5>
+				Repuestos
+			</h5>
+			<h5>
+				Internos: 13 y 37<br />
+				E-Mail: repuestos@matassi.com.ar
+			</h5>
+			<p>
+
+			</p>
+		</div>
+
+		<hr class="hrSeparadorItemsSeccion" />
+
+		<div class="iconoDesplegarSeccion">
+			<img src="../../Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Servicio y PostVenta</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Derecha">
+			<img src="img/Empresa07.jpg" class="imgResponsiva" />
+			<h5>
+				Servicio y PostVenta
+			</h5>
+			<h5>
+				Internos: 23 y 43<br />
+				E-Mail: atencion.al.cliente@matassi.com.ar<br />
+				E-Mail: gerenciapostventa@matassi.com.ar<br />
+				E-Mail: turnotaller@matassi.com.ar
+			</h5>
+			<p>
+
+			</p>
+		</div>
+
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="../../Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Administración y Autoahorro</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<img src="img/Empresa08.jpg" class="imgResponsiva" />
+			<h5 style="text-align:center;">
+				Administración y Autoahorro
+			</h5>
+			<h5 style="text-align:center;">
+				Internos: 33 y 58<br />
+				E-Mail: administracion5@matassi.com.ar<br />
+				E-Mail: adminaavw@matassi.com.ar
+			</h5>
+			<p>
+
+			</p>
+		</div>
+
+		<hr class="hrSeparadorItemsSeccion" />
+
+		<div class="iconoDesplegarSeccion">
+			<img src="../../Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Ventas Autoahorro</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha">
+			<img src="img/Empresa10.jpg" class="imgResponsiva" />
+			<h5 style="text-align:center;">
+				Ventas Autoahorro
+			</h5>
+			<h5 style="text-align:center;">
+				Internos: 17 y 35<br />
+				Linea directa: 0810-888-7332 (REFA)<br />
+				E-Mail: administracion5@matassi.com.ar
+			</h5>
+			<p>
+
+			</p>
+		</div>
+
+
+
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+</div>

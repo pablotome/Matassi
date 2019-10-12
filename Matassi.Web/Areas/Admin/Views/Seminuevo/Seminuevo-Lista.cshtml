@@ -1,0 +1,84 @@
+﻿@using System.Web.WebPages.Html;
+@model IEnumerable<Matassi.Dominio.Seminuevo>
+
+@{
+    ViewBag.Title = "Seminuevos";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			<h2>@ViewBag.Title</h2>
+
+			<p class="nuevoItem">
+				@Html.ActionLink("Nuevo Seminuevo", "Seminuevo_Crear", null, new { @class = "btn btn-primary" })
+			</p>
+		</td>
+	</tr>
+</table>
+
+<table class="table tabla-centrada">
+	<tr>
+		<th class="oculto">
+			Código
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Modelo)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Anio)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Kilometraje)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Combustible)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Precio)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Orden)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Publicado)
+		</th>
+		<th></th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td class="oculto">
+				@Html.DisplayFor(modelItem => item.CodSeminuevo)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Modelo)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Anio)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Kilometraje)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Combustible)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Precio)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Orden)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Publicado)
+			</td>
+			<td align="center">
+				@Html.ActionLink("Editar", "Seminuevo_Editar", new { codSeminuevo = item.CodSeminuevo }) |
+				@Html.ActionLink("Borrar", "Seminuevo_Borrar", new { codSeminuevo = item.CodSeminuevo }, new { onclick = string.Format("return confirm('¿Seguro de eliminar el seminuevo {0}?');", item.Modelo) })
+			</td>
+		</tr>
+	}
+</table>
+

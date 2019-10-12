@@ -1,0 +1,1092 @@
+﻿@{
+	ViewBag.Title = "up";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+	@Styles.Render("~/bundles/estilosCSSModelo")
+	@Scripts.Render("~/bundles/funcionesModelo")
+}
+
+
+<div id="divBannerTituloModelo">
+	<span id="spnTituloModelo">
+		Passat
+	</span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+	<ul id="ulListaCaracteristicasModelo">
+		<li class="liDisenio" data-divmodelos="divDisenio">Diseño</li>
+		<li class="liTecnologia" data-divmodelos="divTecnologia">Tecnología</li>
+		<li class="liConfort" data-divmodelos="divConfort">Confort</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+<div id="divImagenModelo">
+	<img src="~/Content/info_modelos/passat/Passat.jpg" class="imgResponsiva" />
+</div>
+
+<div id="divTituloModelo">
+	Ser. No parecer.
+</div>
+
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+	<div class="iconoDesplegar">
+		<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+		<span>
+			Selecciona categoria
+		</span>
+	</div>
+	<ul class="oculto">
+		<li class="liDisenio" data-divmodelos="divDisenio">Diseño</li>
+		<li class="liTecnologia" data-divmodelos="divTecnologia">Tecnología</li>
+		<li class="liConfort" data-divmodelos="divConfort">Confort</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+
+<!----------------------------------DISEÑO---------------------------------->
+<div id="divDisenio" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Un exterior imponente y un interior cautivante.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Estética deportiva</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/passat/Disenio/Disenio01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Estética deportiva
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Atrevido y dinámico
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					El Nuevo Passat es más deportivo que nunca. Su larga silueta, combinada con líneas limpias y elementos de diseño de primera calidad, hacen de su aspecto algo impresionante.
+
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/passat/Disenio/Disenio01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Faros LED</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/passat/Disenio/Disenio02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/passat/Disenio/Disenio02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Faros LED
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Excelente visibilidad, brillante diseño.
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Las mejores vistas en cualquier situación. La eficiente tecnología LED proporciona un mayor alcance lumínico, acompañado de un menor consumo energético.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Paquete R-Line</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/passat/Disenio/Disenio03.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Paquete R-Line
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Mayor deportividad, sin perder su sobriedad.
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Imprimí tu estilo en el Passat con al paquete deportivo R-Line, que brinda un aspecto más deportivo tanto en el interior como en el exterior.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/passat/Disenio/Disenio03.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------TECNOLOGÍA---------------------------------->
+<div id="divTecnologia" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Sistemas de asistencia.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Volkswagen Active Info Display</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/passat/Tecnologia/Tecnologia01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Volkswagen Active Info Display
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Estar informado en alta resolución.
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					El cuadro de mandos digital convierte al manejo en una experiencia interactiva. Así, utilidades como el mapa de navegación pueden integrarse en la pantalla para que puedas consultar tu ruta sin quitar la vista del camino.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/passat/Tecnologia/Tecnologia01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Area View con Park Assist</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/passat/Tecnologia/Tecnologia02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/passat/Tecnologia/Tecnologia02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Area View con Park Assist
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Control panorámico y dinámico del entorno al estacionar
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Gracias a la vista panorámica del entorno Area View, maniobrar en situaciones de conducción difíciles es mucho más sencillo. Y si aún así lo considerás muy trabajosa, le podés delegar la tarea al sistema Park Assist.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Estar siempre conectado.</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/passat/Tecnologia/Tecnologia03.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Estar siempre conectado.
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Discover Pro
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					El sistema de infoentretenimiento Discover Pro con App Connect permite estar siempre conectado, y a la vez te guía con su avanzado sistema de navegación.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/passat/Tecnologia/Tecnologia03.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>El Passat se adapta a cada tipo de manejo.</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/passat/Tecnologia/Tecnologia04.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/passat/Tecnologia/Tecnologia04.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					El Passat se adapta a cada tipo de manejo.
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Dynamic Chassis Control
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Con el Dynamic Chassis Control, el Passat puede modificar parámetros de motor, chasis y dirección para brindar una experiencia de manejo óptima y personalizable.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------CONFORT---------------------------------->
+<div id="divConfort" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Viajá de la forma más cómoda posible.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Asiento ergoComfort</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/passat/Confort/Confort01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Asiento ergoComfort
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					No vas a querer bajarte.
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					El asiento ergoComfort con memoria y masajes ofrece diferentes posturas optimizadas para la espalda. Hay 14 configuraciones disponibles para disfrutar del trayecto con un asiento que ha sido galardonado por asociaciones oficiales para el cuidado de la espalda.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/passat/Confort/Confort01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Techo solar panorámico</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/passat/Confort/Confort02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/passat/Confort/Confort02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Techo solar panorámico
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Mayor luminosidad para ver cada detalle interior.
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					El techo solar panorámico permite disfrutar más del camino gracias a su amplia superficie, que brinda una mayor entrada de luz natural al habitáculo.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Climatronic</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/passat/Confort/Confort03.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Climatronic
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Un microclima en cada parte del Passat
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					¿Demasiado frío? ¿Demasiado calor? ¿Demasiado... intermedio? Encontrar la temperatura adecuada no siempre es fácil, especialmente cuando viajan varias personas en el auto. El Passat está equipado con el sistema de aire acondicionado Climatronic de tres zonas, que permite a los ocupantes elegir tres temperaturas de habitáculo diferentes.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/passat/Confort/Confort03.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Concepto de espacio</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/passat/Confort/Confort04.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/passat/Confort/Confort04.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Concepto de espacio
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Como en el living de tu casa
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					El espacioso habitáculo deja un amplio margen para el confort y te ayuda a afrontar todos los retos del día a día. Los asientos de diseño ergonómico y manejo intuitivo, junto a su elegante interior, garantizan un viaje cómodo y relajante.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+
+
+<!----------------------------------VERSIONES---------------------------------->
+<div id="divVersiones" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Versiones
+	</div>
+
+	<!-- HIGHLINE -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/passat/Versiones/Versiones01.png" class="imgResponsiva" />
+			<h4>Highline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Llantas de aleación de 18" "Dartford"</li>
+				<li>Active Info Display</li>
+				<li>Faros delanteros y traseros full LED</li>
+				<li>Tapizado en Alcantara</li>
+				<li>Asientos delanteros eléctricos y masajes para el conductor</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Highline">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Highline">
+		<h1>Highline</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/passat/InfoTecnica/InfoTecnica01.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Llantas de aleación de 18" "Dartford" </li>
+					<li>Active Info Display </li>
+					<li>Faros delanteros y traseros full LED </li>
+					<li>Tapizado en Alcantara </li>
+					<li>Asientos delanteros eléctricos y masajes para el conductor </li>
+					<li>Dynamic Chassis Control </li>
+					<li>Area View con Park Assit </li>
+					<li>9 Airbags </li>
+					<li>App Connect </li>
+					<li>Transmisión automática DSG </li>
+					<li>Motor 2.0 TSI de 220CV </li>
+					<li>Techo panorámico eléctrico </li>
+					<li>Sistema de Audio táctil "Discover Pro" de 8"</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Nuevo Passat Highline 2.0TSI (Nafta) 220CV DSG (6 Marchas) 4 Puertas</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Paquetes</b></li>
+					<li>WD4</li>
+					<li>Alarma antirrobo con vigilancia del habitáculo, sirena de alarma y protección contra remolque</li>
+
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación de 18" "Dartford"</li>
+					<li>PJ6</li>
+
+					<li><b>Interior</b></li>
+					<li>Paquete Cromo (Versión 2)</li>
+					<li>Techo moldeado en una pieza</li>
+					<li>Pomo/empuñadura de la palanca de cambio en cuero</li>
+					<li>Sin cortinilla parasol</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tramo final tubo de escape posterior lateral</li>
+					<li>Sin dispositivo de remolque</li>
+					<li>Sin barras longitudinales del techo ni barras portaequipajes</li>
+					<li>Techo panorámico eléctrico</li>
+					<li>Sin spoiler posterior</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Embellecedores brillantes</li>
+					<li>PAH</li>
+					<li>Airbag para conductor (2 niveles)</li>
+					<li>Cinturones de seguridad automáticos de tres puntos para asientos traseros exteriores con emblema ECE</li>
+					<li>9 Airbags</li>
+					<li>Control de cinturones de seguridad, contacto E en el cierre, equipamiento seguridad ampliado</li>
+
+					<li><b>Sistema de asistencia</b></li>
+					<li>Sin head up display</li>
+					<li>Sin sistema de asistencia en caso de cambio de carril</li>
+					<li>Sin Front Assist /sin control automático de distancia (ANB)</li>
+
+					<li><b>Espejos</b></li>
+					<li>Retrovisor ext., memoria, ajuste autom. posición antideslumbrante, ajustable/ abatible eléctric., térmico por separado</li>
+					<li>Espejo interior de seguridad antideslumbramiento automático</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Luz de marcha diurna con asistente de luz de marcha y función "coming home"</li>
+					<li>WLH</li>
+					<li>Faros delanteros y traseros full LED</li>
+					<li>Con limpialavafaros</li>
+					<li>Regulación del alcance de las luces, automática/dinámica con luz de conducción en curva(AFS 1)</li>
+					<li>PA5</li>
+					<li>Testigos luminosos de advertencia adicionales LED (en las puertas) y detrás</li>
+					<li>Iluminación ambiental versión 1</li>
+					<li>Sin asistente para el cambio de luces</li>
+					<li>Faros antiniebla y luz de giro</li>
+					<li>Conjunto de pilotos posteriores en técnica LED</li>
+					<li>Conexión de intervalos de barrido del limpiaparabrisas, con sensor de luz y lluvia</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Dynamic Chassis Control</li>
+					<li>Servodirección para aparcamiento</li>
+					<li>Regulador de velocidad plus limitador de velocidad</li>
+					<li>Sin dispositivo para abrir la puerta del garaje</li>
+					<li>Sin cámara ni sensor de distancia (sistema de asistencia al conductor)</li>
+					<li>Area View con Park Assit</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta trasera no dividida, respaldo dividido y abatible, con resposabrazos central</li>
+					<li>Climatronic (3 zonas) con panel de mandos del climatizador detrás</li>
+					<li>Sin ventilación del asiento/masaje</li>
+					<li>PH1</li>
+					<li>Asientos delanteros eléctricos y masajes para el conductor</li>
+					<li>Retrovisor ext., memoria, ajuste autom. posición antideslumbrante, ajustable/ abatible eléctric., térmico por separado</li>
+					<li>Apoyo lumbar en el respaldo de los asientos delanteros con ajuste eléctrico y función de masaje para asiento izq.</li>
+					<li>Reposabrazos central delante</li>
+					<li>Ambos asientos anteriores calefaccionables regulables por separado</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Insertos en aluminio</li>
+
+					<li><b>Infotainment</b></li>
+					<li>App ConnectInterfaz eléctrica para uso externo, AUX-IN y 2 USB8 altavoces (pasivos)</li>
+					<li>ZMX.</li>
+
+					<li><b>Navegación</b></li>
+					<li>Active Info Display</li>
+					<li>Sistema de Audio táctil "Discover Pro" de 8"</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>PM3</li>
+					<li>Volante multifuncional deportivo en cuero con Tiptronic</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor (2 niveles)</li>
+					<li>Frenos de disco posteriores</li>
+					<li>Frenos delanteros de disco</li>
+					<li>Alarma antirrobo con vigilancia del habitáculo, sirena de alarma y protección contra remolque</li>
+					<li>Sin sistema de seguridad ampliado</li>
+					<li>Indicador para el control de los neumáticos</li>
+					<li>9 Airbags</li>
+					<li>Cierre centralizado "Keyless-Entry"</li>
+					<li>Dirección asistida, dependiente de la velocidad (Servotronic)</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><br />Plata Pyrut</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/passat/Colores/Colores01.png" class="imgResponsiva" /><br />Azul Atlantic</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><br />Gris Manganeso</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/passat/Colores/Colores02.png" class="imgResponsiva" /><br />Azul Harvard</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/passat/Colores/Colores03.png" class="imgResponsiva" /><br />Marron Roble Negro</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/passat/Colores/Colores04.png" class="imgResponsiva" /><br />Rojo Crimson</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/passat/Colores/Colores05.png" class="imgResponsiva" /><br />Plata Reflex</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/passat/Colores/Colores06.png" class="imgResponsiva" /><br />Gris Urano</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/passat/Colores/Colores07.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/passat/Colores/Colores08.png" class="imgResponsiva" /><br />Blanco Oryx</li>
+
+					<li class="sin-borde" style="clear:both"><b>Insercciones</b></li>
+					<li>Apliques de Madera "Pino Brillante"</li>
+					<li>Consola central</li>
+					<li>Insertos en madera</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<!-- R-LINE  -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/passat/Versiones/Versiones02.png" class="imgResponsiva" />
+			<h4>R-Line</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Llantas de aleación de 19" "Verona"</li>
+				<li>Sistema de Audio táctil "Discover Pro" de 8"</li>
+				<li>Techo panorámico eléctrico</li>
+				<li>Motor 2.0 TSI de 220CV</li>
+				<li>Transmisión automática DSG</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="R-Line">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-R-Line">
+		<h1>R-Line</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/passat/InfoTecnica/InfoTecnica02.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Llantas de aleación de 19" "Verona" </li>
+					<li>Sistema de Audio táctil "Discover Pro" de 8" </li>
+					<li>Techo panorámico eléctrico </li>
+					<li>Motor 2.0 TSI de 220CV </li>
+					<li>Transmisión automática DSG </li>
+					<li>App Connect </li>
+					<li>9 Airbags </li>
+					<li>Area View con Park Assit </li>
+					<li>Dynamic Chassis Control </li>
+					<li>Asientos delanteros eléctricos y masajes para el conductor </li>
+					<li>Tapizado de asientos en cuero R-Line </li>
+					<li>Paquete interior y exterior R-Line</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Nuevo Passat R-Line 2.0TSI (Nafta) 220CV DSG (6 Marchas) 4 Puertas</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Paquetes</b></li>
+					<li>WD4</li>
+					<li>Alarma antirrobo con vigilancia del habitáculo, sirena de alarma y protección contra remolque</li>
+
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación de 19" "Verona"</li>
+					<li>PJG</li>
+
+					<li><b>Interior</b></li>
+					<li>Paquete Cromo (Versión 2)</li>
+					<li>Techo moldeado en una pieza</li>
+					<li>Pomo/empuñadura de la palanca de cambio en cuero</li>
+					<li>Sin cortinilla parasol</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tramo final tubo de escape posterior lateral</li>
+					<li>Sin dispositivo de remolque</li>
+					<li>Sin barras longitudinales del techo ni barras portaequipajes</li>
+					<li>Techo panorámico eléctrico</li>
+					<li>Sin spoiler posterior</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Embellecedores brillantes</li>
+					<li>PAH</li>
+					<li>Airbag para conductor (2 niveles)</li>
+					<li>Cinturones de seguridad automáticos de tres puntos para asientos traseros exteriores con emblema ECE</li>
+					<li>9 Airbags</li>
+					<li>Control de cinturones de seguridad, contacto E en el cierre, equipamiento seguridad ampliado</li>
+
+					<li><b>Sistema de asistencia</b></li>
+					<li>Sin head up display</li>
+					<li>Sin sistema de asistencia en caso de cambio de carril</li>
+					<li>Sin Front Assist /sin control automático de distancia (ANB)</li>
+
+					<li><b>Espejos</b></li>
+					<li>Retrovisor ext., memoria, ajuste autom. posición antideslumbrante, ajustable/ abatible eléctric., térmico por separado</li>
+					<li>Espejo interior de seguridad antideslumbramiento automático</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Luz de marcha diurna con asistente de luz de marcha y función "coming home"</li>
+					<li>WLH</li>
+					<li>Faros delanteros y traseros full LED</li>
+					<li>Con limpialavafaros</li>
+					<li>Regulación del alcance de las luces, automática/dinámica con luz de conducción en curva(AFS 1)</li>
+					<li>PA5</li>
+					<li>Testigos luminosos de advertencia adicionales LED (en las puertas) y detrás</li>
+					<li>Iluminación ambiental versión 1</li>
+					<li>Sin asistente para el cambio de luces</li>
+					<li>Faros antiniebla y luz de giro</li>
+					<li>Conjunto de pilotos posteriores en técnica LED</li>
+					<li>Conexión de intervalos de barrido del limpiaparabrisas, con sensor de luz y lluvia</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Dynamic Chassis Control</li>
+					<li>Servodirección para aparcamiento</li>
+					<li>Regulador de velocidad plus limitador de velocidad</li>
+					<li>Sin dispositivo para abrir la puerta del garaje</li>
+					<li>Sin cámara ni sensor de distancia (sistema de asistencia al conductor)</li>
+					<li>Area View con Park Assit</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta trasera no dividida, respaldo dividido y abatible, con resposabrazos central</li>
+					<li>Climatronic (3 zonas) con panel de mandos del climatizador detrás</li>
+					<li>Sin ventilación del asiento/masaje</li>
+					<li>PH1</li>
+					<li>Asientos delanteros eléctricos y masajes para el conductor</li>
+					<li>Retrovisor ext., memoria, ajuste autom. posición antideslumbrante, ajustable/ abatible eléctric., térmico por separado</li>
+					<li>Apoyo lumbar en el respaldo de los asientos delanteros con ajuste eléctrico y función de masaje para asiento izq.</li>
+					<li>Reposabrazos central delante</li>
+					<li>Ambos asientos anteriores calefaccionables regulables por separado</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Insertos en aluminio</li>
+
+					<li><b>Infotainment</b></li>
+					<li>App Connect</li>
+					<li>Interfaz eléctrica para uso externo, AUX-IN y 2 USB</li>
+					<li>8 altavoces (pasivos)</li>
+					<li>ZMX.</li>
+
+					<li><b>Navegación</b></li>
+					<li>Active Info Display</li>
+					<li>Sistema de Audio táctil "Discover Pro" de 8"</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifuncional deportivo en cuero con Tiptronic</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor (2 niveles)</li>
+					<li>Frenos de disco posteriores</li>
+					<li>Frenos delanteros de disco</li>
+					<li>Alarma antirrobo con vigilancia del habitáculo, sirena de alarma y protección contra remolque</li>
+					<li>Sin sistema de seguridad ampliado</li>
+					<li>Indicador para el control de los neumáticos</li>
+					<li>9 Airbags</li>
+					<li>Cierre centralizado "Keyless-Entry"</li>
+					<li>Dirección asistida, dependiente de la velocidad (Servotronic)</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><br />Plata Pyrut</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/passat/Colores/Colores01.png" class="imgResponsiva" /><br />Azul Atlantic</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><br />Gris Manganeso</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/passat/Colores/Colores02.png" class="imgResponsiva" /><br />Azul Harvard</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/passat/Colores/Colores03.png" class="imgResponsiva" /><br />Marron Roble Negro</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/passat/Colores/Colores04.png" class="imgResponsiva" /><br />Rojo Crimson</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/passat/Colores/Colores05.png" class="imgResponsiva" /><br />Plata Reflex</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/passat/Colores/Colores06.png" class="imgResponsiva" /><br />Gris Urano</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/passat/Colores/Colores07.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/passat/Colores/Colores08.png" class="imgResponsiva" /><br />Blanco Oryx</li>
+
+					<li class="sin-borde" style="clear:both"><b>Interior</b></li>
+					<li>Tapizado en Alcantara</li>
+					<li>Techo moldeado en una pieza</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Apliques de Madera "Pino Brillante"</li>
+					<li>Consola central</li>
+					<li>Insertos en madera</li>
+					<li>Insertos en aluminio</li>
+
+					<li><b>Volantes</b></li>
+					<li>PM3</li>
+					<li>Volante multifuncional deportivo en cuero con Tiptronic</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<p class="paginadorVersiones visibleCelular">
+		<a href="#1" class="active">&nbsp;</a>
+		<a href="#2">&nbsp;</a>
+	</p>
+</div>
+
+
+<!----------------------------------ACCESORIOS---------------------------------->
+<div class="divGaleria">
+	<div id="div-Brochure-Info">
+		<h2>Accesorios</h2>
+		<div id="div-Brochure-Boton">
+			<div id="div-Brochure-Boton-Inner">Accesorios</div>
+		</div>
+	</div>
+	<div id="div-Brochure-Imagen">
+		<img src="~/Content/info_modelos/passat/Accesorios/Accesorios.jpg" class="imgResponsiva" />
+	</div>
+</div>
+
+
+<!----------------------------------BROCHURE---------------------------------->
+<div id="divBrochure">
+	<div id="div-Brochure-Info">
+		<h2>Brochure<br />de Passat</h2>
+		<a href="~/Content/info_modelos/passat/Brochure/Brochure.pdf" rel="external" class="linkDescargarBrochure" target="_blank">
+			<div id="div-Brochure-Boton">
+				<div id="div-Brochure-Boton-Inner">Descargalo</div>
+			</div>
+		</a>
+	</div>
+
+	<div id="div-Brochure-Imagen">
+		<img src="~/Content/info_modelos/passat/Brochure/Brochure.jpg" class="imgResponsiva" />
+	</div>
+</div>
+
+@section footerModelo
+{
+
+	<div class="md-modal md-effect-12">
+		<h1>Accesorios Passat</h1>
+		<div class="md-contentAccesorios">
+			<div id="divGaleriaPopup-Imagenes" style="width: 60%; height: auto; margin: auto auto;">
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios01.jpg" class="imgResponsiva" />
+					<p>
+						Embellecedor pedalera DSG | 1K1-064-200-A
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios02.jpg" class="imgResponsiva" />
+					<p>
+						Barras porta equipaje | 3G0-071-126
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios03.jpg" class="imgResponsiva" />
+					<p>
+						Porta bicicleta | 6Q0-071-128-A
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios04.jpg" class="imgResponsiva" />
+					<p>
+						Porta kayak | 1K0-071-127-A
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios05.jpg" class="imgResponsiva" />
+					<p>
+						Porta tabla de surf | 000-071-120-HA
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios06.jpg" class="imgResponsiva" />
+					<p>
+						Porta tabla de ski / snowboard | 1T0-071-129
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios07.jpg" class="imgResponsiva" />
+					<p>
+						Enganche remolque desmontable c/ e-kit | G0-092-150-B
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios08.jpg" class="imgResponsiva" />
+					<p>
+						Llanta de aleación Motorsport Negra 8J x 19" | 1K8-071-499-A -AX1
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios09.jpg" class="imgResponsiva" />
+					<p>
+						Llanta de aleación Motorsport Gris 8J x 19" | 1K8-071-499-A -16Z
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios10.jpg" class="imgResponsiva" />
+					<p>
+						Llanta de aleación Motorsport Blanca 8J x 19" | 1K8-071-499-A -Y9C
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios11.jpg" class="imgResponsiva" />
+					<p>
+						Llanta de aleación Sagitta 8J X 19" | 1K8-071-499-  -QQ9
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios12.png" class="imgResponsiva" />
+					<p>
+						Tuercas de seguridad | 000-071-597
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios13.jpg" class="imgResponsiva" />
+					<p>
+						Protector de válvula | 000-071-215-A
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios14.jpg" class="imgResponsiva" />
+					<p>
+						Embellecedor de zocalo c/ lettering Passat | 3G0-071-303
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios15.jpg" class="imgResponsiva" />
+					<p>
+						Alfombra de baúl c/ lettering Passat | 3G5-061-161
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios16.jpg" class="imgResponsiva" />
+					<p>
+						Red de baúl | 3C5-065-110
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios17.jpg" class="imgResponsiva" />
+					<p>
+						Alfombra de piso
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios18.jpg" class="imgResponsiva" />
+					<p>
+						Pecha de habitaculo | 00V-061-127
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios19.jpg" class="imgResponsiva" />
+					<p>
+						Waste bag | 000-061-107
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios20.jpg" class="imgResponsiva" />
+					<p>
+						Clothes hanger | 000-061-126-A -041
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios21.jpg" class="imgResponsiva" />
+					<p>
+						Sistema viaje y confort - Soporte básico | 000-061-122
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios22.jpg" class="imgResponsiva" />
+					<p>
+						Sistema viaje y confort - Mesa plegable | 000-061-124
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios23.jpg" class="imgResponsiva" />
+					<p>
+						Sistema viaje y confort - Porta Ipad | 000-061-125-A (Ipad 2-4)
+						<br>Sistema viaje y confort - Porta Ipad | 000-061-125 -B (Ipad mini 1-3)
+						<br>Sistema viaje y confort - Porta Ipad | 000-061-125-E (Ipad Air 1-2)
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios24.jpg" class="imgResponsiva" />
+					<p>
+						Sistema viaje y confort - Porta Samsung Tab | 000-061-125-D
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios25.jpg" class="imgResponsiva" />
+					<p>
+						Sistema viaje y confort - Percha habitáculo | 000-061-127-B
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios26.jpg" class="imgResponsiva" />
+					<p>
+						Sistema viaje y confort - Soporte bolsas | 000-061-126-B
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios27.jpg" class="imgResponsiva" />
+					<p>
+						Conservadora portatil 12V - 25 litros | 000-065-400-F
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios28.jpg" class="imgResponsiva" />
+					<p>
+						Kit cuidado automotor | 000-096-355-B
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios29.jpg" class="imgResponsiva" />
+					<p>
+						Kit de seguridad c/ extintor | PMR-BOL-SEG-B
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios30.jpg" class="imgResponsiva" />
+					<p>
+						Asiento de niño G0 hasta 13 kg | 5G0-019-900
+						<br>Asiento de niño G0 hasta 13 kg c/ Isofix | 5G0-019-907
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios31.jpg" class="imgResponsiva" />
+					<p>
+						Asiento de niño G1 de 9 a 18 kg c/ Isofix + Top Tether | 5G0-019-909-A
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/passat/Accesorios/Accesorios32.jpg" class="imgResponsiva" />
+					<p>
+						Kit de seguridad c/ extintor | PMR-BOL-SEG-B
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="divCerrarGaleria">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg cruzCerrar" />
+		</div>
+	</div>
+	<div class="md-overlay"></div>
+	<br /><br />
+}

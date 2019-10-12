@@ -1,0 +1,228 @@
+﻿@model Matassi.Web.Areas.Web.Models.ConsultaOfertaEmision
+@using Matassi.Dominio
+
+@{
+	ViewBag.Title = "Ofertas y Emisiones de cuota";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+<style type="text/css">
+	.tabla-Emision-Oferta {
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
+		border: 1px solid #000;
+	}
+
+		.tabla-Emision-Oferta tr:nth-child(even) td {
+			font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+			font-size: 12px;
+			padding: 3px;
+			background-color: rgb(234, 238, 237);
+			border: 1px solid #000;
+		}
+
+		.tabla-Emision-Oferta tr:nth-child(odd) td {
+			font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+			font-size: 12px;
+			padding: 3px;
+			background-color: rgb(255, 255, 255);
+			border: 1px solid #000;
+		}
+
+		.tabla-Emision-Oferta tr:nth-child(1) td,
+		.tabla-Emision-Oferta tr:nth-child(2) td {
+			background-color: #bac2c5;
+			font-family: 'VWHeadWeb-Bold', Arial, Helvetica, sans-serif;
+			font-size: 12px;
+			padding: 5px;
+			text-align: center;
+		}
+</style>
+
+<div class="infoModelo">
+	<a href="#" class="modeloActual">@ViewBag.Title</a>
+	<div class="infoModeloTitulos">
+		<ul class="">
+			<li>|</li>
+			<li>
+				<span></span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div style="margin: 10px 9px 9px 9px; display:block; position: relative; height: auto; overflow:hidden;">
+	<div class="columnaIzquierda">
+		&nbsp;
+	</div>
+	<div class="columnaDerecha">
+		<div style="text-align:center;">
+			<img src="~/Content/images/Autoahorro20170809.jpg" />
+		</div>
+		<div class="TituloPagina">@ViewBag.Title</div>
+
+		@using (Html.BeginForm())
+		{
+			@Html.AntiForgeryToken()
+
+			<table class="tabla-Emision-Oferta">
+				<tr>
+					<td>Grupo</td>
+					<td>
+						@Html.TextBoxFor(model => model.Grupo)
+						<br />@Html.ValidationMessageFor(model => model.Grupo)
+					</td>
+					<td>Orden</td>
+					<td>
+						@Html.TextBoxFor(model => model.Orden)
+						<br />@Html.ValidationMessageFor(model => model.Orden)
+					</td>
+					<td><input type="submit" name="Ofertas" value="ver ofertas" /></td>
+					<td><input type="submit" name="Cuota" value="consulte su cuota" /></td>
+				</tr>
+			</table>
+			<br />
+		}
+
+		@if (ViewBag.Ofertas != null)
+		{
+			foreach (DateTime fecha in ((List<AutoahorroOferta>)ViewBag.Ofertas).Select(ao => ao.ArchivoAutoahorro.Fecha).Distinct().OrderByDescending(ao => ao.Date))
+			{
+				<table class="tabla-Emision-Oferta">
+					<tr>
+						<td colspan="5">
+							@System.Globalization.CultureInfo.CurrentUICulture.TextInfo.ToTitleCase(fecha.ToString("MMMM 'de' yyyy"))
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Fecha Oferta
+						</td>
+						<td>
+							Grupo
+						</td>
+						<td>
+							Modelo
+						</td>
+						<td>
+							Total Ajustado
+						</td>
+						<td>
+							Total Licitado
+						</td>
+					</tr>
+					@foreach (AutoahorroOferta oferta in ((List<AutoahorroOferta>)ViewBag.Ofertas).Where(ao => ao.ArchivoAutoahorro.Fecha == fecha))
+					{
+						<tr>
+							<td style="text-align:center">
+								@oferta.ArchivoAutoahorro.Fecha.ToString("dd/MM/yyyy")
+							</td>
+							<td style="text-align:center">
+								@oferta.Grupo.ToString().PadLeft(4, '0')
+							</td>
+							<td style="text-align:center">
+								@oferta.Modelo
+							</td>
+							<td style="text-align:right">
+								$ @string.Format("{0:0.00}", oferta.TAjustado)
+							</td>
+							<td style="text-align:right">
+								$ @string.Format("{0:0.00}", oferta.TLicitado)
+							</td>
+						</tr>
+					}
+				</table>
+				<br />
+			}
+		}
+
+		@if (ViewBag.Cuotas != null)
+		{
+			foreach (AutoahorroEmision emision in ViewBag.Cuotas)
+			{
+				<table class="tabla-Emision-Oferta">
+					<tr class="emision-Titulo">
+
+						<td colspan="4">APELLIDO Y NOMBRE DEL CLIENTE: @emision.Nombre</td>
+					</tr>
+					<tr>
+						<td>VENCIMIENTO:</td>
+						<td>@emision.Vence.ToString("dd/MM/yyyy")</td>
+						<td colspan="2"></td>
+					</tr>
+					<tr>
+						<td>GRUPO:</td>
+						<td>@emision.Gpo.ToString().PadLeft(4, '0')</td>
+						<td>ALICUOTA:</td>
+						<td>$ @string.Format("{0:0.00}", emision.Alicuota)</td>
+					</tr>
+					<tr>
+						<td>ORDEN:</td>
+						<td>@emision.Ord.ToString().PadLeft(3, '0')</td>
+						<td>CARGOS ADM.:</td>
+						<td>$ @string.Format("{0:0.00}", emision.Cargos)</td>
+					</tr>
+					<tr>
+						<td>DESVIO:</td>
+						<td>@emision.Desv</td>
+						<td>ACT.ALICUOTA:</td>
+						<td>$ @string.Format("{0:0.00}", emision.Actalicuota)</td>
+					</tr>
+					<tr>
+						<td>CUOTA NRO:</td>
+						<td>@emision.Cuot.ToString().PadLeft(2, '0')</td>
+						<td>CARGOS ACT.ALIC.:</td>
+						<td>$ @string.Format("{0:0.00}", emision.Caactalic)</td>
+					</tr>
+					<tr>
+						<td>$ SEG.BIEN:</td>
+						<td>@string.Format("{0:0.00}", emision.SegBien)</td>
+						<td>SEG.VIDA:</td>
+						<td>$ @string.Format("{0:0.00}", emision.SegVida)</td>
+					</tr>
+					<tr>
+						<td>CUOTAS PLAN:</td>
+						<td>@emision.Plan</td>
+						<td>MORA:</td>
+						<td>$ @string.Format("{0:0.00}", emision.Mora)</td>
+					</tr>
+					<tr>
+						<td>MODELO PLAN:</td>
+						<td>@emision.Mod</td>
+						<td>DEB/CRED:</td>
+						<td>$ @string.Format("{0:0.00}", emision.DebCred)</td>
+					</tr>
+					<tr>
+						<td>BANCO:</td>
+						<td>@emision.Banco</td>
+						<td>INT.LIQUIDACION:</td>
+						<td>$ @string.Format("{0:0.00}", emision.Intliquid)</td>
+					</tr>
+					<tr>
+						<td>SUCURSAL:</td>
+						<td>@emision.Sucursal</td>
+						<td>OTROS:</td>
+						<td>$ @string.Format("{0:0.00}", emision.Otros)</td>
+					</tr>
+					<tr>
+						<td>CUENTA:</td>
+						<td>@emision.Cuenta</td>
+						<td><b>***** TOTAL:</b></td>
+						<td><b>$ @string.Format("{0:0.00}", emision.Total)</b></td>
+					</tr>
+				</table>
+				<br />
+			}
+		}
+	</div>
+
+</div>
+
+
+
+
+
+<style>
+
+</style>

@@ -1,0 +1,321 @@
+﻿@using Matassi.Dominio
+
+@{
+	ViewBag.Title = "Inicio";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+<style type="text/css">
+	.grande {
+		width: 206px;
+		height: 104px;
+		filter: none;
+		-webkit-filter: grayscale(0);
+		/*-webkit-filter: opacity(100%);
+		filter: opacity(100%);*/
+		-webkit-filter: sepia(0.57);
+		filter: sepia(0.57);
+	}
+
+	.mediano {
+		width: 158px;
+		height: 80px;
+	}
+
+	.chico {
+		width: 126px;
+		height: 64px;
+	}
+
+	.mediano, .chico {
+		filter: gray; /* IE6-9 */
+		filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+		-webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+		/*-webkit-filter: opacity(50%);
+		filter: opacity(50%);*/
+		-webkit-filter: sepia(1);
+		filter: sepia(1);
+	}
+
+	.img-zoom {
+		-webkit-transition: all .35s ease-in-out;
+		-moz-transition: all .35s ease-in-out;
+		-o-transition: all .35s ease-in-out;
+		-ms-transition: all .35s ease-in-out;
+		cursor: pointer;
+		cursor: hand;
+	}
+
+	.transition {
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-o-transform: scale(1);
+		transform: scale(1);
+		z-index: 100;
+	}
+
+	.tituloAccesoHome {
+		font-family: 'VWHeadWeb-Bold';
+		font-size: 14px;
+		margin-left: 11px;
+		margin-top: 10px;
+		position: absolute;
+		z-index: 1;
+	}
+
+	.tituloBlancoSombraNegra {
+		color: #FFF;
+		text-shadow: 1px 1px #000;
+	}
+
+	.tituloNegroSombraBlanca {
+		color: #000;
+		text-shadow: 1px 1px #FFF;
+	}
+
+	.linkAccesoHome {
+		text-decoration: none;
+	}
+
+	.conColor {
+		-webkit-filter: grayscale(0);
+		-webkit-filter: sepia(0.57);
+		filter: sepia(0.57);
+	}
+</style>
+<script type="text/javascript">
+	function GetAnterior(idActual) {
+		var actual = parseInt(idActual.replace('img-footer', ''));
+		if (actual == 1)
+			return "";
+		else
+			return "img-footer" + String(actual - 1);
+	}
+
+	function GetPosterior(idActual) {
+		var actual = parseInt(idActual.replace('img-footer', ''));
+		if (actual == 5)
+			return "";
+		else
+			return "img-footer" + String(actual + 1);
+	}
+
+	$(document).ready(function () {
+
+		/*$('.img-zoom').hover(function () {
+			$(this).addClass('conColor');
+		}, function () {
+			$(this).removeClass('conColor');
+		});*/
+
+
+		$('.img-zoom').hover(function () {
+
+			$(this).addClass('transition');
+
+			//Quito el tamaño mediano
+			$(this).removeClass('mediano');
+
+			//Agrando el actual
+			$(this).addClass('grande');
+
+			//Achico anteriores: el peor caso es estar en el 5 y tener que achicar el 3, el 2 y el 1.
+			$("#" + GetAnterior(GetAnterior($(this).attr('id')))).addClass('chico');
+			$("#" + GetAnterior(GetAnterior(GetAnterior($(this).attr('id'))))).addClass('chico');
+			$("#" + GetAnterior(GetAnterior(GetAnterior(GetAnterior($(this).attr('id')))))).addClass('chico');
+
+			//Achico posteriores: el peor caso es estar en el 1 y tener que agrandar el 3, el 4 y el 5.
+			$("#" + GetPosterior(GetPosterior($(this).attr('id')))).addClass('chico');
+			$("#" + GetPosterior(GetPosterior(GetPosterior($(this).attr('id'))))).addClass('chico');
+			$("#" + GetPosterior(GetPosterior(GetPosterior(GetPosterior($(this).attr('id')))))).addClass('chico');
+
+		}, function () {
+			$(this).removeClass('transition');
+
+			for (i = 1; i <= 5; i++) {
+				$("#img-footer" + i).removeClass('grande');
+				$("#img-footer" + i).removeClass('chico');
+				$("#img-footer" + i).addClass('mediano');
+			}
+		});
+
+		var desplegado = false;
+
+		$("#botonModelos").click(function () {
+			$("#listaModelos").slideToggle("slow", function () {
+				desplegado = !desplegado;
+				$("#botonModelos").removeClass();
+				if (desplegado)
+					$("#botonModelos").addClass('imgSliderModelos imgSliderModelos_contraer');
+				else
+					$("#botonModelos").addClass('imgSliderModelos imgSliderModelos_desplegar');
+			});
+		});
+
+		$("#botonModelos").hover(function () {
+			$("#botonModelos").removeClass();
+			if (desplegado)
+				$("#botonModelos").addClass('imgSliderModelos imgSliderModelos_contraer_hover');
+			else
+				$("#botonModelos").addClass('imgSliderModelos imgSliderModelos_desplegar_hover');
+		}, function () {
+			$("#botonModelos").removeClass();
+			if (desplegado)
+				$("#botonModelos").addClass('imgSliderModelos imgSliderModelos_contraer');
+			else
+				$("#botonModelos").addClass('imgSliderModelos imgSliderModelos_desplegar');
+		});
+
+		$(".BKGModelo").click(function () {
+			window.open($(this).attr("link"), '_self');
+		});
+	});
+</script>
+<div style="position: absolute; width: 100%;">
+	<div class="sliderModelos" id="listaModelos">
+		<!--FILA UNO-->
+		<ul style="padding-top: 30px;">
+			<li class="BKGModelo liModeloUP" link="/Modelo/UP"></li>
+			<li class="BKGModelo liModeloNuevoGol" link="/Modelo/nuevo-gol"></li>
+			<li class="BKGModelo liModeloFox" link="/Modelo/Fox"></li>
+			<li class="BKGModelo liModeloGolf" link="/Modelo/golf"></li>
+			<li class="BKGModelo liModeloBeetle" link="/Modelo/the-beetle"></li>
+			<li class="BKGModelo liModeloPassat" link="/Modelo/passat"></li>
+		</ul>
+		<ul>
+			<li class="SlideTituloModelo SlideTituloModeloUP">UP</li>
+			<li class="SlideTituloModelo SlideTituloModeloNuevoGol">Gol</li>
+			<li class="SlideTituloModelo SlideTituloModeloFox">Fox</li>
+			<li class="SlideTituloModelo SlideTituloModeloGolf">Golf</li>
+			<li class="SlideTituloModelo SlideTituloModeloBeetle">Beetle</li>
+			<li class="SlideTituloModelo SlideTituloModeloPassat">Passat</li>
+		</ul>
+		<!--FILA DOS-->
+		<ul>
+			<li class="BKGModelo liModeloVoyage" link="/Modelo/voyage"></li>
+			<li class="BKGModelo liModeloPolo" link="/Modelo/polo"></li>
+			<li class="BKGModelo liModeloVento" link="#"></li>
+			<li class="BKGModelo liModeloScirocco" link="/Modelo/scirocco"></li>
+			<li class="BKGModelo liModeloNuevoPolo" link="/Modelo/nuevo-polo"></li>
+			<li class="BKGModelo liModeloTiguan" link="/Modelo/tiguan-allspace"></li>
+		</ul>
+		<ul>
+			<li class="SlideTituloModelo SlideTituloModeloVoyage">Voyage</li>
+			<li class="SlideTituloModelo SlideTituloModeloPolo">Polo</li>
+			<li class="SlideTituloModelo SlideTituloModeloVento">Volkswagen Vento</li>
+			<li class="SlideTituloModelo SlideTituloModeloScirocco">Scirocco</li>
+			<li class="SlideTituloModelo SlideTituloModeloNuevoPolo">Nuevo Polo</li>
+			<li class="SlideTituloModelo SlideTituloModeloTiguan">Tiguan Allspace</li>
+		</ul>
+		<!--FILA TRES-->
+		<ul>
+			<li class="BKGModelo liModeloTouareg" link="/Modelo/touareg">
+			<li class="BKGModelo liModeloSuran" link="/Modelo/Suran"></li>
+			<li class="BKGModelo liModeloGolfVariant" link="/Modelo/golf-variant"></li>
+			<li class="BKGModelo liModeloSaveiro" link="/Modelo/saveiro"></li>
+			<li class="BKGModelo liModeloAmarok" link="/Modelo/amarok"></li>
+			<li class="BKGModelo liModeloAmarokV6" link="/Modelo/amarok-v6"></li>
+		</ul>
+		<ul>
+			<li class="SlideTituloModelo SlideTituloModeloTouareg">Touareg</li>
+			<li class="SlideTituloModelo SlideTituloModeloSuran">Suran</li>
+			<li class="SlideTituloModelo SlideTituloModeloGolfVariant">Golf Variant</li>
+			<li class="SlideTituloModelo SlideTituloModeloSaveiro">Saveiro</li>
+			<li class="SlideTituloModelo SlideTituloModeloAmarok">Amarok</li>
+			<li class="SlideTituloModelo SlideTituloModeloAmarokV6">Amarok V6</li>
+		</ul>
+		<!--FILA CUATRO-->
+		<ul>
+			<li class="BKGModelo liModeloGolfGTI" link="/Modelo/golf-gti">
+			<li class="BKGModelo liModeloNuevoVirtus" link="/Modelo/nuevo-virtus"></li>
+		</ul>
+		<ul>
+			<li class="SlideTituloModelo SlideTituloModeloGolfGTI">Golf GTI</li>
+			<li class="SlideTituloModelo SlideTituloModeloNuevoVirtus">Nuevo Virtus</li>
+		</ul>
+	</div>
+	<div class="botonSliderModelos">
+		<div class="imgSliderModelos imgSliderModelos_desplegar" id="botonModelos">
+
+		</div>
+	</div>
+</div>
+<div style="position:relative;">
+	<div class="tituloModeloHome @ViewBag.EstiloTitulo">
+		@ViewBag.TituloImagen
+	</div>
+	@if (ViewBag.TituloImagen != ViewBag.BajadaTitulo)
+	{
+		<div class="subTituloModeloHome @ViewBag.EstiloTitulo">
+			@ViewBag.BajadaTitulo
+		</div>
+	}
+	<img src='@Url.Action("VerImagenModeloHome", new { codImagenModelo = ViewBag.CodImagenModelo })' />
+</div>
+<div class="">
+	<ul id="ulImagenesMini" class="">
+		@for (int i = 0; i < ((List<AccesosHome>)ViewBag.AccesosHome).Count; i++)
+		{
+			<li style="left: @ViewBag.PosicionesAccesos[i]px; vertical-align:bottom;display:inline-block;text-align: center">
+				<a href="@(((List<AccesosHome>)ViewBag.AccesosHome)[i].Link)" class="linkAccesoHome">
+					<div>
+						<div class="tituloAccesoHome @(((List<AccesosHome>)ViewBag.AccesosHome)[i].ClaseCSSTitulo)">@(((List<AccesosHome>)ViewBag.AccesosHome)[i].Titulo)</div>
+						<div style="position:relative">
+							<img id="img-footer@(i+1)" class="img-zoom mediano" src='@Url.Action("VerImagenModelo", new { codTipoImagen = ((List<AccesosHome>)ViewBag.AccesosHome)[i].CodTipoImagen, codImagen = ((List<AccesosHome>)ViewBag.AccesosHome)[i].CodImagen })' width="158" height="80" />
+						</div>
+					</div>
+				</a>
+			</li>
+		}
+	</ul>
+</div>
+<div id="datosConcesionario">
+	<img src="~/Content/images/LogoMatassi.jpg" alt="Matassi e Imperiale S.A.">
+	<div class="content-concesionario">
+		<div class="dato1Consecionario">
+			<!--<div class="dato2Consecionario" style="margin-bottom: 10px;"><img src="" /></div>-->
+			<div class="dato2Consecionario" style="font-size:14px; margin-bottom: 10px;"><b>Matassi e Imperiale SA</b></div>
+			<div class="dato2Consecionario">Hipólito Yrigoyen Nº 1603</div>
+			<div class="dato2Consecionario">03462-437500</div>
+			<div class="dato2Consecionario" style="margin-top: 10px;">Venado Tuerto – Santa Fe</div>
+			<div class="dato2Consecionario">Email: Ventas@matassi.com.ar</div>
+		</div>
+	</div>
+</div>
+
+<style type="text/css">
+	#datosConcesionario img {
+		width: 100%;
+	}
+
+	#datosConcesionario {
+		position: absolute;
+		z-index: 25;
+		border: 5px solid #FFF;
+		top: 20px;
+		right: 30px;
+		background: #ededed;
+		width: 200px;
+		overflow: hidden;
+		font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+		padding: 10px;
+		opacity: 0.85;
+	}
+
+		#datosConcesionario h1 {
+			font-size: 14px;
+			margin-bottom: 5px;
+		}
+
+		#datosConcesionario div.dato1Consecionario {
+			margin-top: 10px;
+			margin-bottom: 3px;
+		}
+
+		#datosConcesionario div.dato2Consecionario {
+			font-size: 12px;
+			padding-bottom: 5px;
+			padding-left: 10px;
+		}
+</style>
+
+<link rel="stylesheet" href="/Content/EstilosDesplegableModelos.css" />

@@ -1,0 +1,305 @@
+﻿@media only screen and (min-width:768px) {
+	/***********************DESTACADOS****************************/
+	#divDestacados {
+		background-color: #f3f5f6;
+	}
+
+	#divConectividad {
+		background-color: #FFF;
+	}
+
+	#divPerformance {
+		background-color: #f3f5f6;
+	}
+
+	#divSeguridad {
+		background-color: #FFF;
+	}
+
+	#divDisenio {
+		background-color: #f3f5f6;
+	}
+
+	#divTecnologia {
+		background-color: #FFF;
+	}
+
+	#divVersiones {
+		background-color: #f3f5f6;
+	}
+
+		#divVersiones div.TituloSeccion {
+			padding-bottom: 25px;
+		}
+
+
+	/***********************GENERICOS****************************/
+
+	/*Div general de cada sección: destacados, conectividad, etc.*/
+	.SeccionModelo {
+		overflow: auto;
+		padding-bottom: 50px;
+		padding-top: 50px;
+	}
+
+		.SeccionModelo hr {
+			clear: both;
+			display: none;
+		}
+
+	/*Div titulo de cada seccion: destacados, conectividad, etc.*/
+	.TituloSeccion {
+		color: #2f3538;
+		font-family: "VWHeadWeb-Bold";
+		font-size: 45px;
+		font-style: normal;
+		font-weight: normal;
+		letter-spacing: -1.125px;
+		line-height: 50px;
+		text-align: center;
+	}
+
+	/*Div sub-titulo de cada seccion: destacados, conectividad, etc.*/
+	.SubTituloSeccion {
+		color: #2f3538;
+		font-family: VWTextWeb-Regular;
+		font-size: 16px;
+		font-style: normal;
+		line-height: 25px;
+		margin-bottom: 20px;
+		margin-top: 20px;
+		padding-left: 8%;
+		padding-right: 8%;
+		text-align: center;
+	}
+
+	.listaHorizontalImagenes {
+		margin-top: 25px;
+		text-align: center;
+	}
+
+		.listaHorizontalImagenes ul {
+			margin-bottom: 15px;
+		}
+
+			.listaHorizontalImagenes ul li {
+				display: inline-block;
+				font-family: VWTextWeb-Bold;
+				font-size: 16px;
+				font-style: normal;
+				padding: 10px;
+			}
+
+
+	.Imagenes1Columna {
+		margin-bottom: 70px;
+		margin-left: 5%;
+		padding-left: 20px;
+		padding-right: 20px;
+		position: relative;
+		text-align: center;
+		top: 15px;
+		width: 90%;
+	}
+
+		.Imagenes1Columna table {
+			border-collapse: collapse;
+			margin-left: auto;
+			margin-right: auto;
+			width: 85%;
+		}
+
+			.Imagenes1Columna table tr.Encabezado th {
+				background-color: #CCCCD1;
+				font-weight: bold;
+				padding: 8px;
+			}
+
+			.Imagenes1Columna table tr:nth-child(even) {
+				background-color: #FFF;
+			}
+
+			.Imagenes1Columna table tr:nth-child(odd) {
+				background-color: #F0F0F5;
+			}
+
+			.Imagenes1Columna table tr td {
+				font-weight: normal;
+				padding: 6px;
+			}
+
+			.Imagenes1Columna table#tblEmision tr td {
+				font-weight: normal;
+				padding: 6px;
+				text-align: left;
+			}
+
+		.Imagenes1Columna .infoSoloTextoColumna p label {
+			margin-right: 20px;
+		}
+
+			.Imagenes1Columna .infoSoloTextoColumna p label input {
+				margin-right: 5px;
+			}
+
+
+
+	.Imagenes2Columnas {
+		/*align-items: center;*/
+		display: flex;
+		float: left;
+		margin-bottom: 70px;
+		margin-left: 5%;
+		padding-left: 6px;
+		padding-right: 6px;
+		position: relative;
+		text-align: center;
+		top: 15px;
+		width: 90%;
+	}
+
+		.Imagenes2Columnas > div.iconoDesplegarSeccion,
+		.Imagenes2Columnas > hr {
+			display: none;
+		}
+
+	.Imagenes2Columnas-Izquierda {
+		float: left;
+		margin-right: 15px;
+		width: 48%;
+	}
+
+	.Imagenes2Columnas-Derecha {
+		float: right;
+		margin-left: 15px;
+		width: 48%;
+	}
+
+	.Imagenes2Columnas .infoTextoColumna {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 50%;
+	}
+
+	.Imagenes2Columnas .infoSoloTextoColumna {
+		padding: 15px;
+	}
+
+	.infoSoloTextoColumna h5,
+	.infoSoloTextoColumna p {
+		text-align: left;
+	}
+
+	.infoTextoColumna h5,
+	.infoTextoColumna h3,
+	.infoTextoColumna p {
+		text-align: left;
+		/*font-size: 50px;*/
+	}
+
+	/*.Imagenes2Columnas h5, 
+	.Imagenes2Columnas h3, 
+	.Imagenes2Columnas p {
+		text-align: center;
+	}*/
+
+	.Imagenes3Columnas {
+		float: left;
+		height: auto;
+		margin-bottom: 50px;
+		margin-left: 5%;
+		padding-left: 6px;
+		padding-right: 6px;
+		position: relative;
+		text-align: center;
+		top: 15px;
+		width: 90%;
+	}
+
+		.Imagenes3Columnas > div.iconoDesplegarSeccion,
+		.Imagenes3Columnas > hr {
+			display: none;
+		}
+
+	.Imagenes3Columnas-Izquierda {
+		float: left;
+		width: 33%;
+	}
+
+	.Imagenes3Columnas-Centro {
+		float: left;
+		width: 33%;
+	}
+
+	.Imagenes3Columnas-Derecha {
+		float: right;
+		width: 33%;
+	}
+
+	.Imagenes3Columnas > div > img {
+		text-align: center;
+		margin-left: 5%;
+		width: 90%;
+		float: left;
+		position: relative;
+		padding-left: 6px;
+		padding-right: 6px;
+		top: 15px;
+		margin-bottom: 25px;
+	}
+
+	.Imagenes3Columnas h5,
+	.Imagenes3Columnas h3,
+	.Imagenes3Columnas p {
+		text-align: center;
+	}
+
+	h5 {
+		color: rgb(29, 31, 32);
+		font-family: VWHeadWeb-Bold;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: bold;
+		letter-spacing: -0.025em;
+		line-height: 23px;
+		margin: 0px;
+		padding-top: 10px;
+		text-align: left;
+	}
+
+	h3 {
+		color: #1d1f20;
+		font-family: "VWHeadWeb-Bold";
+		font-size: 28px;
+		font-style: normal;
+		font-weight: bold;
+		letter-spacing: -0.025em;
+		line-height: 33px;
+		margin: 0;
+		padding-top: 7px;
+		text-align: left;
+	}
+
+	p {
+		color: #2f3538;
+		font-family: "VWTextWeb-Regular";
+		font-size: 16px;
+		font-style: normal;
+		font-weight: normal;
+		line-height: 25px;
+		margin: 0;
+		margin-top: 15px;
+		text-align: left;
+	}
+
+	/***********************ESTILOS DE CELULAR****************************/
+
+	.CaracteristicasCelular, .volverArriba, .jcarousel-pagination, .visibleCelular {
+		display: none;
+	}
+
+	.ocultoCelular {
+		display: block;
+	}
+}

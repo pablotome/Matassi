@@ -1,0 +1,61 @@
+﻿@model Matassi.Dominio.ImagenModelo
+
+@{
+    ViewBag.Title = "NuevaImagenModelo";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>NuevaImagenModelo</h2>
+
+@using (Html.BeginForm("NuevaImagenModelo", "AdminModelo", FormMethod.Post, new { enctype = "multipart/form-data" })) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>ImagenModelo</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.CodImagenModelo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CodImagenModelo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CodImagenModelo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Bajada, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Bajada, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Bajada, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+		<div>
+			@Html.LabelFor(model => model.ImagenPosteada, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+				@Html.TextBoxFor(model => model.ImagenPosteada, new { type = "file" })
+				@Html.ValidationMessageFor(model => model.ImagenPosteada)
+            </div>
+		</div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+				@Html.HiddenFor(codModelo => Model.Modelo.CodModelo)
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

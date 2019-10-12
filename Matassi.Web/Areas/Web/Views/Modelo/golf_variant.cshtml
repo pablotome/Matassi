@@ -1,0 +1,506 @@
+﻿@{
+	ViewBag.Title = "up";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+	@Styles.Render("~/bundles/estilosCSSModelo")
+	@Scripts.Render("~/bundles/funcionesModelo")
+}
+
+<div id="divBannerTituloModelo">
+	<span id="spnTituloModelo">
+		Golf Variant
+	</span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+	<ul id="ulListaCaracteristicasModelo">
+		<li class="liConfort" data-divmodelos="divConfort">Confort</li>
+		<li class="liSeguridad" data-divmodelos="divSeguridad">Seguridad</li>
+		<li class="liTecnología" data-divmodelos="divTecnologia">Tecnología</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+<div id="divImagenModelo">
+	<img src="~/Content/info_modelos/golf_variant/Golf_Variant.jpg" class="imgResponsiva" />
+</div>
+
+<div id="divTituloModelo">
+	Más espacio significa más confort
+</div>
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+	<div class="iconoDesplegar">
+		<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+		<span>
+			Selecciona categoria
+		</span>
+	</div>
+	<ul class="oculto">
+		<li class="liConfort" data-divmodelos="divConfort">Confort</li>
+		<li class="liSeguridad" data-divmodelos="divSeguridad">Seguridad</li>
+		<li class="liTecnología" data-divmodelos="divTecnologia">Tecnología</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+
+<!----------------------------------ESPACIO---------------------------------->
+<div id="divEspacio" class="SeccionModelo">
+	<div class="TituloSeccion">
+		No me importa dónde vayas, el confort viaja con vos.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>El lugar perfecto para encontrar nuevos destinos.</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/golf_variant/Espacio/Espacio01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					El lugar perfecto para encontrar nuevos destinos.
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Interior
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					El interior del Golf Variant se distingue por materiales de alta calidad y una amplia gama de detalles inteligentes, que sorprenden tanto en términos de aspecto como en funcionalidad. Dentro del habitáculo la mirada se detiene en cada uno de estos detalles, sumando a la sensación de encontrarse en un lugar especial.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/golf_variant/Espacio/Espacio01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Comodidad y calidad</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/golf_variant/Espacio/Espacio02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/golf_variant/Espacio/Espacio02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Comodidad y calidad
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Capacidad
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					El Golf Variant cuenta con una ampliada capacidad en su baúl, especialmente pensado para las necesidades de todos tus días. El suelo del baúl, los anillos de amarre y el respaldo trasero abatible, son algunas de sus características más novedosas y funcionales.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+</div>
+
+<!----------------------------------EQUIPAMIENTO---------------------------------->
+<div id="divEquipamiento" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Equipamiento de alta calidad y diseño perfectamente combinados.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Diseñado a tu medida</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/golf_variant/Equipamiento/Equipamiento01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Diseñado a tu medida
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Confort Interior
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					El Golf Variant es un vehículo adaptable a todo. El control de velocidad crucero, el techo panorámico y el volante de cuero, son componentes exclusivos que suman a la comodidad de tu viaje, vayas donde vayas.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/golf_variant/Equipamiento/Equipamiento01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Elegancia en estado puro</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/golf_variant/Equipamiento/Equipamiento02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/golf_variant/Equipamiento/Equipamiento02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Elegancia en estado puro
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Confort Exterior
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Con el nuevo conjunto de faros y DRL Full LED, el Golf Variant logra visibilidad máxima y un confort de marcha único. Estos componentes suman tanto a la comodidad de tus viajes de todos los días, como a su elegante diseño exterior, atrapando miradas donde sea que vaya.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------TECNOLOGIA---------------------------------->
+<div id="divTecnologia" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Sistemas de audio y navegación
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Nueva generación</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/golf_variant/Tecnologia/Tecnologia01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/golf_variant/Tecnologia/Tecnologia01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Nueva generación
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Audio
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					El Golf Variant está conectado con el mundo que te rodea. Su sistema de audio ofrece varias posibilidades de utilizar lo última en tecnología digital. El sistema Composition Media está especialmente diseñado para ser usado de forma fácil e intuitiva, acercándote un completo servicio de infoentretenimiento.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Llegá donde quieras</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/golf_variant/Tecnologia/Tecnologia02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Llegá donde quieras
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Navegación
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Sumado al sistema de audio, el sistema de navegación Discover Media ofrece 8" totalmente táctiles que brindan todo la información que necesitás al volante. Disfrutá tus viajes sabiendo que tenés lo último en tecnología conduciendo junto a vos.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/golf_variant/Tecnologia/Tecnologia02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------DESTACADOS---------------------------------->
+<div id="divDestacados" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Seguridad y asistencia al conductor
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Manejá tranquilo</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/golf_variant/Destacados/Destacados01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/golf_variant/Tecnologia/Tecnologia01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Manejá tranquilo
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Seguridad
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Entre sus principales componentes se encuentran frenos ABS, ESC, 7 airbags, anclajes ISOFIX, sensores de estacionamiento y cámara de retroceso. Todos ellos suman a convertir tus viajes arriba del Golf Variant en la opción más segura sobre la ruta. Manejá tranquilo sabiendo que estás en buenas manos.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------VERSIONES---------------------------------->
+<div id="divVersiones" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Versiones
+	</div>
+
+	<!-- COMFORTLINE -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/golf_variant/Versiones/Versiones01.png" class="imgResponsiva" />
+			<h4>Comfortline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Control electrónico de estabilidad (ESC)</li>
+				<li>Anclajes ISOFIX con Top Tether</li>
+				<li>Sensores de estacionamiento delanteros y traseros</li>
+				<li>Climatronic bi-zona</li>
+				<li>Sistema de audio con pantalla de 5.2”</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Comfortline">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Comfortline">
+		<h1>Comfortline</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/golf_variant/InfoTecnica/InfoTecnica01.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Control electrónico de estabilidad (ESC)</li>
+					<li>Anclajes ISOFIX con Top Tether</li>
+					<li>Sensores de estacionamiento delanteros y traseros</li>
+					<li>Climatronic bi-zona</li>
+					<li>Sistema de audio con pantalla de 5.2”</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Golf Variant Comfortline 1.4TSI Nafta 150 CV DQ 5D</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación ligera 7J x 17P66</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tubo de escape final detrás (estándar)</li>
+					<li>Sin dispositivo de remolque</li>
+					<li>Carcasas espejos exteriores y diversos componentes en color carrocería</li>
+					<li>Barras longitudinales del techo, negro</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Sin spoiler posterior</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Inscripción "TSI"</li>
+					<li>Sin embellecedores adicionales</li>
+					<li>4 puertas</li>
+
+					<li><b>Sistema de asistencia</b></li>
+					<li>Sin sistema de asistencia en caso de cambio de carril</li>
+					<li>Sin Front Assist /sin control automático de distancia (ANB)</li>
+
+					<li><b>Espejos</b></li>
+					<li>Retrovisor exterior con función de memoria, con ajuste eléctrico y térmico por separado</li>
+					<li>Espejo interior de seguridad antideslumbramiento automático</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Luz de marcha diurna con asistente de luz de marcha y función "coming home"</li>
+					<li>Faros H7 con luz marcha diurna LED</li>
+					<li>Iluminación indirecta para indicadores y unidades de mando</li>
+					<li>Sin asistente para el cambio de luces</li>
+					<li>Regulación alcance faros</li>
+					<li>Faros antiniebla y luz de giro</li>
+					<li>Conjunto de pilotos posteriores en técnica LED</li>
+					<li>Sin limpialavafaros</li>
+					<li>Conexión de intervalos de barrido del limpiaparabrisas, con sensor de luz y lluvia</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Sin "drive select"</li>
+					<li>Sensores de estacionamiento delanteros y traseros</li>
+					<li>Sistema de regulación de velocidad (GRA) electrónico</li>
+					<li>Sin cámara ni sensor de distancia (sistema de asistencia al conductor)</li>
+					<li>Con sistema de cámara de marcha atrás (versión 1)</li>
+
+					<li><b>Interior</b></li>
+					<li>Sin compartimento/caja portaobjetos</li>
+					<li>Paquete Cromo</li>
+					<li>Techo moldeado en una pieza</li>
+					<li>Pomo/empuñadura de la palanca de cambio en cuero</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta trasera no dividida, respaldo dividido y abatible, con resposabrazos central</li>
+					<li>Climatronic bi-zona</li>
+					<li>Regulación lumbar manual respaldo asientos anteriores</li>
+					<li>Reposabrazos central delante</li>
+					<li>Regulación en altura manual de los asientos anterioresAsientos no calefaccionables</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Inserciones</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Mirror Link</li>
+					<li>ZE4</li>
+					<li>6 altavoces (pasivos)</li>
+					<li>Preparación para teléfono móvil</li>
+					<li>Antena de luna para búsqueda automática de emisora (diversidad de frecuencia)</li>
+					<li>Sistema de audio con pantalla de 5.2”</li>
+					<li>Interfaz eléctrica para uso externo, USB (compatible con iPod)</li>
+
+					<li><b>Navegación</b></li>
+					<li>Display multifuncional/ ordenador de a bordo "Medium"</li>
+					<li>Sin sistema de navegación</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifuncional de cuero</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante con airbag para rodillas y desactivación del airbag del acompañante</li>
+					<li>Frenos de disco posteriores (Geomet D)</li>
+					<li>Frenos de disco anteriores (Geomet D)</li>
+					<li>Alarma antirrobo con vigilancia del habitáculo, sirena de alarma y protección contra remolque</li>
+					<li>Sin sistema de seguridad ampliadoIndicador para el control de los neumáticos</li>
+					<li>Airbags laterales anteriores con airbag de cabeza</li>
+					<li>Cierre centralizado por control remoto, con accionamiento desde el interior y cierre de seguridad</li>
+					<li>Dirección asistida, dependiente de la velocidad (Servotronic)</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/golf_variant/Colores/Colores01.png" class="imgResponsiva" /><br />Azul Noche</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/golf_variant/Colores/Colores02.png" class="imgResponsiva" /><br />Gris platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/golf_variant/Colores/Colores03.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/golf_variant/Colores/Colores04.png" class="imgResponsiva" /><br />Plata Blanca</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/golf_variant/Colores/Colores05.png" class="imgResponsiva" /><br />Negro Profundo</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/golf_variant/Colores/Colores06.png" class="imgResponsiva" /><br />Rojo Tornado</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/golf_variant/Colores/Colores07.png" class="imgResponsiva" /><br />Blanco puro</li>
+
+					<li style="clear:both;">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+</div>
+
+
+<!--BROCHURE-->
+<div id="divBrochure">
+	<div id="div-Brochure-Info">
+		<h2>Brochure<br />de Golf Variant</h2>
+		<a href="~/Content/info_modelos/golf_variant/Brochure/Brochure.pdf" rel="external" class="linkDescargarBrochure" target="_blank">
+			<div id="div-Brochure-Boton">
+				<div id="div-Brochure-Boton-Inner">Descargalo</div>
+			</div>
+		</a>
+	</div>
+	<div id="div-Brochure-Imagen">
+		<img src="~/Content/info_modelos/golf_variant/Brochure/Brochure.jpg" class="imgResponsiva" />
+	</div>
+</div>

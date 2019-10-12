@@ -1,0 +1,159 @@
+﻿@model List<Matassi.Dominio.Seminuevo>
+@using Matassi.Web.Clases
+
+@{
+	ViewBag.Title = "Seminuevos";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+
+<style type="text/css">
+	#MainBox_form_cm {
+		font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		color: #0b0b0b;
+		width: 920px;
+		margin: 10px auto;
+	}
+
+		#MainBox_form_cm .cm_copete {
+			border-bottom: 1px #cfd7d9 solid;
+			padding-bottom: 6px;
+			font-family: 'VWHeadWeb-Regular';
+			font-size: 15px;
+		}
+
+		#MainBox_form_cm .cm_titulo {
+			padding: 18px 0 4px 0;
+			font-family: 'VWHeadWeb-Regular';
+			font-size: 24px;
+		}
+
+		#MainBox_form_cm UL.box_modelos_acc {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			margin-top: 20px;
+		}
+
+			#MainBox_form_cm UL.box_modelos_acc LI {
+				display: inline;
+				padding: 10px;
+			}
+
+	.accesorio {
+		display: block;
+		margin-bottom: 15px;
+	}
+
+	.accesorio p
+	{
+		margin-bottom: 5px;
+	}
+
+	#MainBox_form_cm .box_item_acc {
+		border: 1px #d0d8da solid;
+		padding: 20px;
+	}
+
+		#MainBox_form_cm .box_item_acc .item_img {
+			float: left;
+			margin-right: 20px;
+			width: 321px;
+			border: 1px #d0d8da solid;
+		}
+
+		#MainBox_form_cm .box_item_acc .item_datos {
+			float: left;
+			width: 460px;
+			min-height: 180px;
+			padding: 10px 20px 10px 40px;
+			background-color: #eaeeed;
+		}
+
+			#MainBox_form_cm .box_item_acc .item_datos .tit {
+				text-align: left;
+				font-family: 'VWHeadWeb-Regular';
+				font-size: 15px;
+				margin-bottom: 10px;
+			}
+
+	.CleanFloats {
+		clear: both;
+		float: none;
+		height: 0px;
+	}
+</style>
+
+<div class="infoModelo">
+	<div class="modeloActual">Seminuevos</div>
+</div>
+<div id="MainBox_form_cm">
+
+	@foreach (Matassi.Dominio.Seminuevo seminuevo in Model)
+	{
+		<div class="accesorio">
+			<div class="box_item_acc">
+				<div class="item_img">
+					<img src='@Url.Action("VerImagenSeminuevo", "Seminuevo", new { codSeminuevo = seminuevo.CodSeminuevo })' />
+				</div>
+				<div class="item_datos">
+					<div class="tit">
+						@Html.DisplayFor(accesorioItem => seminuevo.Modelo)
+					</div>
+					<ul class="item_datos_p">
+						<li>
+							<p>
+								<strong>Año:</strong>
+								@Html.DisplayFor(modelItem => seminuevo.Anio)
+							</p>
+							<p>
+								<strong>Modelo:</strong>
+								@Html.DisplayFor(modelItem => seminuevo.Modelo)
+							</p>
+							<p>
+								<strong>Kilometraje:</strong>
+								@Html.DisplayFor(modelItem => seminuevo.Kilometraje)
+							</p>
+							<p>
+								<strong>Precio:</strong>
+								@Html.DisplayFor(modelItem => seminuevo.Precio)
+							</p>
+							<p>
+								<strong>Combustible:</strong>
+								@Html.DisplayFor(modelItem => seminuevo.Combustible)
+							</p>
+							<p>
+								<strong>Color:</strong>
+								@Html.DisplayFor(modelItem => seminuevo.Color)
+							</p>
+							<p>
+								<strong>Vendedor:</strong>
+								@Html.DisplayFor(modelItem => seminuevo.Vendedor)
+							</p>
+							<p>
+								<strong>Comentarios:</strong>
+								@Html.DisplayFor(modelItem => seminuevo.Comentarios)
+							</p>
+							<p>
+								<strong>Transmision:</strong>
+								@Html.DisplayFor(modelItem => seminuevo.Transmision)
+							</p>
+							<p>
+								<strong>Cantidad de Puertas:</strong>
+								@Html.DisplayFor(modelItem => seminuevo.CantidadPuertas)
+							</p>
+
+						</li>
+					</ul>
+				</div>
+				<div class="CleanFloats"></div>
+			</div><!--box_item_acc-->
+		</div>
+	}
+
+
+</div>
+
+
+

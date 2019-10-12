@@ -1,0 +1,54 @@
+﻿@using Matassi.Dominio
+@model IEnumerable<Matassi.Dominio.ClubMatassiPuntosCliente>
+@{
+    ViewBag.Title = "Club Matassi - Puntos por Cliente";
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			<h2>@ViewBag.Title</h2>
+
+			<p class="nuevoItem">
+				@Html.ActionLink("Nuevo Cliente", "ClubMatassiPuntosCliente_Crear", null, new { @class = "btn btn-primary" })
+			</p>
+		</td>
+	</tr>
+</table>
+
+<table class="table tabla-centrada">
+	<tr>
+		<th class="oculto">
+			CodClubMatassiPuntosCliente
+		</th>
+		<th>
+			Patente
+		</th>
+		<th>
+			Puntos
+		</th>
+		<th></th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td class="oculto">
+				@Html.DisplayFor(modelItem => item.CodClubMatassiPuntosCliente)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Patente)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.CantidadPuntos)
+			</td>
+			<td align="center">
+				@Html.ActionLink("Editar", "ClubMatassiPuntosCliente_Editar", new { codClubMatassiPuntosCliente = item.CodClubMatassiPuntosCliente }) |
+				@Html.ActionLink("Eliminar", "ClubMatassiPuntosCliente_Borrar", new { codClubMatassiPuntosCliente = item.CodClubMatassiPuntosCliente }, new { onclick = string.Format("return confirm('¿Seguro de eliminar el cliente con patente \"{0}\"?');", item.Patente ) })
+			</td>
+		</tr>
+	}
+</table>
+
+

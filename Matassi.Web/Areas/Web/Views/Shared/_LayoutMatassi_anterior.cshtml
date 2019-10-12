@@ -1,0 +1,155 @@
+﻿@using Matassi.Dominio;
+@{
+	ViewBag.Title = "Matassi e Imperiale | Concesionario Oficial Volkswagen";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>@ViewBag.Title</title>
+	<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<meta name="viewport" content="width=device-width" />
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/jqueryui")
+	@Scripts.Render("~/bundles/jqueryval")
+	@Scripts.Render("~/bundles/modernizr")
+	@Scripts.Render("~/bundles/bxslider")
+	@Scripts.Render("~/bundles/functionesJS")
+
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-19117216-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+
+	@RenderSection("scripts", required: false)
+	@RenderSection("style", required: false)
+
+</head>
+<body>
+	<div id="pagina">
+		<header>
+			<a href="/" id="logo"><img src="~/Content/images/Logo.jpeg" alt="logo" id="logo_header" /></a>
+
+			<nav id="navMenu">
+				<ul id="menu">
+					<li class="itemMenu dropdown">
+						<a href="#">Modelos</a>
+						<ul class="sub-menu" style="display: none;">
+							@{ Html.RenderPartial("~/Areas/Web/Views/MenuModelos.cshtml"); }
+						</ul>
+					</li>
+					<li class="itemMenu dropdown">
+						<a href="#">Empresa</a>
+						<ul class="sub-menu" style="display: none;">
+							<li><a href="/Empresa/Horarios" class="itemSubMenu">Horarios de atención</a></li>
+							<li><a href="/Empresa/Internos" class="itemSubMenu">Listado de Internos</a></li>
+							<!--
+								<li><a href="#" class="itemSubMenu">Trabaja con nosotros</a></li>-->
+							<li><a href="/Empresa/EncuestaSatisfaccionVenta" class="itemSubMenu">Encuesta de satisfac. de venta</a></li>
+							<li><a href="/Empresa/EncuestaSatisfaccionPostVenta" class="itemSubMenu">Encuesta de satisfac. de post-venta</a></li>
+						</ul>
+					</li>
+					<li class="itemMenu">
+						<a href="/Home/VentasCorporativas">Ventas Corporativas</a>
+					</li>
+					<li class="itemMenu dropdown">
+						<a href="#">PostVenta</a>
+						<ul class="sub-menu" style="display: none;">
+							<li><a href="/Home/Contacto/PostVenta" class="itemSubMenu">Solicite su turno</a></li>
+							<li><a href="/Accesorios" class="itemSubMenu">Accesorios</a></li>
+							<!--<li><a href="/PostVenta/GarantiaVW" class="itemSubMenu">Garantía Volkswagen</a></li>-->
+							<li><a href="/PostVenta/GarantiaVW2" class="itemSubMenu">Garantía Volkswagen</a></li>
+							<li><a href="/Empresa/Horarios" class="itemSubMenu">Horarios de atención</a></li>
+							<li><a href="/PostVenta/ServiciosInspeccion" class="itemSubMenu">Servicios de Inspección</a></li>
+							<li><a href="/PostVenta/YoCuidoMiVW" class="itemSubMenu">Yo Cuido a mi Volkswagen</a></li>
+						</ul>
+					</li>
+					<li class="itemMenu dropdown">
+						<a href="#" class="">Autoahorro</a>
+						<ul class="sub-menu" style="display: none;">
+							<li><a href="/Autoahorro/QueEs" class="itemSubMenu">¿Qué es?</a></li>
+							<li><a href="/Autoahorro/MediosPago" class="itemSubMenu">Medios de Pago</a></li>
+							<li><a href="/Autoahorro/Ganadores" class="itemSubMenu">Ganadores</a></li>
+							<li><a href="/Autoahorro/Planes" class="itemSubMenu">Planes</a></li>
+							<li><a href="/Autoahorro/OfertasEmisiones" class="itemSubMenu">Ofertas y emisiones de cuota</a></li>
+							<!--<li><a href="/Autoahorro/PagoPuntual" class="itemSubMenu">Pago puntual</a></li>-->
+							<!--<li><a href="/Autoahorro/ComoLicitar" class="itemSubMenu">Cómo licitar</a></li>-->
+							<li><a href="/Autoahorro/Formularios" class="itemSubMenu">Formularios</a></li>
+						</ul>
+					</li>
+					<li class="itemMenu">
+						<a href="/Home/PruebaDeManejo">Prueba de Manejo</a>
+					</li>
+					@Html.Action("ItemSeminuevos", "Layout", new { Area = "Web" })
+				</ul>
+			</nav>
+
+			<ul class="menuSuperior">
+				<li>@Html.ActionLink("Home", "Inicio", "Home", null, null)</li>
+				<li>|</li>
+				<li><a href="https://www.facebook.com/matassieimperialevt/" target="_blank">Facebook</a></li>
+				<li>|</li>
+				<li><a href="https://www.instagram.com/matassieimperiale/" target="_blank">Instagram</a></li>
+				<li>|</li>
+				<li>@Html.ActionLink("Contáctenos", "Contacto", "Home", new { @id = "General" }, null)</li>
+			</ul>
+
+			<div id="divWhatsApp">
+				<img style="width:20px;height:20px;margin-right:8px;" alt="Reservar un turno" src="/Content/images/whatsapp-icon-32.png" id="imgWhatsApp"> Turnos por WhatsApp
+				<br>
+				+54 9 3462 667 516
+			</div>
+
+			<!--<div class="tituloConsesionario">Matassi e Imperiale S.A.</div>-->
+
+		</header>
+		<div id="body">
+			@RenderBody()
+		</div>
+		<footer style="margin-bottom:50px;">
+			<ul class="footerIzq">
+				<li>(*) Las imágenes publicadas en este sitio son de carácter ilustrativo.<br />*FOTO NO CONTRACTUAL.</li>
+			</ul>
+			<ul class="footerDer">
+				<!--<li>Matassi e Imperiale S.A. - Hipolito Yrigoyen 1603 - 2600 Venado Tuerto - Teléfono : (03462)-437500</li>-->
+				<li>@Html.ActionLink("Políticas de Privacidad", "PoliticasPrivacidad", "Home")</li>
+			</ul>
+			<div style="clear:both;">
+				<a href="http://qr.afip.gob.ar/?qr=WN90VbQmJ36XGAHXQhNO9w,," target="_F960AFIPInfo">
+					<img src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg" border="0" style="padding-top:20px; width:40px;">
+				</a>
+			</div>
+		</footer>
+	</div>
+	<!-- Facebook Pixel Code -->
+	<script>
+		!function (f, b, e, v, n, t, s) {
+			if (f.fbq) return; n = f.fbq = function () {
+				n.callMethod ?
+				n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+			}; if (!f._fbq) f._fbq = n;
+			n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+			t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+		}(window,
+		document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '456592031363048'); // Insert your pixel ID here.
+		fbq('track', 'PageView');
+	</script>
+	<noscript>
+		<img height="1" width="1" style="display:none"
+			 src="https://www.facebook.com/tr?id=456592031363048&ev=PageView&noscript=1" />
+	</noscript>
+	<!-- DO NOT MODIFY -->
+	<!-- End Facebook Pixel Code -->
+</body>
+</html>

@@ -1,0 +1,443 @@
+﻿@{
+	ViewBag.Title = "up";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+	@Styles.Render("~/bundles/estilosCSSModelo")
+	@Scripts.Render("~/bundles/funcionesModelo")
+}
+
+<div id="divBannerTituloModelo">
+	<span id="spnTituloModelo">
+		Touareg
+	</span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+	<ul id="ulListaCaracteristicasModelo">
+		<li class="liDisenio" data-divmodelos="divDisenio">Diseño</li>
+		<li class="liPerformance" data-divmodelos="divPerformance">Performance</li>
+		<li class="liConfort" data-divmodelos="divConfort">Confort</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+<div id="divImagenModelo">
+	<img src="~/Content/info_modelos/touareg/Touareg.jpg" class="imgResponsiva" />
+</div>
+
+<div id="divTituloModelo">
+	La armoniosa unión entre la elegancia y el offroad.
+</div>
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+	<div class="iconoDesplegar">
+		<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+		<span>
+			Selecciona categoria
+		</span>
+	</div>
+	<ul class="oculto">
+		<li class="liDisenio" data-divmodelos="divDisenio">Diseño</li>
+		<li class="liPerformance" data-divmodelos="divPerformance">Performance</li>
+		<li class="liConfort" data-divmodelos="divConfort">Confort</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+
+<!----------------------------------DISEÑO---------------------------------->
+<div id="divDisenio" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Actitud todoterreno.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Exterior</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/touareg/Disenio/Disenio01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Exterior
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Las apariencias no engañan.
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Gracias a su diseño, el Touareg garantiza un rendimiento potente y confiable, ya sea en la ciudad o en el campo.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/touareg/Disenio/Disenio01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Sistema de iluminación inteligente</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/touareg/Disenio/Disenio02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/touareg/Disenio/Disenio02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Sistema de iluminación inteligente
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Una solución brillante
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					El sistema de iluminación de Xenón del Touareg mejora la visibilidad para vos y los demás conductores durante la noche. A la vez, las luces diurnas de LED le confieren una visual con diseño distintivo.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+</div>
+
+<!----------------------------------PERFORMANCE---------------------------------->
+<div id="divPerformance" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Lo último en tecnología de eficiencia.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Inercia</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/touareg/Performance/Performance01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Inercia
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Dejate llevar
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Es sencillo ahorrar combustible si sabes cómo. Podés viajar más lejos cuando dejás que las cosas marchen por sí solas, como ocurre con el funcionamiento por inercia, que utiliza la energía cinética de tu Volkswagen para avanzar sin pisar el acelerador. De este modo, podés ahorrar hasta medio litro de combustible por cada 100 km sin ningún esfuerzo.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/touareg/Performance/Performance01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			4Motion.
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/touareg/Performance/Performance02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/touareg/Performance/Performance02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					4Motion
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Atracción por los caminos difíciles.
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					El camino nunca se acaba, ya que el Touareg es capaz de moverse increíblemente bien incluso por los terrenos más complicados. La tracción permanente 4MOTION en las cuatro ruedas garantiza una excelente performance en superficies mojadas, heladas e irregulares.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Capacidad de subida de pendientes</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/touareg/Performance/Performance03.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Capacidad de subida de pendientes
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Sigue fresco a 45º.
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Mantenete relajado y tranquilo en todo momento, incluso en las pendientes más extremas. Tu Touareg puede lidiar con pendientes de hasta 45°.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/touareg/Performance/Performance03.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------CONFORT---------------------------------->
+<div id="divConfort" class="SeccionModelo">
+	<div class="TituloSeccion">
+		El lugar más cómodo para empezar un viaje.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Interior</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/touareg/Confort/Confort01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/touareg/Confort/Confort01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Interior
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					En Los Andes o en la costa, el confort viaja con vos.
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Vas a sentirte cómodo hasta en los lugares más inhóspitos gracias al interior del Touareg que, con su agradable tacto, sus colores y la calidad de sus materiales, harán que el confort viaje siempre con vos.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Suspensión neumática</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/touareg/Confort/Confort02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Suspensión neumática
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Los baches son un cosquilleo a bordo del Touareg.
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					La suspensión neumática opcional del Touareg suaviza los baches y las irregularidades del terreno. Este práctico sistema, que incluye programas de caja de cambios seleccionables, ajusta la altura del chasis según el camino sobre el que se circula.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/touareg/Confort/Confort02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Climatronic</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/touareg/Confort/Confort03.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/touareg/Confort/Confort03.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Climatronic
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Un microclima en cada parte del Touraeg.
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					¿Demasiado frío? ¿Demasiado calor? ¿Demasiado... intermedio? Encontrar la temperatura adecuada no siempre es fácil, especialmente cuando viajan varias personas en el auto. El Touareg está equipado con el sistema de aire acondicionado Climatronic, que permite elegir la temperatura para el conductor y acompañante.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+
+<!----------------------------------VERSIONES---------------------------------->
+<div id="divVersiones" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Versiones
+	</div>
+
+	<!-- PREMIUM -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/touareg/Versiones/Versiones01.png" class="imgResponsiva" />
+			<h4>Premium</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Programa electrónico de estabilización (ESP)</li>
+				<li>Sistema de techo grande</li>
+				<li>Ajuste del asiento eléctrico, para ambos asientos delanteros, asiento del conductor con función memoria</li>
+				<li>Ambos asientos anteriores calefaccionables regulables por separado</li>
+				<li>Cierre centralizado "Keyless-Entry"</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Premium">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Premium">
+		<h1>Comfortline</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/touareg/InfoTecnica/InfoTecnica01.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Programa electrónico de estabilización (ESP)</li>
+					<li>Sistema de techo grande</li>
+					<li>Ajuste del asiento eléctrico, para ambos asientos delanteros, asiento del conductor con función memoria</li>
+					<li>Ambos asientos anteriores calefaccionables regulables por separado</li>
+					<li>Cierre centralizado "Keyless-Entry"</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Touareg Premium 3.0L TDI Diesel 245 CV Automatica (8 Marchas) 5 Puertas</li>
+					<li class="sin-borde">Touareg Premium 4.2L FSI Nafta 360 CV Automatica (8 Marchas) 5 Puertas</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>??</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>??</li>
+
+					<li style="clear:both;">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+</div>
+
+
+<!--BROCHURE-->
+<div id="divBrochure">
+	<div id="div-Brochure-Info">
+		<h2>Brochure<br />de Touareg</h2>
+		<a href="~/Content/info_modelos/touareg/Brochure/Brochure.pdf" rel="external" class="linkDescargarBrochure" target="_blank">
+			<div id="div-Brochure-Boton">
+				<div id="div-Brochure-Boton-Inner">Descargalo</div>
+			</div>
+		</a>
+	</div>
+
+	<div id="div-Brochure-Imagen">
+		<img src="~/Content/info_modelos/touareg/Brochure/Brochure.jpg" class="imgResponsiva" />
+	</div>
+</div>

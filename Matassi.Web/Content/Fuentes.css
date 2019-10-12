@@ -1,0 +1,62 @@
+﻿@font-face{
+font-family:"VWHeadlineOT-Book";
+  src:url("fonts/VWHeadlineOT-Book.eot");
+  src:url("fonts/VWHeadlineOT-Book.eot?#iefix") format("embedded-opentype"),
+  url("fonts/VWHeadlineOT-Book.woff") format("woff"),
+  url("fonts/VWHeadlineOT-Book.svg#webfontX0LFdQBr") format("svg"),
+  url("fonts/VWHeadlineOT-Book.ttf") format("truetype");
+}
+
+@font-face{
+font-family:"VWHeadlineOT-Semibold";
+  src:url("fonts/VWHeadlineOT-Semibold.eot");
+  src:url("fonts/VWHeadlineOT-Semibold.eot?#iefix") format("embedded-opentype"),
+  url("fonts/VWHeadlineOT-Semibold.woff") format("woff"),
+  url("fonts/VWHeadlineOT-Semibold.svg#webfontfbDJZY22") format("svg"),
+  url("fonts/VWHeadlineOT-Semibold.ttf") format("truetype");
+}
+
+@font-face{
+font-family:"VWHeadlineOT-Black";
+  src:url("fonts/VWHeadlineOT-Black.eot");
+  src:url("fonts/VWHeadlineOT-Black.eot?#iefix") format("embedded-opentype"),
+  url("fonts/VWHeadlineOT-Black.woff") format("woff"),
+  url("fonts/VWHeadlineOT-Black.svg#webfontfbDJZY22") format("svg"),
+  url("fonts/VWHeadlineOT-Black.ttf") format("truetype");
+}
+
+@font-face{
+font-family:"VWHeadWeb-Bold";
+  src:url("fonts/VWText/VWHeadWeb-Bold.eot");
+  src:url("fonts/VWText/VWHeadWeb-Bold.eot?#iefix") format("embedded-opentype"),
+  url("fonts/VWText/VWHeadWeb-Bold.woff") format("woff"),
+  url("fonts/VWText/VWHeadWeb-Bold.svg#webfontfbDJZY22") format("svg"),
+  url("fonts/VWText/VWHeadWeb-Bold.ttf") format("truetype");
+}
+
+@font-face{
+font-family:"VWHeadWeb-BoldItalic";
+  src:url("fonts/VWText/VWHeadWeb-BoldItalic.eot");
+  src:url("fonts/VWText/VWHeadWeb-BoldItalic.eot?#iefix") format("embedded-opentype"),
+  url("fonts/VWText/VWHeadWeb-BoldItalic.woff") format("woff"),
+  url("fonts/VWText/VWHeadWeb-BoldItalic.svg#webfontfbDJZY22") format("svg"),
+  url("fonts/VWText/VWHeadWeb-BoldItalic.ttf") format("truetype");
+}
+
+@font-face{
+font-family:"VWHeadWeb-Regular";
+  src:url("fonts/VWText/VWHeadWeb-Regular.eot");
+  src:url("fonts/VWText/VWHeadWeb-Regular.eot?#iefix") format("embedded-opentype"),
+  url("fonts/VWText/VWHeadWeb-Regular.woff") format("woff"),
+  url("fonts/VWText/VWHeadWeb-Regular.svg#webfontfbDJZY22") format("svg"),
+  url("fonts/VWText/VWHeadWeb-Regular.ttf") format("truetype");
+}
+
+@font-face{
+font-family:"VWHeadWeb-RegularItalic";
+  src:url("fonts/VWText/VWHeadWeb-RegularItalic.eot");
+  src:url("fonts/VWText/VWHeadWeb-RegularItalic.eot?#iefix") format("embedded-opentype"),
+  url("fonts/VWText/VWHeadWeb-RegularItalic.woff") format("woff"),
+  url("fonts/VWText/VWHeadWeb-RegularItalic.svg#webfontfbDJZY22") format("svg"),
+  url("fonts/VWText/VWHeadWeb-RegularItalic.ttf") format("truetype");
+}

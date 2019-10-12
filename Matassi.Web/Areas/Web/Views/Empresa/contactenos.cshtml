@@ -1,0 +1,89 @@
+﻿@{
+    ViewBag.Title = "Inicio";
+    Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+    @Styles.Render("~/bundles/estilosCSSModelo")
+    @Scripts.Render("~/bundles/funcionesModelo")
+
+    @Scripts.Render("~/bundles/funcionesEmpresaContactenos")
+	@Styles.Render("~/bundles/estilosEmpresa")
+}
+
+<div id="divBannerTituloModelo">
+    <span id="spnTituloModelo">
+        Contáctenos
+    </span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+    <ul id="ulListaPaginasHermanas">
+        <li>&nbsp;</li>
+    </ul>
+</div>
+
+<div id="divImagenEncabezado">
+    <img src="img/Empresa01.jpg" class="imgResponsiva" />
+</div>
+
+<div id="divTituloModelo">
+    Contáctenos
+</div>
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+    <!--<div class="iconoDesplegar">
+        <img src="../../Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+        <span>
+            Más información
+        </span>
+    </div>
+    <ul class="oculto">
+        <li><a href="index.html" rel="external">Horarios</a></li>
+        <li><a href="internos.html" rel="external">Internos</a></li>
+        <li><a href="encuesta_venta.html" rel="external">Encuesta satisfaccion venta</a></li>
+        <li class="seleccionado">Encuesta satisfaccion pos-venta</li>
+    </ul>-->
+</div>
+
+<!----------------------------------QUE ES---------------------------------->
+<div id="divListaPreguntas">
+
+    <div class="Imagenes3Columnas" style="z-index:9;">
+        <div class="Imagenes3Columnas-Izquierda">
+            <div class="infoSoloTextoColumna">
+                <h5>Nombre</h5>
+                <input type="text" id="txtNombre" style="padding-top:10px;padding-bottom:10px;padding-left:10px;width:80%;" />
+            </div>
+        </div>
+        <div class="Imagenes3Columnas-Centro">
+            <div class="infoSoloTextoColumna">
+                <h5>Teléfono</h5>
+                <input type="text" id="txtTelefono" style="padding-top:10px;padding-bottom:10px;padding-left:10px;width:80%;" />
+            </div>
+        </div>
+        <div class="Imagenes3Columnas-Derecha">
+            <div class="infoSoloTextoColumna">
+                <h5>E-Mail</h5>
+                <input type="email" id="txtEMail" style="padding-top:10px;padding-bottom:10px;padding-left:10px;width:80%;" />
+            </div>
+        </div>
+    </div>
+
+    <div class="Imagenes1Columna" id="divComentarios">
+        <div class="infoSoloTextoColumna">
+            <h5 style="text-align:center">Comentarios</h5>
+            <textarea id="txtComentarios" rows="10" style="padding-top:10px;padding-bottom:10px;padding-left:10px;width:95%;"></textarea>
+        </div>
+    </div>
+
+
+    <div class="Imagenes1Columna">
+        <div class="infoSoloTextoColumna">
+            <button id="btnEnviarContacto">Enviar</button>
+        </div>
+    </div>
+
+</div>
+
+<hr class="hrSeparadorItemsSeccion" />

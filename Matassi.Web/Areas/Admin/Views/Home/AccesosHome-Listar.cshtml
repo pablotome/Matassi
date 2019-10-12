@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Matassi.Dominio.AccesosHome>
+
+@{
+    ViewBag.Title = "Accesos desde la Home";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			<h2>@ViewBag.Title</h2>
+
+			<p class="nuevoItem">
+				@Html.ActionLink("Nuevo Acceso", "AccesosHome_Crear", null, new { @class = "btn btn-primary" })
+			</p>
+		</td>
+	</tr>
+</table>
+
+	<table class="table tabla-centrada">
+	<tr>
+		<th class="oculto">
+			@Html.DisplayNameFor(model => model.CodAccesosHome)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Titulo)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.CodTipoImagen)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.CodImagen)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Link)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Orden)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Vigente)
+		</th>
+		<th></th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td class="oculto">
+				@Html.DisplayFor(modelItem => item.CodAccesosHome)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Titulo)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.CodTipoImagen)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.CodImagen)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Link)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Orden)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Vigente)
+			</td>
+			<td align="center">
+				@Html.ActionLink("Editar", "AccesosHome_Editar", new { codAccesosHome = item.CodAccesosHome }) |
+				@Html.ActionLink("Borrar", "AccesosHome_Borrar", new { codAccesosHome = item.CodAccesosHome }, new { onclick = string.Format("return confirm('¿Seguro de eliminar el acceso {0}?');", item.Titulo) })
+			</td>
+		</tr>
+	}
+
+</table>
+

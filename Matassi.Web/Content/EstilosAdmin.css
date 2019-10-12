@@ -1,0 +1,67 @@
+﻿.tabla-centrada
+{
+	width:80%;
+	margin: 0 auto !important;
+	float: none !important;
+}
+
+.oculto {
+	display: none;
+}
+
+@media (min-width: 980px) {
+	#body {
+		padding-top: 40px;
+		min-height: 650px;
+	}
+}
+
+.nuevoItem {
+	text-align: right;
+}
+
+footer .float-left,
+footer .float-right {
+    float: none;
+}
+
+footer {
+    margin-top: 20px;
+	border-top: 1px solid #000;
+	text-align: center;
+    height: auto;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+.form-horizontal
+{
+	/*display: table;
+	margin-left:auto; 
+    margin-right:auto;
+	margin-left: 15%;*/
+}
+
+.oculto{
+	display: none;
+}
+
+.form-group {
+	margin: 10px;
+}
+
+.control-label {
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+.btnGuardar {
+	margin-top: 50px;
+}
+
+.table tfoot tr td{
+	padding-top: 50px;
+}

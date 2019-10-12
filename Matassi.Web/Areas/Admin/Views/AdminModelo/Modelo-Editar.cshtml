@@ -1,0 +1,78 @@
+﻿@model Matassi.Dominio.Modelo
+
+@{
+	ViewBag.Title = "Editar Modelo";
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			<h2>@ViewBag.Title</h2>
+		</td>
+	</tr>
+</table>
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			@using (Html.BeginForm("Modelo_Editar", "AdminModelo", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal" }))
+			{
+				@Html.AntiForgeryToken()
+
+				@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-sm-8">
+						@Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Bajada, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-sm-8">
+						@Html.EditorFor(model => model.Bajada, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.Bajada, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-sm-3 control-label">&nbsp;</label>
+					<div class="col-sm-8">
+						@Html.CheckBoxFor(model => model.Vigente)
+						@Html.LabelFor(model => model.Vigente, "Vigente")
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.ImagenAccesoriosPosteada, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-sm-8">
+						@Html.TextBoxFor(model => model.ImagenAccesoriosPosteada, new { @type = "file" })
+						@Html.ValidationMessageFor(model => model.ImagenAccesoriosPosteada)
+						<!--<p class="help-block">Example block-level help text here.</p>-->
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.ImagenContactoPosteada, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-sm-8">
+						@Html.TextBoxFor(model => model.ImagenContactoPosteada, new { type = "file" })
+						@Html.ValidationMessageFor(model => model.ImagenContactoPosteada)
+					</div>
+				</div>
+
+				<div class="form-group btnGuardar">
+					<div class="col-md-offset-3 col-md-8">
+						<input type="submit" value="Guardar" class="btn btn-primary" />
+						@Html.ActionLink("Cancelar", "Index", null, new { @class = "btn btn-default" })
+					</div>
+				</div>
+			}
+
+		</td>
+	</tr>
+</table>

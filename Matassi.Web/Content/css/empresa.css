@@ -1,0 +1,16 @@
+﻿/*CELULAR*/
+@media only screen and (max-width:767px) {
+	#btnContestarEncuesta, #btnEnviarContacto {
+		padding-bottom:10px;
+		padding-top:10px;
+		width: 50%;
+	}
+}
+/*PC*/
+@media only screen and (min-width:768px) {
+	#btnContestarEncuesta, #btnEnviarContacto {
+		padding-bottom:10px;
+		padding-top:10px;
+		width: 10%;
+	}
+}

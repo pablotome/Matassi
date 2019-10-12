@@ -1,0 +1,896 @@
+﻿@{
+	ViewBag.Title = "up";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+	@Styles.Render("~/bundles/estilosCSSModelo")
+	@Scripts.Render("~/bundles/funcionesModelo")
+}
+
+<div id="divBannerTituloModelo">
+	<span id="spnTituloModelo">
+		Saveiro
+	</span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+	<ul id="ulListaCaracteristicasModelo">
+		<li class="liDisenio" data-divmodelos="divDisenio">Diseño</li>
+		<li class="liCaracteristicas" data-divmodelos="divCaracteristicas">Características</li>
+		<li class="liPerformance" data-divmodelos="divPerformance">Performance</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+<div id="divImagenModelo">
+	<img src="~/Content/info_modelos/saveiro/Saveiro.jpg" class="imgResponsiva" />
+</div>
+
+<div id="divTituloModelo">
+	Somos lo que hacemos
+</div>
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+	<div class="iconoDesplegar">
+		<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+		<span>
+			Selecciona categoria
+		</span>
+	</div>
+	<ul class="oculto">
+		<li class="liDisenio" data-divmodelos="divDisenio">Diseño</li>
+		<li class="liCaracteristicas" data-divmodelos="divCaracteristicas">Características</li>
+		<li class="liPerformance" data-divmodelos="divPerformance">Performance</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+
+<!----------------------------------DISEÑO---------------------------------->
+<div id="divDisenio" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Robusto y aventurero
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Confiabilidad</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/saveiro/Disenio/Disenio01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Confiabilidad
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Potencia
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					La potencia, confiabilidad y calidad de siempre con un diseño que hacen del Saveiro la mejor combinación de un vehículo de trabajo y aventurero.<br />Cabina simple, extendida y doble.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/saveiro/Disenio/Disenio01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Distinguido</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/saveiro/Disenio/Disenio02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/saveiro/Disenio/Disenio02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Distinguido
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Diseño
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Diseño distinguido y diferenciado. Nuevos paragolpes y faros que le otorgan una apariencia mas robusta y agresiva.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+</div>
+
+<!----------------------------------CARACTERÍSTICAS---------------------------------->
+<div id="divCaracteristicas" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Espacio para todas las soluciones
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Características</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/saveiro/Caracteristicas/Caracteristicas01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Características
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Versátil
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Versátil y atractivo por fuera; cómodo y espacioso por dentro. Cuenta con capacidad para 5 pasajeros y una caja de carga que soporta mas de 600 kg.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/saveiro/Caracteristicas/Caracteristicas01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Características</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/saveiro/Caracteristicas/Caracteristicas02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/saveiro/Caracteristicas/Caracteristicas02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Características
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Equipamiento
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					En Saveiro encontraras el equipamiento mas destacado de su segmento.<br />Alzacristales electricos, volante multifunción, computadora de abordo, cierre centralizado, alarma,asiento regulable en altura,soporte para celular Dockstation.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------PERFORMANCE---------------------------------->
+<div id="divPerformance" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Disfruta el recorrido
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Performance</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/saveiro/Performance/Performance01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/saveiro/Performance/Performance01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Performance
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Motor
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Con un motor 1.6 L de 101CV o 110CV, según la versión, el Saveiro posee una gran aceleración y excelente rendimiento.<br />
+					Con freno a disco en las cuatro ruedas, Control de estabilidad (ESP) con estabilización para remolques,Regulacion del par de arrastre del motor (MSR)<br />
+					Control de tracción (ASR),Bloqueo electrónico de diferencial (EDL),Frenos con ABS Off-road,Asistente para arranque en pendiente (HHC).
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>App Connect</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/saveiro/Performance/Performance02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					App Connect
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Siempre conectado
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					App Connect es un sistema que combina MirrorLink, CarPlay y Google AndroidAuto. Estas aplicaciones permiten espejar las pantallas de los teléfonos móviles con comandos fáciles e intuitivos, de forma tal de ver todas las pantallas del teléfono se duplican directamente en la pantalla de la central multimedia.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/saveiro/Performance/Performance02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+
+<!----------------------------------VERSIONES---------------------------------->
+<div id="divVersiones" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Versiones
+	</div>
+
+	<!----------------------------------CROSS---------------------------------->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/saveiro/Versiones/Versiones01.png" class="imgResponsiva" />
+			<h4>Cross</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Volante multifuncional de cuero</li>
+				<li>Control de presión de los neumáticos</li>
+				<li>Sensores de estacionamiento delantero y trasero</li>
+				<li>App Connect</li>
+				<li>Tapizado de asientos en cuero</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Cross">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Cross">
+		<h1>Cross</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/saveiro/InfoTecnica/InfoTecnica01.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Volante multifuncional de cuero</li>
+					<li>Control de presión de los neumáticos</li>
+					<li>Sensores de estacionamiento delantero y trasero</li>
+					<li>App Connect</li>
+					<li>Tapizado de asientos en cuero</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Cross 1.6l Nafta 110 CV Manual 2 P</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación ligera 6J x 15</li>
+
+					<li><b>Interior</b></li>
+					<li>Portaobjetos 1</li>
+					<li>Paquete Cromo</li>
+					<li>Techo moldeado en una pieza, confort</li>
+					<li>Pomo/empuñadura de la palanca de cambio en plástico</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tubo de escape final detrás (estándar)</li>
+					<li>Carcasa del retrovisor exterior negra</li>
+					<li>Portaequipajes de techo</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Spoiler trasero</li>
+					<li>Cristales laterales y posterior tintados verdes, laterales posteriores orientables manualmente</li>
+					<li>Sin embellecedores adicionales</li>
+					<li>2 puertas</li>
+
+					<li><b>Espejos</b></li>
+					<li>Retrovisor exterior con ajuste eléctrico (versión 2)</li>
+					<li>Espejo interior de seguridad antideslumbramiento automático</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Sin activación especial de las luces de marcha pero con función "coming/leaving home"</li>
+					<li>Faros dobles, con faros de largo alcance integrados, circulación por la derecha</li>
+					<li>Sin regulación alcance faros</li>
+					<li>Faros antiniebla y luz de giro</li>
+					<li>Conjunto pilotos posteriores de color oscuro</li>
+					<li>Conexión de intervalos de barrido del limpiaparabrisas, con sensor de luz y lluvia</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Suspensión/amortiguación especial, versión deportiva</li>
+					<li>Sensores de estacionamiento delantero y trasero</li>
+					<li>Sistema de regulación de velocidad (GRA) electrónico</li>
+					<li>Con sistema de cámara de marcha atrás (versión 1)</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta trasera y respaldo, no abatible</li>
+					<li>Aire acondicionado con regulación mecánica</li>
+					<li>Regulación en altura manual del asiento anterior izquierdo</li>
+					<li>Asientos no calefaccionables</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Inserciones</li>
+
+					<li><b>Infotainment</b></li>
+					<li>App Connect</li>
+					<li>Sin interface eléctrico</li>
+					<li>4 altavoces (pasivos) y 2 altavoces para agudos</li>
+					<li>MIB2-G estándar plus PQ/MQB radio resto del mundo/China (GP)</li>
+
+					<li><b>Navegación</b></li>
+					<li>Display multifuncional con mando</li>
+					<li>Preparación para sistema de navegación</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifuncional de cuero</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante</li>
+					<li>Frenos de disco posteriores</li>
+					<li>Frenos delanteros de disco</li>
+					<li>Inmovilizador electrónico, con alarma antirrobo y control del habitáculo</li>
+					<li>Control de presión de los neumáticos</li>
+					<li>Sin airbag lateral</li>
+					<li>Marco protector (arco antivuelco)</li>
+					<li>Cierre centralizado por control remoto, con accionamiento desde el interior</li>
+					<li>Dirección asistida</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/saveiro/Colores/Colores01.png" class="imgResponsiva" /><br />Plata Sirius</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/saveiro/Colores/Colores02.png" class="imgResponsiva" /><br />Gris Platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/saveiro/Colores/Colores03.png" class="imgResponsiva" /><br />Negro Ninja</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/saveiro/Colores/Colores04.png" class="imgResponsiva" /><br />Blanco Cristal</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/saveiro/Colores/Colores05.png" class="imgResponsiva" /><br />Azul Ravena</li>
+
+					<li style="clear:both;">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<!----------------------------------HIGHLINE---------------------------------->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/saveiro/Versiones/Versiones02.png" class="imgResponsiva" />
+			<h4>Highline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>3 apoyacabezas posteriores</li>
+				<li>Levantacristales eléctrico</li>
+				<li>Sensor de estacionamiento trasero</li>
+				<li>Display multifuncional con mando</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Highline">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Highline">
+		<h1>Highline</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/saveiro/InfoTecnica/InfoTecnica02.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>3 apoyacabezas posteriores</li>
+					<li>Levantacristales eléctrico</li>
+					<li>Sensor de estacionamiento trasero</li>
+					<li>Display multifuncional con mando</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Highline 1.6l Nafta 101 CV Manual 2 P</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación ligera 6J x 15 bombeo: 43</li>
+
+					<li><b>Interior</b></li>
+					<li>Portaobjetos 1</li>
+					<li>Sin paquete aluminio/cromo</li>
+					<li>Techo moldeado en una pieza, confort</li>
+					<li>Pomo/empuñadura de la palanca de cambio en plástico</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tubo de escape final detrás (estándar)</li>
+					<li>Componentes sin superficie especial</li>
+					<li>Portaequipajes de techo</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Spoiler trasero</li>
+					<li>Cristales laterales y posterior tintados verdes, laterales posteriores orientables manualmente</li>
+					<li>Sin embellecedores adicionales</li>
+					<li>2 puertas</li>
+
+					<li><b>Espejos</b></li>
+					<li>Regulación interna manual espejos exter.</li>
+					<li>Espejo interior de seguridad antideslumbrante</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Sin activación especial de las luces de marcha</li>
+					<li>Faros principales halógenos, circulación por la derecha</li>
+					<li>Sin regulación alcance faros</li>
+					<li>Faros antiniebla (integrados)</li>
+					<li>Conjunto pilotos posteriores, versión normal</li>
+					<li>Limpiaparabrisas a intervalos, sin regulación</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Suspensión/amortiguación especial, versión deportiva</li>
+					<li>Sensor de estacionamiento trasero</li>
+					<li>Sin regulador de velocidad (GRA)</li>
+					<li>Sin sistema de cámaras/vigilancia sensorial del entorno</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta trasera y respaldo, no abatible</li>
+					<li>Aire acondicionado con regulación mecánica</li>
+					<li>Regulación en altura manual del asiento anterior izquierdo</li>
+					<li>Asientos no calefaccionables</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Inserciones</li>
+
+					<li><b>Infotainment</b></li>
+					<li>App Connect</li>
+					<li>Sin interface eléctrico</li>
+					<li>4 altavoces (pasivos) y 2 altavoces para agudos</li>
+					<li>MIB2-G estándar plus PQ/MQB radio resto del mundo/China (GP)</li>
+
+					<li><b>Navegación</b></li>
+					<li>Display multifuncional con mando</li>
+					<li>Preparación para sistema de navegación</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante para sistema airbag</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante</li>
+					<li>Frenos de disco posteriores</li>
+					<li>Frenos de disco anteriores, con soporte integrado</li>
+					<li>Inmovilizador electrónico, con alarma antirrobo y control del habitáculo</li>
+					<li>Sin control de presión de los neumáticos</li>
+					<li>Sin airbag lateral</li>
+					<li>Marco protector (arco antivuelco)</li>
+					<li>Cierre centralizado por control remoto, con accionamiento desde el interior</li>
+					<li>Dirección asistida</li>
+
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/saveiro/Colores/Colores01.png" class="imgResponsiva" /><br />Plata Sirius</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/saveiro/Colores/Colores02.png" class="imgResponsiva" /><br />Gris Platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/saveiro/Colores/Colores03.png" class="imgResponsiva" /><br />Negro Ninja</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/saveiro/Colores/Colores04.png" class="imgResponsiva" /><br />Blanco Cristal</li>
+
+					<li style="clear:both;">&nbsp;</li>
+					<li><b>Exterior</b></li>
+					<li>Carcasas espejos exteriores y diversos componentes en color carrocería</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<!----------------------------------TRENDLINE---------------------------------->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/saveiro/Versiones/Versiones01.png" class="imgResponsiva" />
+			<h4>Trendline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Dirección asistida</li>
+				<li>Asiento del conductor con ajuste de altura</li>
+				<li>Retrovisor interior antideslumbrante</li>
+				<li>Enchufe de 12 V en la consola central, detrás y en el maletero</li>
+				<li>Porta celulares "Dockstation"</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Trendline">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Trendline">
+		<h1>Trendline</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/saveiro/InfoTecnica/InfoTecnica01.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Dirección asistida</li>
+					<li>Asiento del conductor con ajuste de altura</li>
+					<li>Retrovisor interior antideslumbrante</li>
+					<li>Enchufe de 12 V en la consola central, detrás y en el maletero</li>
+					<li>Porta celulares "Dockstation"</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Trendline 1.6l Nafta 101 CV Manual 2 P</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de acero 6J x 15 bombeo: 38</li>
+
+					<li><b>Interior</b></li>
+					<li>Portaobjetos 1</li>
+					<li>Sin paquete aluminio/cromo</li>
+					<li>Techo moldeado en una pieza, confort</li>
+					<li>Pomo/empuñadura de la palanca de cambio en plástico</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tubo de escape final detrás (estándar)</li>
+					<li>Componentes sin superficie especial</li>
+					<li>Sin barras longitudinales del techo ni barras portaequipajes</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Sin spoiler posterior</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Sin embellecedores adicionales2 puertas</li>
+
+					<li><b>Espejos</b></li>
+					<li>Regulación interna manual espejos exter.</li>
+					<li>Retrovisor interior antideslumbrante</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Sin activación especial de las luces de marcha</li>
+					<li>Faros principales halógenos, circulación por la derecha</li>
+					<li>Sin regulación alcance faros</li>
+					<li>Sin faros antiniebla</li>
+					<li>Conjunto pilotos posteriores, versión normal</li>
+					<li>Limpiaparabrisas a intervalos, sin regulación</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Suspensión/amortiguación especial, versión deportiva</li>
+					<li>Sin ayuda de aparcamiento</li>
+					<li>Sin regulador de velocidad (GRA)</li>
+					<li>Sin sistema de cámaras/vigilancia sensorial del entorno</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Sin asientos posteriores ni respaldo</li>
+					<li>Aire acondicionado con regulación mecánica</li>
+					<li>Asiento del conductor con ajuste de altura</li>
+					<li>Asientos no calefaccionables</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Inserciones</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Sin multimedia" en el vehículoSin interface eléctrico</li>
+					<li>2 altavoces (pasivos) y 2 altavoces para agudos</li>
+					<li>MIB2-G Entry PQ radio resto del mundo alta velocidad activa</li>
+
+					<li><b>Navegación</b></li>
+					<li>Sin indicador multifunciones/computadora de a bordo</li>
+					<li>Porta celulares "Dockstation"</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante, el del acompañante con desactivación del airbag</li>
+					<li>Frenos de disco posteriores</li>
+					<li>Frenos de disco anteriores, con soporte integrado</li>
+					<li>Inmovilizador electrónico</li>
+					<li>Sin control de presión de los neumáticos</li>
+					<li>Sin airbag lateral</li>
+					<li>Marco protector (arco antivuelco)</li>
+					<li>Sin cierre centralizado</li>
+					<li>Dirección asistida</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/saveiro/Colores/Colores01.png" class="imgResponsiva" /><br />Plata Sirius</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/saveiro/Colores/Colores02.png" class="imgResponsiva" /><br />Gris Platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/saveiro/Colores/Colores03.png" class="imgResponsiva" /><br />Negro Ninja</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/saveiro/Colores/Colores04.png" class="imgResponsiva" /><br />Blanco Cristal</li>
+
+					<li style="clear:both;">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<!----------------------------------COMFORTLINE---------------------------------->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/saveiro/Versiones/Versiones01.png" class="imgResponsiva" />
+			<h4>Comfortline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Levantacristales eléctrico</li>
+				<li>Enchufe de 12 V en la consola central, detrás y en el maletero</li>
+				<li>Porta celulares "Dockstation"</li>
+				<li>Faros antiniebla</li>
+				<li>Display multifuncional con mando</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Comfortline">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Comfortline">
+		<h1>Comfortline</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/saveiro/InfoTecnica/InfoTecnica01.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Levantacristales eléctrico</li>
+					<li>Enchufe de 12 V en la consola central, detrás y en el maletero</li>
+					<li>Porta celulares "Dockstation"</li>
+					<li>Faros antiniebla</li>
+					<li>Display multifuncional con mando</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Comfortline 1.6l Nafta 101 CV Manual 2 P</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación ligera 6J x 15 bombeo: 43</li>
+
+					<li><b>Interior</b></li>
+					<li>Portaobjetos 1</li>
+					<li>Sin paquete aluminio/cromo</li>
+					<li>Techo moldeado en una pieza, confort</li>
+					<li>Pomo/empuñadura de la palanca de cambio en plástico</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tubo de escape final detrás (estándar)</li>
+					<li>Componentes sin superficie especial</li>
+					<li>Sin barras longitudinales del techo ni barras portaequipajes</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Sin spoiler posterior</li>
+					<li>Lunas laterales y trasera en cristal antitérmico (luna trasera con ventanilla corrediza)</li>
+					<li>Sin embellecedores adicionales</li>
+					<li>2 puertas</li>
+
+					<li><b>Espejos</b></li>
+					<li>Regulación interna manual espejos exter.</li>
+					<li>Espejo interior de seguridad antideslumbrante</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Sin activación especial de las luces de marcha</li>
+					<li>Faros principales halógenos, circulación por la derecha</li>
+					<li>Sin regulación alcance faros</li>
+					<li>Faros antiniebla</li>
+					<li>Conjunto pilotos posteriores, versión normal</li>
+					<li>Limpiaparabrisas a intervalos, sin regulación</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Suspensión/amortiguación especial, versión deportiva</li>
+					<li>Sin ayuda de aparcamiento</li>
+					<li>Sin regulador de velocidad (GRA)</li>
+					<li>Sin sistema de cámaras/vigilancia sensorial del entorno</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Sin asientos posteriores ni respaldo</li>
+					<li>Aire acondicionado con regulación mecánica</li>
+					<li>Regulación en altura manual del asiento anterior izquierdo</li>
+					<li>Asientos no calefaccionables</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Inserciones</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Sin multimedia" en el vehículo</li>
+					<li>Sin interface eléctrico</li>
+					<li>4 altavoces (pasivos) y 2 altavoces para agudos</li>
+					<li>MIB2-G Entry PQ radio resto del mundo alta velocidad activa</li>
+
+					<li><b>Navegación</b></li>
+					<li>Display multifuncional con mando</li>
+					<li>Porta celulares "Dockstation"</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante para sistema airbag</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante, el del acompañante con desactivación del airbag</li>
+					<li>Frenos de disco posteriores</li>
+					<li>Frenos de disco anteriores, con soporte integrado</li>
+					<li>Inmovilizador electrónico, con alarma antirrobo y control del habitáculo</li>
+					<li>Sin control de presión de los neumáticos</li>
+					<li>Sin airbag lateral</li>
+					<li>Marco protector (arco antivuelco)</li>
+					<li>Cierre centralizado por control remoto, con accionamiento desde el interior</li>
+					<li>Dirección asistida</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/saveiro/Colores/Colores01.png" class="imgResponsiva" /><br />Plata Sirius</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/saveiro/Colores/Colores02.png" class="imgResponsiva" /><br />Gris Platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/saveiro/Colores/Colores03.png" class="imgResponsiva" /><br />Negro Ninja</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/saveiro/Colores/Colores04.png" class="imgResponsiva" /><br />Blanco Cristal</li>
+
+					<li style="clear:both;">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+
+</div>
+
+
+<!--BROCHURE-->
+<div id="divBrochure">
+	<div id="div-Brochure-Info">
+		<h2>Brochure<br />de Saveiro</h2>
+		<a href="~/Content/info_modelos/saveiro/Brochure/Brochure.pdf" rel="external" class="linkDescargarBrochure" target="_blank">
+			<div id="div-Brochure-Boton">
+				<div id="div-Brochure-Boton-Inner">Descargalo</div>
+			</div>
+		</a>
+	</div>
+
+	<div id="div-Brochure-Imagen">
+		<img src="~/Content/info_modelos/saveiro/Brochure/Brochure.jpg" class="imgResponsiva" />
+	</div>
+</div>

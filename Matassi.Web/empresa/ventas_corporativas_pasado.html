@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Matassi e Imperiale | Concesionario Oficial Volkswagen</title>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+	<link href="../../Content/css/normalize.css" rel="stylesheet" />
+
+	<link rel="stylesheet" href="../../Content/css/matassi.css?v=2" />
+	<link rel="stylesheet" media="screen and (max-width:767px)" href="../../Content/css/matassi-celular.css?v=2" />
+	<link rel="stylesheet" media="screen and (min-width:768px)" href="../../Content/css/estilo-modelo.css" />
+	<link rel="stylesheet" media="screen and (max-width:767px)" href="../../Content/css/estilo-modelo-celular.css" />
+	<link rel="stylesheet" media="screen and (min-width:768px)" href="../../Content/css/matassi-modelo.css" />
+
+	<link href="../../Content/css/slick.css" rel="stylesheet" />
+	<link href="../../Content/css/slick-theme.css" rel="stylesheet" />
+	<link href="empresa.css" rel="stylesheet" />
+
+
+	<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="../../Content/js/jquery.mobile-1.4.5.js"></script>
+	<script src="../../Content/js/jquery.touchwipe.1.1.1.js"></script>
+
+	<script src="../../Content/js/slick.js"></script>
+
+	<script src="../../Content/js/matassi.js"></script>
+	<script src="../../Content/js/matassi-modelo.js"></script>
+</head>
+<body>
+	<header>
+		<nav id="menu">
+			<ul id="menu_ul"></ul>
+		</nav>
+		<div id="divMenuCelular">
+			<ul></ul>
+		</div>
+	</header>
+	<div id="content">
+		<div id="divIconoVWCell">
+			<a href="/index.html" rel="external">
+				<img src="../../Content/img/LogoVWChico.png" class="svg" alt="Matassi e Imperiale">
+			</a>
+		</div>
+		<div id="divIconoMenuCell">
+			<div id="divMostrarMenuCelular" onclick="openNav()"><img src="../../Content/img/iconos/menuCel.svg" class="svg imgImagenIcono" style="fill: #0099da;" /></div>
+			<div id="divOcultarMenuCelular" onclick="closeNav()" class="oculto"><img src="../../Content/img/iconos/cruz.svg" class="svg imgImagenIcono" style="fill: #0099da;" /></div>
+		</div>
+
+		<div id="divBannerTituloModelo">
+			<span id="spnTituloModelo">
+				Ventas Corporativas
+			</span>
+		</div>
+		<div id="divBannerTituloCaracteristicasModelo">
+			<ul id="ulListaPaginasHermanas">
+				<li>&nbsp;</li>
+			</ul>
+		</div>
+
+		<div id="divImagenEncabezado">
+			<img src="img/Empresa01.jpg" class="imgResponsiva" />
+		</div>
+
+		<div id="divTituloModelo">
+			Ventas Corporativas
+		</div>
+		<div id="divBajadaTituloModelo">
+			Volkswagen Argentina S.A., otorga importantes descuentos para la adquisición de vehículos 0km. Los beneficiarios son:
+		</div>
+
+		<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+		<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+			<!--<div class="iconoDesplegar">
+				<img src="../../Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+				<span>
+					Más información
+				</span>
+			</div>
+			<ul class="oculto">
+				<li><a href="index.html" rel="external">Horarios</a></li>
+				<li><a href="internos.html" rel="external">Internos</a></li>
+				<li><a href="encuesta_venta.html" rel="external">Encuesta satisfaccion venta</a></li>
+				<li class="seleccionado">Encuesta satisfaccion pos-venta</li>
+			</ul>-->
+		</div>
+
+		<!----------------------------------QUE ES---------------------------------->
+		<div class="Imagenes1Columna" id="divComentarios">
+			<div class="infoSoloTextoColumna">
+				<h5>Empresas</h5>
+				<p>
+					<span class="bulet">&bull;</span>Las empresas disponen de la facturación directa de Volkswagen Argentina S.A. a precios especialmente elaborados a su medida y necesidades.
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>Las empresas que posean 5 unidades patentadas a nombre de la empresa que emita la orden de compra ó concretando una compra inicial de 5 unidades sin flota preexistente. Podran acceder a este régimen.
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>Las Rentadoras de Unidades, también serán comprendidas dentro del Régimen Flotista, independientemente de las unidades con las que cuenten o adquieran.
+				</p>
+			</div>
+		</div>
+		
+		<div class="Imagenes1Columna" id="divComentarios">
+			<div class="infoSoloTextoColumna">
+				<h5>Diplomaticos</h5>
+				<p>
+					<span class="bulet">&bull;</span>Acceden a este Beneficio Embajadores, Ministros, Secretarios y Cónsules del Servicio Exterior Argentino o Extranjero, ademas de las Embajadas propiamente dichas.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes1Columna" id="divComentarios">
+			<div class="infoSoloTextoColumna">
+				<h5>Personas con capacidades Diferentes bajo la Ley 24.183</h5>
+				<p>
+					<span class="bulet">&bull;</span>Volkswagen Argentina ofrece su línea de vehículos comercializados en el país, a través del beneficio que marca la Ley 24.183, Decreto 1313-93 que permite obtener franquicias con el fin de adquirir vehículos exentos del IVA y de impuestos internos.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes1Columna" id="divComentarios">
+			<div class="infoSoloTextoColumna">
+				<h5>Proveedores de VW Argentina:</h5>
+				<p>
+					<span class="bulet">&bull;</span>Si su empresa es proveedora de Volkswagen Argentina S.A. también cuenta con el Beneficio.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes1Columna" id="divComentarios">
+			<div class="infoSoloTextoColumna">
+				<h5>Personas físicas (Categorías especiales):</h5>
+				<p>
+					<span class="bulet">&bull;</span>Presidente y Vice-Presidente de la República.
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>Ministros, Secretarios de Estado, Sub-Secretarios y Directores Nacionales.
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>Jueces de la Nación y de las provincias.
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>Oficiales en actividad de las Fuerzas Armadas y de Seguridad Nacionales y Provinciales.
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>Embajadores, Ministros, Secretarios y Cónsules del Servicio Exterior Argentino o extranjero.
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>Gobernadores, Vice-Gobernadores y Ministros de las Provincias.
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>Cardenales, Arzobispos y Obispos o cargos similares de los diferentes credos.
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>Senadores y Diputados Nacionales y Provinciale
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>Intendentes de los Municipios Argentinos.
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>Rectores y Decanos de Universidades Nacionales, Provinciales y Privadas reconocidas oficialmente.
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>Directores, propietarios, secretarios y periodistas de medios de difusión (diarios, revistas, agencias de noticias, canales de TV abierta y por cable, radiodifusoras, empresas periodísticas y/u otro medio). En el caso de los periodistas, deberán presentar el carnet habilitante correspondiente.
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>Presidentes Y Directores de los Bancos Oficiales y Privados y de las Compañías Financieras y de Seguros que operen con la Cía.
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>Secretario General del SMATA, Secretario General Adjunto y Secretario Gremial (Nivel Nacional), Secretario del SMATA regional Córdoba, Secretario General de la CGT y Secretarios Generales de todos los Sindicatos.
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>Propietarios y Directores de empresas proveedoras de VWA Esta categoría sólo podrá adquirir unidades de producción nacional o en caso de ser importadas, de la línea Golf o superior.
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>Propietarios y Directores de Empresas que estén calificadas como Flotistas Esta categoría sólo podrá adquirir unidades de producción nacional o en caso de ser importadas, de la línea Golf o superior.
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>Oficiales Superiores y/o Directores de los Bomberos de Escobar, Tigre y Gral. Sarmiento y Directores de Hospitales de Tigre y Escobar.
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>Instituciones de Bien Público oficialmente inscriptas y sus presidentes.
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>Empresas e Instituciones inscriptas en la Cámara de Comercio Argentino/Alemana y sus presidentes.
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>APMs ( Agentes de Propaganda Médica), quienes deberán presentar el carnet habilitante correspondiente.
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>Flotas Comerciales: Ingresarán dentro de esta categoría las operaciones por unidades que deberán ser facturadas a personas físicas por políticas de la empresa a la que pertenecen. Para ser aceptadas, deberá tratarse de una orden de compra que incluya 5 o más unidades. Dicha orden de compra deberá venir acompañada por una carta en hoja con membrete de la empresa solicitante, informando los beneficiarios y su puesto, la que deberá ser firmada por el director del área a la que éstos pertenecen.
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>Taxis y Remises: La orden de compra deberá ser por un mínimo de 3 unidades y deberá venir acompañada por una nota emitida por alguna de las asociaciones que nuclean a estas actividades presentando a los asociados a quienes se facturarán las unidades. Esta operatoria estará limitada a los modelos que VWA determine de acuerdo a las políticas comerciales y de marketing correspondientes.
+				</p>
+				<p>
+					<span class="bulet">&bull;</span>Propietarios y Directores de Concesionarios VW, Seat, Audi, Camiones y Buses VW y sus familiares en primer grado.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes1Columna" id="divComentarios">
+			<div class="infoSoloTextoColumna">
+				<h5>Ex Combatientes Veteranos de Malvinas:</h5>
+				<p>
+					<span class="bulet">&bull;</span>Volkswagen Argentina ha firmado un convenio con la Federación de Veteranos de Guerra de la República Argentina que permite a los Ex Combatientes Veteranos de Malvinas adquirir vehículos según los precios y condiciones fijadas en la política de ventas especiales.
+				</p>
+			</div>
+		</div>
+
+		<hr class="hrSeparadorItemsSeccion" />
+
+	</div>
+
+	<a class="volverArriba oculto">
+		<div>
+			<img src="../../Content/img/iconos/flechaArribaDoble.svg" class="imgResponsiva svg" />
+		</div>
+	</a>
+
+	<footer id="footer">
+		<div id="divBarraSeparadora">
+			<div id="divTextoVolver">
+				Volver arriba&nbsp;<img src="../../Content/img/iconos/flechaArriba.svg" class="svg imgFlechitaArriba" />
+			</div>
+		</div>
+		<div id="divInfoFooter">
+			<div id="divItemsInfoFooter">
+				<div class="divItemInfoFooter">(*) Las imágenes publicadas en este sitio son de carácter ilustrativo.<br />*FOTO NO CONTRACTUAL.</div>
+				<div class="divItemInfoFooter">Política de privacidad</div>
+				<div class="divItemInfoFooter">
+					<a href="http://qr.afip.gob.ar/?qr=WN90VbQmJ36XGAHXQhNO9w,," target="_F960AFIPInfo">
+						<img src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg" border="0" style="width:40px;">
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<br /><br />
+</body>
+</html>

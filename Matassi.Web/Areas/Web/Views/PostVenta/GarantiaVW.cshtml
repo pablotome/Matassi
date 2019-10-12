@@ -1,0 +1,150 @@
+﻿@using Matassi.Dominio
+
+@{
+	ViewBag.Title = "Garantia Volkswagen";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+<style type="text/css">
+	p {
+		font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		line-height: 15px;
+		text-align: justify;
+		padding: 10px;
+	}
+
+	.tablaGarantia
+	{
+		font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+		font-size: 12px;
+	    margin-left:auto; 
+		margin-right:auto;
+		width: 90%;
+	}
+
+	.trTitulo {
+		background-color: #CCCCD1;
+		line-height: 20px;
+	}
+
+	.trImpar{
+		background-color: #F0F0F5;
+		line-height: 20px;
+	}
+
+	.trPar{
+		background-color: #FFF;
+		line-height: 20px;
+	}
+</style>
+
+<div class="infoModelo">
+	<a href="#" class="modeloActual">@ViewBag.Title</a>
+	<div class="infoModeloTitulos">
+		<ul class="">
+			<li>|</li>
+			<li>
+				<span></span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div style="margin: 10px 9px 9px 9px; display:block; position: relative; height: auto; overflow:hidden;">
+	<div class="columnaIzquierda">
+		&nbsp;
+	</div>
+	<div class="columnaDerecha">
+		<img src="~/Content/images/ScirocoAsesoramiento.png" />
+		<div class="TituloPagina">@ViewBag.Title</div>
+
+		<p>
+			Su unidad <b>Volkswagen</b> esta amparada por la Automotriz numero uno del mundo. No pierda su Garantia, coloque solo repuestos y accesorios <span style="color:#FF0000"><b>ORIGINALES</b></span>.
+		</p>
+
+		<br />
+
+		<table class="tablaGarantia">
+			<tr class="trTitulo">
+				<td>
+					<b>SERVICIO DE MANTENIMIENTO - DETALLE DE TRABAJOS A REALIZAR</b>
+				</td>
+			</tr>
+			@{
+				bool esImpar = true;
+
+				foreach (ServicioMantenimiento servicioMantenimiento in ViewBag.ServiciosMantenimiento)
+				{
+					if (esImpar)
+					{
+						<tr class="trImpar"><td>@servicioMantenimiento.DesServicioMantenimiento</td></tr>
+					}
+					else
+					{
+						<tr class="trPar"><td>@servicioMantenimiento.DesServicioMantenimiento</td></tr>
+					}
+
+					esImpar = !esImpar;
+				}
+			}
+		</table>
+
+		<br />
+
+		<p>
+			<b>RECUERDE:</b><br />
+			PARA MANTENER SU SEGURIDAD Y LA VIDA ÚTIL DE SU VOLKSWAGEN COLOQUE SOLAMENTE REPUESTOS Y ACCESORIOS ORIGINALES
+		</p>
+
+		<br />
+
+		<p>
+			<b>MUY IMPORTANTE:</b><br />
+			Los trabajos detallados corresponden en líneas generales al 100% de unidades de la gama Volkswagen.<br />
+		</p>
+
+		<br />
+
+		<table class="tablaGarantia">
+			<tr class="trTitulo">
+				<td colspan="4">
+					<b>PERIODO DE GARANTÍA E INTERVALOS DE SERVICIO SUGERIDOS</b>
+				</td>
+			</tr>
+			@{
+				esImpar = true;
+
+				foreach (GarantiaPeriodoIntervalo garantiaPeriodoIntervalo in ViewBag.GarantiasPeriodoIntervalo)
+				{
+					if (esImpar)
+					{
+						<tr class="trImpar">
+							<td>@garantiaPeriodoIntervalo.ModeloGarantia</td>
+							<td>@garantiaPeriodoIntervalo.GarantiaVW</td>
+							<td>@garantiaPeriodoIntervalo.ServiciosCada</td>
+							<td>@garantiaPeriodoIntervalo.ServiciosManoObraSinCargo</td>
+						</tr>
+					}
+					else
+					{
+						<tr class="trPar">
+							<td>@garantiaPeriodoIntervalo.ModeloGarantia</td>
+							<td>@garantiaPeriodoIntervalo.GarantiaVW</td>
+							<td>@garantiaPeriodoIntervalo.ServiciosCada</td>
+							<td>@garantiaPeriodoIntervalo.ServiciosManoObraSinCargo</td>
+						</tr>
+					}
+
+					esImpar = !esImpar;
+				}
+			}
+		</table>
+
+		<br />
+
+		<p>
+			NO PIERDA LA GARANTÍA DE SU UNIDAD VOLKSWAGEN, COLOQUE SOLO	ACCESORIOS Y REPUESTOS ORIGINALES Y LLEVELA SOLO A TALLERES OFICIALES
+		</p>
+	</div>
+</div>

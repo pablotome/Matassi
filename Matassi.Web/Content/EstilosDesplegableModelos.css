@@ -1,0 +1,241 @@
+﻿.botonSliderModelos {
+	position: relative;
+	z-index: 100;
+	width: 100%;
+	text-align: center;
+}
+
+.imgSliderModelos {
+	background-image: url('images/sliderModelos.png');
+	background-position: top left;
+	background-repeat: no-repeat;
+	border-left: 1px solid rgb(207, 215, 217);
+	border-right: 1px solid rgb(207, 215, 217);
+	border-bottom: 1px solid rgb(207, 215, 217);
+	margin: auto;
+	width: 185px;
+	height: 33px;
+	cursor: pointer;
+}
+
+.imgSliderModelos_desplegar {
+	background-position: -2px 0px; 
+}
+
+.imgSliderModelos_desplegar_hover {
+	background-position: -2px -57px; 
+}
+
+.imgSliderModelos_contraer {
+	background-position: -2px -114px; 
+}
+
+.imgSliderModelos_contraer_hover {
+	background-position: -2px -171px; 
+}
+
+.sliderModelos {
+	position: relative;
+	z-index: 50;
+	background-color: #FFF;
+	display: none;
+	text-align: center;
+	opacity: 0.95;
+}
+
+	.sliderModelos UL {
+		display: inline-block;
+		width: 90%;
+		margin: auto;
+	}
+
+	.sliderModelos UL LI.BKGModelo {
+		display:inline-block;
+		background-image: url('images/ModelosSlide4.jpg');
+		background-position: top left;
+		background-repeat: no-repeat;
+		cursor: pointer;
+		width: 16.35%;
+		height: 60px;
+	}
+
+	.sliderModelos UL LI.SlideTituloModelo {
+		display:inline-block;
+		cursor: pointer;
+		font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+		font-size: 1.09em;
+		font-weight: normal;
+		color: #000;
+		width: 16.35%;
+		height: 20px;
+	}
+
+	/* FILA UNO*/
+	.sliderModelos UL LI.liModeloNuevoGol {
+		background-position: 12px 0px;
+	}
+	.sliderModelos UL LI.SlideTituloModeloNuevoGol {
+		text-align: center;
+	}
+
+	.sliderModelos UL LI.liModeloUP {
+		background-position: -130px 0px; 
+	}
+	.sliderModelos UL LI.SlideTituloModeloUP {
+		text-align: center;
+	}
+
+	.sliderModelos UL LI.liModeloFox {
+		background-position: -268px 0px; 
+	}
+	.sliderModelos UL LI.SlideTituloModeloFox {
+		text-align: center;
+	}
+
+	.sliderModelos UL LI.liModeloGolf {
+		background-position: -410px 0px; 
+	}
+	.sliderModelos UL LI.SlideTituloModeloGolf {
+		text-align: center;
+	}
+
+	.sliderModelos UL LI.liModeloBeetle {
+		background-position: -550px 0px; 
+	}
+	.sliderModelos UL LI.SlideTituloModeloBeetle{
+		text-align: center;
+	}
+
+	.sliderModelos UL LI.liModeloPassat {
+		background-position: -690px 0px; 
+	}
+	.sliderModelos UL LI.SlideTituloModeloPassat {
+		text-align: center;
+	}
+	/* FILA UNO*/
+
+
+
+
+
+
+	/* FILA DOS*/
+	.sliderModelos UL LI.liModeloVoyage {
+		background-position: -840px 0px; 
+	}
+	.sliderModelos UL LI.SlideTituloModeloVoyage{
+		text-align: center;
+	}
+
+	.sliderModelos UL LI.liModeloPolo {
+		background-position: -970px 0px; 
+	}
+	.sliderModelos UL LI.SlideTituloModeloPolo{
+		text-align: center;
+	}
+
+	.sliderModelos UL LI.liModeloVento {
+		background-position: -1111px 0px; 
+	}
+	.sliderModelos UL LI.SlideTituloModeloVento {
+		text-align: center;
+	}
+
+	.sliderModelos UL LI.liModeloScirocco {
+		background-position: -1255px 0px; 
+	}
+	.sliderModelos UL LI.SlideTituloModeloScirocco {
+		text-align: center;
+	}
+
+	.sliderModelos UL LI.liModeloCC {
+		background-position: -1400px 0px; 
+	}
+	.sliderModelos UL LI.SlideTituloModeloCC {
+		text-align: center;
+	}
+
+	.sliderModelos UL LI.liModeloNuevoPolo {
+		background-position: -2370px 0px; 
+	}
+	.sliderModelos UL LI.SlideTituloModeloNuevoPolo {
+		text-align: center;
+	}
+
+	.sliderModelos UL LI.liModeloTiguan {
+		background-position: -2510px 0px; 
+	}
+	.sliderModelos UL LI.SlideTituloModeloTiguan {
+		text-align: center;
+	}
+	/* FILA DOS*/
+
+
+
+
+
+	/* FILA TRES*/
+	.sliderModelos UL LI.liModeloTouareg {
+		background-position: -1680px 0px; 
+	}
+	.sliderModelos UL LI.SlideTituloModeloTouareg{
+		text-align: center;
+	}
+
+	.sliderModelos UL LI.liModeloSuran {
+		background-position: -1810px 0px; 
+	}
+	.sliderModelos UL LI.SlideTituloModeloSuran {
+		text-align: center;
+	}
+
+	.sliderModelos UL LI.liModeloGolfVariant {
+		background-position: -1950px 0px; 
+	}
+	.sliderModelos UL LI.SlideTituloModeloGolfVariant {
+		text-align: center;
+	}
+
+	.sliderModelos UL LI.liModeloSaveiro {
+		background-position: -2090px 0px; 
+	}
+	.sliderModelos UL LI.SlideTituloModeloSaveiro {
+		text-align: center;
+	}
+
+	.sliderModelos UL LI.liModeloAmarok {
+		background-position: -2235px 0px; 
+	}
+	.sliderModelos UL LI.SlideTituloModeloAmarok {
+		text-align: center;
+	}
+
+	.sliderModelos UL LI.liModeloAmarokV6 {
+		background-position: -2644px 0px; 
+	}
+	.sliderModelos UL LI.SlideTituloModeloAmarokV6 {
+		text-align: center;
+	}
+
+	/* FILA TRES*/
+
+
+
+
+	/* FILA CUATRO */
+
+	.sliderModelos UL LI.liModeloGolfGTI {
+		background-position: -2798px 0px; 
+	}
+	.sliderModelos UL LI.SlideTituloModeloGolfGTI {
+		text-align: center;
+	}
+
+	.sliderModelos UL LI.liModeloNuevoVirtus {
+		background-position: -2944px 0px; 
+	}
+	.sliderModelos UL LI.SlideTituloModeloNuevoVirtus {
+		text-align: center;
+	}
+
+	/* FILA CUATRO */

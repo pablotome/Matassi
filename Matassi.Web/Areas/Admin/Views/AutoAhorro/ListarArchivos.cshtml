@@ -1,0 +1,88 @@
+﻿@using Matassi.Dominio
+@model List<Matassi.Dominio.ArchivoAutoahorro>
+
+@{
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			<h2>@ViewBag.Title</h2>
+
+			<p class="nuevoItem">
+				@Html.ActionLink("Nuevo Archivo", "Archivo_Crear", new { Tipo = (int)ViewBag.Tipo }, new { @class = "btn btn-primary" })
+			</p>
+		</td>
+	</tr>
+</table>
+
+<table class="table tabla-centrada">
+	<tr>
+		<th class="oculto">
+			Código
+		</th>
+		<th>
+			NombreArchivo
+		</th>
+		<th>
+			Fecha de Alta
+		</th>
+		<th>
+			Acto
+		</th>
+		<th>
+			Fecha de Acto
+		</th>
+		<th>
+			Ofertas Recibidas al
+		</th>
+		<th>
+			Concesionario
+		</th>
+		<th>
+			Activo
+		</th>
+		<th></th>
+	</tr>
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td class="oculto">
+				@item.CodArchivoAutoahorro
+			</td>
+			<td>
+				@item.NombreArchivo
+			</td>
+			<td>
+				@item.FechaAlta
+			</td>
+			<td>
+				@item.Acto
+			</td>
+			<td>
+				@item.Fecha
+			</td>
+			<td>
+				@item.OfertasRecibidas
+			</td>
+			<td>
+				@item.Concesionario
+			</td>
+			<td>
+				@item.Activo
+			</td>
+			<td>
+				@Html.ActionLink("Eliminar", "Archivo_Borrar", new { codArchivoAutoahorro = item.CodArchivoAutoahorro, Tipo = (int)ViewBag.Tipo }, new { onclick = string.Format("return confirm('¿Seguro de eliminar el archivo {0}?');", item.NombreArchivo) })
+			</td>
+		</tr>
+	}
+	<tfoot>
+		<tr>
+			<td colspan="4">
+				@Html.ActionLink("<< Volver", "Index", "Admin")
+			</td>
+		</tr>
+	</tfoot>
+
+</table>

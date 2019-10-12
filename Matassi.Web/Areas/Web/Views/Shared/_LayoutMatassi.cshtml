@@ -1,0 +1,124 @@
+﻿@using Matassi.Dominio;
+@{
+	ViewBag.Title = "Matassi e Imperiale | Concesionario Oficial Volkswagen";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>@ViewBag.Title</title>
+	<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <meta name="description" content="Concesionario Oficial Volkswagen">
+    <meta property="og:title" content="Matassi e Imperiale" />
+    <meta property="og:url" content="https://www.matassi.com.ar/" />
+    <meta property="og:description" content="Concesionario Oficial Volkswagen">
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:image:width" content="93" />
+    <meta property="og:image:height" content="122" />
+    <meta property="og:image" content="http://matassi.com.ar/Content/img/LogoVWGrande.png">
+    <!--<div style="display:none" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+        <img itemprop="url" src="http://matassi.com.ar/Content/img/LogoVWGrande.png">
+        <meta itemprop="width" content="93">
+        <meta itemprop="height" content="122">
+    </div>-->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+
+	@Styles.Render("~/bundles/estilosCSS")
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+    
+    @Scripts.Render("~/bundles/funcionesJS1")
+    @Scripts.Render("~/bundles/funcionesJS2")
+
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-19117216-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+
+	@RenderSection("scripts", required: false)
+	@RenderSection("style", required: false)
+
+</head>
+<body>
+    <header>
+        <nav id="menu">
+            <ul id="menu_ul"></ul>
+        </nav>
+        <div id="divMenuCelular">
+            <ul></ul>
+        </div>
+    </header>
+    <div id="content">
+        <div id="divIconoVWCell">
+            <a href="/" rel="external">
+                <img src="/Content/img/LogoVWChico.png" class="svg" alt="Matassi e Imperiale">
+            </a>
+        </div>
+        <div id="divIconoMenuCell">
+            <div id="divMostrarMenuCelular" onclick="openNav()"><img src="/Content/img/iconos/menuCel.svg" class="svg imgImagenIcono" style="fill:#0099da;" /></div>
+            <div id="divOcultarMenuCelular" onclick="closeNav()" class="oculto"><img src="/Content/img/iconos/cruz.svg" class="svg imgImagenIcono" style="fill:#0099da;" /></div>
+        </div>
+
+        @RenderBody()
+
+    </div>
+    <br />
+
+    @RenderSection("footerModelo", required: false)
+
+    <footer id="footer">
+        <div id="divBarraSeparadora">
+            <div id="divTextoVolver" onclick="javascript:$('html, body').animate({ scrollTop: 0 }, 'fast');">
+                Volver arriba&nbsp;<img src="/Content/img/iconos/flechaArribaDoble.svg" class="svg imgFlechitaArriba" />
+            </div>
+        </div>
+        <div id="divInfoFooter">
+            <div id="divItemsInfoFooter">
+                <div class="divItemInfoFooter">(*) Las imágenes publicadas en este sitio son de carácter ilustrativo.<br />*FOTO NO CONTRACTUAL.</div>
+                <div class="divItemInfoFooter">Política de privacidad</div>
+                <div class="divItemInfoFooter">
+                    <a href="http://qr.afip.gob.ar/?qr=WN90VbQmJ36XGAHXQhNO9w,," target="_F960AFIPInfo">
+                        <img src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg" border="0" style="width:40px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <br /><br />
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            }; if (!f._fbq) f._fbq = n;
+            n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+        }(window,
+        document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '456592031363048'); // Insert your pixel ID here.
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+                src="https://www.facebook.com/tr?id=456592031363048&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+</body>
+</html>

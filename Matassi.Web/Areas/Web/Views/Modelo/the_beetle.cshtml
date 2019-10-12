@@ -1,0 +1,724 @@
+﻿@{
+	ViewBag.Title = "up";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+	@Styles.Render("~/bundles/estilosCSSModelo")
+	@Scripts.Render("~/bundles/funcionesModelo")
+}
+
+<div id="divBannerTituloModelo">
+	<span id="spnTituloModelo">
+		The Beetle
+	</span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+	<ul id="ulListaCaracteristicasModelo">
+		<li class="liDisenio" data-divmodelos="divDisenio">Diseño y estilo</li>
+		<li class="liInnovacion" data-divmodelos="divInnovacion">Innovación y tecnología</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+<div id="divImagenModelo">
+	<img src="~/Content/info_modelos/the_beetle/the_beetle.jpg" class="imgResponsiva" />
+</div>
+
+<div id="divTituloModelo">
+	Un ícono histórico.<br /><br />
+</div>
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+	<div class="iconoDesplegar">
+		<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+		<span>
+			Selecciona categoria
+		</span>
+	</div>
+	<ul class="oculto">
+		<li class="liDisenio" data-divmodelos="divDisenio">Diseño y estilo</li>
+		<li class="liInnovacion" data-divmodelos="divInnovacion">Innovación y tecnología</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+
+<!----------------------------------DISEÑO---------------------------------->
+<div id="divDisenio" class="SeccionModelo">
+	<div class="TituloSeccion">
+		El ícono de toda una generación.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Elegancia</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/the_beetle/Disenio/Disenio01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>Elegancia</h5>
+				<h3>Estilo inconfundible</h3>
+				<p>El Nuevo The Beetle logra un aspecto más refinado y sofisticado, sin perder el estilo por el cual es reconocido mundialmente. Moderno, fresco y más rupturista que nunca.</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/the_beetle/Disenio/Disenio01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Innovador</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/the_beetle/Disenio/Disenio02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/the_beetle/Disenio/Disenio02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>Innovador</h5>
+				<h3>Exterior</h3>
+				<p>Su combinación de líneas le otorgan fluidez a una silueta con estilo único y personalidad diferente.</p>
+			</div>
+		</div>
+
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------INNOVACIÓN---------------------------------->
+<div id="divInnovacion" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Balance perfecto
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Rediseño</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/the_beetle/Innovacion/Innovacion01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>Rediseño</h5>
+				<h3>Detalles</h3>
+				<p>Incluye nuevos detalles en color y tapizado, con un especial acabado en el volante multifunción. Su Sistema de Audio Discover Media equipado con tecnología App Connect se encarga de conectar al The Beetle con el resto del mundo.</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/the_beetle/Innovacion/Innovacion01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Equipamiento Premium</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/the_beetle/Innovacion/Innovacion02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/the_beetle/Innovacion/Innovacion02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>Equipamiento Premium</h5>
+				<h3>Sport</h3>
+				<p>La versión Sport ofrece Faros Bi-Xenón, llantas de 17", sensores de estacionamiento, techo panorámico, tapizado de cuero y climatizador Bizona.</p>
+			</div>
+		</div>
+
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------VERSIONES---------------------------------->
+<div id="divVersiones" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Versiones
+	</div>
+
+	<!-- SPORT CABRIO -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/the_beetle/Versiones/Versiones01.png" class="imgResponsiva" />
+			<h4>Sport Cabrio</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Sistema de Audio tactil "Discover Media" de 6,5"</li>
+				<li>Faros Bi-xenon con DRL LED</li>
+				<li>Climatizador automatico Bizona</li>
+				<li>Llantas de aleación de 17"</li>
+				<li>Motor 2.0 TSI 211CV</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="SportCabrio">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-SportCabrio">
+		<h1>Sport Cabrio</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/the_beetle/InfoTecnica/InfoTecnica01.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Sistema de Audio tactil "Discover Media" de 6,5"</li>
+					<li>Faros Bi-xenon con DRL LED</li>
+					<li>Climatizador automatico Bizona</li>
+					<li>Llantas de aleación de 17"</li>
+					<li>Motor 2.0 TSI 211CV</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">The Beetle Cabrio Sport Cabrio 211 CV DQ</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Paquetes</b></li>
+					<li>PA3Volante multifuncional deportivo en cuero con Tiptronic</li>
+
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación de 17"</li>
+
+					<li><b>Interior</b></li>
+					<li>Box portaobjetos</li>
+					<li>Pomo/empuñadura de la palanca de cambio en cuero</li>
+
+					<li><b>Exterior</b></li>
+					<li>Sin dispositivo de remolque</li>
+					<li>Carcasa del retrovisor exterior con superficie especial</li>
+					<li>Capota / techo plegable, eléctrico</li>
+					<li>Spoiler trasero</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Sin juego de siglas y emblemas (sin denominación de tipo)</li>
+					<li>Embellecedores</li>
+					<li>2 puertas</li>
+
+					<li><b>Sistema de asistencia</b></li>
+					<li>Sin sistema de asistencia en caso de cambio de carril</li>
+
+					<li><b>Espejos</b></li>
+					<li>Retrovisor exterior con ajuste eléctrico/térmico por separado</li>
+					<li>Espejo interior de seguridad antideslumbramiento automático</li>
+
+					<li><b>Iluminación</b></li>
+					<li>PLA</li>
+					<li>Limpiaparabrisas a intervalos con sensor de lluvia</li>
+					<li>2 lámparas de lectura</li>
+					<li>Luz de marcha diurna con asistente de luz de marcha y función "coming home"</li>
+					<li>Espejo interior de seguridad antideslumbramiento automático</li>
+					<li>PXH</li>
+					<li>Faros Bi-xenon con DRL LED</li>
+					<li>Iluminación de matrícula LED</li>
+					<li>Con luces adicionales (ilum. interior)</li>
+					<li>Regulación alcance faros</li>
+					<li>Faros antiniebla y luz de giro</li>
+					<li>Conjunto de pilotos posteriores en técnica LED (NAR)</li>
+					<li>Sin limpialavafaros</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Sensor de estacionamiento delanteros y traseros</li>
+					<li>Sistema de regulación de velocidad (GRA) electrónico</li>
+					<li>Sin sistema de cámaras/vigilancia sensorial del entorno</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta trasera de asientos no divididos y respaldos abatibles por separado</li>
+					<li>PC6</li>
+					<li>Climatizador automatico Bizona</li>
+					<li>Reposabrazos central delante</li>
+					<li>Sistema de regulación de velocidad (GRA) electrónico</li>
+					<li>Regulación lumbar manual respaldo asientos anteriores</li>
+					<li>Regulación en altura manual de los asientos anteriores</li>
+					<li>Ambos asientos anteriores calefaccionables regulables por separado</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Insertos para producción en pequeña serie</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Mirror Link y "App" RSE inalámbrica</li>
+					<li>Sin cambiador de CD/CD-Player</li>
+					<li>Interfaz eléctrica para uso externo, AUX-IN, USB (compatible con iPod)</li>
+					<li>8 altavoces (pasivos)</li>
+					<li>PRC</li>
+					<li>Sistema de Audio tactil "Discover Media" de 6,5"</li>
+					<li>Radio para sistema de navegación</li>
+
+					<li><b>Navegación</b></li>
+					<li>Display multifuncional con mando</li>
+					<li>Sistema de Audio tactil "Discover Media" de 6,5"</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifuncional deportivo en cuero con Tiptronic</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante, el del acompañante con desactivación del airbag</li>
+					<li>Frenos de disco posteriores</li>
+					<li>Frenos delanteros de disco</li>
+					<li>Alarma antirrobo con vigilancia del habitáculo, sirena de alarma y protección contra remolque</li>
+					<li>Sin control de presión de los neumáticos</li>
+					<li>Airbags laterales anteriores con airbag de cabeza</li>
+					<li>Marco protector (arco antivuelco)</li>
+					<li>Cierre centralizado por control remoto, con accionamiento desde el interior y cierre de seguridad</li>
+					<li>Dirección asistida, dependiente de la velocidad (Servotronic)</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores01.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores02.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores03.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores04.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores05.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores06.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores07.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores08.png" class="imgResponsiva" /><br />??</li>
+
+					<li style="clear:both;">&nbsp;</li>
+
+					<li><b>Espejos</b></li>
+					<li>Regulac. eléctrica, abatimiento eléctrico espejo exterior calefaccionable</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<!-- SPORT -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/the_beetle/Versiones/Versiones02.png" class="imgResponsiva" />
+			<h4>Sport</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Techo panorámico</li>
+				<li>Sistema de Audio tactil "Discover Media" de 6,5"</li>
+				<li>Faros Bi-xenon con DRL LED</li>
+				<li>Climatizador automatico Bizona</li>
+				<li>Llantas de aleación de 17"</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Sport">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Sport">
+		<h1>Connect</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/the_beetle/InfoTecnica/InfoTecnica02.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Techo panorámico</li>
+					<li>Sistema de Audio tactil "Discover Media" de 6,5"</li>
+					<li>Faros Bi-xenon con DRL LED</li>
+					<li>Climatizador automatico Bizona</li>
+					<li>Llantas de aleación de 17"</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">The Beetle Sport 211 CV DQ 3P</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Paquetes</b></li>
+					<li>PA3</li>
+					<li>Empuñadura del freno de mano en cuero</li>
+					<li>Pomo/empuñadura de la palanca de cambio en cuero</li>
+					<li>Volante multifuncional deportivo en cuero con Tiptronic</li>
+
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación de 17"</li>
+
+					<li><b>Interior</b></li>
+					<li>Box portaobjetos</li>
+					<li>Pomo/empuñadura de la palanca de cambio en cuero</li>
+
+					<li><b>Exterior</b></li>
+					<li>Sin dispositivo de remolque</li>
+					<li>Carcasa del retrovisor exterior con superficie especial</li>
+					<li>Techo panorámico</li>
+					<li>Spoiler posterior en el color de la carrocería</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Sin juego de siglas y emblemas (sin denominación de tipo)</li>
+					<li>Embellecedores</li>
+					<li>2 puertas</li>
+
+					<li><b>Sistema de asistencia</b></li>
+					<li>Sin sistema de asistencia en caso de cambio de carril</li>
+
+					<li><b>Espejos</b></li>
+					<li>Retrovisor exterior con ajuste eléctrico/térmico por separado</li>
+					<li>Espejo interior de seguridad antideslumbramiento automático</li>
+
+					<li><b>Iluminación</b></li>
+					<li>PLA</li>
+					<li>Limpiaparabrisas a intervalos con sensor de lluvia</li>
+					<li>2 lámparas de lectura</li>
+					<li>Luz de marcha diurna con asistente de luz de marcha y función "coming home"</li>
+					<li>Espejo interior de seguridad antideslumbramiento automático</li>
+					<li>PXH</li>
+					<li>Faros Bi-xenon con DRL LED</li>
+					<li>Iluminación de matrícula LED</li>
+					<li>Con luces adicionales (ilum. interior)</li>
+					<li>Regulación alcance faros</li>
+					<li>Faros antiniebla y luz de giro</li>
+					<li>Conjunto de pilotos posteriores en técnica LED (NAR)</li>
+					<li>Sin limpialavafaros</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Sensor de estacionamiento delanteros y traseros</li>
+					<li>Sistema de regulación de velocidad (GRA) electrónico</li>
+					<li>Sin sistema de cámaras/vigilancia sensorial del entorno</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta trasera de asientos no divididos y respaldos abatibles por separado</li>
+					<li>PC6</li>
+					<li>Climatizador automatico Bizona</li>
+					<li>Reposabrazos central delante</li>
+					<li>Sistema de regulación de velocidad (GRA) electrónico</li>
+					<li>Regulación lumbar manual respaldo asientos anteriores</li>
+					<li>Regulación en altura manual de los asientos anteriores</li>
+					<li>Ambos asientos anteriores calefaccionables regulables por separado</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Insertos para producción en pequeña serie</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Mirror Link y "App" RSE inalámbrica</li>
+					<li>Sin cambiador de CD/CD-Player</li>
+					<li>Interfaz eléctrica para uso externo, AUX-IN, USB (compatible con iPod)</li>
+					<li>8 altavoces (pasivos)</li>
+					<li>PRC</li>
+					<li>Sistema de Audio tactil "Discover Media" de 6,5"</li>
+					<li>Radio para sistema de navegación</li>
+
+					<li><b>Navegación</b></li>
+					<li>Display multifuncional con mando</li>
+					<li>Sistema de Audio tactil "Discover Media" de 6,5"</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifuncional deportivo en cuero con Tiptronic</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante, el del acompañante con desactivación del airbag</li>
+					<li>Frenos de disco posteriores</li>
+					<li>Frenos delanteros de disco</li>
+					<li>Alarma antirrobo con vigilancia del habitáculo, sirena de alarma y protección contra remolque</li>
+					<li>Sin control de presión de los neumáticos</li>
+					<li>Airbags laterales anteriores con airbag de cabeza</li>
+					<li>Sin marco protector</li>
+					<li>Cierre centralizado por control remoto, con accionamiento desde el interior y cierre de seguridad</li>
+					<li>Dirección asistida, dependiente de la velocidad (Servotronic)</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores05.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores09.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores03.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores10.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores01.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores11.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores12.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores13.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores06.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores07.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores14.png" class="imgResponsiva" /><br />??</li>
+
+					<li style="clear:both;">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<!-- DESIGN -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/the_beetle/Versiones/Versiones03.png" class="imgResponsiva" />
+			<h4>Design</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Sensor de estacionamiento delanteros y traseros</li>
+				<li>App Connect</li>
+				<li>Llantas de aleación de 16"</li>
+				<li>Motor 1.4 TSI 160CV</li>
+				<li>Sistema de Audio tactil "Composition Media" de 6,5"</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Design">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Design">
+		<h1>Connect</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/the_beetle/InfoTecnica/InfoTecnica03.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Sensor de estacionamiento delanteros y traseros</li>
+					<li>App Connect</li>
+					<li>Llantas de aleación de 16"</li>
+					<li>Motor 1.4 TSI 160CV</li>
+					<li>Sistema de Audio tactil "Composition Media" de 6,5"</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>The Beetle Design 160 CV Manual 3P</li>
+					<li>The Beetle Design 160 CV DQ 3P</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Paquetes</b></li>
+					<li>PA2</li>
+					<li>Empuñadura del freno de mano en cuero</li>
+					<li>Pomo/empuñadura de la palanca de cambio en cuero</li>
+					<li>Volante multifuncional de cuero</li>
+
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación de 16"</li>
+
+					<li><b>Interior</b></li>
+					<li>Box portaobjetos</li>
+					<li>Paquete Cromo</li>
+					<li>Pomo/empuñadura de la palanca de cambio en cuero</li>
+
+					<li><b>Exterior</b></li>
+					<li>Sin dispositivo de remolque</li>
+					<li>Carcasa del retrovisor exterior pintada</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Spoiler trasero</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Sin juego de siglas y emblemas (sin denominación de tipo)</li>
+					<li>Embellecedores</li>
+					<li>2 puertas</li>
+
+					<li><b>Sistema de asistencia</b></li>
+					<li>Sin sistema de asistencia en caso de cambio de carril</li>
+
+					<li><b>Espejos</b></li>
+					<li>Retrovisor exterior con ajuste eléctrico/térmico por separado</li>
+					<li>Espejo interior de seguridad antideslumbrante</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Activación de las luces de marcha diurna</li>
+					<li>Faros halógenos</li>
+					<li>Sin luces adicionales (ilum. interior)</li>
+					<li>Regulación alcance faros</li>
+					<li>Faros antiniebla y luz de giro</li>
+					<li>Conjunto de pilotos posteriores en técnica LED (NAR)</li>
+					<li>Sin limpialavafaros</li>
+					<li>Conexión de limpiaparabrisas con intervalos, con potenciómetro (4 niveles)</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Sensor de estacionamiento delanteros y traseros</li>
+					<li>Sistema de regulación de velocidad (GRA) electrónico</li>
+					<li>Sin sistema de cámaras/vigilancia sensorial del entorno</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta trasera de asientos no divididos y respaldos abatibles por separado</li>
+					<li>PC1</li>
+					<li>Sistema de regulación de velocidad (GRA) electrónicoAire acondicionado con regulación mecánica</li>
+					<li>Reposabrazos central delante</li>
+					<li>Sin apoyo lumbar en los respaldos de los asientos</li>
+					<li>Regulación en altura manual de los asientos anteriores</li>
+					<li>Asientos no calefaccionables</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Inserciones</li>
+
+					<li><b>Infotainment</b></li>
+					<li>PMU</li>
+					<li>App Connect</li>
+					<li>Interfaz eléctrica para uso externo, AUX-IN, USB (compatible con iPod)</li>
+					<li>ZR2</li>
+					<li>Sistema de Audio tactil "Composition Media" de 6,5"</li>
+					<li>8 altavoces (pasivos)</li>
+					<li>Preparación para teléfono móvil</li>
+					<li>Antena de luna para búsqueda automática de emisora (diversidad de frecuencia)</li>
+					<li>Sin cambiador de CD/CD-Player</li>
+
+					<li><b>Navegación</b></li>
+					<li>Display multifuncional con mando</li>
+					<li>Sin sistema de navegación</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifuncional de cuero</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante, el del acompañante con desactivación del airbag</li>
+					<li>Frenos traseros de disco (Geomet D)</li>
+					<li>Frenos delanteros de disco</li>
+					<li>Alarma antirrobo con vigilancia del habitáculo, sirena de alarma y protección contra remolque</li>
+					<li>Sin control de presión de los neumáticos</li>
+					<li>Airbags laterales anteriores con airbag de cabeza</li>
+					<li>Sin marco protector</li>
+					<li>Cierre centralizado por control remoto, con accionamiento desde el interior y cierre de seguridad</li>
+					<li>Dirección asistida, dependiente de la velocidad (Servotronic)</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores05.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores09.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores03.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores10.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores01.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores11.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores12.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores13.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores06.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores07.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/the_beetle/Colores/Colores14.png" class="imgResponsiva" /><br />??</li>
+
+					<li style="clear:both;">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<p class="paginadorVersiones visibleCelular">
+		<a href="#1" class="active">&nbsp;</a>
+		<a href="#2">&nbsp;</a>
+	</p>
+</div>
+
+<!----------------------------------BROCHURE---------------------------------->
+<div id="divBrochure">
+	<div id="div-Brochure-Info">
+		<h2>Brochure<br />de The Beetle</h2>
+		<a href="~/Content/info_modelos/the_beetle/Brochure/Brochure.pdf" rel="external" class="linkDescargarBrochure" target="_blank">
+			<div id="div-Brochure-Boton">
+				<div id="div-Brochure-Boton-Inner">Descargalo</div>
+			</div>
+		</a>
+	</div>
+
+	<div id="div-Brochure-Imagen">
+		<img src="~/Content/info_modelos/the_beetle/Brochure/Brochure.jpg" class="imgResponsiva" />
+	</div>
+</div>

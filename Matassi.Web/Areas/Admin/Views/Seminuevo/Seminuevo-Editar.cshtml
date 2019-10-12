@@ -1,0 +1,148 @@
+﻿@model Matassi.Dominio.Seminuevo
+
+@{
+	ViewBag.Title = "Editar Seminuevo";
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			<h2>@ViewBag.Title</h2>
+		</td>
+	</tr>
+</table>
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			@using (Html.BeginForm("Seminuevo_Editar", "Seminuevo", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal" }))
+			{
+				@Html.AntiForgeryToken()
+
+				@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Modelo, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-sm-8">
+						@Html.EditorFor(model => model.Modelo, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.Modelo, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Anio, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-sm-8">
+						@Html.EditorFor(model => model.Anio, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.Anio, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Kilometraje, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-sm-8">
+						@Html.EditorFor(model => model.Kilometraje, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.Kilometraje, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Precio, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-sm-8">
+						@Html.EditorFor(model => model.Precio, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.Precio, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Combustible, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-sm-8">
+						@Html.EditorFor(model => model.Combustible, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.Combustible, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Color, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-sm-8">
+						@Html.EditorFor(model => model.Color, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.Color, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Vendedor, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-sm-8">
+						@Html.EditorFor(model => model.Vendedor, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.Vendedor, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Comentarios, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-sm-8">
+						@Html.EditorFor(model => model.Comentarios, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.Comentarios, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Transmision, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-sm-8">
+						@Html.EditorFor(model => model.Transmision, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.Transmision, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.CantidadPuertas, "Cantidad de Puertas", htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-sm-8">
+						@Html.EditorFor(model => model.CantidadPuertas, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.CantidadPuertas, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.ImagenPosteada, "Imagen", htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-md-8">
+						<img src='@Url.Action("VerImagenSeminuevo", new { codSeminuevo = Model.CodSeminuevo	})' />
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.ImagenPosteada, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-sm-8">
+						@Html.TextBoxFor(model => model.ImagenPosteada, new { @type = "file" })
+						@Html.ValidationMessageFor(model => model.ImagenPosteada)
+						<!--<p class="help-block">Example block-level help text here.</p>-->
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Orden, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-sm-8">
+						@Html.EditorFor(model => model.Orden, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.Orden, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-sm-3 control-label">&nbsp;</label>
+					<div class="col-sm-8">
+						@Html.CheckBoxFor(model => model.Publicado)
+						@Html.LabelFor(model => model.Publicado, "Publicado")
+					</div>
+				</div>
+				
+				<div class="form-group btnGuardar">
+					<div class="col-md-offset-3 col-md-8">
+						@Html.HiddenFor(codSeminuevo => Model.CodSeminuevo)
+						<input type="submit" value="Guardar" class="btn btn-primary" />
+						@Html.ActionLink("Cancelar", "Seminuevo_Lista", null, new { @class = "btn btn-default" })
+					</div>
+				</div>
+			}
+
+		</td>
+	</tr>
+</table>

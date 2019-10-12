@@ -1,0 +1,7 @@
+﻿@using Matassi.Dominio;
+@using Matassi.Servicios;
+
+@foreach (Modelo modelo in ServicioSistema<Modelo>.Get(m => m.Vigente == true).OrderBy(m => m.Orden).ToList())
+{
+	<li><a href="~/Modelo/@modelo.NombreClave" class="itemSubMenu">@modelo.Nombre</a></li>
+}

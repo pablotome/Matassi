@@ -1,0 +1,1009 @@
+﻿@{
+	ViewBag.Title = "up";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+	@Styles.Render("~/bundles/estilosCSSModelo")
+	@Scripts.Render("~/bundles/funcionesModelo")
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#divSeguridad').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+			//$('#divDisenio').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+
+			$(window).on("orientationchange", function () {
+				//window.location.reload();
+				setTimeout(function () {
+					$('#divSeguridad').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+				}, 500);
+
+				//setTimeout(function () {
+				//	$('#divDisenio').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+				//}, 500);
+			});
+		});
+	</script>
+}
+
+<div id="divBannerTituloModelo">
+	<span id="spnTituloModelo">
+		Nuevo Gol
+	</span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+	<ul id="ulListaCaracteristicasModelo">
+		<li class="liSeguridad" data-divmodelos="divSeguridad">Seguridad</li>
+		<li class="liCaracteristicas" data-divmodelos="divCaracteristicas">Características</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+<div id="divImagenModelo">
+	<img src="~/Content/info_modelos/gol/gol2.jpg" class="imgResponsiva" />
+</div>
+
+<div id="divTituloModelo">
+	Divertido como siempre, conectado como nunca.
+</div>
+
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+	<div class="iconoDesplegar">
+		<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+		<span>
+			Selecciona categoria
+		</span>
+	</div>
+	<ul class="oculto">
+		<li class="liSeguridad" data-divmodelos="divSeguridad">Seguridad</li>
+		<li class="liCaracteristicas" data-divmodelos="divCaracteristicas">Características</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+
+
+
+<!----------------------------------SEGURIDAD---------------------------------->
+<div id="divSeguridad" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Protección en todos tus viajes
+	</div>
+	<!--<div class="SubTituloSeccion">
+		Todo en el Nuevo up! se enfoca en ofrecer una experiencia de manejo única.
+	</div>-->
+	<div class="listaHorizontalImagenes">
+		<ul>
+			<li data-pos="1" class="linkCarouselApagado linkCarouselEncendido">ISOFIX</li>
+			<li data-pos="2" class="linkCarouselApagado">Señal de cinturón</li>
+			<li data-pos="3" class="linkCarouselApagado">Cierre centralizado</li>
+			<li data-pos="4" class="linkCarouselApagado">ABS</li>
+			<li data-pos="5" class="linkCarouselApagado">Apoyacabezas</li>
+		</ul>
+
+		<!-- Carrousel -->
+		<div class="divCarousel">
+			<div>
+				<ul>
+					<li>
+						<img src="~/Content/info_modelos/gol/Seguridad/Seguridad-01.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/gol/Seguridad/Seguridad-02.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/gol/Seguridad/Seguridad-03.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/gol/Seguridad/Seguridad-04.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/gol/Seguridad/Seguridad-05.jpg" class="imgResponsiva" />
+					</li>
+				</ul>
+			</div>
+
+			<div class="divFlechaIzquierda">
+				<img src="~/Content/img/iconos/flechaIzquierda.svg" class="svg" />
+			</div>
+			<div class="divFlechaDerecha">
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+			</div>
+
+		</div>
+	</div>
+	<div class="divPaginador"><ul class="ulIndice"></ul></div>
+
+	<div class="InfoCarousel">
+		<ul>
+			<li data-pos="1">
+				<h5>
+					Anclajes ISOFIX
+				</h5>
+				<h3>
+					Un vehículo para toda la familia
+				</h3>
+				<p>
+					El Nuevo Gol piensa en proteger a cada miembro de tu familia. Por eso, sus asientos traseros están equipados con anclajes ISOFIX, uno de los sistemas estándares de sujeción de sillas de seguridad de niños más recomendados.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="2">
+				<h5>
+					Señal de cinturón
+				</h5>
+				<h3>
+					La seguridad es lo primero
+				</h3>
+				<p>
+					El Nuevo Gol te alertará con una señal acústica cuando detecte que iniciaste tu viaje con el cinturón desabrochado.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="3">
+				<h5>
+					Cierre centralizado
+				</h5>
+				<h3>
+					Con mando a distancia
+					<br>
+				</h3>
+				<p>
+					El nuevo diseño de Gol incluye una función de cierre centralizado para que puedas trabar las puertas y baúl también con un comando a distancia, aportando seguridad y confort.
+				</p>
+			</li>
+
+			<li data-pos="4">
+				<h5>
+					ABS
+				</h5>
+				<h3>
+					Sistema antibloqueo de frenado
+					<br>
+				</h3>
+				<p>
+					El ABS es uno de los elementos de seguridad activa más importantes ya que permite que las ruedas no se bloqueen y resbalen ante una frenada imprevista.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="5">
+				<h5>
+					Apoyacabezas
+				</h5>
+				<h3>
+					Un nuevo concepto de confort
+					<br>
+				</h3>
+				<p>
+					Para que disfrutes tus viajes de la forma más cómoda y segura posible, el Nuevo Gol incorpora un tercer apoyacabezas en la plaza trasera.
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<!----------------------------------CARACTERISTICAS---------------------------------->
+<div id="divCaracteristicas" class="SeccionModelo">
+	<div class="TituloSeccion">
+		El más popular de los compactos
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Características</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/gol/Interior/Interior-01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Conectado como nunca
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Pantalla de 8” con App Connect
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					El Nuevo Gol incorpora el sistema App Connect, que te permite conectar tu teléfono y disfrutar de tus aplicaciones favoritas para viajar conectado.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/gol/Interior/Interior-01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes3Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Seguridad</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Izquierda">
+			<img src="~/Content/info_modelos/gol/Seguridad/Seguridad-02.jpg" class="imgResponsiva" />
+			<h5>
+				Levantavidrios eléctricos
+			</h5>
+			<h3>
+				Disfrutá tu viaje de otra manera
+			</h3>
+			<p>
+				Las novedades del Nuevo Gol fueron diseñadas para que viajes más cómodo, e incluyen innovaciones como levantavidrios eléctricos en sus puertas.
+			</p>
+		</div>
+
+		<hr class="hrSeparadorItemsSeccion" />
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Seguridad</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Centro">
+			<img src="~/Content/info_modelos/gol/Interior/Interior-03.jpg" class="imgResponsiva" />
+			<h5>
+				Park Pilot
+			</h5>
+			<h3>
+				Una nueva forma de estacionar
+			</h3>
+			<p>
+				El Nuevo Gol cuenta con sensores traseros que, a través de una alerta sonora, hacen que estacionar sea muy fácil. Con el nuevo sistema, convertirte en un experto en la maniobra.
+			</p>
+		</div>
+
+		<hr class="hrSeparadorItemsSeccion" />
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Seguridad</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Derecha">
+			<img src="~/Content/info_modelos/gol/Interior/Interior-04.jpg" class="imgResponsiva" />
+			<h5>
+				Un mundo de posibilidades a tu alcance
+			</h5>
+			<h3>
+				Volante multifunción
+			</h3>
+			<p>
+				Los botones del volante multifunción te permiten acceder fácilmente a lo que necesites. Atender la llamada, subir el volumen o cambiar de radio son algunas de las funciones que vas a poder hacer sin sacar las manos del volante del Nuevo Gol.
+			</p>
+		</div>
+	</div>
+
+
+</div>
+
+
+<!----------------------------------DISEÑo---------------------------------->
+<div id="divDisenio" class="SeccionModelo" style="background-color:#FFF;">
+	<div class="TituloSeccion">
+		Un símbolo que se renueva
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Diseño</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/gol/Disenio/Disenio-01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Nuevo frente
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Una mirada única
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					El Nuevo Gol presenta en su exterior un frente más robusto y firme. Sus líneas definidas y su nuevo diseño de parrilla y faros crean una impronta inconfundible.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/gol/Disenio/Disenio-01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes3Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Diseño</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Izquierda">
+			<img src="~/Content/info_modelos/gol/Disenio/Disenio-02.jpg" class="imgResponsiva" />
+			<h5>
+				Luces en espejos retrovisores
+			</h5>
+			<h3>
+				La clave está en los detalles
+			</h3>
+			<p>
+				Las luces en los espejos retrovisores se activan cuando das la señal de giro para aportar más seguridad a tus viajes.
+			</p>
+		</div>
+
+		<hr class="hrSeparadorItemsSeccion" />
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Diseño</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Centro">
+			<img src="~/Content/info_modelos/gol/Disenio/Disenio-03.jpg" class="imgResponsiva" />
+			<h5>
+				Colores
+			</h5>
+			<h3>
+				Elegí tu favorito
+			</h3>
+			<p>
+				El Nuevo Gol viene disponible en cinco colores: Blanco cristal, Negro universal, Rojo flash, Gris platinum y Plata sirius.
+			</p>
+		</div>
+
+		<hr class="hrSeparadorItemsSeccion" />
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Diseño</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Derecha">
+			<img src="~/Content/info_modelos/gol/Disenio/Disenio-04.jpg" class="imgResponsiva" />
+			<h5>
+				Llantas
+			</h5>
+			<h3>
+				La combinación perfecta
+			</h3>
+			<p>
+				En su versión Comfortline podemos encontrar llantas de aleación de 15”, y en su versión Trendline presenta un nuevo diseño de llantas de acero.
+			</p>
+		</div>
+	</div>
+
+
+</div>
+
+
+<!----------------------------------VERSIONES---------------------------------->
+<div id="divVersiones" class="SeccionModelo" style="background-color:#FFF;">
+	<div class="TituloSeccion">
+		Versiones
+	</div>
+
+	<!-- TRENDLINE -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/gol/Versiones/Versiones01-2.jpg" class="imgResponsiva" />
+			<h4>Trendline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Motor 1.6 l de 101 CV</li>
+				<li>Llantas de 15”</li>
+				<li>Cierre centralizado</li>
+				<li>Alzacristales delanteros eléctricos</li>
+				<li>Anclajes ISOFIX</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="up-pepper">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-up-pepper">
+		<h1>Trendline</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/gol/InfoTecnica/InfoTecnica02.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Dirección asistida</li>
+					<li>Asiento de conductor con ajuste de altura</li>
+					<li>Soporte porta celular "Dockstation"</li>
+					<li>Aire Acondicionado</li>
+					<li>Computadora de abordo </li>
+					<li>Llantas de acero de 14"</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Gol Trendline 1.6l Nafta 101 CV Manual 5P</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de acero de 14"</li>
+
+					<li><b>Interior</b></li>
+					<li>Portaobjetos 1</li>
+					<li>Sin paquete aluminio/cromo</li>
+					<li>Techo moldeado en una pieza, confort</li>
+					<li>Pomo/empuñadura de la palanca de cambio en plástico</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tubo de escape final detrás (estándar)</li>
+					<li>Componentes sin superficie especial</li>
+					<li>Sin barras longitudinales del techo ni barras portaequipajes</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Sin spoiler posterior</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Sin embellecedores adicionales</li>
+					<li>4 puertas</li>
+
+					<li><b>Espejos</b></li>
+					<li>Regulación interna manual espejos exter.</li>
+					<li>Espejo interior de seguridad antideslumbrante</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Sin activación especial de las luces de marcha</li>
+					<li>Faros principales halógenosSin regulación alcance faros</li>
+					<li>Sin faros antiniebla</li>
+					<li>Conjunto pilotos posteriores, versión normal</li>
+					<li>Limpiaparabrisas a intervalos, sin regulación</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Suspensión/amortiguación estándar</li>
+					<li>Sin ayuda de aparcamiento</li>
+					<li>Sin regulador de velocidad (GRA)</li>
+					<li>Sin sistema de cámaras/vigilancia sensorial del entorno</li>
+					<li>PDS</li>
+					<li>Soporte porta celular "Dockstation"</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Asiento posterior y respaldo no partido</li>
+					<li>Aire Acondicionado</li>
+					<li>Asiento de conductor con ajuste de altura</li>
+					<li>Asientos no calefaccionables</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Inserciones</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Sin multimedia" en el vehículo</li>
+					<li>Sin interface eléctrico</li>
+					<li>4 altavoces (pasivos) y 2 altavoces para agudos</li>
+					<li>MIB1-G estándar PQ radio 2-DIN resto del mundo</li>
+
+					<li><b>Navegación</b></li>
+					<li>Computadora de abordo</li>
+					<li>Soporte porta celular "Dockstation"</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante</li>
+					<li>Frenos de tambor posteriores</li>
+					<li>PAK</li>
+					<li>Aire Acondicionado</li>
+					<li>MIB1-G estándar PQ radio 2-DIN resto del mundo</li>
+					<li>Dirección asistida</li>
+					<li>Alternador trifásico 90 A</li>
+					<li>Filtro de polvo y polen</li>
+					<li>Frenos de disco anteriores, con soporte integrado</li>
+					<li>Inmovilizador electrónico</li>
+					<li>Sin control de presión de los neumáticos</li>
+					<li>Sin airbag lateral</li>
+					<li>Sin marco protector</li>
+					<li>Sin cierre centralizado</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/gol/Color/Color01.png" class="imgResponsiva" /><br />Plata Sirius</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/gol/Color/Color02.png" class="imgResponsiva" /><br />Gris Platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/gol/Color/Color03.png" class="imgResponsiva" /><br />Negro Ninja</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/gol/Color/Color04.png" class="imgResponsiva" /><br />Blanco Cristal</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/gol/Color/Color05.png" class="imgResponsiva" /><br />Rojo Flash</li>
+
+					<li class="sin-borde" style="clear:both"><b>Llantas/Neumáticos</b></li>
+					<li class="sin-borde">P7A</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Ayuda de aparcamiento</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>P7S</li>
+					<li>Aire Acondicionado</li>
+					<li>Filtro de polvo y polen</li>
+					<li>Alternador trifásico 90 A</li>
+
+					<li><b>Seguridad</b></li>
+					<li>W7C</li>
+					<li>Luz interior con interruptores de contacto/puertas</li>
+					<li>Alzacristales eléctricos delanteros</li>
+					<li>Frenos de disco anteriores, con soporte integrado</li>
+					<li>Cierre centralizado de puertas</li>
+					<li>Filtro de polvo y polen</li>
+					<li>Alternador trifásico 90 A</li>
+					<li>Aire Acondicionado</li>
+					<li>MIB1-G estándar PQ radio 2-DIN resto del mundo</li>
+					<li>Llave para sistema de cierre</li>
+					<li>Dirección asistida</li>
+
+					<li class="sin-borde">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<!-- COMFORTLINE -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/gol/Versiones/Versiones02-2.jpg" class="imgResponsiva" />
+			<h4>Comfortline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Motor 1.6 l de 101 CV</li>
+				<li>Pantalla de 8” con App Connect</li>
+				<li>Volante multifunción</li>
+				<li>Cierre centralizado con control</li>
+				<li>Sensores de estacionamiento</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="cross-up">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-cross-up">
+		<h1>Comfortline</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/gol/InfoTecnica/InfoTecnica01.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Volante Multifunción</li>
+					<li>Cierre centralizado de puertas</li>
+					<li>Alzacristales eléctricos delanteros</li>
+					<li>Panel de instrumentos con moldura especial</li>
+					<li>Espejos y manijas color carrocería</li>
+					<li>Llantas de aleación de 15" Sistema de audio "Composition Touch" con pantalla touchscreen 6,5", AM/FM, Bluetooth, Aux-in, USB, SD-card y App Connect</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Gol Comfortline 1.6l Nafta 101 CV Manual 5P</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación de 15"</li>
+					<li>PC5</li>
+
+					<li><b>Interior</b></li>
+					<li>Portaobjetos 1</li>
+					<li>Paquete Cromo</li>
+					<li>Techo moldeado en una pieza, confort</li>
+					<li>Pomo/empuñadura de la palanca de cambio en plástico</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tubo de escape final detrás (estándar)</li>
+					<li>Espejos y manijas color carrocería</li>
+					<li>Sin barras longitudinales del techo ni barras portaequipajes</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Sin spoiler posterior</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Sin embellecedores adicionales</li>
+					<li>4 puertas</li>
+
+					<li><b>Espejos</b></li>
+					<li>Regulación interna manual espejos exter.</li>
+					<li>Espejo interior de seguridad antideslumbrante</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Sin activación especial de las luces de marcha</li>
+					<li>Faros principales halógenos</li>
+					<li>Sin regulación alcance faros</li>
+					<li>P7F</li>
+					<li>Faros antiniebla (integrados)</li>
+					<li>Conjunto pilotos posteriores, versión normal</li>
+					<li>Limpiaparabrisas a intervalos, sin regulación</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Suspensión/amortiguación estándar</li>
+					<li>Sin ayuda de aparcamiento</li>
+					<li>Sin regulador de velocidad (GRA)</li>
+					<li>Sin sistema de cámaras/vigilancia sensorial del entorno</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Asiento posterior y respaldo no partido</li>
+					<li>Aire Acondicionado</li>
+					<li>Asiento de conductor con ajuste de altura</li>
+					<li>Asientos no calefaccionables</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Panel de instrumentos con moldura especial</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Mirror Link</li>
+					<li>Sin interface eléctrico</li>
+					<li>4 altavoces (pasivos) y 2 altavoces para agudos</li>
+					<li>Sistema de audio "Composition Touch" con pantalla touchscreen 6,5", AM/FM, Bluetooth, Aux-in, USB, SD-card y App Connect</li>
+
+					<li><b>Navegación</b></li>
+					<li>Computadora de abordo</li>
+					<li>Soporte porta celular "Dockstation"</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante Multifunción</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante</li>
+					<li>Frenos de tambor posteriores</li>
+					<li>Frenos de disco anteriores, con soporte integrado</li>
+					<li>Inmovilizador electrónico</li>
+					<li>Sin control de presión de los neumáticos</li>
+					<li>Sin airbag lateral</li>
+					<li>Sin marco protector</li>
+					<li>Cierre centralizado de puertas</li>
+					<li>Dirección asistida</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/gol/Color/Color01.png" class="imgResponsiva" /><br />Plata Sirius</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/gol/Color/Color02.png" class="imgResponsiva" /><br />Gris Platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/gol/Color/Color03.png" class="imgResponsiva" /><br />Negro Ninja</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/gol/Color/Color04.png" class="imgResponsiva" /><br />Blanco Cristal</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/gol/Color/Color05.png" class="imgResponsiva" /><br />Rojo Flash</li>
+
+					<li class="sin-borde" style="clear:both"><b>Llantas/Neumáticos</b></li>
+					<li class="sin-borde">P7A</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Ayuda de aparcamiento</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>P7S</li>
+					<li>Aire Acondicionado</li>
+					<li>Filtro de polvo y polen</li>
+					<li>Alternador trifásico 90 A</li>
+
+					<li><b>Seguridad</b></li>
+					<li>W7C</li>
+					<li>Luz interior con interruptores de contacto/puertas</li>
+					<li>Alzacristales eléctricos delanteros</li>
+					<li>Frenos de disco anteriores, con soporte integrado</li>
+					<li>Cierre centralizado de puertas</li>
+					<li>Filtro de polvo y polen</li>
+					<li>Alternador trifásico 90 A</li>
+					<li>Aire Acondicionado</li>
+					<li>MIB1-G estándar PQ radio 2-DIN resto del mundo</li>
+					<li>Llave para sistema de cierre</li>
+					<li>Dirección asistida</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<p class="paginadorVersiones visibleCelular">
+		<a href="#1" class="active">&nbsp;</a>
+		<a href="#2">&nbsp;</a>
+	</p>
+</div>
+
+
+<!----------------------------------ACCESORIOS---------------------------------->
+<!--
+<div class="divGaleria">
+	<div id="div-Brochure-Info">
+		<h2>Accesorios</h2>
+		<div id="div-Brochure-Boton">
+			<div id="div-Brochure-Boton-Inner">Accesorios</div>
+		</div>
+	</div>
+	<div id="div-Brochure-Imagen">
+		<img src="~/Content/info_modelos/gol/Accesorios/Accesorios.jpg" class="imgResponsiva" />
+	</div>
+</div>
+-->
+
+
+<!----------------------------------BROCHURE---------------------------------->
+<div id="divBrochure">
+	<div id="div-Brochure-Info">
+		<h2>Brochure<br />de Nuevo Gol</h2>
+		<a href="~/Content/info_modelos/gol/Brochure/Brochure-Gol.pdf" rel="external" class="linkDescargarBrochure" target="_blank">
+			<div id="div-Brochure-Boton">
+				<div id="div-Brochure-Boton-Inner">Descargalo</div>
+			</div>
+		</a>
+	</div>
+	<div id="div-Brochure-Imagen">
+		<img src="~/Content/info_modelos/gol/Brochure/Brochure2.jpg" class="imgResponsiva" />
+	</div>
+</div>
+
+@section footerModelo{
+
+	<a class="volverArriba oculto">
+		<div>
+			<img src="~/Content/img/iconos/flechaArribaDoble.svg" class="imgResponsiva svg" />
+		</div>
+	</a>
+
+
+	<div class="md-modal md-effect-12">
+		<h1>Accesorios Gol</h1>
+		<div class="md-contentAccesorios">
+			<div id="divGaleriaPopup-Imagenes" style="width: 60%; height: auto; margin: auto auto;">
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios01.jpg" class="imgResponsiva" />
+					<p>
+						Alarma | PMR-035-953-PX-PST
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios02.jpg" class="imgResponsiva" />
+					<p>
+						Cierre Centralizado (aplica a Gol Trend 5P) | PMR-959-000-05-5U0
+						<br>
+						Kit Alza Cristales (aplica a Gol Trend 5P) | PMR-837-000-05-5W0
+						<br>
+						Cierre Centralizado (aplica a Gol Trend 3P) | PMR-959-000-03-5U3
+						<br>
+						Kit Alza Cristales (aplica a Gol Trend 3P) | PMR-837-000-03-5U3
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios03.jpg" class="imgResponsiva" />
+					<p>
+						Cubre Carter | PMR-018-903
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios04.jpg" class="imgResponsiva" />
+					<p>
+						Tuercas de Seguridad | 000-071-595
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios05.jpg" class="imgResponsiva" />
+					<p>
+						Embellecedor válvula | 000-071-215-A
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios06.jpg" class="imgResponsiva" />
+					<p>
+						Alfombra PVC | PMR-867-700-04-5U0
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios07.jpg" class="imgResponsiva" />
+					<p>
+						Kit Faros de Neblina | PMR-052-184
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios08.jpg" class="imgResponsiva" />
+					<p>
+						Pedalera Deportiva (solo cambio manual) | APR-064-200
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios09.jpg" class="imgResponsiva" />
+					<p>
+						Llanta Mod. Sepang 15" | 5U0-601-025-H -Z31
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios10.jpg" class="imgResponsiva" />
+					<p>
+						Llanta Mod. Trinter 15" | 5U0-601-025-N Z-31
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios11.jpg" class="imgResponsiva" />
+					<p>
+						Llanta Mod. Selecao 16" | 5U0-601-025-P Z-31
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios12.jpg" class="imgResponsiva" />
+					<p>
+						Sensor de Estacionamiento | 5Z9-054-630
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios13.jpg" class="imgResponsiva" />
+					<p>
+						Espejo interior de Carbono | 000-072-548-  -Z57
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios14.jpg" class="imgResponsiva" />
+					<p>
+						Espejo interior Adicional | 000-072-549-A
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios15.jpg" class="imgResponsiva" />
+					<p>
+						Soporte básico - Sistema de viaje y confort | 000-061-122
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios16.jpg" class="imgResponsiva" />
+					<p>
+						Mesa Plegable - Sistema de Viaje y Confort | 000-061-124
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios17.jpg" class="imgResponsiva" />
+					<p>
+						Soporte GO PRO - Sistema de Viaje y Confort | 000-061-125-J
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios18.jpg" class="imgResponsiva" />
+					<p>
+						Porta Ipad - Sistema de Viaje y Confort | 000-061-125-A
+						<br>Porta Ipad mini - Sistema de Viaje y Confort | 000-061-125-B
+						<br>Porta Ipad Air - Sistema de Viaje y Confort | 000-061-125-C
+						<br>Porta Samsung Galaxy Tab 3/4 10.1" - Sistema de Viaje y Confort | 000-061-125-D
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios19.jpg" class="imgResponsiva" />
+					<p>
+						Soporte de Bolsas - Sistema de viaje y confort | 000-061-126-B
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios20.jpg" class="imgResponsiva" />
+					<p>
+						Percha de habitaculo - Sistema de viaje y confort | 000-061-127-B
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios21.jpg" class="imgResponsiva" />
+					<p>
+						Conservadora | 000-065-400-F
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios22.jpg" class="imgResponsiva" />
+					<p>
+						Bolsa para papeles | 000-061-107
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios23.jpg" class="imgResponsiva" />
+					<p>
+						Percha de habitaculo | 00V-061-127
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios24.jpg" class="imgResponsiva" />
+					<p>
+						Asiento para niños G0 Plus - ISOFIX (menos de 13kg) | 5G0-019-907
+						<br>Asiento para Niños G0 Plus (menos 13kg) | 5G0-019-900
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios25.jpg" class="imgResponsiva" />
+					<p>
+						Asiento para niños G1 - DUO ISOFIX +TOP TETHER (de 9 a 18 kg) | 5G0-019-909-A
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios26.jpg" class="imgResponsiva" />
+					<p>
+						Asiento para niños G2 (de 15 a 36 kg) | 5G0-019-906
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios27.jpg" class="imgResponsiva" />
+					<p>
+						Asiento de niños GTI | 1KV-019-903
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios28.jpg" class="imgResponsiva" />
+					<p>
+						Kit de Cuidado Automotor | 000-096-355-B
+					</p>
+				</div>
+				<div class="slick-div-aux-acc">
+					<img src="~/Content/info_modelos/gol/Accesorios/Accesorios29.jpg" class="imgResponsiva" />
+					<p>
+						Kit de Seguridad c/ extintor | PMR-BOL-SEG-B
+						<br>Kit de Seguridad s/ extintor | PMR-BOL-SEG-C
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="divCerrarGaleria">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg cruzCerrar" />
+		</div>
+	</div>
+	<div class="md-overlay"></div>
+	<br /><br />
+}

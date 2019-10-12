@@ -1,0 +1,320 @@
+﻿@model Matassi.Web.Areas.Web.Models.EncuestaVentas
+@using Matassi.Web.Clases
+@using Matassi.Web.Areas.Web.Models
+
+@{
+	ViewBag.Title = "Encuesta de satisfacción de clientes - Sector Ventas";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+<style type="text/css">
+	.btn_enviar {
+		width: 85px;
+		height: 24px;
+		float: right;
+		background: url('../../../../Content/images/btn_enviar.png') no-repeat 0 0;
+		margin-top: 10px;
+	}
+
+		.btn_enviar:hover {
+			width: 85px;
+			height: 24px;
+			background: url('../../../../Content/images/btn_enviar.png') no-repeat 0 -25px;
+		}
+
+
+	dt {
+		font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+		font-size: 14px;
+	}
+
+	dd {
+		display: block;
+		font-family: 'VWHeadWeb-Regular';
+		font-size: 12px;
+		margin-bottom: 20px;
+	}
+
+	.field-validation-error {
+		display: block;
+		font-family: 'VWHeadWeb-Regular';
+		color: #F00;
+		padding-top: 5px;
+		font-size: 12px;
+	}
+</style>
+
+<div class="infoModelo">
+	<a href="#" class="modeloActual">@ViewBag.Title</a>
+	<div class="infoModeloTitulos">
+		<ul class="">
+			<li>|</li>
+			<li>
+				<span></span>
+			</li>
+		</ul>
+	</div>
+</div>
+<div style="margin: 10px 9px 9px 9px; display:block; position: relative; height: auto; overflow:hidden;">
+	<div class="columnaIzquierda">
+		&nbsp;
+	</div>
+	<div class="columnaDerecha">
+		<img src="~/Content/images/FoxAsesoramiento.jpg" />
+		<div class="TituloPagina">@ViewBag.Title</div>
+		<div>
+			@using (Html.BeginForm("EncuestaSatisfaccionVenta", "Empresa", FormMethod.Post))
+			{
+				@Html.AntiForgeryToken()
+
+				<dl class="dl-horizontal">
+					<dt>
+						@Html.DisplayNameFor(model => model.NivelSatisfaccion)
+					</dt>
+
+					<dd>
+						@foreach (NivelSatisfaccion nivelSatisfaccion in NivelSatisfaccion.NivelesSatisfaccion())
+						{
+							<label>
+								@Html.RadioButton("NivelSatisfaccion", nivelSatisfaccion.Nivel)
+								@nivelSatisfaccion.Nivel
+							</label>
+					<!--, new { onclick = "changeImage(this);", -arroba-class = "radioID" })-->
+						}
+						<br />
+						@Html.ValidationMessageFor(model => model.NivelSatisfaccion)
+					</dd>
+
+					<dt>
+						@Html.DisplayNameFor(model => model.NivelSatisfaccionVendedor)
+					</dt>
+
+					<dd>
+						@foreach (NivelSatisfaccion nivelSatisfaccion in NivelSatisfaccion.NivelesSatisfaccion())
+						{
+							<label>
+								@Html.RadioButton("NivelSatisfaccionVendedor", nivelSatisfaccion.Nivel)
+								@nivelSatisfaccion.Nivel
+							</label>
+					<!--, new { onclick = "changeImage(this);", -arroba-class = "radioID" })-->
+						}
+						<br />
+						@Html.ValidationMessageFor(model => model.NivelSatisfaccionVendedor)
+					</dd>
+
+					<dt>
+						@Html.DisplayNameFor(model => model.NivelSatisfaccionConocimientoVendedor)
+					</dt>
+
+					<dd>
+						@foreach (NivelSatisfaccion nivelSatisfaccion in NivelSatisfaccion.NivelesSatisfaccion())
+						{
+							<label>
+								@Html.RadioButton("NivelSatisfaccionConocimientoVendedor", nivelSatisfaccion.Nivel)
+								@nivelSatisfaccion.Nivel
+							</label>
+					<!--, new { onclick = "changeImage(this);", -arroba-class = "radioID" })-->
+						}
+						<br />
+						@Html.ValidationMessageFor(model => model.NivelSatisfaccionConocimientoVendedor)
+					</dd>
+
+					<dt>
+						@Html.DisplayNameFor(model => model.PruebaManejo)
+					</dt>
+
+					<dd>
+						@foreach (NivelSatisfaccion nivelSatisfaccion in NivelSatisfaccion.NivelesSatisfaccion())
+						{
+							<label>
+								@Html.RadioButton("PruebaManejo", nivelSatisfaccion.Nivel)
+								@nivelSatisfaccion.Nivel
+							</label>
+					<!--, new { onclick = "changeImage(this);", -arroba-class = "radioID" })-->
+						}
+						<br />
+						@Html.ValidationMessageFor(model => model.PruebaManejo)
+					</dd>
+
+					<dt>
+						@Html.DisplayNameFor(model => model.NivelSatisfaccionAdministrativa)
+					</dt>
+
+					<dd>
+						@foreach (NivelSatisfaccion nivelSatisfaccion in NivelSatisfaccion.NivelesSatisfaccion())
+						{
+							<label>
+								@Html.RadioButton("NivelSatisfaccionAdministrativa", nivelSatisfaccion.Nivel)
+								@nivelSatisfaccion.Nivel
+							</label>
+					<!--, new { onclick = "changeImage(this);", -arroba-class = "radioID" })-->
+						}
+						<br />
+						@Html.ValidationMessageFor(model => model.NivelSatisfaccionAdministrativa)
+					</dd>
+
+					<dt>
+						@Html.DisplayNameFor(model => model.NivelSatisfaccionComunicacion)
+					</dt>
+
+					<dd>
+						@foreach (NivelSatisfaccion nivelSatisfaccion in NivelSatisfaccion.NivelesSatisfaccion())
+						{
+							<label>
+								@Html.RadioButton("NivelSatisfaccionComunicacion", nivelSatisfaccion.Nivel)
+								@nivelSatisfaccion.Nivel
+							</label>
+					<!--, new { onclick = "changeImage(this);", -arroba-class = "radioID" })-->
+						}
+						<br />
+						@Html.ValidationMessageFor(model => model.NivelSatisfaccionComunicacion)
+					</dd>
+
+					<dt>
+						@Html.DisplayNameFor(model => model.NivelSatisfaccionExplicacionTramites)
+					</dt>
+
+					<dd>
+						@foreach (NivelSatisfaccion nivelSatisfaccion in NivelSatisfaccion.NivelesSatisfaccion())
+						{
+							<label>
+								@Html.RadioButton("NivelSatisfaccionExplicacionTramites", nivelSatisfaccion.Nivel)
+								@nivelSatisfaccion.Nivel
+							</label>
+					<!--, new { onclick = "changeImage(this);", -arroba-class = "radioID" })-->
+						}
+						<br />
+						@Html.ValidationMessageFor(model => model.NivelSatisfaccionExplicacionTramites)
+					</dd>
+
+					<dt>
+						@Html.DisplayNameFor(model => model.NivelSatisfaccionEntrega)
+					</dt>
+
+					<dd>
+						@foreach (NivelSatisfaccion nivelSatisfaccion in NivelSatisfaccion.NivelesSatisfaccion())
+						{
+							<label>
+								@Html.RadioButton("NivelSatisfaccionEntrega", nivelSatisfaccion.Nivel)
+								@nivelSatisfaccion.Nivel
+							</label>
+					<!--, new { onclick = "changeImage(this);", -arroba-class = "radioID" })-->
+						}
+						<br />
+						@Html.ValidationMessageFor(model => model.NivelSatisfaccionEntrega)
+					</dd>
+
+					<dt>
+						@Html.DisplayNameFor(model => model.NivelSatisfaccionExplicacionFuncionamiento)
+					</dt>
+
+					<dd>
+						@foreach (NivelSatisfaccion nivelSatisfaccion in NivelSatisfaccion.NivelesSatisfaccion())
+						{
+							<label>
+								@Html.RadioButton("NivelSatisfaccionExplicacionFuncionamiento", nivelSatisfaccion.Nivel)
+								@nivelSatisfaccion.Nivel
+							</label>
+					<!--, new { onclick = "changeImage(this);", -arroba-class = "radioID" })-->
+						}
+						<br />
+						@Html.ValidationMessageFor(model => model.NivelSatisfaccionExplicacionFuncionamiento)
+					</dd>
+
+					<dt>
+						@Html.DisplayNameFor(model => model.NivelSatisfaccionCumplimientoFecha)
+					</dt>
+
+					<dd>
+						@foreach (NivelSatisfaccion nivelSatisfaccion in NivelSatisfaccion.NivelesSatisfaccion())
+						{
+							<label>
+								@Html.RadioButton("NivelSatisfaccionCumplimientoFecha", nivelSatisfaccion.Nivel)
+								@nivelSatisfaccion.Nivel
+							</label>
+					<!--, new { onclick = "changeImage(this);", -arroba-class = "radioID" })-->
+						}
+						<br />
+						@Html.ValidationMessageFor(model => model.NivelSatisfaccionCumplimientoFecha)
+					</dd>
+
+					<dt>
+						@Html.DisplayNameFor(model => model.InformaronContacto)
+					</dt>
+
+					<dd>
+						@Html.RadioButton("InformaronContacto", true, false) Si
+						@Html.RadioButton("InformaronContacto", false, false) No
+						<br />
+						@Html.ValidationMessageFor(model => model.InformaronContacto)
+					</dd>
+
+					<dt>
+						@Html.DisplayNameFor(model => model.ContactoVendedor)
+					</dt>
+
+					<dd>
+						@Html.RadioButton("ContactoVendedor", true, false) Si
+						@Html.RadioButton("ContactoVendedor", false, false) No
+						<br />
+						@Html.ValidationMessageFor(model => model.ContactoVendedor)
+					</dd>
+
+					<dt>
+						@Html.DisplayNameFor(model => model.VolveriaAComprar)
+					</dt>
+
+					<dd>
+						@Html.RadioButton("VolveriaAComprar", true, false) Si
+						@Html.RadioButton("VolveriaAComprar", false, false) No
+						<br />
+						@Html.ValidationMessageFor(model => model.VolveriaAComprar)
+					</dd>
+
+					<dt>
+						@Html.DisplayNameFor(model => model.InteresaAccesorio)
+					</dt>
+
+					<dd>
+						@Html.RadioButton("InteresaAccesorio", true, false) Si
+						@Html.RadioButton("InteresaAccesorio", false, false) No
+						<br />
+						@Html.ValidationMessageFor(model => model.InteresaAccesorio)
+					</dd>
+
+					<dt>
+						@Html.DisplayNameFor(model => model.Nombre)
+					</dt>
+
+					<dd>
+						@Html.TextBoxFor(model => model.Nombre)
+						<br />
+						@Html.ValidationMessageFor(model => model.Nombre)
+					</dd>
+
+					<dt>
+						@Html.DisplayNameFor(model => model.EMail)
+					</dt>
+
+					<dd>
+						@Html.TextBoxFor(model => model.EMail)
+						<br />
+						@Html.ValidationMessageFor(model => model.EMail)
+					</dd>
+
+					<dt>
+						@Html.DisplayNameFor(model => model.Telefono)
+					</dt>
+
+					<dd>
+						@Html.TextBoxFor(model => model.Telefono)
+						<br />
+						@Html.ValidationMessageFor(model => model.Telefono)
+					</dd>
+
+				</dl>
+				<input type="image" class="btn_enviar" src="~/Content/images/0.gif" value="Enviar" />
+			}
+		</div>
+	</div>
+</div>

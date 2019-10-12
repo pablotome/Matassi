@@ -1,0 +1,821 @@
+﻿@{
+    ViewBag.Title = "up";
+    Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+    @Styles.Render("~/bundles/estilosCSSModelo")
+    @Scripts.Render("~/bundles/funcionesModelo")
+}
+
+<div id="divBannerTituloModelo">
+    <span id="spnTituloModelo">
+        Amarok
+    </span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+    <ul id="ulListaCaracteristicasModelo">
+        <li class="liDisenio" data-divmodelos="divDisenio">Diseño</li>
+        <li class="liFuncionalidad" data-divmodelos="divFuncionalidad">Funcionalidad</li>
+        <li class="liMotor" data-divmodelos="divMotor">Motor</li>
+        <li class="liSeguridad" data-divmodelos="divSeguridad">Seguridad</li>
+        <li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+    </ul>
+</div>
+
+<div id="divImagenModelo">
+    <img src="~/Content/info_modelos/nueva_amarok/Amarok.jpg" class="imgResponsiva" />
+</div>
+
+<div id="divTituloModelo">
+    En el campo de la tecnología
+</div>
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+    <div class="iconoDesplegar">
+        <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+        <span>
+            Selecciona categoria
+        </span>
+    </div>
+    <ul class="oculto">
+        <li class="liDisenio" data-divmodelos="divDisenio">Diseño</li>
+        <li class="liFuncionalidad" data-divmodelos="divFuncionalidad">Funcionalidad</li>
+        <li class="liMotor" data-divmodelos="divMotor">Motor</li>
+        <li class="liSeguridad" data-divmodelos="divSeguridad">Seguridad</li>
+        <li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+    </ul>
+</div>
+
+
+<!----------------------------------DISEÑO---------------------------------->
+<div id="divDisenio" class="SeccionModelo">
+    <div class="TituloSeccion">
+        Diseño
+    </div>
+
+    <hr class="hrSeparadorItemsSeccion" />
+
+    <div class="Imagenes2Columnas">
+
+        <div class="iconoDesplegarSeccion">
+            <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+            <span>Diseño Exterior</span>
+        </div>
+
+        <div class="Imagenes2Columnas-Izquierda">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+                <img src="~/Content/info_modelos/nueva_amarok/Disenio/Disenio01.jpg" class="imgResponsiva" />
+            </div>
+            <div class="infoTextoColumna">
+                <h5>
+                    Diseño Exterior
+                </h5>
+                <h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+                    Un renovado diseño frontal que distingue aún más a la Amarok
+                </h3>
+                <p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+                    La Amarok no pasa desapercibida donde vaya, sus paragolpes de diseño atlético y deportivo en conjunto con la parrilla de doble grilla cromada dotan a la pick-up de un carácter robusto y deportivo.<br />
+                    En el frente del vehículo se destacan además los nuevos faros antiniebla rectangulares que le aportan más carácter y personalidad.
+                </p>
+            </div>
+        </div>
+
+        <div class="Imagenes2Columnas-Derecha ocultoCelular">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+                <img src="~/Content/info_modelos/nueva_amarok/Disenio/Disenio01.jpg" class="imgResponsiva" />
+            </div>
+        </div>
+    </div>
+
+    <hr class="hrSeparadorItemsSeccion" />
+
+    <div class="Imagenes2Columnas">
+
+        <div class="iconoDesplegarSeccion">
+            <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+            <span>Diseño Interior</span>
+        </div>
+
+        <div class="Imagenes2Columnas-Izquierda">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+                <img src="~/Content/info_modelos/nueva_amarok/Disenio/Disenio02.png" class="imgResponsiva" />
+            </div>
+        </div>
+
+        <div class="Imagenes2Columnas-Derecha ocultoCelular">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+                <img src="~/Content/info_modelos/nueva_amarok/Disenio/Disenio02.png" class="imgResponsiva" />
+            </div>
+            <div class="infoTextoColumna">
+                <h5>
+                    Diseño Interior
+                </h5>
+                <h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+                    El interior más amplio y confortable del segmento, ahora renovado.
+                </h3>
+                <p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+                    Totalmente renovado. Con un diseño elegante y moderno, Amarok refuerza su presencia con terminaciones muy delineadas y alta calidad de materiales.<br />
+                    La consola central y todos los elementos fueron pensados en función del conductor para permitir una conducción más práctica e intuitiva. Se aplican todas las reglas de la ergonomía para una conducción más confortable. Los elementos de mando y controles son prácticos, claros y accesibles.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="hrSeparadorItemsSeccion" />
+</div>
+
+<!----------------------------------FUNCIONALIDAD---------------------------------->
+<div id="divFuncionalidad" class="SeccionModelo">
+    <div class="TituloSeccion">
+        Funcionalidad
+    </div>
+
+    <hr class="hrSeparadorItemsSeccion" />
+
+    <div class="Imagenes2Columnas">
+
+        <div class="iconoDesplegarSeccion">
+            <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+            <span>Off-road</span>
+        </div>
+
+        <div class="Imagenes2Columnas-Izquierda">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+                <img src="~/Content/info_modelos/nueva_amarok/Funcionalidad/Funcionalidad01.png" class="imgResponsiva" />
+            </div>
+            <div class="infoTextoColumna">
+                <h5>
+                    Off-road
+                </h5>
+                <h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+                    50° de inclinación lateral/transversal y ABS Off-road.
+                </h3>
+                <p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+                    Asfalto, tierra, ripio. Con Amarok experimentará lo máximo en confort de conducción en todo tipo de terreno.
+                </p>
+            </div>
+        </div>
+
+        <div class="Imagenes2Columnas-Derecha ocultoCelular">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+                <img src="~/Content/info_modelos/nueva_amarok/Funcionalidad/Funcionalidad01.png" class="imgResponsiva" />
+            </div>
+        </div>
+    </div>
+
+    <hr class="hrSeparadorItemsSeccion" />
+
+    <div class="Imagenes2Columnas">
+
+        <div class="iconoDesplegarSeccion">
+            <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Off-road</span>
+        </div>
+
+        <div class="Imagenes2Columnas-Izquierda">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+                <img src="~/Content/info_modelos/nueva_amarok/Funcionalidad/Funcionalidad02.png" class="imgResponsiva" />
+            </div>
+        </div>
+
+        <div class="Imagenes2Columnas-Derecha ocultoCelular">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+                <img src="~/Content/info_modelos/nueva_amarok/Funcionalidad/Funcionalidad02.png" class="imgResponsiva" />
+            </div>
+            <div class="infoTextoColumna">
+                <h5>
+                    Off-road
+                </h5>
+                <h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+                    50° de inclinación lateral/transversal y ABS Off-road
+                </h3>
+                <p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+                    Este vehículo combina un gran despeje al suelo con la mejor estabilidad del conjunto chasis carrocería junto con la comprobada doble tracción 4MOTION.<br />
+                    La Amarok despliega todo su potencial en la ruta y ofrece la mejor tracción en curvas.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="hrSeparadorItemsSeccion" />
+</div>
+
+<!----------------------------------MOTOR---------------------------------->
+<div id="divMotor" class="SeccionModelo">
+    <div class="TituloSeccion">
+        Motor
+    </div>
+
+    <hr class="hrSeparadorItemsSeccion" />
+
+    <div class="Imagenes2Columnas">
+
+        <div class="iconoDesplegarSeccion">
+            <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+            <span>Potencia</span>
+        </div>
+
+        <div class="Imagenes2Columnas-Izquierda">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+                <img src="~/Content/info_modelos/nueva_amarok/Motor/Motor01.png" class="imgResponsiva" />
+            </div>
+        </div>
+
+        <div class="Imagenes2Columnas-Derecha ocultoCelular">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+                <img src="~/Content/info_modelos/nueva_amarok/Motor/Motor01.png" class="imgResponsiva" />
+            </div>
+            <div class="infoTextoColumna">
+                <h5>
+                    Potencia
+                </h5>
+                <h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+                    Motor
+                </h3>
+                <p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+                    Poderoso como ninguno: el nuevo motor turbodiésel V6 3.0L de 224 cv permite superar las situaciones más exigentes. Para obtener aún más potencia la función de refuerzo "overboost" aumenta brevemente su rendimiento hasta 20 cv en función de las necesidades de conducción.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="hrSeparadorItemsSeccion" />
+
+    <div class="Imagenes2Columnas">
+
+        <div class="iconoDesplegarSeccion">
+            <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Potencia</span>
+        </div>
+
+        <div class="Imagenes2Columnas-Izquierda">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+                <img src="~/Content/info_modelos/nueva_amarok/Motor/Motor02.png" class="imgResponsiva" />
+            </div>
+            <div class="infoTextoColumna">
+                <h5>
+                    Potencia
+                </h5>
+                <h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+                    Motor
+                </h3>
+                <p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+                    Caja de cambios automática de 8 velocidades y doble tracción 4MOTION permanente. Amarok es el único vehículo que ofrece la combinación exclusiva de caja automática de 8 velocidades y doble tracción 4MOTION permanente. La primera marcha está diseñada para la conducción todo terreno, mientras que la octava está optimizada para un andar eficiente a bajos regímenes del motor.
+                </p>
+            </div>
+        </div>
+
+        <div class="Imagenes2Columnas-Derecha ocultoCelular">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+                <img src="~/Content/info_modelos/nueva_amarok/Motor/Motor02.png" class="imgResponsiva" />
+            </div>
+        </div>
+    </div>
+
+    <hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------SEGURIDAD---------------------------------->
+<div id="divSeguridad" class="SeccionModelo">
+    <div class="TituloSeccion">
+        Seguridad
+    </div>
+
+    <hr class="hrSeparadorItemsSeccion" />
+
+    <div class="Imagenes2Columnas">
+
+        <div class="iconoDesplegarSeccion">
+            <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+            <span>Seguridad</span>
+        </div>
+
+        <div class="Imagenes2Columnas-Izquierda">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+                <img src="~/Content/info_modelos/nueva_amarok/Seguridad/Seguridad01.png" class="imgResponsiva" />
+            </div>
+        </div>
+
+        <div class="Imagenes2Columnas-Derecha ocultoCelular">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+                <img src="~/Content/info_modelos/nueva_amarok/Seguridad/Seguridad01.png" class="imgResponsiva" />
+            </div>
+            <div class="infoTextoColumna">
+                <h5>
+                    Seguridad
+                </h5>
+                <h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+                    Frenos
+                </h3>
+                <p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+                    Nuevo sistema de frenado automático postcolisión. Acciona los frenos después de un choque con el propósito de evitar choques secundarios. Después de un breve retardo, el vehículo inicia una acción de frenado gradual hasta los 10 km/h. Control de estabilidad ESP. Evita que el vehículo se desestabilice mediante el frenado selectivo de las ruedas individualmente.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="hrSeparadorItemsSeccion" />
+
+    <div class="Imagenes2Columnas">
+
+        <div class="iconoDesplegarSeccion">
+            <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Seguridad</span>
+        </div>
+
+        <div class="Imagenes2Columnas-Izquierda">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+                <img src="~/Content/info_modelos/nueva_amarok/Seguridad/Seguridad02.png" class="imgResponsiva" />
+            </div>
+            <div class="infoTextoColumna">
+                <h5>
+                    Seguridad
+                </h5>
+                <h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+                    Asistentes
+                </h3>
+                <p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+                    Faros antiniebla con luz estática de curva integrada. Garantiza una visibilidad óptima en condiciones de mal tiempo. El faro más cercano al giro ilumina el borde del camino mientras se gira. Asistencia de arranque en pendiente. Impide que el vehículo ruede hacia atrás en pendientes y facilita el arranque en pendientes ascendentes. Asistencia de descenso en pendiente. Permite descender pendientes de forma segura y controlada a velocidad reducida mediante el control de la velocidad del motor y la aplicación de los frenos, en caso de ser necesario.
+                </p>
+            </div>
+        </div>
+
+        <div class="Imagenes2Columnas-Derecha ocultoCelular">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+                <img src="~/Content/info_modelos/nueva_amarok/Seguridad/Seguridad02.png" class="imgResponsiva" />
+            </div>
+        </div>
+    </div>
+
+    <hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------VERSIONES---------------------------------->
+<div id="divVersiones" class="SeccionModelo">
+    <div class="TituloSeccion">
+        Versiones
+    </div>
+
+    <!----------------------------------TRENDLINE---------------------------------->
+    <div class="div-version-modelo">
+        <div class="div-version-modelo-auto">
+            <img src="~/Content/info_modelos/nueva_amarok/Versiones/Versiones01.png" class="imgResponsiva" />
+            <h4>Trendline</h4>
+        </div>
+        <div class="div-version-modelo-texto">
+            <ul>
+                <li>Llantas de aleación 16”</li>
+                <li>Revestimiento de asientos en cuerina</li>
+                <li>Asientos delanteros regulables en altura y trasero rebatible</li>
+                <li>Sensor de estacionamiento trasero</li>
+                <li>Radio "RCD 230G" con CD, MP3, USB, SD Card, Entrada Aux.,conectividad i-Pod y Bluetooth</li>
+            </ul>
+        </div>
+        <div class="div-version-modelo-botones">
+            <div class="div-boton-info-tecnica" data-modelo="Trendline1">
+                <div>Información Técnica</div>
+            </div>
+        </div>
+    </div>
+    <div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Trendline1">
+        <h1>Trend</h1>
+        <div class="div-info-tecnica-modelo-imagen">
+            <img src="~/Content/info_modelos/nueva_amarok/InfoTecnica/InfoTecnica01.png" class="imgResponsiva" />
+        </div>
+        <div class="div-items-informacion-tecnica">
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Características
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li>Llantas de aleación 16”</li>
+                    <li>Revestimiento de asientos en cuerina</li>
+                    <li>Asientos delanteros regulables en altura y trasero rebatible</li>
+                    <li>Sensor de estacionamiento trasero</li>
+                    <li>Radio "RCD 230G" con CD, MP3, USB, SD Card, Entrada Aux.,conectividad i-Pod y Bluetooth</li>
+                </ul>
+            </div>
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Datos técnicos
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li class="sin-borde">Amarok Cabina Doble 2.0 TDI 140 CV / 103 kW 4X2</li>
+                    <li class="sin-borde">Amarok Cabina Doble 2.0 TDI 4MO 140 CV / 103 kW 4X4</li>
+                </ul>
+            </div>
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Equipamiento de serie
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li>??</li>
+                </ul>
+            </div>
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Equipamiento opcional
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li>??</li>
+                </ul>
+            </div>
+        </div>
+        <div class="div-items-informacion-tecnica-cerrar">
+            <img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+        </div>
+    </div>
+
+    <!----------------------------------TRENDLINE---------------------------------->
+    <div class="div-version-modelo">
+        <div class="div-version-modelo-auto">
+            <img src="~/Content/info_modelos/nueva_amarok/Versiones/Versiones02.png" class="imgResponsiva" />
+            <h4>Trendline</h4>
+        </div>
+        <div class="div-version-modelo-texto">
+            <ul>
+                <li>Llantas de aleación 16”</li>
+                <li>Revestimiento de asientos en cuerina</li>
+                <li>Asientos delanteros regulables en altura y trasero rebatible</li>
+                <li>Sensor de estacionamiento trasero</li>
+                <li>Radio "RCD 230G" con CD, MP3, USB, SD Card, Entrada Aux.,conectividad i-Pod y Bluetooth</li>
+            </ul>
+        </div>
+        <div class="div-version-modelo-botones">
+            <div class="div-boton-info-tecnica" data-modelo="Trendline2">
+                <div>Información Técnica</div>
+            </div>
+        </div>
+    </div>
+    <div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Trendline2">
+        <h1>Trend</h1>
+        <div class="div-info-tecnica-modelo-imagen">
+            <img src="~/Content/info_modelos/nueva_amarok/InfoTecnica/InfoTecnica02.png" class="imgResponsiva" />
+        </div>
+        <div class="div-items-informacion-tecnica">
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Características
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li>Llantas de aleación 16”</li>
+                    <li>Revestimiento de asientos en cuerina</li>
+                    <li>Asientos delanteros regulables en altura y trasero rebatible</li>
+                    <li>Sensor de estacionamiento trasero</li>
+                    <li>Radio "RCD 230G" con CD, MP3, USB, SD Card, Entrada Aux.,conectividad i-Pod y Bluetooth</li>
+                </ul>
+            </div>
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Datos técnicos
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li class="sin-borde">Amarok Cabina Doble 2.0 TDI 140 CV / 103 kW 4X2</li>
+                    <li class="sin-borde">Amarok Cabina Doble 2.0 TDI 4MO 140 CV / 103 kW 4X4</li>
+                </ul>
+            </div>
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Equipamiento de serie
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li>??</li>
+                </ul>
+            </div>
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Equipamiento opcional
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li>??</li>
+                </ul>
+            </div>
+        </div>
+        <div class="div-items-informacion-tecnica-cerrar">
+            <img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+        </div>
+    </div>
+
+    <!----------------------------------COMFORTLINE---------------------------------->
+    <div class="div-version-modelo">
+        <div class="div-version-modelo-auto">
+            <img src="~/Content/info_modelos/nueva_amarok/Versiones/Versiones03.png" class="imgResponsiva" />
+            <h4>Comfortline</h4>
+        </div>
+        <div class="div-version-modelo-texto">
+            <ul>
+                <li>Llantas de aleación 17”</li>
+                <li>Tapizado de tela "Kemisu"</li>
+                <li>Sensor de estacionamiento delantero y trasero</li>
+                <li>Motorizaciónes 2.0 TDI 180cv y V6 3.0 TDI 224cv (Nueva Comfortline V6)</li>
+                <li>Radio "Composition Media" con CD, MP3, USB, SD Card, Entrada Aux., conectividad i-Pod y Bluetooth y App-Connect</li>
+            </ul>
+        </div>
+        <div class="div-version-modelo-botones">
+            <div class="div-boton-info-tecnica" data-modelo="Comfortline">
+                <div>Información Técnica</div>
+            </div>
+        </div>
+    </div>
+    <div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Comfortline">
+        <h1>Comfortline</h1>
+        <div class="div-info-tecnica-modelo-imagen">
+            <img src="~/Content/info_modelos/nueva_amarok/InfoTecnica/InfoTecnica03.png" class="imgResponsiva" />
+        </div>
+        <div class="div-items-informacion-tecnica">
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Características
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li>Llantas de aleación 17”</li>
+                    <li>Tapizado de tela "Kemisu"</li>
+                    <li>Sensor de estacionamiento delantero y trasero</li>
+                    <li>Motorizaciónes 2.0 TDI 180cv y V6 3.0 TDI 224cv (Nueva Comfortline V6)</li>
+                    <li>Radio "Composition Media" con CD, MP3, USB, SD Card, Entrada Aux., conectividad i-Pod y Bluetooth y App-Connect</li>
+                </ul>
+            </div>
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Datos técnicos
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li class="sin-borde">Amarok Cabina Doble 2.0 TDI 180 CV / 132 kW 4X2</li>
+                    <li class="sin-borde">Amarok Cabina Doble 2.0 TDI 180 CV / 132 kW 4X4</li>
+                    <li class="sin-borde">Amarok Cabina Doble 2.0 TDI 180 CV / 132 kW Aut 4X2</li>
+                    <li class="sin-borde">Amarok Cabina Doble 2.0 TDI 180 CV / 132 kW AUT 4X4</li>
+                </ul>
+            </div>
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Equipamiento de serie
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li>??</li>
+                </ul>
+            </div>
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Equipamiento opcional
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li>??</li>
+                </ul>
+            </div>
+        </div>
+        <div class="div-items-informacion-tecnica-cerrar">
+            <img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+        </div>
+    </div>
+
+    <!----------------------------------HIGHLINE---------------------------------->
+    <div class="div-version-modelo">
+        <div class="div-version-modelo-auto">
+            <img src="~/Content/info_modelos/nueva_amarok/Versiones/Versiones04.png" class="imgResponsiva" />
+            <h4>Highline</h4>
+        </div>
+        <div class="div-version-modelo-texto">
+            <ul>
+                <li>Llantas aleación 18"</li>
+                <li>Asientos delanteros regulables eléctricamente</li>
+                <li>Climatizador automático "Climatronic" bizona</li>
+                <li>Cámara de retroceso</li>
+                <li>Radio "Discover Media"con CD, MP3, USB, SD Card, Entrada Aux., conectividad i-Pod y Bluetooth, App-Connect y Navegador</li>
+            </ul>
+        </div>
+        <div class="div-version-modelo-botones">
+            <div class="div-boton-info-tecnica" data-modelo="Highline1">
+                <div>Información Técnica</div>
+            </div>
+        </div>
+    </div>
+    <div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Highline1">
+        <h1>Highline</h1>
+        <div class="div-info-tecnica-modelo-imagen">
+            <img src="~/Content/info_modelos/nueva_amarok/InfoTecnica/InfoTecnica04.png" class="imgResponsiva" />
+        </div>
+        <div class="div-items-informacion-tecnica">
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Características
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li>Llantas aleación 18"</li>
+                    <li>Asientos delanteros regulables eléctricamente</li>
+                    <li>Climatizador automático "Climatronic" bizona</li>
+                    <li>Cámara de retroceso</li>
+                    <li>Radio "Discover Media"con CD, MP3, USB, SD Card, Entrada Aux., conectividad i-Pod y Bluetooth, App-Connect y Navegador</li>
+                </ul>
+            </div>
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Datos técnicos
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li class="sin-borde">Amarok Cabina Doble 2.0 TDI 180 CV / 132 kW 4X2</li>
+                    <li class="sin-borde">Amarok Cabina Doble 2.0 TDI 180 CV / 132 kW 4X4</li>
+                    <li class="sin-borde">Amarok Cabina Doble 2.0 TDI 180 CV / 132 kW AUT 4X2</li>
+                    <li class="sin-borde">Amarok Cabina Doble 2.0 TDI 180 CV / 132 kW AUT 4X4</li>
+                </ul>
+            </div>
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Equipamiento de serie
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li>??</li>
+                </ul>
+            </div>
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Equipamiento opcional
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li>??</li>
+                </ul>
+            </div>
+        </div>
+        <div class="div-items-informacion-tecnica-cerrar">
+            <img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+        </div>
+    </div>
+
+    <!----------------------------------HIGHLINE---------------------------------->
+    <div class="div-version-modelo">
+        <div class="div-version-modelo-auto">
+            <img src="~/Content/info_modelos/nueva_amarok/Versiones/Versiones05.png" class="imgResponsiva" />
+            <h4>Highline</h4>
+        </div>
+        <div class="div-version-modelo-texto">
+            <ul>
+                <li>Frenos a disco en las 4 ruedas</li>
+                <li>Barra de estilo de acero inoxidable</li>
+                <li>Llantas de aleación 19”</li>
+                <li>Tapizado de cuero "Nappa"</li>
+            </ul>
+        </div>
+        <div class="div-version-modelo-botones">
+            <div class="div-boton-info-tecnica" data-modelo="Highline2">
+                <div>Información Técnica</div>
+            </div>
+        </div>
+    </div>
+    <div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Highline2">
+        <h1>Highline</h1>
+        <div class="div-info-tecnica-modelo-imagen">
+            <img src="~/Content/info_modelos/nueva_amarok/InfoTecnica/InfoTecnica05.png" class="imgResponsiva" />
+        </div>
+        <div class="div-items-informacion-tecnica">
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Características
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li>Frenos a disco en las 4 ruedas</li>
+                    <li>Barra de estilo de acero inoxidable</li>
+                    <li>Llantas de aleación 19”</li>
+                    <li>Tapizado de cuero "Nappa"</li>
+                </ul>
+            </div>
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Datos técnicos
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li class="sin-borde">Amarok Cabina Doble 3.0 V6 TDI 4MO AUT 4X4</li>
+                </ul>
+            </div>
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Equipamiento de serie
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li>??</li>
+                </ul>
+            </div>
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Equipamiento opcional
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li>??</li>
+                </ul>
+            </div>
+        </div>
+        <div class="div-items-informacion-tecnica-cerrar">
+            <img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+        </div>
+    </div>
+
+    <!----------------------------------HIGHLINE---------------------------------->
+    <div class="div-version-modelo">
+        <div class="div-version-modelo-auto">
+            <img src="~/Content/info_modelos/nueva_amarok/Versiones/Versiones06.png" class="imgResponsiva" />
+            <h4>Highline</h4>
+        </div>
+        <div class="div-version-modelo-texto">
+            <ul>
+                <li>Llantas de aleación 20”</li>
+                <li>Frenos a disco en las cuatro ruedas</li>
+                <li>Computadora de abordo multifunción "Premium Color"</li>
+                <li>Sportsbar color carrocería</li>
+            </ul>
+        </div>
+        <div class="div-version-modelo-botones">
+            <div class="div-boton-info-tecnica" data-modelo="Highline3">
+                <div>Información Técnica</div>
+            </div>
+        </div>
+    </div>
+    <div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Highline3">
+        <h1>Highline</h1>
+        <div class="div-info-tecnica-modelo-imagen">
+            <img src="~/Content/info_modelos/nueva_amarok/InfoTecnica/InfoTecnica06.png" class="imgResponsiva" />
+        </div>
+        <div class="div-items-informacion-tecnica">
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Características
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li>Llantas de aleación 20”</li>
+                    <li>Frenos a disco en las cuatro ruedas</li>
+                    <li>Computadora de abordo multifunción "Premium Color"</li>
+                    <li>Sportsbar color carrocería</li>
+                </ul>
+            </div>
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Datos técnicos
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li class="sin-borde">Amarok Cabina Doble 3.0 V6 TDI 4MO AUT 4X4</li>
+                </ul>
+            </div>
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Equipamiento de serie
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li>??</li>
+                </ul>
+            </div>
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Equipamiento opcional
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li>??</li>
+                </ul>
+            </div>
+        </div>
+        <div class="div-items-informacion-tecnica-cerrar">
+            <img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+        </div>
+    </div>
+
+</div>
+
+
+<!--BROCHURE-->
+<div id="divBrochure">
+	<div id="div-Brochure-Info">
+		<h2>Brochure<br />de Amarok</h2>
+		<a href="~/Content/info_modelos/nueva_amarok/Brochure/Brochure.pdf" rel="external" class="linkDescargarBrochure" target="_blank">
+			<div id="div-Brochure-Boton">
+				<div id="div-Brochure-Boton-Inner">Descargalo</div>
+			</div>
+		</a>
+	</div>
+    <div id="div-Brochure-Imagen">
+        <img src="~/Content/info_modelos/nueva_amarok/Brochure/Brochure.jpg" class="imgResponsiva" />
+    </div>
+</div>

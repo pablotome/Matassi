@@ -1,0 +1,176 @@
+﻿@model List<Matassi.Dominio.PlanAutoahorro>
+@using Matassi.Dominio
+@using Matassi.Web.Areas.Web.Models
+
+@{
+	ViewBag.Title = "Planes";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+<style type="text/css">
+	.row {
+		display: -webkit-flex;
+		display: flex;
+		margin-top: 3px;
+		margin-bottom: 15px;
+	}
+
+	.col, .colVacio {
+		-webkit-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+		height: auto;
+		background-color: rgb(234, 238, 237);
+		margin-left: 6px;
+		margin-right: 6px;
+		padding-bottom: 10px;
+	}
+
+	.colVacio {
+		background-color: rgb(255, 255, 255);
+	}
+</style>
+
+<div class="infoModelo">
+	<a href="#" class="modeloActual">@ViewBag.Title</a>
+	<div class="infoModeloTitulos">
+		<ul class="">
+			<li>|</li>
+			<li>
+				<span></span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div style="margin: 10px 9px 9px 9px; display:block; position: relative; height: auto; overflow:hidden;">
+	<div class="columnaIzquierda">
+		&nbsp;
+	</div>
+	<div class="columnaDerecha">
+		<div style="text-align:center;">
+			<img src="~/Content/images/Autoahorro20170809.jpg" />
+		</div>
+		<div class="TituloPagina">@ViewBag.Title</div>
+
+
+
+		@{
+			int filasCompletas = Model.Count() / 4;
+			int columnasFaltantes = 4 - Model.Count() % 4;
+
+			if (columnasFaltantes == 4)
+			{
+				columnasFaltantes = 0;
+			}
+
+			for (int fila = 0; fila < filasCompletas + 1; fila += 1)
+			{
+				@Html.Raw("<div class=\"row\">")
+				for (int columna = (4 * fila); columna < 4 + (4 * fila); columna++)
+				{
+					if (columna < Model.Count)
+					{
+						<div class="col">
+							<div class="dataListItem">
+								<div class="plan-Modelo">@Model[columna].Titulo</div>
+								<div class="plan-Imagen">
+									<img src='@Url.Action("VerImagenPlanAutoahorro", new { codPlanAutoahorro = Model[columna].CodPlanAutoahorro })' />
+								</div>
+								<div class="plan-Descripcion">
+									@Model[columna].Subtitulo<br />
+								</div>
+								<div class="plan-Caracteristicas">
+									<ul>
+										@if (Model[columna].CuotasPlanAutoahorro.Count > 0)
+										{
+											foreach (ValorCuotaPlanAutoahorro valorCuotaPlanAutoahorro in Model[columna].CuotasPlanAutoahorro)
+											{
+												<li>@valorCuotaPlanAutoahorro.RangoCuota: $ @valorCuotaPlanAutoahorro.Valor</li>
+											}
+										}
+									</ul>
+								</div>
+								<div class="plan-Contacto">
+									@Html.ActionLink("Contáctenos", "ContactoPlan", "Home", new PlanAutoahorro() { CodPlanAutoahorro = Model[columna].CodPlanAutoahorro }, new { @style = "text-decoration:none;" })
+								</div>
+							</div>
+
+						</div>
+					}
+					else
+					{
+						@Html.Raw("<div class=\"colVacio\"></div>")
+					}
+				}
+				@Html.Raw("</div>")
+			}
+
+
+
+
+		}
+
+	</div>
+</div>
+
+
+
+
+
+<style>
+	.plan-Modelo {
+		background-color: #bac2c5;
+		font-family: 'VWHeadWeb-Bold', Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		padding: 5px;
+	}
+
+	.plan-Imagen {
+		min-height: 120px;
+		text-align: center;
+	}
+
+	.plan-Descripcion {
+		font-family: 'VWHeadWeb-Bold', Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		padding-top: 3px;
+		padding-bottom: 2px;
+		padding-left: 5px;
+		color: rgb(51, 51, 51);
+	}
+
+	.plan-Caracteristicas ul {
+		list-style: square;
+		padding-left: 20px;
+		padding-top: 3px;
+	}
+
+		.plan-Caracteristicas ul li {
+			font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+			font-size: 12px;
+			padding-top: 3px;
+			padding-bottom: 2px;
+			color: rgb(51, 51, 51);
+		}
+
+	.plan-Contacto{
+		margin-top: 10px;
+		font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		padding-top: 3px;
+		padding-bottom: 2px;
+		padding-left: 10px;
+		color: rgb(0, 0, 255);
+	}
+
+	#contractCoverablesGrid {
+		margin-top: 0px;
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+	}
+
+	.dataListItem {
+		height: auto;
+	}
+</style>

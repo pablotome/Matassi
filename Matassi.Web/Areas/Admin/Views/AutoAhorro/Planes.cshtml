@@ -1,0 +1,67 @@
+﻿@using Matassi.Dominio
+@model IEnumerable<Matassi.Dominio.PlanAutoahorro>
+
+@{
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			<h2>@ViewBag.Title</h2>
+
+			<p class="nuevoItem">
+				@Html.ActionLink("Nuevo Plan", "NuevoPlan", null, new { @class = "btn btn-primary" })
+			</p>
+		</td>
+	</tr>
+</table>
+
+<table class="table tabla-centrada">
+	<tr>
+		<th class="oculto">
+			CodPlanAutoahorro
+		</th>
+		<th>
+			Titulo
+		</th>
+		<th>
+			Subtitulo
+		</th>
+		<th>
+			Orden
+		</th>
+		<th>
+			Vigente
+		</th>
+		<th></th>
+	</tr>
+
+	@if (Model != null)
+	{
+		foreach (var item in Model)
+		{
+			<tr>
+				<td class="oculto">
+					@Html.DisplayFor(modelItem => item.CodPlanAutoahorro)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Titulo)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Subtitulo)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Orden)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Vigente)
+				</td>
+				<td align="center">
+					@Html.ActionLink("Editar", "EditarPlan", new { codPlanAutoahorro = item.CodPlanAutoahorro }) |
+					@Html.ActionLink("Cuotas", "Cuotas", new { codPlanAutoahorro = item.CodPlanAutoahorro })
+				</td>
+			</tr>
+		}
+	}
+</table>

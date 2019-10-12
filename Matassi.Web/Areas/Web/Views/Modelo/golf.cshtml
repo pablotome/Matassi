@@ -1,0 +1,683 @@
+﻿@{
+	ViewBag.Title = "up";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+	@Styles.Render("~/bundles/estilosCSSModelo")
+	@Scripts.Render("~/bundles/funcionesModelo")
+}
+
+<div id="divBannerTituloModelo">
+	<span id="spnTituloModelo">
+		Golf
+	</span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+	<ul id="ulListaCaracteristicasModelo">
+		<li class="liDisenio" data-divmodelos="divDisenio">Diseño</li>
+		<li class="liInnovacion" data-divmodelos="divInnovacion">Innovación</li>
+		<li class="liConfort" data-divmodelos="divConfort">Confort</li>
+		<li class="liNovedades" data-divmodelos="divNovedades">Novedades</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+<div id="divImagenModelo">
+	<img src="~/Content/info_modelos/golf/Golf.jpg" class="imgResponsiva" />
+</div>
+
+<div id="divTituloModelo">
+	Deportivo, elegante, exclusivo. Descubrí el Nuevo Golf.<br /><br />
+</div>
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+	<div class="iconoDesplegar">
+		<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+		<span>
+			Selecciona categoria
+		</span>
+	</div>
+	<ul class="oculto">
+		<li class="liDisenio" data-divmodelos="divDisenio">Diseño</li>
+		<li class="liInnovacion" data-divmodelos="divInnovacion">Innovación</li>
+		<li class="liConfort" data-divmodelos="divConfort">Confort</li>
+		<li class="liNovedades" data-divmodelos="divNovedades">Novedades</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+
+<!----------------------------------DISEÑO---------------------------------->
+<div id="divDisenio" class="SeccionModelo">
+	<div class="TituloSeccion">
+		El mito se renueva.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>El mito se renueva.</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/golf/Disenio/Disenio01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>Elegante y progresivo.</h5>
+				<h3>Así es el nuevo Golf</h3>
+				<p>Único e irrepetible, el Nuevo Golf fue diseñado con una personalidad propia. Concebidos con un fuerte espíritu deportivo, sus elementos de diseño lo hacen portador de un distinguido estilo donde dinamismo, agilidad y confort significan el siguiente paso evolutivo en conducción.</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/golf/Disenio/Disenio01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Sensaciones</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/golf/Disenio/Disenio02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/golf/Disenio/Disenio02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>Sensaciones</h5>
+				<h3>Conducción intuitiva.</h3>
+				<p>Para ofrecer una experiencia de manejo aún más práctica e intuitiva, aplicamos todas las reglas de la ergonomía que puedas disfrutar tus viajes de la manera más confortable. Las funciones interactivas del diseño ergonómico significan una revolución de confort.</p>
+			</div>
+		</div>
+
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------INNOVACIÓN---------------------------------->
+<div id="divInnovacion" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Innovación
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Evolución en tecnología.</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/golf/Innovacion/Innovacion01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>Siempre conectado.</h5>
+				<h3>Info-entretenimiento</h3>
+				<p>El Nuevo Golf se sumerge en la conectividad gracias al diseño de su Sistema de Audio completamente táctil. Sentite conectado con el mundo que te rodea y disfrutá tus viajes sabiendo que tenés lo último en tecnología siempre a tu lado.</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/golf/Innovacion/Innovacion01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Mirada impactante.</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/golf/Innovacion/Innovacion02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/golf/Innovacion/Innovacion02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>Mirada impactante.</h5>
+				<h3>Full LED</h3>
+				<p>La inclusión de proyectores principales en LED hacen del Nuevo Golf un auto adaptable a todo. Su mirada impactante no sólo suma a la seguridad de tus viajes sino que te permite disfrutar una experiencia placentera al volante como nunca antes.</p>
+			</div>
+		</div>
+
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------CONFORT---------------------------------->
+<div id="divConfort" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Mucho por disfrutar.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Calidad superior.</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/golf/Confort/Confort01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>Calidad superior.</h5>
+				<h3>Un auto para toda la vida.</h3>
+				<p>Golf es sinónimo de equipamiento de alta calidad. Cada componente en acción fue armado con materiales diseñados perfectamente para su combinación. Confía en que tus viajes están en manos de todo lo que el Nuevo Golf tiene para ofrecer.</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/golf/Confort/Confort01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Todo al alcance de tu mano.</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/golf/Confort/Confort02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/golf/Confort/Confort02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>Todo al alcance de tu mano.</h5>
+				<h3>Seguridad al volante</h3>
+				<p>Además de ser fiel a su estilo, el Nuevo Golf incorpora lo último en tecnología y diseño para brindar una mejor experiencia al volante.</p>
+			</div>
+		</div>
+
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------NOVEDADES---------------------------------->
+<div id="divNovedades" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Muchos cambios, mismo espíritu.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Rejuvenece con el paso del tiempo.</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/golf/Novedades/Novedades01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>Rejuvenece con el paso del tiempo.</h5>
+				<h3>Exterior</h3>
+				<p>Nuevos faros, nuevas llantas, nuevos paragolpes, nueva estética. El Nuevo Golf es el único vehículo que parece rejuvenecer con el paso del tiempo. Su diseño fue especialmente ideado para mantener un look fresco y un estilo siempre atractivo.</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/golf/Novedades/Novedades01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>El lugar que elegís.</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/golf/Novedades/Novedades02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/golf/Novedades/Novedades02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>El lugar que elegís.</h5>
+				<h3>Interior</h3>
+				<p>El Nuevo Golf incorpora novedosos sistemas de info-entretenimiento totalmente táctiles. También incorpora los sistemas de cruise control en todas sus versiones y la cámara de retroceso para estacionar desde versión Comfortline.</p>
+			</div>
+		</div>
+
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------VERSIONES---------------------------------->
+<div id="divVersiones" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Versiones
+	</div>
+
+	<!-- COMFORTLINE -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/golf/Versiones/Versiones01.png" class="imgResponsiva" />
+			<h4>Comfortline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Llantas de aleación de 17”</li>
+				<li>Sensores de estacionamiento delanteros y traseros</li>
+				<li>Luz de marcha diurna en LED</li>
+				<li>Climatizador automático bizona</li>
+				<li>Sistema de audio con pantalla touch de 8” con App Connect</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Comfortline">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Comfortline">
+		<h1>Connect</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/golf/InfoTecnica/InfoTecnica01.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Llantas de aleación de 17”</li>
+					<li>Sensores de estacionamiento delanteros y traseros</li>
+					<li>Luz de marcha diurna en LED</li>
+					<li>Climatizador automático bizona</li>
+					<li>Sistema de audio con pantalla touch de 8” con App Connect</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Golf Comfortline 1.4TSI Nafta 150 CV DQ 5D</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Paquetes</b></li>
+					<li>WD1</li>
+					<li>Cierre centralizado por control remoto, con accionamiento desde el interior y cierre de seguridad</li>
+					<li>Alarma antirrobo con vigilancia del habitáculo, sirena de alarma y protección contra remolque</li>
+
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación de 17”</li>
+					<li>P80</li>
+
+					<li><b>Interior</b></li>
+					<li>Sin compartimento/caja porta objetos</li>
+					<li>Paquete Cromo</li>
+					<li>Techo moldeado en una pieza</li>
+					<li>Pomo/empuñadura de la palanca de cambio en cuero</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tubo de escape final detrás (estándar)</li>
+					<li>Sin dispositivo de remolque</li>
+					<li>Carcasas espejos exteriores y diversos componentes en color carrocería</li>
+					<li>Sin barras longitudinales del techo ni barras portaequipajes</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Sin spoiler posterior</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Inscripción "TSI"</li>
+					<li>Embellecedores en negro</li>
+					<li>4 puertas</li>
+
+					<li><b>Sistema de asistencia</b></li>
+					<li>Sin sistema de asistencia en caso de cambio de carril</li>
+					<li>Sin Front Assist /sin control automático de distancia (ANB)</li>
+
+					<li><b>Espejos</b></li>
+					<li>Retrovisor exterior con función de memoria, con ajuste eléctrico y térmico por separado</li>
+					<li>Espejo interior de seguridad antideslumbramiento automático</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Luz de marcha diurna con asistente de luz de marcha y función "coming home"</li>
+					<li>Luz de marcha diurna en LED</li>
+					<li>Iluminación indirecta para indicadores y unidades de mando</li>
+					<li>Sin asistente para el cambio de luces</li>
+					<li>Regulación alcance faros</li>
+					<li>Faros antiniebla y luz de giro</li>
+					<li>Conjunto de pilotos posteriores en técnica LED</li>
+					<li>Sin limpialavafaros</li>
+					<li>Conexión de intervalos de barrido del limpiaparabrisas, con sensor de luz y lluvia</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Sin "drive select"</li>
+					<li>Sensores de estacionamiento delanteros y traseros</li>
+					<li>Sistema de regulación de velocidad (GRA) electrónico</li>
+					<li>Sin cámara ni sensor de distancia (sistema de asistencia al conductor)</li>
+					<li>Sensores de estacionamiento con cámara de visión trasera</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta trasera no dividida, respaldo dividido y abatible, con resposabrazos central</li>
+					<li>Climatizador automático bizona</li>
+					<li>Regulación lumbar manual respaldo asientos anteriores</li>
+					<li>Reposabrazos central delante</li>
+					<li>Regulación en altura manual de los asientos anteriores</li>
+					<li>Asientos no calefaccionables</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Inserciones</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Mirror Link</li>
+					<li>ZE46 altavoces (pasivos)</li>
+					<li>Preparación para teléfono móvil</li>
+					<li>Antena de luna para búsqueda automática de emisora (diversidad de frecuencia)</li>
+					<li>Sistema de audio con pantalla touch de 8” con App Connect</li>
+					<li>Interfaz eléctrica para uso externo, USB (compatible con iPod)</li>
+
+					<li><b>Navegación</b></li>
+					<li>Display multifuncional/ ordenador de a bordo "Medium"</li>
+					<li>Sin sistema de navegación</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifuncional de cuero</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante con airbag para rodillas y desactivación del airbag del acompañante</li>
+					<li>Frenos de disco posteriores (Geomet D)</li>
+					<li>Frenos de disco anteriores (Geomet D)</li>
+					<li>Alarma antirrobo con vigilancia del habitáculo, sirena de alarma y protección contra remolque</li>
+					<li>Sin sistema de seguridad ampliado</li>
+					<li>Indicador para el control de los neumáticos</li>
+					<li>Airbags laterales anteriores con airbag de cabeza</li>
+					<li>Cierre centralizado por control remoto, con accionamiento desde el interior y cierre de seguridad</li>
+					<li>Dirección asistida, dependiente de la velocidad (Servotronic)</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/golf/Colores/Colores01.png" class="imgResponsiva" /><br />Azul Noche</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/golf/Colores/Colores02.png" class="imgResponsiva" /><br />Gris platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/golf/Colores/Colores03.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/golf/Colores/Colores04.png" class="imgResponsiva" /><br />Plata Blanca</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/golf/Colores/Colores05.png" class="imgResponsiva" /><br />Negro Profundo</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/golf/Colores/Colores06.png" class="imgResponsiva" /><br />Blanco puro</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/golf/Colores/Colores07.png" class="imgResponsiva" /><br />Rojo Tornado</li>
+
+					<li style="clear:both;">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<!-- GTI -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/golf/Versiones/Versiones01.png" class="imgResponsiva" />
+			<h4>GTI</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Llantas de aleación de 18”</li>
+				<li>Faros delanteros y traseros LED</li>
+				<li>Sistema de audio y navegación con pantalla de 9.2” y App Connect</li>
+				<li>Sensores de estacionamiento con cámara de visión trasera</li>
+				<li>Sistema de arranque sin llave Keyless Start Entry</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="GTI">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-GTI">
+		<h1>Connect</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/golf/InfoTecnica/InfoTecnica01.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Llantas de aleación de 18”</li>
+					<li>Faros delanteros y traseros LED</li>
+					<li>Sistema de audio y navegación con pantalla de 9.2” y App Connect</li>
+					<li>Sensores de estacionamiento con cámara de visión trasera</li>
+					<li>Sistema de arranque sin llave Keyless Start Entry</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Golf GTI 2.0TSI Nafta 230 CV DQ 5D</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Paquetes</b></li>
+					<li>WD1</li>
+					<li>Cierre centralizado por control remoto, con accionamiento desde el interior y cierre de seguridad</li>
+					<li>Alarma antirrobo con vigilancia del habitáculo, sirena de alarma y protección contra remolque</li>
+
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación de 18”</li>
+					<li>P84</li>
+
+					<li><b>Interior</b></li>
+					<li>Sin compartimento/caja porta objetos</li>
+					<li>Paquete Cromo</li>
+					<li>Techo moldeado en una pieza</li>
+					<li>Pomo/empuñadura de la palanca de cambio en aluminio</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tramo final tubo de escape posterior lateral</li>
+					<li>Sin dispositivo de remolque</li>
+					<li>Carcasas espejos exteriores y diversos componentes en color carrocería</li>
+					<li>Sin barras longitudinales del techo ni barras portaequipajes</li>
+					<li>Techo con alerón</li>
+					<li>Spoiler posterior en el color de la carrocería</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Inscripción "GTI"</li>
+					<li>Embellecedores en negro</li>
+					<li>4 puertas</li>
+
+					<li><b>Sistema de asistencia</b></li>
+					<li>Sin sistema de asistencia en caso de cambio de carril</li>
+					<li>Sin Front Assist /sin control automático de distancia (ANB)</li>
+
+					<li><b>Espejos</b></li>
+					<li>Retrovisor exterior con función de memoria, con ajuste eléctrico y térmico por separado</li>
+					<li>Espejo interior de seguridad antideslumbramiento automático</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Luz de marcha diurna con asistente de luz de marcha y función "coming home"</li>
+					<li>Faros delanteros y traseros LED</li>
+					<li>Iluminación indirecta para indicadores y unidades de mando</li>
+					<li>Sin asistente para el cambio de luces</li>
+					<li>Regulación del alcance de las luces, automática/dinámica con luz de conducción en curva(AFS 1)</li>
+					<li>Faros antiniebla y luz de giro</li>
+					<li>Conjunto de pilotos posteriores en técnica LED</li>
+					<li>Sin limpialavafaros</li>
+					<li>Conexión de intervalos de barrido del limpiaparabrisas, con sensor de luz y lluvia</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Sin "drive select"</li>
+					<li>Sensores de estacionamiento delanteros y traseros</li>
+					<li>Sistema de regulación de velocidad (GRA) electrónico</li>
+					<li>Sin cámara ni sensor de distancia (sistema de asistencia al conductor)</li>
+					<li>Sensores de estacionamiento con cámara de visión trasera</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta trasera no dividida, respaldo dividido y abatible, con resposabrazos central</li>
+					<li>Climatizador automático bizona</li>
+					<li>Regulación lumbar manual respaldo asientos anteriores</li>
+					<li>Reposabrazos central delante</li>
+					<li>Regulación en altura manual de los asientos anteriores</li>
+					<li>Asientos no calefaccionables</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Inserciones</li>
+
+					<li><b>Infotainment</b></li>
+					<li>ZM46 altavoces (pasivos)</li>
+					<li>Sistema de navegación High</li>
+					<li>Sistema de audio y navegación con pantalla de 9.2” y App Connect</li>
+					<li>Control por voz</li>
+					<li>Preparación para teléfono móvil</li>
+					<li>Antena de luna para búsqueda automática de emisora (diversidad de frecuencia)</li>
+					<li>Interfaz eléctrica para uso externo, USB (compatible con iPod)</li>
+					<li>Mirror Link</li>
+
+					<li><b>Navegación</b></li>
+					<li>Display multifuncional/ ordenador de a bordo "Colour"</li>
+					<li>Sistema de navegación High</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifuncional deportivo en cuero con Tiptronic</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante con airbag para rodillas y desactivación del airbag del acompañante</li>
+					<li>Frenos de disco posteriores (Geomet D)</li>
+					<li>Frenos delanteros de disco</li>
+					<li>Alarma antirrobo con vigilancia del habitáculo, sirena de alarma y protección contra remolque</li>
+					<li>Sin sistema de seguridad ampliado</li>
+					<li>Indicador para el control de los neumáticos</li>
+					<li>Airbags laterales anteriores con airbag de cabeza</li>
+					<li>Sistema de arranque sin llave Keyless Start Entry</li>
+					<li>Dirección dinámica</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/golf/Colores/Colores08.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/golf/Colores/Colores01.png" class="imgResponsiva" /><br />Azul Noche</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/golf/Colores/Colores02.png" class="imgResponsiva" /><br />Gris platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/golf/Colores/Colores04.png" class="imgResponsiva" /><br />Plata Blanca</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/golf/Colores/Colores05.png" class="imgResponsiva" /><br />Negro Profundo</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/golf/Colores/Colores07.png" class="imgResponsiva" /><br />Rojo Tornado</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/golf/Colores/Colores06.png" class="imgResponsiva" /><br />Blanco puro</li>
+
+					<li style="clear:both;">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<p class="paginadorVersiones visibleCelular">
+		<a href="#1" class="active">&nbsp;</a>
+		<a href="#2">&nbsp;</a>
+	</p>
+</div>
+
+<!----------------------------------BROCHURE---------------------------------->
+<div id="divBrochure">
+	<div id="div-Brochure-Info">
+		<h2>Brochure<br />de Golf</h2>
+		<a href="~/Content/info_modelos/golf/Brochure/Brochure.pdf" rel="external" class="linkDescargarBrochure" target="_blank">
+			<div id="div-Brochure-Boton">
+				<div id="div-Brochure-Boton-Inner">Descargalo</div>
+			</div>
+		</a>
+	</div>
+	<div id="div-Brochure-Imagen">
+		<img src="~/Content/info_modelos/golf/Brochure/Brochure.jpg" class="imgResponsiva" />
+	</div>
+</div>

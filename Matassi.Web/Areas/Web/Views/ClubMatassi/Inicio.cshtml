@@ -1,0 +1,176 @@
+﻿@model Matassi.Web.Areas.Web.Models.ConsultaPuntosPatente
+@using Matassi.Dominio
+
+@{
+	ViewBag.Title = "Club Matassi";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+<style type="text/css">
+	p {
+		font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		line-height: 15px;
+		text-align: justify;
+		padding: 10px;
+	}
+
+	.tablaGarantia, .tablaMotorizacion {
+		font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 90%;
+	}
+
+	.trTitulo {
+		background-color: #CCCCD1;
+		line-height: 20px;
+	}
+
+		.trTitulo td {
+			text-align: center;
+		}
+
+	.trImpar {
+		background-color: #F0F0F5;
+		line-height: 20px;
+	}
+
+	.trPar {
+		background-color: #FFF;
+		line-height: 20px;
+	}
+
+		.trImpar td,
+		.trPar td {
+			text-align: center;
+		}
+
+			.trImpar td.al,
+			.trPar td.al {
+				text-align: left;
+				padding-left: 7px;
+			}
+</style>
+
+
+<div class="infoModelo">
+	<a href="#" class="modeloActual">@ViewBag.Title</a>
+	<div class="infoModeloTitulos">
+		<ul class="">
+			<li>|</li>
+			<li>
+				<span></span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div style="margin: 10px 9px 9px 9px; display:block; position: relative; height: auto; overflow:hidden;">
+	<div class="columnaIzquierda">
+		&nbsp;
+	</div>
+	<div class="columnaDerecha">
+		<img src="~/Content/images/SaveiroAsesoramiento.jpg" />
+		<div class="TituloPagina">@ViewBag.Title</div>
+
+		<p>
+			Lista de premios:
+		</p>
+
+		<br />
+
+		@using (Html.BeginForm())
+		{
+			@Html.AntiForgeryToken()
+
+			<p>
+				<table class="tabla-Emision-Oferta">
+					<tr>
+						<td>Mi patente</td>
+						<td>
+							@Html.TextBoxFor(model => model.Patente)
+							<br />@Html.ValidationMessageFor(model => model.Patente)
+						</td>
+						<td><input type="submit" name="Consultar" value="consultar" /></td>
+					</tr>
+				</table>
+			</p>
+		}
+
+
+		<!--
+			<table class="tablaGarantia">
+			<tr class="trTitulo">
+				<td>
+					<b>Motorización</b>
+				</td>
+				<td>
+					<b>Obligatorio</b>
+				</td>
+				<td>
+					<b>Recomendado</b>
+				</td>
+			</tr>
+			<tr class="trImpar">
+				<td>Diesel</td>
+				<td>Cada 7.500 km</td>
+				<td>Cada 7.500 km</td>
+			</tr>
+			<tr class="trPar">
+				<td>Amarok</td>
+				<td>Cada 10.000 km</td>
+				<td>Cada 10.000 km</td>
+			</tr>
+			<tr class="trImpar">
+				<td>Nafta</td>
+				<td>Cada 15.000 km</td>
+				<td>Cada 10.000 km</td>
+			</tr>
+			</table>
+		-->
+
+		<br /><br />
+
+		<table class="tablaGarantia">
+			<tr class="trTitulo">
+				<td colspan="3">
+					<b>CLUB MATASSI - LISTADO DE PREMIOS</b>
+				</td>
+			</tr>
+			<tr class="trTitulo">
+				<td class="al">Premio</td>
+				<td class="al">Descripción</td>
+				<td class="al">Puntos Necesarios</td>
+			</tr>
+			@{
+				bool esImpar = true;
+
+				foreach (ClubMatassiCatalogo premio in ViewBag.Premios)
+				{
+					if (esImpar)
+					{
+						<tr class="trImpar">
+							<td class="al">@premio.TituloPremio</td>
+							<td class="al">@premio.DescripcionPremio</td>
+							<td class="al">@premio.CantidadPuntos</td>
+						</tr>
+					}
+					else
+					{
+						<tr class="trPar al">
+							<td class="al">@premio.TituloPremio</td>
+							<td class="al">@premio.DescripcionPremio</td>
+							<td class="al">@premio.CantidadPuntos</td>
+						</tr>
+					}
+
+					esImpar = !esImpar;
+				}
+			}
+		</table>
+
+	</div>
+</div>
+

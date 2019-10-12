@@ -1,0 +1,103 @@
+﻿@using Matassi.Dominio
+@model Matassi.Dominio.ImagenModelo
+
+@{
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			<h2>@ViewBag.Title</h2>
+		</td>
+	</tr>
+</table>
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			@using (Html.BeginForm("Imagen_Crear", "AdminModelo", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal" }))
+			{
+				@Html.AntiForgeryToken()
+
+				@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-md-8">
+						@Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Bajada, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-md-8">
+						@Html.EditorFor(model => model.Bajada, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.Bajada, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.ClaseCSSTitulo, htmlAttributes: new { @class = "col-md-3 control-label" })
+					<div class="col-md-8">
+						@Html.DropDownListFor(model => model.ClaseCSSTitulo, new SelectList(
+																				  new List<Object>{
+																					   new { value = "" , text = "- Seleccione"  },
+																					   new { value = "tituloBlancoSombraNegra" , text = "Titulo Blanco, Sombra Negra" },
+																					   new { value = "tituloNegroSombraBlanca" , text = "Titulo Negro, Sombra Blanca"}
+																					},
+																				  "value",
+																				  "text",
+																				0), new
+																				{
+																					@class = "form-control"
+																				})
+						@Html.ValidationMessageFor(model => model.ClaseCSSTitulo, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.MostrarEnHome, "Mostrar en la página principal", htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-md-8">
+						@Html.CheckBoxFor(model => model.MostrarEnHome, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.MostrarEnHome, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.MostrarEnAccesoHome, "Mostrar para selecionar en los accesos desde la página principal", htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-md-8">
+						@Html.CheckBoxFor(model => model.MostrarEnAccesoHome, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.MostrarEnAccesoHome, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Vigente, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-md-8">
+						@Html.CheckBoxFor(model => model.Vigente, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.Vigente, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.ImagenPosteada, "Imagen", htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-md-8">
+						@Html.TextBoxFor(model => model.ImagenPosteada, new { type = "file", multiple = "multiple" })
+						@Html.ValidationMessageFor(model => model.ImagenPosteada)
+					</div>
+				</div>
+
+				<div class="form-group btnGuardar">
+					<div class="col-md-offset-3 col-md-8">
+						@Html.HiddenFor(codModelo => Model.Modelo.CodModelo)
+						<input type="submit" value="Guardar" class="btn btn-primary" />
+						@Html.ActionLink("Cancelar", "Imagen_Lista", new { codModelo = Model.Modelo.CodModelo }, new { @class = "btn btn-default" })
+					</div>
+				</div>
+			}
+		</td>
+	</tr>
+</table>

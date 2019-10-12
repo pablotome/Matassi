@@ -1,0 +1,85 @@
+﻿@{
+	ViewBag.Title = "Encuesta_Venta";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+	@Styles.Render("~/bundles/estilosCSSModelo")
+	@Styles.Render("~/bundles/estilosEmpresa")
+	@Scripts.Render("~/bundles/funcionesModelo")
+	@Scripts.Render("~/bundles/funcionesEmpresaEncuestaVenta")
+}
+
+<div id="divBannerTituloModelo">
+	<span id="spnTituloModelo">
+		Encuesta de satisfacción de clientes - Sector Ventas
+	</span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+	<ul id="ulListaPaginasHermanas">
+		<li><a href="/empresa/inicio" rel="external">Horarios</a></li>
+		<li><a href="/empresa/internos" rel="external">Internos</a></li>
+		<li class="seleccionado">Encuesta satisfacción venta</li>
+		<li><a href="/empresa/encuesta_posventa" rel="external">Encuesta satisfacción posventa</a></li>
+		<li><a href="/empresa/prueba_manejo" rel="external">Prueba de manejo</a></li>
+	</ul>
+</div>
+
+<div id="divImagenEncabezado">
+	<img src="img/Empresa01.jpg" class="imgResponsiva" />
+</div>
+
+<div id="divTituloModelo">
+	Encuesta de satisfacción de clientes - Sector Ventas
+</div>
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+	<div class="iconoDesplegar">
+		<img src="../../Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+		<span>
+			Más información
+		</span>
+	</div>
+	<ul class="oculto">
+		<li><a href="/empresa/inicio" rel="external">Horarios</a></li>
+		<li><a href="/empresa/internos" rel="external">Internos</a></li>
+		<li class="seleccionado">Encuesta satisfacción venta</li>
+		<li><a href="/empresa/encuesta_posventa" rel="external">Encuesta satisfacción posventa</a></li>
+		<li><a href="/empresa/prueba_manejo" rel="external">Prueba de manejo</a></li>
+	</ul>
+</div>
+
+<!----------------------------------QUE ES---------------------------------->
+<div id="divListaPreguntas">
+
+	<div class="Imagenes3Columnas" style="z-index:9;">
+		<div class="Imagenes3Columnas-Izquierda">
+			<div class="infoSoloTextoColumna">
+				<h5>Nombre</h5>
+				<input type="text" id="txtNombre" style="padding-top:10px;padding-bottom:10px;padding-left:10px;width:80%;" />
+			</div>
+		</div>
+		<div class="Imagenes3Columnas-Centro">
+			<div class="infoSoloTextoColumna">
+				<h5>Teléfono</h5>
+				<input type="text" id="txtTelefono" style="padding-top:10px;padding-bottom:10px;padding-left:10px;width:80%;" />
+			</div>
+		</div>
+		<div class="Imagenes3Columnas-Derecha">
+			<div class="infoSoloTextoColumna">
+				<h5>E-Mail</h5>
+				<input type="email" id="txtEMail" style="padding-top:10px;padding-bottom:10px;padding-left:10px;width:80%;" />
+			</div>
+		</div>
+	</div>
+
+	<div class="Imagenes1Columna">
+		<div class="infoSoloTextoColumna">
+			<button id="btnContestarEncuesta">Contestar</button>
+		</div>
+	</div>
+
+</div>
+
+<hr class="hrSeparadorItemsSeccion" />

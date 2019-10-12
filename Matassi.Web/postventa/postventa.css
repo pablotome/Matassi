@@ -1,0 +1,43 @@
+﻿/*CELULAR*/
+@media only screen and (max-width:767px) {
+	#btnContestarEncuesta, #btnEnviarContacto {
+		padding-bottom: 10px;
+		padding-top: 10px;
+		width: 50%;
+	}
+
+	.itemsYoCuido li {
+		color: #2f3538;
+		font-family: "VWTextWeb-Regular";
+		font-size: 16px;
+		font-style: normal;
+		font-weight: normal;
+		line-height: 25px;
+		margin: 0;
+		margin-left: 30px;
+		margin-top: 15px;
+		text-align: left;
+	}
+}
+
+/*PC*/
+@media only screen and (min-width:768px) {
+	#btnContestarEncuesta, #btnEnviarContacto {
+		padding-bottom: 10px;
+		padding-top: 10px;
+		width: 10%;
+	}
+
+	.itemsYoCuido li {
+		color: #2f3538;
+		font-family: "VWTextWeb-Regular";
+		font-size: 16px;
+		font-style: normal;
+		font-weight: normal;
+		line-height: 25px;
+		margin: 0;
+		margin-left: 20px;
+		margin-top: 15px;
+		text-align: left;
+	}
+}

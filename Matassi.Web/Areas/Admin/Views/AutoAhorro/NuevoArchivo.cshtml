@@ -1,0 +1,42 @@
+﻿@using Matassi.Dominio
+@model Matassi.Dominio.ArchivoAutoahorro
+
+@{
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			<h2>@ViewBag.Title</h2>
+		</td>
+	</tr>
+</table>
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			@using (Html.BeginForm("Archivo_Crear", "AutoAhorro", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal" }))
+			{
+				@Html.AntiForgeryToken()
+
+				@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+				<div class="form-group">
+					<label for="ArchivoPosteado" class="col-sm-3 control-label"></label>
+					<div class="col-md-8">
+						@Html.TextBox("ArchivosPosteados", null, new { type = "file" })
+						@Html.Hidden("Tipo", (int)ViewBag.Tipo)
+					</div>
+				</div>
+
+				<div class="form-group btnGuardar">
+					<div class="col-md-offset-3 col-md-8">
+						<input type="submit" value="Guardar" class="btn btn-primary" />
+						@Html.ActionLink("Cancelar", "ListarArchivos", "AutoAhorro", new { Tipo = @ViewBag.Tipo }, new { @class = "btn btn-default" })
+					</div>
+				</div>
+			}
+		</td>
+	</tr>
+</table>

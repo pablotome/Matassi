@@ -1,0 +1,904 @@
+﻿@{
+	ViewBag.Title = "up";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+	@Styles.Render("~/bundles/estilosCSSModelo")
+	@Scripts.Render("~/bundles/funcionesModelo")
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#divNovedades').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+			$('#divCaracteristicas').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+
+			$(window).on("orientationchange", function () {
+				//window.location.reload();
+				setTimeout(function () {
+					$('#divNovedades').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+				}, 500);
+
+				setTimeout(function () {
+					$('#divCaracteristicas').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+				}, 500);
+			});
+		});
+	</script>
+
+
+	<style type="text/css">
+		video {
+			width: 100% !important;
+			height: auto !important;
+		}
+	</style>
+}
+
+<div id="divBannerTituloModelo">
+	<span id="spnTituloModelo">
+		Nuevo Virtus
+	</span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+	<ul id="ulListaCaracteristicasModelo">
+		<li class="liNovedades" data-divmodelos="divNovedades">Novedades</li>
+		<li class="liDisenio" data-divmodelos="divDisenio">Diseño</li>
+		<li class="liTecnologia" data-divmodelos="divTecnologia">Tecnología</li>
+		<li class="liCaracteristicas" data-divModelos="divCaracteristicas">Características</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+<div id="divImagenModelo">
+	<video controls preload="none" poster="nuevo_virtus.jpg">
+		<source src="~/Content/info_modelos/nuevo_virtus/Nuevo_Virtus.mp4" type="video/mp4">
+	</video>
+</div>
+
+<div id="divTituloModelo">
+	Diseñado para ser tuyo
+</div>
+<div id="divBajadaTituloModelo">
+
+</div>
+
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+	<div class="iconoDesplegar">
+		<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+		<span>
+			Selecciona categoria
+		</span>
+	</div>
+	<ul class="oculto">
+		<li class="liNovedades" data-divmodelos="divNovedades">Novedades</li>
+		<li class="liDisenio" data-divmodelos="divDisenio">Diseño</li>
+		<li class="liTecnologia" data-divmodelos="divTecnologia">Tecnología</li>
+		<li class="liCaracteristicas" data-divModelos="divCaracteristicas">Características</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+
+<!----------------------------------NOVEDADES---------------------------------->
+<div id="divNovedades" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Novedades
+	</div>
+	<div class="SubTituloSeccion">
+		Descubrí el poder del diseño y la tecnología.
+	</div>
+	<div class="listaHorizontalImagenes">
+		<ul>
+			<li data-pos="1" class="linkCarouselApagado linkCarouselEncendido">Diseño</li>
+			<li data-pos="2" class="linkCarouselApagado">Tecnología</li>
+			<li data-pos="3" class="linkCarouselApagado">Confort</li>
+		</ul>
+
+		<!-- Carrousel -->
+		<div class="divCarousel">
+			<div>
+				<ul>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_virtus/Novedades/Novedades01.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_virtus/Novedades/Novedades02.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_virtus/Novedades/Novedades03.jpg" class="imgResponsiva" />
+					</li>
+				</ul>
+			</div>
+
+			<div class="divFlechaIzquierda">
+				<img src="~/Content/img/iconos/flechaIzquierda.svg" class="svg" />
+			</div>
+			<div class="divFlechaDerecha">
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+			</div>
+
+		</div>
+	</div>
+	<div class="divPaginador"><ul class="ulIndice"></ul></div>
+
+	<div class="InfoCarousel">
+		<ul>
+			<li data-pos="1">
+				<h5>
+					Diseño
+				</h5>
+				<h3>
+					El poder del diseño.
+				</h3>
+				<p>
+					Las líneas laterales y frontales del Nuevo Virtus, junto a sus detalles cromados y luces diurnas, lo hacen un modelo atractivo y deportivo.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="2">
+				<h5>
+					Tecnología
+				</h5>
+				<h3>
+					Innovación a tu alcance.
+				</h3>
+				<p>
+					El Nuevo Virtus incorpora la segunda generación de Active Info Display, el asistente digital con información sobre las funciones de conducción y navegación.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="3">
+				<h5>
+					Confort
+				</h5>
+				<h3>
+					Encontrá tu posición ideal.
+					<br>
+				</h3>
+				<p>
+					El interior del Nuevo Virtus fue diseñado siguiendo principios de ergonomía y funcionalidad. Sentate al volante y conocé el verdadero significado del confort.
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<!----------------------------------DISEÑO---------------------------------->
+<div id="divDisenio" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Diseño
+	</div>
+	<div class="SubTituloSeccion">
+		Estilo que marca la diferencia.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes3Columnas">
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Exterior</span>
+		</div>
+		<div class="Imagenes3Columnas-Izquierda">
+			<img src="~/Content/info_modelos/nuevo_virtus/Disenio/Disenio01.jpg" class="imgResponsiva" />
+			<h5>
+				Exterior
+			</h5>
+			<h3>
+				Un diseño único.
+			</h3>
+			<p>
+				El Nuevo Virtus logra una personalidad propia a través de su silueta estilizada y las marcadas líneas que atraviesan su diseño limpio.
+			</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Seguridad</span>
+		</div>
+		<div class="Imagenes3Columnas-Centro">
+			<img src="~/Content/info_modelos/nuevo_virtus/Disenio/Disenio02.jpg" class="imgResponsiva" />
+			<h5>
+				Interior
+			</h5>
+			<h3>
+				El lugar que elegís.
+			</h3>
+			<p>
+				A través de sus paneles interiores, el foco del habitáculo fue puesto en el confort y la tecnología.
+			</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Seguridad</span>
+		</div>
+		<div class="Imagenes3Columnas-Derecha">
+			<img src="~/Content/info_modelos/nuevo_virtus/Disenio/Disenio03.jpg" class="imgResponsiva" />
+			<h5>
+				Llantas
+			</h5>
+			<h3>
+				Ágil y deportivo.
+			</h3>
+			<p>
+				El secreto está en los detalles. El diseño deportivo del Nuevo Virtus se completa con unas llantas de aleación de 15” y 16”.
+			</p>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+
+<!----------------------------------TECNOLOGIA---------------------------------->
+<div id="divConectividad" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Tecnología
+	</div>
+	<div class="SubTituloSeccion">
+		Conocé una nueva forma de estar conectado.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Tecnología</span>
+		</div>
+		<div class="Imagenes2Columnas-Izquierda">
+			<div>
+				<img src="~/Content/info_modelos/nuevo_virtus/Tecnologia/Tecnologia01.jpg" class="imgResponsiva" />
+			</div>
+			<h5>Tecnología</h5>
+			<h3>Total conectividad</h3>
+			<p>Disfrutá el más completo servicio de infotenimiento y accedé a toda la información que necesitás para tus viajes a través del tablero digital de instrumentos.</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Tecnología</span>
+		</div>
+		<div class="Imagenes2Columnas-Derecha">
+			<div>
+				<img src="~/Content/info_modelos/nuevo_virtus/Tecnologia/Tecnologia02.png" class="imgResponsiva" />
+			</div>
+			<h5>Tecnología</h5>
+			<h3>Manual Cognitivo</h3>
+			<p>El Nuevo Virtus es el primer vehículo en incorporar el sistema Watson de IBM con Inteligencia Artificial, capaz de responder todas tus preguntas sobre el funcionamiento del vehículo . Sólo preguntá y conocé a tu Virtus de una manera rápida, práctica e intuitiva.</p>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes3Columnas">
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Tecnología</span>
+		</div>
+		<div class="Imagenes3Columnas-Izquierda">
+			<img src="~/Content/info_modelos/nuevo_virtus/Tecnologia/Tecnologia03.jpg" class="imgResponsiva" />
+			<h5>
+				Tecnología
+			</h5>
+			<h3>
+				Active Info Display
+			</h3>
+			<p>
+				La resolución de su pantalla de 10” (tamaño tablet) permite mostrar gráficos extremadamente precisos y de la más alta calidad.
+			</p>
+		</div>
+
+		<hr class="hrSeparadorItemsSeccion" />
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Tecnología</span>
+		</div>
+		<div class="Imagenes3Columnas-Centro">
+			<img src="~/Content/info_modelos/nuevo_virtus/Tecnologia/Tecnologia04.jpg" class="imgResponsiva" />
+			<h5>
+				Tecnología
+			</h5>
+			<h3>
+				Discover Media
+			</h3>
+			<p>
+				El sistema Discover Media con GPS y cámara trasera permite la conectividad avanzada con tu smartphone a través de la App Connect.
+			</p>
+		</div>
+
+		<hr class="hrSeparadorItemsSeccion" />
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Tecnología</span>
+		</div>
+		<div class="Imagenes3Columnas-Derecha">
+			<img src="~/Content/info_modelos/nuevo_virtus/Tecnologia/Tecnologia05.jpg" class="imgResponsiva" />
+			<h5>
+				Tecnología
+			</h5>
+			<h3>
+				Composition Touch
+			</h3>
+			<p>
+				El interior del Nuevo Virtus se completa con el sistema Composition Touch con pantalla de 6,5”, App Connect y un soporte para celular con entrada USB para carga rápida.
+			</p>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+
+<!----------------------------------CARACTERISTICAS---------------------------------->
+<div id="divCaracteristicas" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Características
+	</div>
+	<div class="SubTituloSeccion">
+		Un antes y un después en tus viajes.
+	</div>
+	<div class="listaHorizontalImagenes">
+		<ul>
+			<li data-pos="1" class="linkCarouselApagado linkCarouselEncendido">Seguridad</li>
+			<li data-pos="2" class="linkCarouselApagado">Confort</li>
+			<li data-pos="3" class="linkCarouselApagado">Motor</li>
+		</ul>
+
+		<!-- Carrousel -->
+		<div class="divCarousel">
+			<div>
+				<ul>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_virtus/Caracteristicas/Caracteristicas01.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_virtus/Caracteristicas/Caracteristicas02.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_virtus/Caracteristicas/Caracteristicas03.jpg" class="imgResponsiva" />
+					</li>
+				</ul>
+			</div>
+
+			<div class="divFlechaIzquierda">
+				<img src="~/Content/img/iconos/flechaIzquierda.svg" class="svg" />
+			</div>
+			<div class="divFlechaDerecha">
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+			</div>
+
+		</div>
+	</div>
+
+	<div class="divPaginador"><ul class="ulIndice"></ul></div>
+
+	<div class="InfoCarousel">
+		<ul>
+			<li data-pos="1">
+				<h5>
+					Seguridad
+				</h5>
+				<h3>
+					Protección para todos tus días.
+				</h3>
+				<p>
+					Gracias a su sistema ESC, sus 4 airbags y el sistema de frenado post colisión, el Nuevo Virtus recibió cinco estrellas del Latin NCAP para la protección del ocupante adulto y del ocupante infantil.
+					<br />
+				</p>
+			</li>
+
+			<li data-pos="2">
+				<h5>
+					Confort
+				</h5>
+				<h3>
+					Sentite como en casa.
+				</h3>
+				<p>
+					Con un baúl de 521 litros de capacidad y el habitáculo más amplio de su segmento, el interior del Nuevo Virtus fue concebido para que sientas la comodidad en un nivel que no conocías.
+					<br />
+				</p>
+			</li>
+
+			<li data-pos="3">
+				<h5>
+					Motor
+				</h5>
+				<h3>
+					Potencia y performance.
+					<br>
+				</h3>
+				<p>
+					La motorización del Nuevo Virtus incluye el motor MSI 1.6 litros de 16v y 110 CV, ofreciendo la fuerza necesaria para tus viajes.
+					<br />
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<!----------------------------------VERSIONES---------------------------------->
+<div id="divVersiones" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Versiones
+	</div>
+
+	<!-- HIGHLINE -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/nuevo_virtus/Versiones/Versiones01.png" class="imgResponsiva" />
+			<h4>Highline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Tablero digital Active Info Display</li>
+				<li>Radio Discover Media de 8” con GPS y App Connect</li>
+				<li>Cámara de visión trasera</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Highline">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Highline">
+		<h1>cross up!</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/nuevo_virtus/InfoTecnica/InfoTecnica01.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Tablero digital Active Info Display</li>
+					<li>Radio Discover Media de 8” con GPS y App Connect</li>
+					<li>Cámara de visión trasera</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Nuevo Virtus Highline 1.6 MSI 110 CV AT 4P</li>
+					<li class="sin-borde">Nuevo Virtus Highline 1.6 MSI 110 CV MT 4P</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación ligera 6J x 16</li>
+
+					<li><b>Interior</b></li>
+					<li>Paquete Cromo (Versión 2)</li>
+					<li>Techo moldeado en una pieza</li>
+					<li>Pomo/empuñadura de la palanca de cambio en cuero</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tubo de escape final detrás (estándar)</li>
+					<li>Sin dispositivo de remolque</li>
+					<li>Carcasas espejos exteriores y diversos componentes en color carroceríaSin apertura para techo (techo estándar)</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Inscripción "1.6 SMFI"</li>
+					<li>4 puertas</li>
+
+					<li><b>Sistema de asistencia</b></li>
+					<li>Sin sistema de asistencia en caso de cambio de carril</li>
+					<li>Sin Front Assist /sin control automático de distancia (ANB)</li>
+
+					<li><b>Espejos</b></li>
+					<li>Espejos exteriores eléctricos con función Tilt Down</li>
+					<li>Espejo interior de seguridad antideslumbramiento automático</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Luz de marcha diurna con asistente de luz de marcha y función "coming home" (automático)</li>
+					<li>Faros dobles halógenos</li>
+					<li>Faros antiniebla y luz de giro</li>
+					<li>Conjunto pilotos posteriores, versión normal</li>
+					<li>Sin limpialavafaros</li>
+					<li>Conexión de intervalos de barrido del limpiaparabrisas, con sensor de luz y lluvia</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Ayuda de aparcamiento delante y detrás</li>
+					<li>Sistema de regulación de velocidad (GRA) electrónico</li>
+					<li>Sin cámara ni sensor de distancia (sistema de asistencia al conductor)</li>
+					<li>Cámara de visión trasera</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta trasera de asientos no divididos y respaldos abatibles por separado</li>
+					<li>Climatronic (1 zona)</li>
+					<li>Sin apoyo lumbar en los respaldos de los asientos</li>
+					<li>Reposabrazos central delante</li>
+					<li>Regulación en altura manual del asiento anterior izquierdo</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Inserciones</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Mirror Link</li>
+					<li>Interfaz eléctrica para uso externo, USB con AMI</li>
+					<li>6 altavoces (pasivos)</li>
+					<li>Radio Discover Media de 8” con GPS y App Connect</li>
+
+					<li><b>Navegación</b></li>
+					<li>Tablero digital Active Info Display</li>
+					<li>Sistema de navegación estándar</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifuncional deportivo en cuero con Tiptronic</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante, el del acompañante con desactivación del airbag</li>
+					<li>Frenos de tambor posteriores</li>
+					<li>Frenos delanteros de disco (Geomet D)</li>
+					<li>Sin sistema de seguridad ampliado</li>
+					<li>Sin control de presión de los neumáticos</li>
+					<li>Airbags laterales anteriores</li>
+					<li>Cierre centralizado "Keyless-Entry" sin cierre de seguridad</li>
+					<li>Dirección asistida</li>
+					<li>9V6</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_virtus/Colores/Colores01.png" class="imgResponsiva" /><br />Plata Sirius</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_virtus/Colores/Colores02.png" class="imgResponsiva" /><br />Gris Platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_virtus/Colores/Colores03.png" class="imgResponsiva" /><br />Azul Noche</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_virtus/Colores/Colores04.png" class="imgResponsiva" /><br />Plata Tungsteno</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_virtus/Colores/Colores05.png" class="imgResponsiva" /><br />Rojo Tornado</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_virtus/Colores/Colores06.png" class="imgResponsiva" /><br />Negro Universal</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_virtus/Colores/Colores07.png" class="imgResponsiva" /><br />Blanco Cristal</li>
+
+					<li class="sin-borde">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<!-- COMFORTLINE -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/nuevo_virtus/Versiones/Versiones02.png" class="imgResponsiva" />
+			<h4>Comfortline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Levantacristales eléctrico delanteros y traseros</li>
+				<li>Espejos exteriores eléctricos con función Tilt Down</li>
+				<li>Faros antiniebla con DRL LED</li>
+				<li>Radio Composition Touch 6,5” con App Connect</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Comfortline">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Comfortline">
+		<h1>Comfortline</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/nuevo_virtus/InfoTecnica/InfoTecnica02.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<!--
+					<img src="~/Content/img/iconos/flechaDerecha.svg" class="imgResponsiva" style="height: 10px;" />
+				-->
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Levantacristales eléctrico delanteros y traseros</li>
+					<li>Espejos exteriores eléctricos con función Tilt Down</li>
+					<li>Faros antiniebla con DRL LED</li>
+					<li>Radio Composition Touch 6,5” con App Connect</li>
+				</ul>
+			</div>
+			<h3>Datos técnicos</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Nuevo Virtus Comfortline 1.6 MSI 110 CV AT 4P</li>
+					<li class="sin-borde">Nuevo Virtus Comfortline 1.6 MSI 110 CV MT 4P</li>
+				</ul>
+			</div>
+			<h3>Equipamiento de serie</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación ligera 6J x 15</li>
+
+					<li><b>Interior</b></li>
+					<li>Paquete Cromo</li>
+					<li>Techo moldeado en una pieza</li>
+					<li>Pomo/empuñadura de la palanca de cambio en cuero</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tubo de escape final detrás (estándar)</li>
+					<li>Sin dispositivo de remolque</li>
+					<li>Carcasas espejos exteriores y diversos componentes en color carrocería</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Inscripción "1.6 SMFI"</li>
+					<li>4 puertas</li>
+
+					<li><b>Sistema de asistencia</b></li>
+					<li>Sin sistema de asistencia en caso de cambio de carril</li>
+					<li>Sin Front Assist /sin control automático de distancia (ANB)</li>
+
+					<li><b>Espejos</b></li>
+					<li>Espejos exteriores eléctricos con función Tilt Down</li>
+					<li>Espejo interior de seguridad antideslumbrante</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Faros antiniebla con DRL LED</li>
+					<li>Faros dobles halógenos</li>
+					<li>Faros antiniebla y luz de giro</li>
+					<li>Conjunto pilotos posteriores, versión normal</li>
+					<li>Sin limpialavafaros</li>
+					<li>Conexión de limpiaparabrisas con intervalos, con potenciómetro (4 niveles)</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Sin ayuda de aparcamiento</li>
+					<li>Sin regulador de velocidad (GRA)</li>
+					<li>Sin cámara ni sensor de distancia (sistema de asistencia al conductor)</li>
+					<li>Sin sistema de cámaras/vigilancia sensorial del entorno</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta trasera de asientos no divididos y respaldos abatibles por separado</li>
+					<li>Aire acondicionado con regulación mecánica</li>
+					<li>Sin apoyo lumbar en los respaldos de los asientos</li>
+					<li>Sin apoyabrazos central anterior</li>
+					<li>Regulación en altura manual del asiento anterior izquierdo</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Inserciones</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Mirror Link</li>
+					<li>Sin interface eléctrico</li>
+					<li>6 altavoces (pasivos)</li>
+					<li>Radio Composition Touch 6,5” con App Connect</li>
+
+					<li><b>Navegación</b></li>
+					<li>Display multifuncional/ ordenador de a bordo "Medium"</li>
+					<li>Sin sistema de navegación</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifunción</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante, el del acompañante con desactivación del airbag</li>
+					<li>Frenos de tambor posteriores</li>
+					<li>Frenos delanteros de disco (Geomet D)</li>
+					<li>Sin sistema de seguridad ampliado</li>
+					<li>Sin control de presión de los neumáticos</li>
+					<li>Airbags laterales anteriores</li>
+					<li>Cierre central con comando a distancia</li>
+					<li>Dirección asistida</li>
+					<li>9V6</li>
+				</ul>
+			</div>
+			<h3>Equipamiento opcional</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_virtus/Colores/Colores01.png" class="imgResponsiva" /><br />Plata Sirius</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_virtus/Colores/Colores02.png" class="imgResponsiva" /><br />Gris Platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_virtus/Colores/Colores03.png" class="imgResponsiva" /><br />Azul Noche</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_virtus/Colores/Colores04.png" class="imgResponsiva" /><br />Plata Tungsteno</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_virtus/Colores/Colores05.png" class="imgResponsiva" /><br />Rojo Tornado</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_virtus/Colores/Colores06.png" class="imgResponsiva" /><br />Negro Universal</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_virtus/Colores/Colores07.png" class="imgResponsiva" /><br />Blanco Cristal</li>
+
+					<li class="sin-borde">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+
+	<!-- TRENDLINE -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/nuevo_virtus/Versiones/Versiones03.png" class="imgResponsiva" />
+			<h4>Trendline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Volante multifunción</li>
+				<li>Cierre central con comando a distancia</li>
+				<li>Levantacristales eléctrico delanteros y traseros</li>
+				<li>Faros antiniebla con DRL LED</li>
+				<li>Radio Composition Touch 6,5” con App Connect</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Trendline">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Trendline">
+		<h1>Trendline</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/nuevo_virtus/InfoTecnica/InfoTecnica03.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<!--
+					<img src="~/Content/img/iconos/flechaDerecha.svg" class="imgResponsiva" style="height: 10px;" />
+				-->
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Volante multifunción</li>
+					<li>Cierre central con comando a distancia</li>
+					<li>Levantacristales eléctrico delanteros y traseros</li>
+					<li>Faros antiniebla con DRL LED</li>
+					<li>Radio Composition Touch 6,5” con App Connect</li>
+				</ul>
+			</div>
+			<h3>Datos técnicos</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Nuevo Virtus Trendline 1.6 MSI 110 CV AT 4P</li>
+					<li class="sin-borde">Nuevo Virtus Trendline 1.6 MSI 110 CV MT 4P</li>
+				</ul>
+			</div>
+			<h3>Equipamiento de serie</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de acero 6J x 15</li>
+
+					<li><b>Interior</b></li>
+					<li>Sin paquete Aluminio/Cromo</li>
+					<li>Techo moldeado en una pieza</li>
+					<li>Pomo/empuñadura de la palanca de cambio en cuero</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tubo de escape final detrás (estándar)</li>
+					<li>Sin dispositivo de remolque</li>
+					<li>Carcasas espejos exteriores y diversos componentes en color carrocería</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Inscripción "1.6 SMFI"</li>
+					<li>4 puertas</li>
+
+					<li><b>Sistema de asistencia</b></li>
+					<li>Sin sistema de asistencia en caso de cambio de carril</li>
+					<li>Sin Front Assist /sin control automático de distancia (ANB)</li>
+
+					<li><b>Espejos</b></li>
+					<li>Regulación interna manual espejos exter.</li>
+					<li>Espejo interior de seguridad antideslumbrante</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Faros antiniebla con DRL LED</li>
+					<li>Faros dobles halógenos</li>
+					<li>Sin faros antiniebla</li>
+					<li>Conjunto pilotos posteriores, versión normal</li>
+					<li>Sin limpialavafaros</li>
+					<li>Conexión de limpiaparabrisas con intervalos, con potenciómetro (4 niveles)</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Sin ayuda de aparcamiento</li>
+					<li>Sin regulador de velocidad (GRA)</li>
+					<li>Sin cámara ni sensor de distancia (sistema de asistencia al conductor)</li>
+					<li>Sin sistema de cámaras/vigilancia sensorial del entorno</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Asiento posterior y respaldo no partido</li>
+					<li>Aire acondicionado con regulación mecánica</li>
+					<li>Sin apoyo lumbar en los respaldos de los asientos</li>
+					<li>Sin apoyabrazos central anterior</li>
+					<li>Regulación en altura manual del asiento anterior izquierdo</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Insertos</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Mirror Link</li>
+					<li>Sin interface eléctrico</li>
+					<li>4 altavoces</li>
+					<li>Radio Composition Touch 6,5” con App Connect</li>
+
+					<li><b>Navegación</b></li>
+					<li>Display multifuncional/ ordenador de a bordo "Medium"</li>
+					<li>Sin sistema de navegación</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifunción</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante, el del acompañante con desactivación del airbag</li>
+					<li>Frenos de tambor posteriores</li>
+					<li>Frenos delanteros de disco (Geomet D)</li>
+					<li>Sin sistema de seguridad ampliado</li>
+					<li>Sin control de presión de los neumáticos</li>
+					<li>Airbags laterales anteriores</li>
+					<li>Cierre central con comando a distancia</li>
+					<li>Dirección asistida</li>
+					<li>9V6</li>
+				</ul>
+			</div>
+			<h3>Equipamiento opcional</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_virtus/Colores/Colores01.png" class="imgResponsiva" /><br />Plata Sirius</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_virtus/Colores/Colores02.png" class="imgResponsiva" /><br />Gris Platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_virtus/Colores/Colores03.png" class="imgResponsiva" /><br />Azul Noche</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_virtus/Colores/Colores04.png" class="imgResponsiva" /><br />Plata Tungsteno</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_virtus/Colores/Colores05.png" class="imgResponsiva" /><br />Rojo Tornado</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_virtus/Colores/Colores06.png" class="imgResponsiva" /><br />Negro Universal</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_virtus/Colores/Colores07.png" class="imgResponsiva" /><br />Blanco Cristal</li>
+
+					<li class="sin-borde">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+
+	<p class="paginadorVersiones visibleCelular">
+		<a href="#1" class="active">&nbsp;</a>
+		<a href="#2">&nbsp;</a>
+		<a href="#3">&nbsp;</a>
+	</p>
+</div>
+
+<!--BROCHURE-->
+<div id="divBrochure">
+	<div id="div-Brochure-Info">
+		<h2>Brochure<br />de Nuevo Virtus</h2>
+		<a href="~/Content/info_modelos/nuevo_virtus/Brochure/Brochure.pdf" rel="external" class="linkDescargarBrochure" target="_blank">
+			<div id="div-Brochure-Boton">
+				<div id="div-Brochure-Boton-Inner">Descargalo</div>
+			</div>
+		</a>
+	</div>
+	<div id="div-Brochure-Imagen">
+		<img src="~/Content/info_modelos/nuevo_virtus/Brochure/Brochure.jpg" class="imgResponsiva" />
+	</div>
+</div>

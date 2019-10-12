@@ -1,0 +1,99 @@
+﻿@model Matassi.Dominio.Modelo
+
+@{
+	ViewBag.Title += "Info";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+			$('.bxslider').bxSlider({
+				mode: 'fade',
+				speed: 500,
+				pager: false,
+				infiniteLoop: true,
+				controls: true,
+				auto: true,
+				autoStart: true,
+				hideControlOnEnd: true,
+				pause: 3001,
+				randomBefore: true,
+				onSlideAfter: function ($slideElement, oldIndex, newIndex) {
+					ActualizarEstiloTitulo(newIndex)
+				}, 
+				onSlidePrev: function ($slideElement, oldIndex, newIndex) {
+					ActualizarEstiloTitulo(newIndex)
+				},
+				onSlideNext: function ($slideElement, oldIndex, newIndex) {
+					ActualizarEstiloTitulo(newIndex)
+				}
+			});
+		});
+
+		function ActualizarEstiloTitulo(newIndex)
+		{
+			$(".tituloModelo").removeClass("tituloBlancoSombraNegra").removeClass("tituloNegroSombraBlanca");
+			$(".subTituloModelo").removeClass("tituloBlancoSombraNegra").removeClass("tituloNegroSombraBlanca");
+			$(".tituloModelo").addClass($("ul.bxslider li:eq(" + newIndex + ")").attr("estiloTitulo"));
+			$(".subTituloModelo").addClass($("ul.bxslider li:eq(" + newIndex + ")").attr("estiloTitulo"));
+		}
+
+	</script>
+}
+
+@section style {
+	<style type="text/css">
+	</style>
+}
+
+<div class="infoModelo">
+	<a href="#" class="modeloActual">@Html.DisplayTextFor(model => model.Nombre)</a>
+	<div class="infoModeloTitulos">
+		<ul class="">
+			<li>|</li>
+			<li>
+				<span>Galería</span>
+			</li>
+			<li>|</li>
+			<li>
+				<a href="~/Modelo/Versiones/@Html.DisplayTextFor(model => model.NombreClave)">Versiones</a>
+			</li>
+			<li>|</li>
+			<li>
+				<a href="~/Modelo/Asesoramiento/@Html.DisplayTextFor(model => model.NombreClave)">Asesoramiento Comercial</a>
+			</li>
+			@if (Model.Accesorios != null && Model.Accesorios.Count > 0)
+			{
+				<li>|</li>
+				<li>
+					<a href="~/Modelo/Accesorios/@Html.DisplayTextFor(model => model.NombreClave)">Accesorios</a>
+				</li>
+			}
+		</ul>
+	</div>
+</div>
+<div id="infoModeloImagen">
+	@if (Model.Nombre != Model.Bajada)
+	{
+		<div class="tituloModelo @Model.Imagenes[0].ClaseCSSTitulo">@Model.Nombre</div>
+	<div class="subTituloModelo @Model.Imagenes[0].ClaseCSSTitulo">@Model.Bajada</div>
+	}
+	else
+	{
+		<div class="tituloModelo @Model.Imagenes[0].ClaseCSSTitulo">@Model.Nombre</div>
+	}
+
+	<ul class="bxslider">
+		@foreach (var item in Model.Imagenes)
+		{
+			if (item.Vigente)
+			{ 
+				<li estilotitulo="@item.ClaseCSSTitulo">
+					<img src='@Url.Action("VerImagenModelo", new { id = item.CodImagenModelo })' />
+				</li>
+			}
+		}
+	</ul>
+</div>

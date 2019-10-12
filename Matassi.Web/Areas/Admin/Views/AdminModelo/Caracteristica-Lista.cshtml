@@ -1,0 +1,56 @@
+﻿@using Matassi.Dominio
+@model dynamic
+
+@{
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			<h2>@ViewBag.Title</h2>
+
+			<p class="nuevoItem">
+				@Html.ActionLink("Nueva Caracteristica", "Caracteristica_Crear", new { codVersionModelo = Model.VersionModelo.CodVersionModelo }, new { @class = "btn btn-primary" })
+				@Html.ActionLink("Muchas Nuevas Caracteristica", "Caracteristica_Crear_Muchas", new { codVersionModelo = Model.VersionModelo.CodVersionModelo }, new { @class = "btn btn-primary" })
+			</p>
+		</td>
+	</tr>
+</table>
+
+<table class="table tabla-centrada">
+	<tr>
+		<th class="oculto">
+			Código
+		</th>
+		<th>
+			Característica
+		</th>
+		<th></th>
+	</tr>
+
+
+	@foreach (var item in Model.Caracteristicas)
+	{
+		<tr>
+			<td class="oculto">
+				@item.CodCaracteristicaModelo
+			</td>
+			<td>
+				@item.DesCaracteristicaModelo
+			</td>
+			<td align="center">
+				@Html.ActionLink("Editar", "Caracteristica_Editar", new { codCaracteristicaModelo = item.CodCaracteristicaModelo, codVersionModelo = Model.VersionModelo.CodVersionModelo }) |
+				@Html.ActionLink("Eliminar", "Caracteristica_Eliminar", new { codCaracteristicaModelo = item.CodCaracteristicaModelo, codVersionModelo = Model.VersionModelo.CodVersionModelo }, new { onclick = "return confirm('¿Está seguro de eliminar la característica \"" + item.DesCaracteristicaModelo + "\" del modelo?');" })
+			</td>
+		</tr>
+	}
+	<tfoot>
+		<tr>
+			<td colspan="4">
+				@Html.ActionLink("<< Volver a la lista de Versiones", "Version_Lista", new { codModelo = Model.VersionModelo.Modelo.CodModelo })
+			</td>
+		</tr>
+	</tfoot>
+
+</table>

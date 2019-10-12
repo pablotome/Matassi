@@ -1,0 +1,86 @@
+﻿@model Matassi.Web.Models.LoginModel
+@{
+	ViewBag.Title = "Log in";
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section ViewStyles {
+	<style type="text/css">
+		body {
+			padding-top: 40px;
+			padding-bottom: 40px;
+			background-color: #f5f5f5;
+		}
+
+		.form-signin {
+			max-width: 300px;
+			padding: 19px 29px 29px;
+			margin: 0 auto 20px;
+			background-color: #fff;
+			border: 1px solid #e5e5e5;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+			-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+			box-shadow: 0 1px 2px rgba(0,0,0,.05);
+		}
+
+			.form-signin .form-signin-heading,
+			.form-signin .checkbox {
+				margin-bottom: 10px;
+			}
+
+			.form-signin input[type="text"],
+			.form-signin input[type="password"] {
+				font-size: 16px;
+				height: auto;
+				margin-bottom: 15px;
+				padding: 7px 9px;
+			}
+	</style>
+}
+
+<div class="container">
+
+	<section id="loginForm">
+		@using (Html.BeginForm("Login", "Admin", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-signin" }))
+		{
+			@Html.AntiForgeryToken()
+			@Html.ValidationSummary(true)
+
+			<h2 class="form-signin-heading">Ingrese usuario y clave</h2>
+
+			//@Html.LabelFor(m => m.UserName)
+			@Html.TextBoxFor(m => m.UserName, new { @class = "input-block-level", placeholder = "Usuario" })
+			@Html.ValidationMessageFor(m => m.UserName)
+
+			//@Html.LabelFor(m => m.Password)
+			@Html.PasswordFor(m => m.Password, new { @class = "input-block-level", placeholder = "Password" })
+			@Html.ValidationMessageFor(m => m.Password)
+
+			<label class="checkbox">
+				@Html.CheckBoxFor(m => m.RememberMe) Recordarme
+			</label>
+
+			//@Html.LabelFor(m => m.RememberMe, new { data_bind = "value: remember-me" })
+
+			//@Html.ActionLink("Registrarse", "Register") si aún no lo has hecho.
+			
+			<button class="btn btn-large btn-primary" type="submit">Ingresar</button>
+		}
+		<p>
+			
+		</p>
+	</section>
+</div>
+
+<!--
+	<section class="social" id="socialLoginForm">
+		<h2>Use another service to log in.</h2>
+		@Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+	</section>
+-->
+@section Scripts {
+	@Scripts.Render("~/bundles/jqueryval")
+}

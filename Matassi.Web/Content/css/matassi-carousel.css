@@ -1,0 +1,147 @@
+﻿.divCarousel {
+	position: relative;
+	overflow: hidden;
+	height: auto;
+	width: 100%;
+}
+
+	.divCarousel ul.ulImagenes {
+		width: 10000em;
+		padding: 0;
+		margin: 0;
+	}
+
+		.divCarousel ul.ulImagenes li {
+			display: inline-block;
+			float: left;
+			list-style-type: none;
+			padding: 0px;
+		}
+
+	.divCarousel div.botonIzquierda,
+	.divCarousel div.botonDerecha {
+		position: absolute;
+		top: 50%;
+		z-index: 20;
+		width: 10px;
+		height: 10px;
+		background-color: #00F;
+	}
+
+	.divCarousel div.botonIzquierda {
+		left: 12%;
+	}
+
+	.divCarousel div.botonDerecha {
+		left: 82.5%;
+	}
+
+.divPaginador {
+	height: auto;
+	margin-top: 10px;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+
+	.divPaginador ul.ulIndice {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		width: auto;
+	}
+
+		.divPaginador ul.ulIndice li {
+			float: left;
+			list-style-type: none;
+		}
+
+.paginadorVersiones {
+	margin-top: 35px;
+}
+
+	.ulIndice li a,
+	.paginadorVersiones a {
+		text-decoration: none;
+		display: inline-block;
+		background-color: #808890;
+		width: 8px;
+		height: 8px;
+		margin-left: 5px;
+		margin-right: 5px;
+		border-radius: 3px;
+	}
+
+		.ulIndice li a.active,
+		.paginadorVersiones a.active {
+			background-color: #0099da;
+		}
+
+
+
+
+.divTitulosCarousel {
+}
+
+	.divTitulosCarousel ul {
+		display: inline-block;
+	}
+
+		.divTitulosCarousel ul li {
+			float: left;
+			list-style-type: none;
+		}
+
+
+.linkCarouselApagado {
+	color: #0099DA;
+	cursor: pointer;
+}
+
+.linkCarouselEncendido {
+	color: #000;
+}
+
+
+.divFlechaIzquierda {
+	position: absolute;
+	top: 50%;
+	width: 15px;
+	fill: #0099DA;
+	left: 24.5%;
+	cursor: pointer;
+}
+
+.divFlechaDerecha {
+	position: absolute;
+	top: 50%;
+	width: 15px;
+	fill: #0099DA;
+	right: 24.7%;
+	cursor: pointer;
+}
+
+.InfoCarousel {
+	float: left;
+	margin-bottom: 70px;
+	margin-left: 20.66667%;
+	padding-left: 6px;
+	padding-right: 6px;
+	position: relative;
+	text-align: center;
+	width: 55.66667%;
+}
+
+	.InfoCarousel ul {
+		padding-left: 0;
+		margin-top: 0;
+		margin-bottom: 10px;
+		list-style: none;
+	}
+
+	.InfoCarousel h5, 
+	.InfoCarousel h3, 
+	.InfoCarousel p {
+		text-align: center;
+	}

@@ -1,0 +1,1287 @@
+﻿@{
+	ViewBag.Title = "up";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+	@Styles.Render("~/bundles/estilosCSSModelo")
+	@Scripts.Render("~/bundles/funcionesModelo")
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#divDestacados').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+			$('#divTecnologia').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+			$('#divDisenio').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+
+			$(window).on("orientationchange", function () {
+				//window.location.reload();
+				setTimeout(function () {
+					$('#divDestacados').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+				}, 500);
+
+				setTimeout(function () {
+					$('#divTecnologia').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+				}, 500);
+
+				setTimeout(function () {
+					$('#divDisenio').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+				}, 500);
+			});
+		});
+	</script>
+}
+
+<div id="divBannerTituloModelo">
+	<span id="spnTituloModelo">
+		Tiguan
+	</span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+	<ul id="ulListaCaracteristicasModelo">
+		<li class="liDestacados" data-divmodelos="divDestacados">Destacados</li>
+		<li class="liEspacio" data-divmodelos="divEspacio">Espacio</li>
+		<li class="liTecnologia" data-divmodelos="divTecnologia">Tecnología</li>
+		<li class="liPerformance" data-divmodelos="divPerformance">Performance</li>
+		<li class="liSeguridad" data-divmodelos="divSeguridad">Seguridad</li>
+		<li class="liDisenio" data-divmodelos="divDisenio">Diseño</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+		<li class="liPostventa" data-divmodelos="divPostventa">Postventa</li>
+	</ul>
+</div>
+
+<div id="divImagenModelo">
+	<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Tiguan2.jpg" class="imgResponsiva" />
+</div>
+
+<div id="divTituloModelo">
+	Elegancia Off Road
+</div>
+<div id="divBajadaTituloModelo">
+	Además de estilo y tecnología, el Tiguan Allspace viene con más espacio para tus aventuras.
+</div>
+
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+	<div class="iconoDesplegar">
+		<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+		<span>
+			Selecciona categoria
+		</span>
+	</div>
+	<ul class="oculto">
+		<li class="liDestacados" data-divmodelos="divDestacados">Destacados</li>
+		<li class="liEspacio" data-divmodelos="divEspacio">Espacio</li>
+		<li class="liTecnologia" data-divmodelos="divTecnologia">Tecnología</li>
+		<li class="liPerformance" data-divmodelos="divPerformance">Performance</li>
+		<li class="liSeguridad" data-divmodelos="divSeguridad">Seguridad</li>
+		<li class="liDisenio" data-divmodelos="divDisenio">Diseño</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+		<li class="liPostventa" data-divmodelos="divPostventa">Postventa</li>
+	</ul>
+</div>
+
+
+<!----------------------------------DESTACADOS---------------------------------->
+<div id="divDestacados" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Destacados
+	</div>
+	<div class="SubTituloSeccion">
+
+	</div>
+	<div class="listaHorizontalImagenes">
+		<ul>
+			<li data-pos="1" class="linkCarouselApagado linkCarouselEncendido">Espacio</li>
+			<li data-pos="2" class="linkCarouselApagado">Performance</li>
+			<li data-pos="3" class="linkCarouselApagado">Seguridad</li>
+			<li data-pos="4" class="linkCarouselApagado">Tecnología</li>
+			<li data-pos="5" class="linkCarouselApagado">Diseño</li>
+		</ul>
+
+		<!-- Carrousel -->
+		<div class="divCarousel">
+			<div>
+				<ul>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Destacados/Destacados01.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Destacados/Destacados02.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Destacados/Destacados03.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Destacados/Destacados04.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Destacados/Destacados05.jpg" class="imgResponsiva" />
+					</li>
+				</ul>
+			</div>
+
+			<div class="divFlechaIzquierda">
+				<img src="~/Content/img/iconos/flechaIzquierda.svg" class="svg" />
+			</div>
+			<div class="divFlechaDerecha">
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+			</div>
+
+		</div>
+	</div>
+	<div class="divPaginador"><ul class="ulIndice"></ul></div>
+
+	<div class="InfoCarousel">
+		<ul>
+			<li data-pos="1">
+				<h5>
+					Espacio
+				</h5>
+				<h3>
+					Mucho más confort
+				</h3>
+				<p>
+					El Tiguan Allspace, ahora con 7 asientos para que nadie se quede afuera.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="2">
+				<h5>
+					Performance
+				</h5>
+				<h3>
+					Tracción Integral 4MOTION
+				</h3>
+				<p>
+					Caja DSG de 7 velocidades junto con el sistema de tracción 4MOTION te permitirá viajar por cualquier tipo de camino con un gran confort de marcha.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="3">
+				<h5>
+					Seguridad
+				</h5>
+				<h3>
+					Detector de fatiga
+					<br>
+				</h3>
+				<p>
+					Si no detectás el momento exacto para tomarte un descanso, el Tiguan lo hace por vos.
+				</p>
+			</li>
+
+			<li data-pos="4">
+				<h5>
+					Tecnología
+				</h5>
+				<h3>
+					Navegador Discover Pro
+					<br>
+				</h3>
+				<p>
+					Este sistema se convierte en lo más parecido a un compañero de viaje. Encontrá rápidamente la mejor ruta para llegar a tu destino, conectate a todas tus aplicaciones o escuchá tu música favorita.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="5">
+				<h5>
+					Diseño
+				</h5>
+				<h3>
+					Sistema de iluminación LED
+					<br>
+				</h3>
+				<p>
+					Las luces del Tiguan leen los movimientos del auto y alumbran en esa dirección. Además, si detectara un auto a la distancia, cambia de luces largas a cortas automáticamente.
+					<br />
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<!----------------------------------GALERIA---------------------------------->
+<div class="divGaleria">
+	<a href="#">
+		<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Galeria/Galeria01.jpg" class="imgResponsiva" />
+		<div class="divIconoGaleria1">
+			<div class="divIconoGaleria2">
+				<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+			</div>
+		</div>
+	</a>
+</div>
+
+
+<!----------------------------------CONFORT/ESPACIO---------------------------------->
+<div id="divEspacio" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Confort
+	</div>
+	<div class="SubTituloSeccion">
+		Comenzá a planear nuevas aventuras en grupo: El Tiguan Allspace viene con dos asientos más que la versión anterior.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Tercera fila de asientos</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Tecnologia/Tecnologia01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Tercera fila de asientos
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					7 veces más cómodo
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Comenzá a planear nuevas aventuras en grupo: El Tiguan Allspace viene con dos asientos más que la versión anterior.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Confort/Confort01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Asientos completamente plegables</span>
+		</div>
+		<div class="Imagenes2Columnas-Izquierda">
+			<div>
+				<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Confort/Confort02.jpg" class="imgResponsiva" />
+			</div>
+			<h5>Asientos completamente plegables</h5>
+			<h3>Máxima adaptabilidad</h3>
+			<p>Todos los días son diferentes. Por eso, todos los asientos traseros y el del acompañante pueden plegarse cuando necesites más espacio en tu baúl.</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Frescura de principio a fin</span>
+		</div>
+		<div class="Imagenes2Columnas-Derecha">
+			<div>
+				<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Confort/Confort03.jpg" class="imgResponsiva" />
+			</div>
+			<h5>Frescura de principio a fin</h5>
+			<h3>Climatizador automático de tres zonas</h3>
+			<p>El Tiguan Allspace es grande y sus comodidades también. Controlá la temperatura para todos los aventureros.</p>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+</div>
+
+
+<!----------------------------------GALERIA---------------------------------->
+<div class="divGaleria">
+	<a href="#">
+		<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Galeria/Galeria02.jpg" class="imgResponsiva" />
+		<div class="divIconoGaleria1">
+			<div class="divIconoGaleria2">
+				<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+			</div>
+		</div>
+	</a>
+</div>
+
+
+<!----------------------------------TECNOLOGÍA---------------------------------->
+<div id="divTecnologia" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Tecnología
+	</div>
+	<div class="SubTituloSeccion">
+		La tecnología hace parte de nuestra vida. Por eso, el Tiguan además de venir equipado con innovaciones en materia de seguridad y confort, también te permite seguir usando lo mejor de tu teléfono de una forma práctica y segura.
+	</div>
+
+	<div class="listaHorizontalImagenes">
+		<ul>
+			<li data-pos="1" class="linkCarouselApagado linkCarouselEncendido">Discover Pro</li>
+			<li data-pos="2" class="linkCarouselApagado">Active Info Display</li>
+			<li data-pos="3" class="linkCarouselApagado">Park Assist</li>
+			<li data-pos="4" class="linkCarouselApagado">Head-up Display</li>
+			<li data-pos="5" class="linkCarouselApagado">Manual Cognitivo</li>
+		</ul>
+
+		<!-- Carrousel -->
+		<div class="divCarousel">
+			<div>
+				<ul>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Tecnologia/Tecnologia01.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Tecnologia/Tecnologia02.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Tecnologia/Tecnologia03.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Tecnologia/Tecnologia04.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Tecnologia/Tecnologia05.jpg" class="imgResponsiva" />
+					</li>
+				</ul>
+			</div>
+
+			<div class="divFlechaIzquierda">
+				<img src="~/Content/img/iconos/flechaIzquierda.svg" class="svg" />
+			</div>
+			<div class="divFlechaDerecha">
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+			</div>
+
+		</div>
+	</div>
+	<div class="divPaginador"><ul class="ulIndice"></ul></div>
+
+	<div class="InfoCarousel">
+		<ul>
+			<li data-pos="1">
+				<h5>
+					Conectividad de última generación
+				</h5>
+				<h3>
+					Navegador Discover Pro
+				</h3>
+				<p>
+					Pantalla touch screen de 8" con App Connect para que navegues de la manera más precisa. Además, conectalo a tu celular y disfrutá de tus aplicaciones preferidas.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="2">
+				<h5>
+					Toda la información de tu Tiguan como vos la querés ver.
+				</h5>
+				<h3>
+					Active Info Display
+				</h3>
+				<p>
+					Gracias al Active Info Display podrás configurar de qué manera preferís ver la inforamación del viaje, estado del auto, sistema de entretenimiento o trayecto a recorrer.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="3">
+				<h5>
+					Area View con Park Assist
+				</h5>
+				<h3>
+					Estacioná como si tuvieras ojos en la espalda
+					<br>
+				</h3>
+				<p>
+					Con la visión de 360*, el Tiguan Allspace te lo hace mucho más fácil para maniobrar en cualquier situación.
+				</p>
+			</li>
+
+			<li data-pos="4">
+				<h5>
+					Head-up Display
+				</h5>
+				<h3>
+					La información indispensable sin sacar los ojos del camino
+					<br>
+				</h3>
+				<p>
+					En el Head-up Display podrás ver la velocidad e instrucciones del navegador reflejados a la altura del parabrisas, para que no necesités desviar la mirada del camino.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="5">
+				<h5>
+					Manual Cognitivo
+				</h5>
+				<h3>
+					Nadie conoce mejor a tu Tiguan Allspace.
+					<br>
+				</h3>
+				<p>
+					El Tiguan Allspace incorpora el sistema Watson de IBM con Inteligencia Artificial para que puedas puedas conocerlo de una manera rápida, práctica e intuitiva.
+					<br />
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<!----------------------------------GALERIA---------------------------------->
+<div class="divGaleria">
+	<a href="#">
+		<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Galeria/Galeria03.jpg" class="imgResponsiva" />
+		<div class="divIconoGaleria1">
+			<div class="divIconoGaleria2">
+				<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+			</div>
+		</div>
+	</a>
+</div>
+
+
+<!----------------------------------PERFORMANCE---------------------------------->
+<div id="divPerformance" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Performance
+	</div>
+	<div class="SubTituloSeccion">
+		Cada vez que te subas a un Tiguan Allspace vas a vivir una experiencia única de manejo. Su motorización y tecnología te hará vivir una experiencia excitante ya sea en la ciudad o en caminos off road.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes3Columnas">
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Motor 2.0 TSI</span>
+		</div>
+		<div class="Imagenes3Columnas-Izquierda">
+			<div>
+				<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Performance/Performance01.jpg" class="imgResponsiva" />
+			</div>
+			<h5>Motor 2.0 TSI</h5>
+			<h3>220 cv y caja DSG de 7 velocidades</h3>
+			<p>Equipado con tracción integral 4MOTION, este motor se adapta a cualquier aventura que tengas.</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Motor 1.4 TSI</span>
+		</div>
+		<div class="Imagenes3Columnas-Centro">
+			<div>
+				<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Performance/Performance02.jpg" class="imgResponsiva" />
+			</div>
+			<h5>Motor 1.4 TSI</h5>
+			<h3>150 cv y caja DSG de 6 velocidades</h3>
+			<p>Equipado con Active Cylinder Technology, este motor logra un equilibrio perfecto entre rendimiento y bajo consumo.</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Motor 2.0 TDI</span>
+		</div>
+		<div class="Imagenes3Columnas-Derecha">
+			<div>
+				<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Performance/Performance03.jpg" class="imgResponsiva" />
+			</div>
+			<h5>Motor 2.0 TDI</h5>
+			<h3>Transmisión DSG de 7 velocidades 4MOTION</h3>
+			<p>Propulsado por la motorización 2.0 TDI de 150CV, con excelentes niveles de prestaciones y eficiencia.</p>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+</div>
+
+
+<!----------------------------------GALERIA---------------------------------->
+<div class="divGaleria">
+	<a href="#">
+		<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Galeria/Galeria04.jpg" class="imgResponsiva" />
+		<div class="divIconoGaleria1">
+			<div class="divIconoGaleria2">
+				<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+			</div>
+		</div>
+	</a>
+</div>
+
+
+<!----------------------------------SEGURIDAD---------------------------------->
+<div id="divSeguridad" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Seguridad
+	</div>
+	<div class="SubTituloSeccion">
+		No importa si la aventura es en la ciudad o fuera de ella, el Tiguan Allspace está equipado con lo último en seguridad para que nada te detenga.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+	<div class="Imagenes3Columnas">
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Sistema Hill Hold</span>
+		</div>
+		<div class="Imagenes3Columnas-Izquierda">
+			<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Seguridad/Seguridad01.jpg" class="imgResponsiva" />
+			<h5>
+				Sistema Hill Hold
+			</h5>
+			<h3>
+				Control en tus maniobras
+			</h3>
+			<p>
+				El sistema hace que sea más fácil maniobrar, incluso en pendientes empinadas.
+			</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Detector de fatiga</span>
+		</div>
+		<div class="Imagenes3Columnas-Centro">
+			<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Seguridad/Seguridad02.jpg" class="imgResponsiva" />
+			<h5>
+				Detector de fatiga
+			</h5>
+			<h3>
+				Recibí una alerta a tiempo
+			</h3>
+			<p>
+				Si no detectás el momento exacto para tomarte un descanso, el Tiguan Allspace lo hace por vos.
+			</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Monitoreo de neumáticos</span>
+		</div>
+		<div class="Imagenes3Columnas-Derecha">
+			<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Seguridad/Seguridad03.jpg" class="imgResponsiva" />
+			<h5>
+				Monitoreo de neumáticos
+			</h5>
+			<h3>
+				Seguridad sobre ruedas
+			</h3>
+			<p>
+				Los neumáticos del Tiguan están monitoreados permanentemente. Por eso, si alguno pierde presión, vas a recibir una alerta al instante.
+			</p>
+		</div>
+	</div>
+	<hr class="hrSeparadorItemsSeccion" />
+</div>
+
+
+<!----------------------------------GALERIA---------------------------------->
+<div class="divGaleria">
+	<a href="#">
+		<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Galeria/Galeria05.jpg" class="imgResponsiva" />
+		<div class="divIconoGaleria1">
+			<div class="divIconoGaleria2">
+				<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+			</div>
+		</div>
+	</a>
+</div>
+
+
+<!----------------------------------DISEÑO---------------------------------->
+<div id="divDisenio" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Diseño
+	</div>
+	<div class="SubTituloSeccion">
+		El diseño y la innovación se encuentran presentes en todos los rincones del Tiguan Allspace. Sus líneas exteriores van a cautivarte.
+	</div>
+	<div class="listaHorizontalImagenes">
+		<ul>
+			<li data-pos="1" class="linkCarouselApagado linkCarouselEncendido">Techo</li>
+			<li data-pos="2" class="linkCarouselApagado">Light Assist</li>
+			<li data-pos="3" class="linkCarouselApagado">Llantas</li>
+			<li data-pos="4" class="linkCarouselApagado">Asientos</li>
+		</ul>
+
+		<!-- Carrousel -->
+		<div class="divCarousel">
+			<div>
+				<ul>
+					<li><img src="~/Content/info_modelos/nuevo_tiguan_allspace/Disenio/Disenio01.jpg" class="imgResponsiva" /></li>
+					<li><img src="~/Content/info_modelos/nuevo_tiguan_allspace/Disenio/Disenio02.jpg" class="imgResponsiva" /></li>
+					<li><img src="~/Content/info_modelos/nuevo_tiguan_allspace/Disenio/Disenio03.jpg" class="imgResponsiva" /></li>
+					<li><img src="~/Content/info_modelos/nuevo_tiguan_allspace/Disenio/Disenio04.jpg" class="imgResponsiva" /></li>
+				</ul>
+			</div>
+
+			<div class="divFlechaIzquierda">
+				<img src="~/Content/img/iconos/flechaIzquierda.svg" class="svg" />
+			</div>
+			<div class="divFlechaDerecha">
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="divPaginador"><ul class="ulIndice"></ul></div>
+
+	<div class="InfoCarousel">
+		<ul>
+			<li data-pos="1">
+				<h5>
+					Techo panorámico
+				</h5>
+				<h3>
+					El cielo es el límite
+				</h3>
+				<p>
+					Si estas dentro del Tiguan Allspace, no hay ninguna razón para que te pierdas del espacio exterior. Solo tenés que abrir el Techo Solar Panorámico y comenzar a disfrutar.
+					<br>
+				</p>
+			</li>
+
+			<li data-pos="2">
+				<h5>
+					Ópticas delanteras de LED, con Light Assist
+				</h5>
+				<h3>
+					Tu camino se aclara en todo momento
+				</h3>
+				<p>
+					En cualquier situación vas a tener el camino despejado. Las luces del Tiguan leen los movimientos de tu auto y alumbran en esa dirección. Además, si detecta un auto a la distancia, cambia de luces largas a cortas automáticamente.
+				</p>
+			</li>
+
+			<li data-pos="3">
+				<h5>
+					Llantas de aleación “Nizza” de 18”
+				</h5>
+				<h3>
+					Diversión sobre ruedas
+					<br>
+				</h3>
+				<p>
+					Una de las razones por las que el Tiguan se adapta tan fácil a la ciudad y a los caminos off road es sus llantas. Fuertes, estables y dinámicas.
+				</p>
+			</li>
+
+			<li data-pos="4">
+				<h5>
+					Asientos en cuero “Vienna”, eléctricos, calefaccionados y con memoria
+				</h5>
+				<h3>
+					Un respaldo de elegancia y confort
+				</h3>
+				<p>
+					Cada vez que te subas al Tiguan Allspace, además de estar rodeado de estilo, vas a poder personalizar la posición y la temperatura de tu asiento.
+				</p>
+			</li>
+
+		</ul>
+	</div>
+
+	<div class="divGaleria">
+		<div class="divGaleria-Izquierda">
+			<a href="#">
+				<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Galeria/Galeria06.jpg" class="imgResponsiva" />
+				<div class="divIconoGaleria1">
+					<div class="divIconoGaleria2">
+						<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="divGaleria-Derecha">
+			<a href="#">
+				<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Galeria/Galeria07.jpg" class="imgResponsiva" />
+				<div class="divIconoGaleria1">
+					<div class="divIconoGaleria2">
+						<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+
+
+<!----------------------------------VERSIONES---------------------------------->
+<div id="divVersiones" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Versiones
+	</div>
+
+	<!-- HIGHLINE -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Versiones/Versiones01.png" class="imgResponsiva" />
+			<h4>Highline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Caja automática DSG de 7 velocidades</li>
+				<li>Tracción 4MOTION</li>
+				<li>Anclajes ISOFIX</li>
+				<li>Park assist</li>
+				<li>Detector de fatiga</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Highline">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Highline">
+		<h1>Highline</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/nuevo_tiguan_allspace/InfoTecnica/InfoTecnica01.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<!--
+					<img src="~/Content/img/iconos/flechaDerecha.svg" class="imgResponsiva" style="height: 10px;" />
+				-->
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Caja automática DSG de 7 velocidades</li>
+					<li>Tracción 4MOTION</li>
+					<li>Anclajes ISOFIX</li>
+					<li>Park assist</li>
+					<li>Detector de fatiga</li>
+					<li>Climatizador automático de 3 zonas</li>
+				</ul>
+			</div>
+			<h3>Datos técnicos</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Tiguan Allspace Highline 2.0TSI (Nafta) 220CV DSG 4MOTION (7 Marchas) 5 Puertas</li>
+				</ul>
+			</div>
+			<h3>Equipamiento de serie</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul></ul>
+			</div>
+			<h3>Equipamiento opcional</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+
+					<li class="sin-borde" style="clear:both;"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<!-- HIGHLINE -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Versiones/Versiones02.png" class="imgResponsiva" />
+			<h4>Highline TDI</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Anclajes ISOFIX</li>
+				<li>Caja automática DSG de 7 velocidades</li>
+				<li>Climatizador automático de 3 zonas</li>
+				<li>Detector de fatiga</li>
+				<li>Park assist</li>
+				<li>Sistema de navegación con pantalla touch de 9,2" y App Connect</li>
+				<li>Tracción 4MOTION</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="HighlineTDI">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-HighlineTDI">
+		<h1>Highline TDI</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/nuevo_tiguan_allspace/InfoTecnica/InfoTecnica02.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Anclajes ISOFIX</li>
+					<li>Caja automática DSG de 7 velocidades</li>
+					<li>Climatizador automático de 3 zonas</li>
+					<li>Detector de fatiga</li>
+					<li>Park assist</li>
+					<li>Sistema de navegación con pantalla touch de 9,2" y App Connect</li>
+					<li>Tracción 4MOTION</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Tiguan Allspace Highline TDI 2.0TDI (Diesel) 150CV DSG 4MOTION (7 Marchas) 5 Puertas</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación ligera 7J x 18</li>
+					<li>W2I</li>
+
+					<li><b>Interior</b></li>
+					<li>Sin compartimento/caja portaobjetos</li>
+					<li>Paquete Cromo (Versión 2)</li>
+					<li>Techo moldeado en una pieza</li>
+					<li>Pomo/empuñadura de la palanca de cambio en cuero</li>
+
+					<li><b>Exterior</b></li>
+					<li>Sin dispositivo de remolque</li>
+					<li>Carcasa del retrovisor exterior en el color de la carrocería</li>
+					<li>Barras longitudinales del techo, brillante</li>
+					<li>Sin spoiler posterior</li>
+					<li>Cristales laterales tintados, a partir del montante B y luneta posterior tintado oscuro</li>
+					<li>Embellecedores brillantes</li>
+					<li>Sistema de techo grande</li>
+					<li>Inscripción "TDI"</li>
+
+					<li><b>Sistema de asistencia</b></li>
+					<li>Sin head up display</li>
+					<li>Sin sistema de asistencia en caso de cambio de carril</li>
+					<li>Sin Front Assist /sin control automático de distancia (ANB)</li>
+
+					<li><b>Espejos</b></li>
+					<li>6YD</li>
+					<li>Espejo interior de seguridad antideslumbramiento automático</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Luz de marcha diurna con asistente de luz de marcha y función "coming home"</li>
+					<li>Iluminación ambiental versión 1</li>
+					<li>Sin asistente para el cambio de luces</li>
+					<li>Regulación del alcance de las luces, automática/dinámica con luz de conducción en curva(AFS 1)</li>
+					<li>Faros antiniebla y luz de giro</li>
+					<li>Conjunto de pilotos posteriores en técnica LED</li>
+					<li>Sin limpialavafaros</li>
+					<li>Conexión de intervalos de barrido del limpiaparabrisas, con sensor de luz y lluvia</li>
+					<li>Faros principales LED con luz de conducción en curva (curvatura especial de la luz de marcha diurna)</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Selección del modo de conducción y amortiguadores convencionales</li>
+					<li>Park assist</li>
+					<li>Control crucero</li>
+					<li>Sin dispositivo para abrir la puerta del garaje</li>
+					<li>Sin cámara ni sensor de distancia (sistema de asistencia al conductor)</li>
+					<li>Con sistema de cámara de marcha atrás (versión 2)</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Climatizador automático de 3 zonas</li>
+					<li>Sin ventilación del asiento/masaje</li>
+					<li>Reposabrazos central delante</li>
+					<li>Regulación en altura manual de los asientos anteriores</li>
+					<li>Asientos no calefaccionables</li>
+					<li>Regulación lumbar manual respaldo asientos anteriores</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Insertos</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Mirror Link y "App" RSE inalámbrica</li>
+					<li>Interfaz eléctrica para uso externo, AUX-IN y 2 USB, MDI gama baja Gen2</li>
+					<li>8 altavoces (pasivos)</li>
+
+					<li><b>Navegación</b></li>
+					<li>Sistema de navegación con pantalla touch de 9,2" y App Connect</li>
+					<li>Preparación para teléfono móvil</li>
+					<li>Display multifuncional / ordenador de a bordo "Colour"</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifuncional deportivo en cuero con Tiptronic</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante, el del acompañante con desactivación del airbag</li>
+					<li>Frenos de disco posteriores</li>
+					<li>Frenos de disco anteriores</li>
+					<li>Alarma antirrobo con vigilancia del habitáculo, sirena de alarma y protección contra remolque</li>
+					<li>Sin sistema de seguridad ampliado</li>
+					<li>Indicador para el control de los neumáticos</li>
+					<li>Airbags laterales anteriores con airbag de cabeza</li>
+					<li>Sistema de cierre y arranque sin llave “Keyless entry”</li>
+					<li>Dirección asistida, dependiente de la velocidad (Servotronic)</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_tiguan_allspace/Colores/Colores01.png" class="imgResponsiva" /><br />Gris platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_tiguan_allspace/Colores/Colores02.png" class="imgResponsiva" /><br />7H7H</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_tiguan_allspace/Colores/Colores03.png" class="imgResponsiva" /><br />2B2B</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_tiguan_allspace/Colores/Colores04.png" class="imgResponsiva" /><br />Negro Profundo</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_tiguan_allspace/Colores/Colores05.png" class="imgResponsiva" /><br />Blanco puro</li>
+
+					<li class="sin-borde" style="clear:both;"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<!-- COMFORTLINE -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Versiones/Versiones03.png" class="imgResponsiva" />
+			<h4>Comfortline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Caja automática DSG de 7 velocidades</li>
+				<li>Tracción 4MOTION</li>
+				<li>Anclajes ISOFIX</li>
+				<li>Detector de fatiga</li>
+				<li>Climatizador automático de 3 zonas</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Comfortline">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Comfortline">
+		<h1>Comfortline</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/nuevo_tiguan_allspace/InfoTecnica/InfoTecnica03.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Caja automática DSG de 7 velocidades</li>
+					<li>Tracción 4MOTION </li>
+					<li>Anclajes ISOFIX </li>
+					<li>Detector de fatiga </li>
+					<li>Climatizador automático de 3 zonas</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Tiguan Allspace Comfortline 2.0TSI (Nafta) 220CV DSG 4MOTION (7 Marchas) 5 Puertas</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul></ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde" style="clear:both;"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<!-- TRENDLINE -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Versiones/Versiones04.png" class="imgResponsiva" />
+			<h4>Trendline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Sensores de estacionamiento traseros y delanteros</li>
+				<li>Climatizador automático de tres zonas</li>
+				<li>Llantas de aleación de 17”</li>
+				<li>Control crucero</li>
+				<li>Sistema de navegación touchscreen de 8” con App Connect</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Trendline">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Trendline">
+		<h1>Trendline</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="/Content/info_modelos/nuevo_tiguan_allspace/InfoTecnica/InfoTecnica04.png" class="imgResponsiva">
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<!--
+					<img src="~/Content/img/iconos/flechaDerecha.svg" class="imgResponsiva" style="height: 10px;" />
+				-->
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Sensores de estacionamiento traseros y delanteros</li>
+					<li>Climatizador automático de tres zonas</li>
+					<li>Llantas de aleación de 17”</li>
+					<li>Control crucero</li>
+					<li>Sistema de navegación touchscreen de 8” con App Connect</li>
+				</ul>
+			</div>
+			<h3>Datos técnicos</h3>
+			<div class="div-item-informacion-tecnica" style="display: none;">
+				<ul>
+					<li class="sin-borde">Nuevo Tiguan Allspace Trendline 1.4TSI (Nafta) 150CV DSG (6 Marchas) 5 Puertas</li>
+				</ul>
+			</div>
+			<h3>Equipamiento de serie</h3>
+			<div class="div-item-informacion-tecnica" style="display: none;">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación de 17”</li>
+					<li>PJV</li>
+
+					<li><b>Interior</b></li>
+					<li>Sin compartimento/caja portaobjetos</li>
+					<li>Sin paquete Aluminio/Cromo</li>
+					<li>Techo moldeado en una pieza</li>
+					<li>Pomo/empuñadura de la palanca de cambio en cuero</li>
+
+					<li><b>Exterior</b></li>
+					<li>Sin dispositivo de remolque</li>
+					<li>Carcasa del retrovisor exterior en el color de la carrocería</li>
+					<li>Barras longitudinales del techo, negro</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Sin spoiler posterior</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Inscripción "TSI"</li>
+					<li>Embellecedores en negro</li>
+
+					<li><b>Sistema de asistencia</b></li>
+					<li>Sin head up display</li>
+					<li>Sin sistema de asistencia en caso de cambio de carril</li>
+					<li>Sin Front Assist /sin control automático de distancia (ANB)</li>
+
+					<li><b>Espejos</b></li>
+					<li>6YD</li>
+					<li>Espejo interior de seguridad antideslumbramiento automático</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Luz de marcha diurna con asistente de luz de marcha y función "coming home"</li>
+					<li>Faros H7 con luz marcha diurna LED</li>
+					<li>Sin luces adicionales (ilum. interior)</li>
+					<li>Sin asistente para el cambio de luces</li>
+					<li>Regulación alcance faros</li>
+					<li>Faros antiniebla y luz de giro</li>
+					<li>Conjunto de pilotos posteriores en técnica LED</li>
+					<li>Sin limpialavafaros</li>
+					<li>Conexión de intervalos de barrido del limpiaparabrisas, con sensor de luz y lluvia</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Sin "drive select"</li>
+					<li>Sensores de estacionamiento traseros y delanteros</li>
+					<li>Control crucero</li>
+					<li>Sin dispositivo para abrir la puerta del garaje</li>
+					<li>Sin cámara ni sensor de distancia (sistema de asistencia al conductor)</li>
+					<li>Con sistema de cámara de marcha atrás (versión 1)</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Climatizador automático de tres zonas</li>
+					<li>Sin ventilación del asiento/masaje</li>
+					<li>Sin apoyo lumbar en los respaldos de los asientos</li>
+					<li>Reposabrazos central delante</li>
+					<li>Regulación en altura manual de los asientos anteriores</li>
+					<li>Asientos no calefaccionables</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Insertos</li>
+
+					<li><b>Infotainment</b></li>
+					<li>W2G</li>
+					<li>Luz de marcha diurna con asistente de luz de marcha y función "coming home"</li>
+					<li>Espejo interior de seguridad antideslumbramiento automático</li>
+					<li>Sin pieza inferior adicional para el suelo del maletero</li>
+					<li>Sistema de navegación touchscreen de 8” con App Connect</li>
+					<li>Conexión de intervalos de barrido del limpiaparabrisas, con sensor de luz y lluvia</li>
+					<li>Volante multifuncional deportivo en cuero con Tiptronic</li>
+					<li>Sin cordaje / red / bolsa portaobjetos</li>
+					<li>Antena de luna para búsqueda automática de emisora (diversidad de frecuencia)</li>
+					<li>Mirror Link y "App" RSE inalámbrica</li>
+					<li>Pomo/empuñadura de la palanca de cambio en cuero</li>
+					<li>Climatizador automático de tres zonas</li>
+					<li>6YD</li>
+					<li>Control crucero</li>
+					<li>Faros antiniebla y luz de giro</li>
+					<li>Sensores de estacionamiento traseros y delanteros</li>
+					<li>8 altavoces (pasivos)</li>
+					<li>Interfaz eléctrica para uso externo, AUX-IN y 2 USB, MDI gama baja Gen2</li>
+					<li>Preparación para teléfono móvil</li>
+					<li>Detector de fatiga</li>
+
+					<li><b>Navegación</b></li>
+					<li>Display multifuncional/ ordenador de a bordo "Medium"</li>
+					<li>Sistema de navegación touchscreen de 8” con App Connect</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifuncional deportivo en cuero con Tiptronic</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante, el del acompañante con desactivación del airbag</li>
+					<li>Frenos de disco posteriores</li>
+					<li>Frenos de disco anteriores</li>
+					<li>Alarma antirrobo con vigilancia del habitáculo, sirena de alarma y protección contra remolque</li>
+					<li>Sin sistema de seguridad ampliado</li>
+					<li>Indicador para el control de los neumáticos</li>
+					<li>Airbags laterales anteriores con airbag de cabezaCierre centralizado por control remoto, con accionamiento desde el interior y cierre de seguridad</li>
+					<li>Dirección asistida, dependiente de la velocidad (Servotronic)</li>
+				</ul>
+			</div>
+			<h3>Equipamiento opcional</h3>
+			<div class="div-item-informacion-tecnica" style="display: none;">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="/Content/info_modelos/nuevo_tiguan_allspace/Colores/Colores01.png" class="imgResponsiva"><br>Gris platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="/Content/info_modelos/nuevo_tiguan_allspace/Colores/Colores02.png" class="imgResponsiva"><br>??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="/Content/info_modelos/nuevo_tiguan_allspace/Colores/Colores03.png" class="imgResponsiva"><br>??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="/Content/info_modelos/nuevo_tiguan_allspace/Colores/Colores04.png" class="imgResponsiva"><br>Negro Profundo</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="/Content/info_modelos/nuevo_tiguan_allspace/Colores/Colores05.png" class="imgResponsiva"><br>Blanco puro</li>
+
+					<li class="sin-borde" style="clear:both;"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="icon-navigation-close" width="100%" height="100%" class="imgResponsiva svg replaced-svg">
+				<path d="M13.1 10l6.8-7.1c.2-.2.2-.5 0-.7l-2-2c-.2-.2-.5-.2-.7 0L10 7 2.9.2c-.2-.2-.5-.2-.7 0l-2 2c-.2.2-.2.5-.1.7L7 10 .2 17.1c-.2.2-.2.5 0 .7l2 2c.2.2.5.2.7 0L10 13l7.1 6.8c.2.2.5.2.7 0l2-2c.2-.2.2-.5 0-.7L13.1 10z"></path>
+			</svg>
+		</div>
+	</div>
+
+	<p class="paginadorVersiones visibleCelular">
+		<a href="#1" class="active">&nbsp;</a>
+		<a href="#2">&nbsp;</a>
+		<a href="#3">&nbsp;</a>
+		<a href="#4">&nbsp;</a>
+	</p>
+</div>
+
+
+<!----------------------------------CONFORT/ESPACIO---------------------------------->
+<div id="divPostventa" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Postventa
+	</div>
+	<div class="SubTituloSeccion">
+
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Beneficio Postventa</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Postventa/Postventa01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Beneficio Postventa
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Mantené tu Tiguan como un 0km.
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Con la compra de un Tiguan Allspace te bonificamos el total de los primeros 3 servicios de Mantenimiento Programado en todos los Talleres Oficiales del país.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Postventa/Postventa01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+
+
+<!----------------------------------BROCHURE---------------------------------->
+<div id="divBrochure">
+	<div id="div-Brochure-Info">
+		<h2>Brochure<br />de Tiguan</h2>
+		<a href="~/Content/info_modelos/nuevo_tiguan_allspace/Brochure/Brochure.pdf" rel="external" class="linkDescargarBrochure" target="_blank">
+			<div id="div-Brochure-Boton">
+				<div id="div-Brochure-Boton-Inner">Descargalo</div>
+			</div>
+		</a>
+	</div>
+	<div id="div-Brochure-Imagen">
+		<img src="~/Content/info_modelos/nuevo_tiguan_allspace/Brochure/Brochure.jpg?v=2" class="imgResponsiva" />
+	</div>
+</div>
+
+
+@section footerModelo
+{
+	<div class="md-modal md-effect-12">
+		<div class="md-content">
+			<div id="divGaleriaPopup-Imagenes">
+				<div class="slick-div-aux"><img src="~/Content/info_modelos/nuevo_tiguan_allspace/Galeria/Galeria01.jpg" class="imgResponsiva" /></div>
+				<div class="slick-div-aux"><img src="~/Content/info_modelos/nuevo_tiguan_allspace/Galeria/Galeria02.jpg" class="imgResponsiva" /></div>
+				<div class="slick-div-aux"><img src="~/Content/info_modelos/nuevo_tiguan_allspace/Galeria/Galeria03.jpg" class="imgResponsiva" /></div>
+				<div class="slick-div-aux"><img src="~/Content/info_modelos/nuevo_tiguan_allspace/Galeria/Galeria04.jpg" class="imgResponsiva" /></div>
+				<div class="slick-div-aux"><img src="~/Content/info_modelos/nuevo_tiguan_allspace/Galeria/Galeria05.jpg" class="imgResponsiva" /></div>
+				<div class="slick-div-aux"><img src="~/Content/info_modelos/nuevo_tiguan_allspace/Galeria/Galeria06.jpg" class="imgResponsiva" /></div>
+				<div class="slick-div-aux"><img src="~/Content/info_modelos/nuevo_tiguan_allspace/Galeria/Galeria07.jpg" class="imgResponsiva" /></div>
+			</div>
+		</div>
+		<div id="divCerrarGaleria">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg cruzCerrar" />
+		</div>
+	</div>
+	<div class="md-overlay"></div>
+	<br /><br />}

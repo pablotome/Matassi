@@ -1,0 +1,44 @@
+﻿@{
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			<h2>@ViewBag.Title</h2>
+
+			<p class="nuevoItem">
+				@Html.ActionLink("Nuevo Usuario", "Register", null, new { @class = "btn btn-primary" })
+			</p>
+		</td>
+	</tr>
+</table>
+
+<table class="table tabla-centrada">
+	<tr>
+		<th class="oculto">
+			Código
+		</th>
+		<th>
+			User ID
+		</th>
+		<th>
+			User Name
+		</th>
+		<th width="20%"></th>
+	</tr>
+
+	@foreach (var item in ViewBag.Usuarios)
+	{
+		<tr>
+			<td>
+				@item.UserId
+			</td>
+			<td>
+				@item.UserName
+			</td>
+			<td align="center">
+				@Html.ActionLink("Cambiar Password", "CambiarPassword", new { userName = item.UserName })
+			</td>
+		</tr>
+	}
+</table>

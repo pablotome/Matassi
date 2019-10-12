@@ -1,0 +1,262 @@
+﻿@using Matassi.Dominio
+@model Matassi.Dominio.AccesosHome
+
+@{
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			<h2>@ViewBag.Title</h2>
+		</td>
+	</tr>
+</table>
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			@using (Html.BeginForm("AccesosHome_Crear", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
+			{
+				@Html.AntiForgeryToken()
+
+				@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Titulo, htmlAttributes: new { @class = "col-md-3 control-label" })
+					<div class="col-md-8">
+						@Html.EditorFor(model => model.Titulo, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.Titulo, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.ClaseCSSTitulo, htmlAttributes: new { @class = "col-md-3 control-label" })
+					<div class="col-md-8">
+						@Html.DropDownListFor(model => model.ClaseCSSTitulo, new SelectList(
+																				  new List<Object>{
+																					   new { value = "" , text = "- Seleccione"  },
+																					   new { value = "tituloBlancoSombraNegra" , text = "Titulo Blanco, Sombra Negra" },
+																					   new { value = "tituloNegroSombraBlanca" , text = "Titulo Negro, Sombra Blanca"}
+																					},
+																				  "value",
+																				  "text",
+																				0), new
+																				{
+																					@class = "form-control"
+																				})
+						@Html.ValidationMessageFor(model => model.ClaseCSSTitulo, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Link, htmlAttributes: new { @class = "col-md-3 control-label" })
+					<div class="col-md-8">
+						@Html.EditorFor(model => model.Link, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.Link, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.CodTipoImagen, htmlAttributes: new { @class = "col-md-3 control-label" })
+					<div class="col-md-8">
+						@Html.DropDownListFor(model => model.CodTipoImagen, new SelectList(
+																				  new List<Object>{
+																					   new { value = 0 , text = "- Seleccione"  },
+																					   new { value = 1 , text = "Modelo" },
+																					   new { value = 2 , text = "Accesorio"}
+																					},
+																				  "value",
+																				  "text",
+																				0), new
+																				{
+																					@class = "form-control",
+																					onchange = @"javascript:SeleccionarImagen(this);"
+																				})
+						@Html.ValidationMessageFor(model => model.CodTipoImagen, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.CodImagen, htmlAttributes: new { @class = "col-md-3 control-label" })
+					<div class="col-md-8">
+
+						<button type="button" class="btn btn-sm btn-primary disabled" data-toggle="modal" id="btnElegirImagen" disabled>Elegir</button>
+						&nbsp;
+						<img id="imgElegida" />
+
+
+						@Html.HiddenFor(model => model.CodImagen, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.CodImagen, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Orden, htmlAttributes: new { @class = "col-md-3 control-label" })
+					<div class="col-md-8">
+						@Html.EditorFor(model => model.Orden, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.Orden, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Vigente, htmlAttributes: new { @class = "col-md-3 control-label" })
+					<div class="col-md-8">
+						<div class="checkbox">
+							@Html.EditorFor(model => model.Vigente)
+							@Html.ValidationMessageFor(model => model.Vigente, "", new { @class = "text-danger" })
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group btnGuardar">
+					<div class="col-md-offset-2 col-md-8">
+						<input type="submit" value="Guardar" class="btn btn-primary" />
+						@Html.ActionLink("Cancelar", "AccesosHome_Listar", null, new { @class = "btn btn-default" })
+					</div>
+				</div>
+			}
+		</td>
+	</tr>
+</table>
+
+<div class="modal fade" id="modalImagenModelo" role="dialog">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Modal Header</h4>
+			</div>
+			<div class="modal-body">
+				@for (int i = 0; i < ((List<ImagenModelo>)ViewBag.ImagenesModelo).Count; i += 4)
+				{
+
+					@Html.Raw("<div class=\"row\">")
+
+					for (int j = i; j < i + 4; j++)
+					{
+						<div class="col-md-3">
+							@if (ViewBag.ImagenesModelo[j] != null
+								&& ViewBag.ImagenesModelo[j].CodImagenModelo != 0)
+							{
+								<img class="imagenParaHome" src='@Url.Action("VerImagenModelo", new { codImagenModelo = ViewBag.ImagenesModelo[j].CodImagenModelo })' valor-imagen="@ViewBag.ImagenesModelo[j].CodImagenModelo" />
+							}
+							else
+							{
+								Html.Raw("&nbsp;");
+							}
+						</div>
+					}
+
+					@Html.Raw("</div>")
+
+				}
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal" id="btnOKImagenModelo">Aceptar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="modalAccesorioModelo" role="dialog">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Modal Header</h4>
+			</div>
+			<div class="modal-body">
+				@for (int i = 0; i < ((List<AccesorioModelo>)ViewBag.AccesoriosModelo).Count; i += 4)
+				{
+
+					@Html.Raw("<div class=\"row\">")
+
+					for (int j = i; j < i + 4; j++)
+					{
+						<div class="col-md-3">
+							@if (ViewBag.AccesoriosModelo[j] != null
+								&& ViewBag.AccesoriosModelo[j].CodAccesorioModelo != 0)
+							{
+								<img class="imagenParaHome" src='@Url.Action("VerImagenAccesorioModelo", new { codImagenAccesorioModelo = ViewBag.AccesoriosModelo[j].CodAccesorioModelo })' valor-imagen="@ViewBag.AccesoriosModelo[j].CodAccesorioModelo" />
+							}
+							else
+							{
+								Html.Raw("&nbsp;");
+							}
+						</div>
+					}
+
+					@Html.Raw("</div>")
+
+				}
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal" id="btnOKImagenAccesorio">Aceptar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+@section scriptJS{
+	<script type="text/javascript">
+		function SeleccionarImagen(objTipoImagen) {
+			if ($(objTipoImagen).val() == "0") {
+				$("#btnElegirImagen").addClass("disabled");
+				$("#btnElegirImagen").prop("disabled", true);
+			}
+			else {
+				$("#btnElegirImagen").removeClass("disabled");
+				$("#btnElegirImagen").prop("disabled", false);
+
+				if ($(objTipoImagen).val() == "1")
+					$("#btnElegirImagen").attr("data-target", "#modalImagenModelo");
+				else if ($(objTipoImagen).val() == "2")
+					$("#btnElegirImagen").attr("data-target", "#modalAccesorioModelo");
+			}
+
+			$("#CodImagen").val('');
+		}
+
+		$(document).ready(function () {
+			$(".imagenParaHome").hover(
+				function () {
+					$(this).addClass("bordeSeleccionado");
+				},
+				function () {
+					$(this).removeClass("bordeSeleccionado");
+				});
+
+			$(".imagenParaHome").click(function () {
+				$(this).addClass("bordeSeleccionado2");
+				$("#CodImagen").val($(this).attr('valor-imagen'));
+				$("#btnOKImagenModelo").click();
+				$("#btnOKImagenAccesorio").click();
+				$("#imgElegida").attr("src", $(this).attr("src"));
+			});
+		});
+	</script>
+}
+
+@section styleCSS {
+	<style type="text/css">
+		.row {
+			margin-bottom: 15px;
+		}
+
+		.imagenParaHome {
+			cursor: pointer;
+		}
+
+		.bordeSeleccionado {
+			outline: 1px solid #FFF;
+			outline-offset: -4px;
+		}
+
+		.bordeSeleccionado2 {
+			outline: 2px solid #FFF;
+			outline-offset: -4px;
+		}
+	</style>
+}

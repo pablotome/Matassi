@@ -1,0 +1,576 @@
+﻿@{
+    ViewBag.Title = "up";
+    Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+    @Styles.Render("~/bundles/estilosCSSModelo")
+    @Scripts.Render("~/bundles/funcionesModelo")
+}
+
+<div id="divBannerTituloModelo">
+    <span id="spnTituloModelo">
+        Fox
+    </span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+    <ul id="ulListaCaracteristicasModelo">
+        <li class="liTecnologia" data-divmodelos="divTecnologia">Tecnología</li>
+        <li class="liDestacados" data-divmodelos="divDestacados">Destacados</li>
+        <li class="liDisenio" data-divmodelos="divDisenio">Diseño</li>
+        <li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+    </ul>
+</div>
+
+<div id="divImagenModelo">
+    <img src="~/Content/info_modelos/fox/Fox.jpg" class="imgResponsiva" />
+</div>
+
+<div id="divTituloModelo">
+    Eso que no todo el mundo tiene.<br /><br />
+</div>
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+    <div class="iconoDesplegar">
+        <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+        <span>
+            Selecciona categoria
+        </span>
+    </div>
+    <ul class="oculto">
+        <li class="liTecnologia" data-divmodelos="divTecnologia">Tecnología</li>
+        <li class="liDestacados" data-divmodelos="divDestacados">Destacados</li>
+        <li class="liDisenio" data-divmodelos="divDisenio">Diseño</li>
+        <li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+    </ul>
+</div>
+
+
+<!----------------------------------TECNOLOGIA---------------------------------->
+<div id="divTecnologia" class="SeccionModelo">
+    <div class="TituloSeccion">
+        Tecnología
+    </div>
+
+    <hr class="hrSeparadorItemsSeccion" />
+    <div class="Imagenes2Columnas">
+
+        <div class="iconoDesplegarSeccion">
+            <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+            <span>Sistema de audio</span>
+        </div>
+
+        <div class="Imagenes2Columnas-Izquierda">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+                <img src="~/Content/info_modelos/fox/Tecnologia/Tecnologia01.jpg" class="imgResponsiva" />
+            </div>
+            <div class="infoTextoColumna">
+                <h5>Sistema de audio</h5>
+                <h3>Tu smartphone ya es parte de tu vehículo.</h3>
+                <p>El Nuevo Fox trae el revolucionario sistema de audio App Connect. Permite reflejar el contenido de tu teléfono smartphone en la pantalla multimedia del tablero, una pantalla táctil de 6 pulgadas con comandos fáciles e intuitivos. Sentite más conectado que nunca con el mundo que te rodea.</p>
+            </div>
+        </div>
+
+        <div class="Imagenes2Columnas-Derecha ocultoCelular">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+                <img src="~/Content/info_modelos/fox/Tecnologia/Tecnologia01.jpg" class="imgResponsiva" />
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="hrSeparadorItemsSeccion" />
+
+    <div class="Imagenes2Columnas">
+
+        <div class="iconoDesplegarSeccion">
+            <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+            <span>Compatibilidad</span>
+        </div>
+
+        <div class="Imagenes2Columnas-Izquierda">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+                <img src="~/Content/info_modelos/fox/Tecnologia/Tecnologia02.jpg" class="imgResponsiva" />
+            </div>
+        </div>
+
+        <div class="Imagenes2Columnas-Derecha ocultoCelular">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+                <img src="~/Content/info_modelos/fox/Tecnologia/Tecnologia02.jpg" class="imgResponsiva" />
+            </div>
+            <div class="infoTextoColumna">
+                <h5>Compatibilidad</h5>
+                <h3>Lo último en tecnología a tu alcance.</h3>
+                <p>El App Connect de Volkswagen también logra integrarse con interfaces como MirrorLink, CarPlay de Apple y Android Auto de Google. Disfrutá tus viajes sabiendo que estás acompañado de lo último en tecnología e infoentretenimiento.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------CONFORT---------------------------------->
+<div id="divDestacados" class="SeccionModelo">
+    <div class="TituloSeccion">
+        Confort
+    </div>
+
+    <hr class="hrSeparadorItemsSeccion" />
+    <div class="Imagenes2Columnas">
+
+        <div class="iconoDesplegarSeccion">
+            <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+            <span>Práctico y funcional</span>
+        </div>
+
+        <div class="Imagenes2Columnas-Izquierda">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+                <img src="~/Content/info_modelos/fox/Confort/Confort01.jpg" class="imgResponsiva" />
+            </div>
+            <div class="infoTextoColumna">
+                <h5>Práctico y funcional</h5>
+                <h3>Comodidad para todos tus viajes.</h3>
+                <p>Gracias a su gran espacio envolvente y su volante multifunción, todo en el Fox está dispuesto para que disfrutes de una forma de manejo funcional y práctica. La filosofía “Built Around the Passenger” es garantía de que cada viaje que hagas en el Fox va a ser una experiencia única.</p>
+            </div>
+        </div>
+
+        <div class="Imagenes2Columnas-Derecha ocultoCelular">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+                <img src="~/Content/info_modelos/fox/Confort/Confort01.jpg" class="imgResponsiva" />
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="hrSeparadorItemsSeccion" />
+
+    <div class="Imagenes2Columnas">
+
+        <div class="iconoDesplegarSeccion">
+            <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+            <span>Comodidad</span>
+        </div>
+
+        <div class="Imagenes2Columnas-Izquierda">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+                <img src="~/Content/info_modelos/fox/Confort/Confort02.jpg" class="imgResponsiva" />
+            </div>
+        </div>
+
+        <div class="Imagenes2Columnas-Derecha ocultoCelular">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+                <img src="~/Content/info_modelos/fox/Confort/Confort02.jpg" class="imgResponsiva" />
+            </div>
+            <div class="infoTextoColumna">
+                <h5>Comodidad</h5>
+                <h3>Todo lo que buscás y más.</h3>
+                <p>El Nuevo Fox tiene todo lo que necesitás para disfrutar tus viajes tranquilos. Entre sus componentes vas a encontrar Alzacristales eléctricos delanteros y traseros, cierre centralizado con comando a distancia y alarma y espejos regulables eléctricamente.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------DISEÑO---------------------------------->
+<div id="divDisenio" class="SeccionModelo">
+    <div class="TituloSeccion">
+        Diseño
+    </div>
+
+    <hr class="hrSeparadorItemsSeccion" />
+
+    <div class="Imagenes2Columnas">
+
+        <div class="iconoDesplegarSeccion">
+            <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+            <span>Llantas</span>
+        </div>
+
+        <div class="Imagenes2Columnas-Izquierda">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+                <img src="~/Content/info_modelos/fox/Disenio/Disenio01.jpg" class="imgResponsiva" />
+            </div>
+            <div class="infoTextoColumna">
+                <h5>Llantas</h5>
+                <h3>Elegante y distinguido.</h3>
+                <p>Combinando personalidad y elegancia, el Nuevo Fox adopta el atractivo modelo de llantas de aleación Sato de 15”. También ofrece diferentes y modernas opciones para sus modelos de llanta, que se adaptan a cada una de sus líneas y le dan un toque personal.</p>
+            </div>
+        </div>
+
+        <div class="Imagenes2Columnas-Derecha ocultoCelular">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+                <img src="~/Content/info_modelos/fox/Disenio/Disenio01.jpg" class="imgResponsiva" />
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="hrSeparadorItemsSeccion" />
+
+    <div class="Imagenes2Columnas">
+
+        <div class="iconoDesplegarSeccion">
+            <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+            <span>Personalidad única</span>
+        </div>
+
+        <div class="Imagenes2Columnas-Izquierda">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+                <img src="~/Content/info_modelos/fox/Disenio/Disenio02.jpg" class="imgResponsiva" />
+            </div>
+        </div>
+
+        <div class="Imagenes2Columnas-Derecha ocultoCelular">
+            <div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+                <img src="~/Content/info_modelos/fox/Disenio/Disenio02.jpg" class="imgResponsiva" />
+            </div>
+            <div class="infoTextoColumna">
+                <h5>Personalidad única</h5>
+                <h3>Diseño</h3>
+                <p>El Fox proyecta al conductor a una dimensión distinta. El placer de conducción de un Volkswagen viene acompañado de una posición elevada de manejo. Su tecnología, calidad y performance técnica lo convierten en un referente del segmento con personalidad propia.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------VERSIONES---------------------------------->
+<div id="divVersiones" class="SeccionModelo">
+    <div class="TituloSeccion">
+        Versiones
+    </div>
+
+    <!-- CONNECT -->
+    <div class="div-version-modelo">
+        <div class="div-version-modelo-auto">
+            <img src="~/Content/info_modelos/fox/Versiones/Versiones01.png" class="imgResponsiva" />
+            <h4>Connect</h4>
+        </div>
+        <div class="div-version-modelo-texto">
+            <ul>
+                <li>Volante multifunción</li>
+                <li>Sistema de audio con App Connect</li>
+                <li>Levantavidrios eléctricos delanteros y traseros</li>
+                <li>Cierre centralizado con comando a distancia</li>
+                <li>Anclajes ISOFIX</li>
+            </ul>
+        </div>
+        <div class="div-version-modelo-botones">
+            <div class="div-boton-info-tecnica" data-modelo="Connect">
+                <div>Información Técnica</div>
+            </div>
+        </div>
+    </div>
+    <div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Connect">
+        <h1>Connect</h1>
+        <div class="div-info-tecnica-modelo-imagen">
+            <img src="~/Content/info_modelos/fox/InfoTecnica/InfoTecnica01.png" class="imgResponsiva" />
+        </div>
+        <div class="div-items-informacion-tecnica">
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Características
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li>Volante multifunción </li>
+                    <li>Sistema de audio con App Connect </li>
+                    <li>Levantavidrios eléctricos delanteros y traseros </li>
+                    <li>Cierre centralizado con comando a distancia </li>
+                    <li>Anclajes ISOFIX</li>
+                </ul>
+            </div>
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Datos técnicos
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li class="sin-borde">??</li>
+                </ul>
+            </div>
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Equipamiento de serie
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li><b>Llantas/Neumáticos</b></li>
+                    <li>Llantas de aleación 15" Sato</li>
+
+                    <li><b>Interior</b></li>
+                    <li>Paquete Cromo (Versión 2)</li>
+                    <li>Pomo de la palanca de cambio deportivo</li>
+
+                    <li><b>Exterior</b></li>
+                    <li>Tubo de escape final detrás (estándar)</li>
+                    <li>Carcasas espejos exteriores y diversos componentes en color carrocería</li>
+                    <li>Sin barras longitudinales del techo ni barras portaequipajes</li>
+                    <li>Sin apertura para techo (techo estándar)</li>
+                    <li>Sin spoiler delantero</li>
+                    <li>Sin spoiler posterior</li>
+                    <li>Cristales laterales y luneta posterior antitérmicas</li>
+                    <li>Sin juego de siglas y emblemas (sin denominación de tipo)</li>
+                    <li>4 puertas</li>
+
+                    <li><b>Espejos</b></li>
+                    <li>Retrovisor exterior con ajuste eléctrico</li>
+                    <li>Espejo interior de seguridad antideslumbrante</li>
+
+                    <li><b>Iluminación</b></li>
+                    <li>Sin activación especial de las luces de marcha</li>
+                    <li>Faros dobles, circulación por la derecha, con faros de largo alcance integrados</li>
+                    <li>Sin regulación alcance faros</li>
+                    <li>Sin faros antiniebla</li>
+                    <li>Conjunto pilotos posteriores de color oscuro</li>
+                    <li>Sin limpialavafaros</li>
+                    <li>Limpiaparabrisas a intervalos, sin regulación</li>
+
+                    <li><b>Confort de marcha</b></li>
+                    <li>Suspensión/amortiguación estándar</li>
+                    <li>Sin ayuda de aparcamiento</li>
+                    <li>Sin regulador de velocidad (GRA)</li>
+                    <li>Sin sistema de cámaras/vigilancia sensorial del entorno</li>
+
+                    <li><b>Confort de asiento</b></li>
+                    <li>Respaldo de asiento trasero abatible</li>
+                    <li>Aire acondicionado con regulación mecánica</li>
+                    <li>Regulación en altura manual del asiento anterior izquierdo</li>
+                    <li>Asientos no calefaccionables</li>
+
+                    <li><b>Infotainment</b></li>
+                    <li>Sistema de audio con App Connect</li>
+                    <li>Sin interface eléctrico</li>
+                    <li>4 altavoces (pasivos) y 2 altavoces para agudos</li>
+                    <li>MIB2-G estándar plus PQ/MQB radio resto del mundo/China (GP)</li>
+
+                    <li><b>Navegación</b></li>
+                    <li>Display multifuncional con mando</li>
+                    <li>Sin sistema de navegación</li>
+                    <li>Sin preparación/montaje de auto-teléfono</li>
+
+                    <li><b>Volantes</b></li>
+                    <li>Volante multifunción</li>
+
+                    <li><b>Seguridad</b></li>
+                    <li>Airbag para conductor y acompañante</li>
+                    <li>Frenos de tambor posteriores</li>
+                    <li>Frenos de disco anteriores, con soporte integrado</li>
+                    <li>Inmovilizador electrónico, con alarma antirrobo y control del habitáculo</li>
+                    <li>Sin control de presión de los neumáticos</li>
+                    <li>Sin airbag lateral</li>
+                    <li>Cierre centralizado con comando a distancia</li>
+                    <li>Dirección asistida, dependiente de la velocidad (Servotronic)</li>
+                </ul>
+            </div>
+            <h3>
+                <img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+                Equipamiento opcional
+            </h3>
+            <div class="div-item-informacion-tecnica">
+                <ul>
+                    <li class="sin-borde"><b>Color Exterior</b></li>
+                    <li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/fox/Colores/Colores01.png" class="imgResponsiva" /><br />??</li>
+                    <li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/fox/Colores/Colores02.png" class="imgResponsiva" /><br />??</li>
+                    <li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/fox/Colores/Colores03.png" class="imgResponsiva" /><br />??</li>
+                    <li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/fox/Colores/Colores04.png" class="imgResponsiva" /><br />??</li>
+                    <li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/fox/Colores/Colores05.png" class="imgResponsiva" /><br />??</li>
+
+                    <li style="clear:both;">&nbsp;</li>
+                </ul>
+            </div>
+        </div>
+        <div class="div-items-informacion-tecnica-cerrar">
+            <img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+        </div>
+    </div>
+
+    <p class="paginadorVersiones visibleCelular">
+        <a href="#1" class="active">&nbsp;</a>
+    </p>
+</div>
+
+<!----------------------------------ACCESORIOS---------------------------------->
+<div class="divGaleria">
+    <div id="div-Brochure-Info">
+        <h2>Accesorios</h2>
+        <div id="div-Brochure-Boton">
+            <div id="div-Brochure-Boton-Inner">Accesorios</div>
+        </div>
+    </div>
+    <div id="div-Brochure-Imagen">
+        <img src="~/Content/info_modelos/fox/Accesorios/Accesorios.jpg" class="imgResponsiva" />
+    </div>
+</div>
+
+
+<!----------------------------------BROCHURE---------------------------------->
+<div id="divBrochure">
+        <div id="div-Brochure-Info">
+            <h2>Brochure<br />de Fox</h2>
+			<a href="~/Content/info_modelos/fox/Brochure/Brochure.pdf" rel="external" class="linkDescargarBrochure" target="_blank">
+				<div id="div-Brochure-Boton">
+					<div id="div-Brochure-Boton-Inner">Descargalo</div>
+				</div>
+			</a>
+
+</div>
+    <div id="div-Brochure-Imagen">
+        <img src="~/Content/info_modelos/fox/Brochure/Brochure.jpg" class="imgResponsiva" />
+    </div>
+</div>
+
+@section footerModelo{
+    <a class="volverArriba oculto">
+        <div>
+            <img src="~/Content/info_modelos/fox/~/Content/img/iconos/flechaArribaDoble.svg" class="imgResponsiva svg" />
+        </div>
+    </a>
+
+    <div class="md-modal md-effect-12">
+        <h1>Accesorios Fox</h1>
+        <div class="md-contentAccesorios">
+            <div id="divGaleriaPopup-Imagenes" style="width: 60%; height: auto; margin: auto auto;">
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios01.jpg" class="imgResponsiva" />
+                    <p>
+                        Alarma | PMR-035-953-PX-PST
+                    </p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios02.jpg" class="imgResponsiva" />
+                    <p>
+                        Cierre Centralizado | PMR-959-000-05-5U0
+                        <br>Suplemento cierre fox | 000-959-000-05-5U0
+                    </p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios03.jpg" class="imgResponsiva" />
+                    <p>
+                        Cubre Carter | PMR-018-903
+                    </p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios04.jpg" class="imgResponsiva" />
+                    <p>
+                        Tuercas de Seguridad | 000-071-595
+                    </p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios05.jpg" class="imgResponsiva" />
+                    <p>Embellecedor válvula | 000-071-215-A</p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios06.jpg" class="imgResponsiva" />
+                    <p>Alfombra PVC | PMR-867-700-01-5Z3</p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios07.jpg" class="imgResponsiva" />
+                    <p>Kit Faros de Neblina | PMR-052-184-00-5Z0</p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios08.jpg" class="imgResponsiva" />
+                    <p>Pedalera Deportiva (solo cambio manual) | APR-064-200</p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios09.jpg" class="imgResponsiva" />
+                    <p>Sensor de Estacionamiento | 5Z9-054-630</p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios10.jpg" class="imgResponsiva" />
+                    <p>Espejo interior de Carbono | 000-072-548-  -Z57</p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios11.jpg" class="imgResponsiva" />
+                    <p>Espejo interior Adicional | 000-072-549-A</p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios12.jpg" class="imgResponsiva" />
+                    <p>Soporte básico - Sistema de viaje y confort | 000-061-122</p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios13.jpg" class="imgResponsiva" />
+                    <p>Mesa Plegable - Sistema de Viaje y Confort | 000-061-124</p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios14.jpg" class="imgResponsiva" />
+                    <p>Soporte GO PRO - Sistema de Viaje y Confort | 000-061-125-J</p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios15.jpg" class="imgResponsiva" />
+                    <p>
+                        Porta Ipad - Sistema de Viaje y Confort | 000-061-125-A
+                        <br>Porta Ipad mini - Sistema de Viaje y Confort | 000-061-125-B
+                        <br>Porta Ipad Air - Sistema de Viaje y Confort | 000-061-125-C
+                        <br>Porta Samsung Galaxy Tab 3/4 10.1" - Sistema de Viaje y Confort | 000-061-125-D
+                    </p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios16.jpg" class="imgResponsiva" />
+                    <p>Soporte de Bolsas - Sistema de viaje y confort | 000-061-126-B</p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios17.jpg" class="imgResponsiva" />
+                    <p>Percha de habitaculo - Sistema de viaje y confort | 000-061-127-B</p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios18.jpg" class="imgResponsiva" />
+                    <p>Conservadora | 000-065-400-F</p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios19.jpg" class="imgResponsiva" />
+                    <p>Bolsa para papeles | 000-061-107</p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios20.jpg" class="imgResponsiva" />
+                    <p>Percha de habitaculo | 00V-061-127</p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios21.jpg" class="imgResponsiva" />
+                    <p>
+                        Asiento para niños G0 Plus - ISOFIX (menos de 13kg) | 5G0-019-907
+                        <br>Asiento para Niños G0 Plus (menos 13kg) | 5G0-019-900
+                    </p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios22.jpg" class="imgResponsiva" />
+                    <p>Asiento para niños G1 - DUO ISOFIX +TOP TETHER (de 9 a 18 kg) | 5G0-019-909-A</p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios23.jpg" class="imgResponsiva" />
+                    <p>Asiento para niños G2 (de 15 a 36 kg) | 5G0-019-906</p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios24.jpg" class="imgResponsiva" />
+                    <p>Asiento de niños GTI | 1KV-019-903</p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios25.jpg" class="imgResponsiva" />
+                    <p>Kit de Cuidado Automotor | 000-096-355-B</p>
+                </div>
+                <div class="slick-div-aux-acc">
+                    <img src="~/Content/info_modelos/fox/Accesorios/Accesorios26.jpg" class="imgResponsiva" />
+                    <p class="vw_carousel_caption vw_m022_copy_b3">
+                        Kit de Seguridad c/ extintor | PMR-BOL-SEG-B
+                        <br>Kit de Seguridad s/ extintor | PMR-BOL-SEG-C
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="divCerrarGaleria">
+            <img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg cruzCerrar" />
+        </div>
+    </div>
+
+    <div class="md-overlay"></div>
+    <br /><br />
+}

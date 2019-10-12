@@ -1,0 +1,123 @@
+﻿@using Matassi.Dominio
+@model List<AutoahorroGanador>
+
+@{
+	ViewBag.Title = "Ganadores";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+<style type="text/css">
+	.titulo {
+		font-family: 'VWHeadWeb-Bold', Arial, Helvetica, sans-serif;
+		font-size: 12px;
+	}
+	
+	.Ganadores {
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
+	}
+
+		.Ganadores tr td {
+			padding: 5px;
+		}
+
+		.Ganadores tr:nth-child(odd) {
+			font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+			font-size: 12px;
+			font-weight: normal;
+			background-color: #F0F0F5;
+			height: 22px;
+		}
+
+		.Ganadores tr:nth-child(even) {
+			font-family: 'VWHeadWeb-Regular', Arial, Helvetica, sans-serif;
+			font-size: 12px;
+			font-weight: normal;
+			background-color: #FFFFFF;
+			height: 22px;
+		}
+
+		.Ganadores tr:first-child {
+			background-color: #CCCCD1;
+			color: #000;
+			font-family: 'VWHeadWeb-Bold', Arial, Helvetica, sans-serif;
+		}
+
+			.Ganadores tr:first-child td,
+			.Ganadores tr td:first-child {
+				text-align: center;
+			}
+
+		.Ganadores tr td:last-child {
+			text-align: right;
+			padding-right: 5px;
+		}
+
+		.Ganadores tr:first-child td {
+			text-align: center;
+		}
+</style>
+
+<div class="infoModelo">
+	<a href="#" class="modeloActual">@ViewBag.Title</a>
+	<div class="infoModeloTitulos">
+		<ul class="">
+			<li>|</li>
+			<li>
+				<span></span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div style="margin: 10px 9px 9px 9px; display:block; position: relative; height: auto; overflow:hidden;">
+	<span class="columnaDerecha">
+		<img src="~/Content/images/am0312.jpg" />
+		<div class="TituloPagina">@ViewBag.Title</div>
+
+		<span class="titulo">
+			A continuación, los ganadores del mes de @ViewBag.MesGanadores de @ViewBag.AnioGanadores
+		</span>
+		
+		<div style="margin-top:10px;">
+
+			
+
+			<table class="Ganadores">
+				<tr class="EncabezadoGanadores">
+					<td>
+						Grupo y Orden
+					</td>
+					<td>
+						Nombre
+					</td>
+					<td>
+						Observación
+					</td>
+					<td>
+						Monto
+					</td>
+				</tr>
+				@if (Model != null)
+				{
+					foreach (AutoahorroGanador aag in Model)
+					{
+						<tr>
+							<td>@aag.Grupo.ToString("D4") - @aag.Orden.ToString("D3")</td>
+							<td>
+								@aag.Nombre
+							</td>
+							<td>
+								@aag.Tipo
+							</td>
+							<td>
+								$ @aag.Monto
+							</td>
+						</tr>
+					}
+				}
+			</table>
+		</divs>
+	</div>
+</div>

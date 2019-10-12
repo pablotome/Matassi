@@ -1,0 +1,972 @@
+﻿@{
+	ViewBag.Title = "up";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+	@Styles.Render("~/bundles/estilosCSSModelo")
+	@Scripts.Render("~/bundles/funcionesModelo")
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#divNovedades').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+			$('#divCaracteristicas').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+
+			$(window).on("orientationchange", function () {
+				//window.location.reload();
+				setTimeout(function () {
+					$('#divNovedades').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+				}, 500);
+
+				setTimeout(function () {
+					$('#divCaracteristicas').carouselMatassi({ mostrarBotones: !EsCelular(), mostrarIndice: EsCelular() }, function () { /*alert("callback");*/ });
+				}, 500);
+			});
+		});
+	</script>
+}
+
+<div id="divBannerTituloModelo">
+	<span id="spnTituloModelo">
+		Nuevo Polo
+	</span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+	<ul id="ulListaCaracteristicasModelo">
+		<li class="liNovedades" data-divmodelos="divNovedades">Novedades</li>
+		<li class="liConfort" data-divmodelos="divConfort">Confort</li>
+		<li class="liTecnologia" data-divmodelos="divTecnologia">Tecnología</li>
+		<li class="liCaracteristicas" data-divmodelos="divCaracteristicas">Características</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+<div id="divImagenModelo">
+	<img src="~/Content/info_modelos/nuevo_polo/Nuevo_Polo.jpg" class="imgResponsiva" />
+</div>
+
+<div id="divTituloModelo">
+	Tecnología, diseño y confort. Eso es tenerlo todo.
+</div>
+<div id="divBajadaTituloModelo">
+	El Nuevo Polo representa un nuevo concepto de todo lo que puede ser un Volkswagen. Innovador en todos los sentidos.
+</div>
+
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+	<div class="iconoDesplegar">
+		<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+		<span>
+			Selecciona categoria
+		</span>
+	</div>
+	<ul class="oculto">
+		<li class="liNovedades" data-divmodelos="divNovedades">Novedades</li>
+		<li class="liConfort" data-divmodelos="divConfort">Confort</li>
+		<li class="liTecnologia" data-divmodelos="divTecnologia">Tecnología</li>
+		<li class="liCaracteristicas" data-divmodelos="divCaracteristicas">Características</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+
+<!----------------------------------NOVEDADES---------------------------------->
+<div id="divNovedades" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Novedades
+	</div>
+	<div class="SubTituloSeccion">
+		El primer vehículo de una nueva Volkswagen.
+	</div>
+	<div class="listaHorizontalImagenes">
+		<ul>
+			<li data-pos="1" class="linkCarouselApagado linkCarouselEncendido">Confort</li>
+			<li data-pos="2" class="linkCarouselApagado">Tecnología</li>
+			<li data-pos="3" class="linkCarouselApagado">Seguridad</li>
+			<li data-pos="4" class="linkCarouselApagado">Diseño</li>
+		</ul>
+
+		<!-- Carrousel -->
+		<div class="divCarousel">
+			<div>
+				<ul>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_polo/Novedades/Novedades01.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_polo/Novedades/Novedades02.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_polo/Novedades/Novedades03.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_polo/Novedades/Novedades04.jpg" class="imgResponsiva" />
+					</li>
+				</ul>
+			</div>
+
+			<div class="divFlechaIzquierda">
+				<img src="~/Content/img/iconos/flechaIzquierda.svg" class="svg" />
+			</div>
+			<div class="divFlechaDerecha">
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+			</div>
+
+		</div>
+	</div>
+	<div class="divPaginador"><ul class="ulIndice"></ul></div>
+
+	<div class="InfoCarousel">
+		<ul>
+			<li data-pos="1">
+				<h5>
+					Confort
+				</h5>
+				<h3>
+					Un nuevo concepto.
+				</h3>
+				<p>
+					El interior del modelo fue desarrollado por medio de estudios de ergonomía y funcionalidad. Al sentarse al volante, el conductor del Nuevo Polo encuentra, en cualquier versión, su posición ideal.
+					<br />
+				</p>
+			</li>
+
+			<li data-pos="2">
+				<h5>
+					Tecnología
+				</h5>
+				<h3>
+					Exclusividad en su segmento.
+				</h3>
+				<p>
+					Entre sus más impactantes novedades, el Nuevo Polo es el primer Volkswagen que trae la segunda generación de Active Info Display, el asistente digital con información sobre las funciones de conducción y navegación.
+					<br />
+				</p>
+			</li>
+
+			<li data-pos="3">
+				<h5>
+					Seguridad
+				</h5>
+				<h3>
+					El mejor del segmento.
+					<br>
+				</h3>
+				<p>
+					El Nuevo Polo es el primero en su categoría en recibir la máxima calificación en seguridad del Latin NCAP, al obtener cinco estrellas tanto para la protección de ocupante adulto como la del ocupante infantil.
+					<br />
+				</p>
+			</li>
+
+			<li data-pos="4">
+				<h5>
+					Diseño
+				</h5>
+				<h3>
+					Sofisticado y deportivo.
+					<br>
+				</h3>
+				<p>
+					A través de sus marcadas líneas laterales y frontales, sus luces diurnas de LED y sus detalles cromados, el Nuevo Polo genera un atractivo inédito en su segmento.
+					<br />
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<!----------------------------------GALERIA---------------------------------->
+<div class="divGaleria">
+	<a href="#">
+		<img src="~/Content/info_modelos/nuevo_polo/Galeria/Galeria01.jpeg" class="imgResponsiva" />
+		<div class="divIconoGaleria1">
+			<div class="divIconoGaleria2">
+				<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+			</div>
+		</div>
+	</a>
+</div>
+
+
+<!----------------------------------CONFORT---------------------------------->
+<div id="divConfort" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Confort
+	</div>
+	<div class="SubTituloSeccion">
+		Existe una manera más cómoda de conducir.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+	<div class="Imagenes2Columnas">
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Confort</span>
+		</div>
+		<div class="Imagenes2Columnas-Izquierda">
+			<div>
+				<img src="~/Content/info_modelos/nuevo_polo/Confort/Confort01.jpg" class="imgResponsiva" />
+			</div>
+			<h5>Confort</h5>
+			<h3>Tu asistente perfecto</h3>
+			<p>Confort en un nivel que no conocías, gracias al sistema de apertura y arranque sin llave, la nueva caja automática Tiptronic de 6 velocidades, el climatizador automático y los limpiaparabrisas automáticos con sensor de lluvia, entre otros.</p>
+		</div>
+		<hr class="hrSeparadorItemsSeccion" />
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Confort</span>
+		</div>
+		<div class="Imagenes2Columnas-Derecha">
+			<div>
+				<img src="~/Content/info_modelos/nuevo_polo/Confort/Confort02.jpg" class="imgResponsiva" />
+			</div>
+			<h5>Confort</h5>
+			<h3>Tu propio espacio.</h3>
+			<p>El Nuevo Polo ofrece un excelente espacio en su interior, con lugar de sobra para sus pasajeros y todo el equipaje que lleven con ellos.</p>
+		</div>
+	</div>
+	<hr class="hrSeparadorItemsSeccion" />
+</div>
+
+
+<!----------------------------------GALERIA---------------------------------->
+<div class="divGaleria">
+	<a href="#">
+		<img src="~/Content/info_modelos/nuevo_polo/Galeria/Galeria02.jpeg" class="imgResponsiva" />
+		<div class="divIconoGaleria1">
+			<div class="divIconoGaleria2">
+				<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+			</div>
+		</div>
+	</a>
+</div>
+
+
+<!----------------------------------TECNOLOGÍA---------------------------------->
+<div id="divTecnologia" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Tecnología
+	</div>
+	<div class="SubTituloSeccion">
+		Un mundo al alcance de tu mano.
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Tecnología</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/nuevo_polo/Tecnologia/Tecnologia01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Tecnología.
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Active Info Display.
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					El tablero digital de instrumentos te permite estar informado durante todos tus viajes y ofrece el más completo servicio de infotenimiento.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/nuevo_polo/Tecnologia/Tecnologia01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes3Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Tecnología</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Izquierda">
+			<img src="~/Content/info_modelos/nuevo_polo/Tecnologia/Tecnologia02.jpg" class="imgResponsiva" />
+			<h5>
+				Tecnología
+			</h5>
+			<h3>
+				Total conectividad.
+			</h3>
+			<p>
+				La resolución de su pantalla de 10” (tamaño tablet) permite mostrar gráficos extremadamente precisos y de la más alta calidad.
+			</p>
+		</div>
+
+		<hr class="hrSeparadorItemsSeccion" />
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Tecnología</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Centro">
+			<img src="~/Content/info_modelos/nuevo_polo/Tecnologia/Tecnologia03.jpg" class="imgResponsiva" />
+			<h5>
+				Tecnología
+			</h5>
+			<h3>
+				Discover Media.
+			</h3>
+			<p>
+				Disponible para la versión Highline del Nuevo Polo, el sistema Discover Media permite la conectividad avanzada con tu smartphone a través de la App Connect (Android Auto, Apple CarPlay y Mirrorlink).
+			</p>
+		</div>
+
+		<hr class="hrSeparadorItemsSeccion" />
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Tecnología</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Derecha">
+			<img src="~/Content/info_modelos/nuevo_polo/Tecnologia/Tecnologia04.jpg" class="imgResponsiva" />
+			<h5>
+				Tecnología
+			</h5>
+			<h3>
+				Composition Touch.
+			</h3>
+			<p>
+				Las versiones Trendline y Comfortline ofrecen el sistema Composition Touch con pantalla de 6,5” y App Connect. Además, todas las versiones traen el soporte para celular sobre el panel, con entrada USB para carga rápida.
+			</p>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+
+<!----------------------------------GALERIA---------------------------------->
+<div class="divGaleria">
+	<a href="#">
+		<img src="~/Content/info_modelos/nuevo_polo/Galeria/Galeria03.jpg" class="imgResponsiva" />
+		<div class="divIconoGaleria1">
+			<div class="divIconoGaleria2">
+				<img src="~/Content/img/iconos/Galeria.svg" class="svg iconoGaleria" />
+			</div>
+		</div>
+	</a>
+</div>
+
+
+<!----------------------------------CARACTERISTICAS---------------------------------->
+<div id="divCaracteristicas" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Características
+	</div>
+	<div class="SubTituloSeccion">
+		Detalles que lo hacen único.
+	</div>
+	<div class="listaHorizontalImagenes">
+		<ul>
+			<li data-pos="1" class="linkCarouselApagado linkCarouselEncendido">Seguridad</li>
+			<li data-pos="2" class="linkCarouselApagado">Motor</li>
+			<li data-pos="3" class="linkCarouselApagado">Diseño</li>
+		</ul>
+
+		<!-- Carrousel -->
+		<div class="divCarousel">
+			<div>
+				<ul>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_polo/Caracteristicas/Caracteristicas01.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_polo/Caracteristicas/Caracteristicas02.jpg" class="imgResponsiva" />
+					</li>
+					<li>
+						<img src="~/Content/info_modelos/nuevo_polo/Caracteristicas/Caracteristicas03.jpg" class="imgResponsiva" />
+					</li>
+				</ul>
+			</div>
+
+			<div class="divFlechaIzquierda">
+				<img src="~/Content/img/iconos/flechaIzquierda.svg" class="svg" />
+			</div>
+			<div class="divFlechaDerecha">
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+			</div>
+
+		</div>
+	</div>
+	<div class="divPaginador"><ul class="ulIndice"></ul></div>
+
+	<div class="InfoCarousel">
+		<ul>
+			<li data-pos="1">
+				<h5>
+					Seguridad
+				</h5>
+				<h3>
+					ISOFIX
+				</h3>
+				<p>
+					El Nuevo Polo recibió 5 estrellas Latin NCAP en la protección del ocupante infantil por su robusta estructura y sus anclajes ISOFIX para sillas infantiles. Este ítem es un equipamiento de serie en todas las versiones.
+					<br />
+				</p>
+			</li>
+
+			<li data-pos="2">
+				<h5>
+					Motor
+				</h5>
+				<h3>
+					Fuerza al servicio de tu viaje.
+				</h3>
+				<p>
+					Equipado con el robusto y conocido motor MSI 1.6 litros de 16v y 110 CV, el Nuevo Polo es la combinación perfecta de potencia y performance.
+					<br />
+				</p>
+			</li>
+
+			<li data-pos="3">
+				<h5>
+					Diseño
+				</h5>
+				<h3>
+					Deportivo por donde lo mires.
+					<br>
+				</h3>
+				<p>
+					Las llantas de aleación de 15” y 16” completan el diseño deportivo del Nuevo Polo.
+					<br />
+				</p>
+			</li>
+
+		</ul>
+	</div>
+</div>
+
+
+<!----------------------------------VERSIONES---------------------------------->
+<div id="divVersiones" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Versiones
+	</div>
+
+	<!-- TRENDLINE -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/nuevo_polo/Versiones/Versiones05.png" class="imgResponsiva" />
+			<h4>Trendline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Radio Composition Touch 6,5” con App Connect</li>
+				<li>Volante multifunción</li>
+				<li>Cierre central con comando a distancia</li>
+				<li>Levantacristales eléctrico delanteros y traseros</li>
+			</ul>
+		</div>
+		<!--INCOMPLETO
+			<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica">
+				<div>Información Técnica</div>
+			</div>
+		</div>-->
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Trendline">
+	</div>
+
+	<!-- COMFORTLINE -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/nuevo_polo/Versiones/Versiones03.png" class="imgResponsiva" />
+			<h4>Comfortline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Radio Composition Touch 6,5” con App Connect</li>
+				<li>Sensor de estacionamiento trasero</li>
+				<li>Levantacristales eléctrico delanteros y traseros</li>
+				<li>Espejos exteriores eléctricos con función Tilt Down</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="comfortline">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-comfortline">
+		<h1>Comfortline</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/nuevo_polo/InfoTecnica/InfoTecnica03.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<!--
+					<img src="~/Content/img/iconos/flechaDerecha.svg" class="imgResponsiva" style="height: 10px;" />
+				-->
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Radio Composition Touch 6,5” con App Connect</li>
+					<li>Sensor de estacionamiento trasero</li>
+					<li>Levantacristales eléctrico delanteros y traseros</li>
+					<li>Espejos exteriores eléctricos con función Tilt Down</li>
+				</ul>
+			</div>
+			<h3>Datos técnicos</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Nuevo Polo Comfortline 1.6 MSI 110 CV MT 5P</li>
+				</ul>
+			</div>
+			<h3>Equipamiento de serie</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación ligera 5 1/2J x 15</li>
+
+					<li><b>Interior</b></li>
+					<li>Paquete Cromo</li>
+					<li>Techo moldeado en una pieza</li>
+					<li>Pomo/empuñadura de la palanca de cambio en plástico</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tubo de escape final detrás (estándar)</li>
+					<li>Sin dispositivo de remolque</li>
+					<li>Carcasas espejos exteriores y diversos componentes en color carrocería</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Inscripción "1.6 SMFI"</li>
+					<li>4 puertas</li>
+
+					<li><b>Sistema de asistencia</b></li>
+					<li>Sin sistema de asistencia en caso de cambio de carril</li>
+					<li>Sin Front Assist /sin control automático de distancia (ANB)</li>
+
+					<li><b>Espejos</b></li>
+					<li>Espejos exteriores eléctricos con función Tilt Down</li>
+					<li>Espejo interior de seguridad antideslumbrante</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Activación de las luces de marcha diurna</li>
+					<li>Faros dobles halógenos</li>
+					<li>Faros antiniebla y luz de giro</li>
+					<li>Conjunto pilotos posteriores, versión normal</li>
+					<li>Sin limpialavafaros</li>
+					<li>Conexión de limpiaparabrisas con intervalos, con potenciómetro (4 niveles)</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Sensor de estacionamiento trasero</li>
+					<li>Sin regulador de velocidad (GRA)</li>
+					<li>Sin cámara ni sensor de distancia (sistema de asistencia al conductor)</li>
+					<li>Sin sistema de cámaras/vigilancia sensorial del entorno</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta trasera de asientos no divididos y respaldos abatibles por separado</li>
+					<li>Aire acondicionado con regulación mecánica</li>
+					<li>Sin apoyo lumbar en los respaldos de los asientos</li>
+					<li>Sin apoyabrazos central anterior</li>
+					<li>Regulación en altura manual del asiento anterior izquierdo</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Inserciones</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Mirror Link</li>
+					<li>Sin interface eléctrico</li>
+					<li>6 altavoces (pasivos)</li>
+					<li>Radio Composition Touch 6,5” con App Connect</li>
+
+					<li><b>Navegación</b></li>
+					<li>Display multifuncional/ordenador de a bordo "Medium"</li>
+					<li>Sin sistema de navegación</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifunción</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante, el del acompañante con desactivación del airbag</li>
+					<li>Frenos de tambor posteriores</li>
+					<li>Frenos delanteros de disco (Geomet D)</li>
+					<li>Sin sistema de seguridad ampliado</li>
+					<li>Sin control de presión de los neumáticos</li>
+					<li>Airbags laterales anteriores</li>
+					<li>Cierre central con comando a distancia</li>
+					<li>Dirección asistida</li>
+					<li>9V6</li>
+				</ul>
+			</div>
+			<h3>Equipamiento opcional</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_polo/Colores/Colores01.png" class="imgResponsiva" /><br />Plata Sirius</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_polo/Colores/Colores02.png" class="imgResponsiva" /><br />Azul Noche</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_polo/Colores/Colores03.png" class="imgResponsiva" /><br />Plata Tungsteno</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_polo/Colores/Colores04.png" class="imgResponsiva" /><br />Gris Platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_polo/Colores/Colores05.png" class="imgResponsiva" /><br />Rojo Tornado</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_polo/Colores/Colores06.png" class="imgResponsiva" /><br />Negro Universal</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_polo/Colores/Colores06.png" class="imgResponsiva" /><br />Blanco Cristal</li>
+
+					<li class="sin-borde">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<!-- COMFORTLINE PLUS -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/nuevo_polo/Versiones/Versiones02.png" class="imgResponsiva" />
+			<h4>Comfortline Plus</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Radio Composition Touch 6,5” con App Connect</li>
+				<li>Llantas de aleación de 16”</li>
+				<li>Sensor de estacionamiento trasero</li>
+				<li>Volante multifunción revestido en cuero con levas de cambio</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="comfortline-plus">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-comfortline-plus">
+		<h1>Comfortline Plus</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/nuevo_polo/InfoTecnica/InfoTecnica02.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<!--
+					<img src="~/Content/img/iconos/flechaDerecha.svg" class="imgResponsiva" style="height: 10px;" />
+				-->
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Radio Composition Touch 6,5” con App Connect</li>
+					<li>Llantas de aleación de 16”</li>
+					<li>Sensor de estacionamiento trasero</li>
+					<li>Volante multifunción revestido en cuero con levas de cambio</li>
+				</ul>
+			</div>
+			<h3>Datos técnicos</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Nuevo Polo Comfort Plus 1.6 MSI 110 CV AT 5P</li>
+				</ul>
+			</div>
+			<h3>Equipamiento de serie</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación de 16”</li>
+
+					<li><b>Interior</b></li>
+					<li>Paquete Cromo</li>
+					<li>Techo moldeado en una pieza</li>
+					<li>Pomo/empuñadura de la palanca de cambio en cuero</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tubo de escape final detrás (estándar)</li>
+					<li>Sin dispositivo de remolque</li>
+					<li>Carcasas espejos exteriores y diversos componentes en color carrocería</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Inscripción "1.6 SMFI"</li>
+					<li>4 puertas</li>
+
+					<li><b>Sistema de asistencia</b></li>
+					<li>Sin sistema de asistencia en caso de cambio de carril</li>
+					<li>Sin Front Assist /sin control automático de distancia (ANB)</li>
+
+					<li><b>Espejos</b></li>
+					<li>Espejos exteriores eléctricos con función Tilt Down</li>
+					<li>Espejo interior de seguridad antideslumbrante</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Activación de las luces de marcha diurna</li>
+					<li>Faros dobles halógenos</li>
+					<li>Faros antiniebla y luz de giro</li>
+					<li>Conjunto pilotos posteriores, versión normal</li>
+					<li>Sin limpialavafaros</li>
+					<li>Conexión de limpiaparabrisas con intervalos, con potenciómetro (4 niveles)</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Sensor de estacionamiento trasero</li>
+					<li>Sin regulador de velocidad (GRA)</li>
+					<li>Sin cámara ni sensor de distancia (sistema de asistencia al conductor)</li>
+					<li>Sin sistema de cámaras/vigilancia sensorial del entorno</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta trasera de asientos no divididos y respaldos abatibles por separado</li>
+					<li>Aire acondicionado con regulación mecánica</li>
+					<li>Sin apoyo lumbar en los respaldos de los asientos</li>
+					<li>Sin apoyabrazos central anterior</li>
+					<li>Regulación en altura manual del asiento anterior izquierdo</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Inserciones</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Mirror LinkSin interface eléctrico</li>
+					<li>6 altavoces (pasivos)</li>
+					<li>Radio Composition Touch 6,5” con App Connect</li>
+
+					<li><b>Navegación</b></li>
+					<li>Display multifuncional/ ordenador de a bordo "Medium"</li>
+					<li>Sin sistema de navegación</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifunción revestido en cuero con levas de cambio</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante, el del acompañante con desactivación del airbag</li>
+					<li>Frenos de tambor posteriores</li>
+					<li>Frenos delanteros de disco (Geomet D)</li>
+					<li>Sin sistema de seguridad ampliado</li>
+					<li>Sin control de presión de los neumáticos</li>
+					<li>Airbags laterales anteriores</li>
+					<li>Cierre central con comando a distancia</li>
+					<li>Dirección asistida</li>
+					<li>9V6</li>
+				</ul>
+			</div>
+			<h3>Equipamiento opcional</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_polo/Colores/Colores01.png" class="imgResponsiva" /><br />Plata Sirius</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_polo/Colores/Colores02.png" class="imgResponsiva" /><br />Azul Noche</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_polo/Colores/Colores03.png" class="imgResponsiva" /><br />Plata Tungsteno</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_polo/Colores/Colores04.png" class="imgResponsiva" /><br />Gris Platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_polo/Colores/Colores05.png" class="imgResponsiva" /><br />Rojo Tornado</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_polo/Colores/Colores06.png" class="imgResponsiva" /><br />Negro Universal</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_polo/Colores/Colores06.png" class="imgResponsiva" /><br />Blanco Cristal</li>
+
+					<li class="sin-borde">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<!-- HIGHLINE -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/nuevo_polo/Versiones/Versiones01.png" class="imgResponsiva" />
+			<h4>Highline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Llantas de aleación de 16”</li>
+				<li>Radio Discover Media de 8” con GPS y App Connect</li>
+				<li>Cámara de visión trasera</li>
+				<li>Tablero digital Active Info Display</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Highline">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Highline">
+		<h1>Highline</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/nuevo_polo/InfoTecnica/InfoTecnica01.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Llantas de aleación de 16”</li>
+					<li>Radio Discover Media de 8” con GPS y App Connect</li>
+					<li>Cámara de visión trasera</li>
+					<li>Tablero digital Active Info Display</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Nuevo Polo Highline 1.6 MSI 110 CV AT 5P</li>
+					<li class="sin-borde">Nuevo Polo Highline 1.6 MSI 110 CV MT 5P</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación de 16”</li>
+
+					<li><b>Interior</b></li>
+					<li>Paquete Cromo (Versión 2)</li>
+					<li>Techo moldeado en una pieza</li>
+					<li>Pomo/empuñadura de la palanca de cambio en cuero</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tubo de escape final detrás (estándar)</li>
+					<li>Sin dispositivo de remolque</li>
+					<li>Carcasas espejos exteriores y diversos componentes en color carrocería</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Inscripción "1.6 SMFI"</li>
+					<li>4 puertas</li>
+
+					<li><b>Sistema de asistencia</b></li>
+					<li>Sin sistema de asistencia en caso de cambio de carril</li>
+					<li>Sin Front Assist /sin control automático de distancia (ANB)</li>
+
+					<li><b>Espejos</b></li>
+					<li>Espejos exteriores eléctricos con función Tilt Down</li>
+					<li>Espejo interior de seguridad antideslumbramiento automático</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Luz de marcha diurna con asistente de luz de marcha y función "coming home" (automático)</li>
+					<li>Faros dobles halógenos</li>
+					<li>Faros antiniebla y luz de giro</li>
+					<li>Conjunto pilotos posteriores, versión normal</li>
+					<li>Sin limpialavafaros</li>
+					<li>Conexión de intervalos de barrido del limpiaparabrisas, con sensor de luz y lluvia</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Ayuda de aparcamiento delante y detrás</li>
+					<li>Sistema de regulación de velocidad (GRA) electrónico</li>
+					<li>Sin cámara ni sensor de distancia (sistema de asistencia al conductor)</li>
+					<li>Cámara de visión trasera</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Banqueta trasera de asientos no divididos y respaldos abatibles por separado</li>
+					<li>Climatronic (1 zona)</li>
+					<li>Sin apoyo lumbar en los respaldos de los asientos</li>
+					<li>Reposabrazos central delante</li>
+					<li>Regulación en altura manual del asiento anterior izquierdo</li>
+
+					<li><b>Insercciones</b></li>
+					<li>Inserciones</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Mirror Link</li>
+					<li>Interfaz eléctrica para uso externo, USB con AMI</li>
+					<li>6 altavoces (pasivos)</li>
+					<li>Radio Discover Media de 8” con GPS y App Connect</li>
+
+					<li><b>Navegación</b></li>
+					<li>Tablero digital Active Info Display</li>
+					<li>Sistema de navegación estándar</li>
+					<li>Preparación para teléfono móvil</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifunción revestido en cuero con levas de cambio</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante, el del acompañante con desactivación del airbag</li>
+					<li>Frenos de tambor posteriores</li>
+					<li>Frenos delanteros de disco (Geomet D)</li>
+					<li>Sin sistema de seguridad ampliado</li>
+					<li>Sin control de presión de los neumáticos</li>
+					<li>Airbags laterales anteriores</li>
+					<li>Cierre centralizado "Keyless-Entry" sin cierre de seguridad</li>
+					<li>Dirección asistida</li>
+					<li>9V6</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_polo/Colores/Colores01.png" class="imgResponsiva" /><br />Plata Sirius</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_polo/Colores/Colores02.png" class="imgResponsiva" /><br />Azul Noche</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_polo/Colores/Colores03.png" class="imgResponsiva" /><br />Plata Tungsteno</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_polo/Colores/Colores04.png" class="imgResponsiva" /><br />Gris Platino</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_polo/Colores/Colores05.png" class="imgResponsiva" /><br />Rojo Tornado</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_polo/Colores/Colores06.png" class="imgResponsiva" /><br />Negro Universal</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/nuevo_polo/Colores/Colores06.png" class="imgResponsiva" /><br />Blanco Cristal</li>
+
+					<li class="sin-borde">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<p class="paginadorVersiones visibleCelular">
+		<a href="#1" class="active">&nbsp;</a>
+		<a href="#2">&nbsp;</a>
+		<a href="#3">&nbsp;</a>
+		<a href="#4">&nbsp;</a>
+		<a href="#5">&nbsp;</a>
+	</p>
+</div>
+
+<!--BROCHURE-->
+<div id="divBrochure">
+	<div id="div-Brochure-Info">
+		<h2>Brochure<br />de Nuevo Polo</h2>
+		<a href="~/Content/info_modelos/nuevo_polo/Brochure/Brochure.pdf" rel="external" class="linkDescargarBrochure" target="_blank">
+			<div id="div-Brochure-Boton">
+				<div id="div-Brochure-Boton-Inner">Descargalo</div>
+			</div>
+		</a>
+	</div>
+
+	<div id="div-Brochure-Imagen">
+		<img src="~/Content/info_modelos/nuevo_polo/Brochure/Brochure.jpg" class="imgResponsiva" />
+	</div>
+</div>
+
+
+
+@section footerModelo{
+	<div class="md-modal md-effect-12">
+		<div class="md-content">
+			<div id="divGaleriaPopup-Imagenes">
+				<div class="slick-div-aux"><img src="~/Content/info_modelos/nuevo_polo/Galeria/Galeria01.jpeg" class="imgResponsiva" /></div>
+				<div class="slick-div-aux"><img src="~/Content/info_modelos/nuevo_polo/Galeria/Galeria02.jpeg" class="imgResponsiva" /></div>
+				<div class="slick-div-aux"><img src="~/Content/info_modelos/nuevo_polo/Galeria/Galeria03.jpg" class="imgResponsiva" /></div>
+			</div>
+		</div>
+		<div id="divCerrarGaleria">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg cruzCerrar" />
+		</div>
+	</div>
+	<div class="md-overlay"></div>
+}

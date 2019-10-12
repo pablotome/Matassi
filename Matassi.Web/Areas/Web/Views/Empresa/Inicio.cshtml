@@ -1,0 +1,126 @@
+﻿@{
+    ViewBag.Title = "Inicio";
+    Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+	@Styles.Render("~/bundles/estilosCSSModelo")
+	@Scripts.Render("~/bundles/funcionesModelo")
+}
+
+<div id="divBannerTituloModelo">
+	<span id="spnTituloModelo">
+		Horarios de atención
+	</span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+	<ul id="ulListaPaginasHermanas">
+		<li class="seleccionado">Horarios</li>
+		<li><a href="/empresa/internos" rel="external">Internos</a></li>
+		<li><a href="/empresa/encuesta_venta" rel="external">Encuesta satisfacción venta</a></li>
+		<li><a href="/empresa/encuesta_posventa" rel="external">Encuesta satisfacción posventa</a></li>
+		<li><a href="/empresa/prueba_manejo" rel="external">Prueba de manejo</a></li>
+	</ul>
+</div>
+
+<div id="divImagenEncabezado">
+	<img src="img/Empresa01.jpg" class="imgResponsiva" />
+</div>
+
+<div id="divTituloModelo">
+	Horarios de atención
+</div>
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+	<div class="iconoDesplegar">
+		<img src="../../Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+		<span>
+			Más información
+		</span>
+	</div>
+	<ul class="oculto">
+		<li class="seleccionado">Horarios</li>
+		<li><a href="/empresa/internos" rel="external">Internos</a></li>
+		<li><a href="/empresa/encuesta_venta" rel="external">Encuesta satisfacción venta</a></li>
+		<li><a href="/empresa/encuesta_posventa" rel="external">Encuesta satisfacción posventa</a></li>
+		<li><a href="/empresa/prueba_manejo" rel="external">Prueba de manejo</a></li>
+	</ul>
+</div>
+
+
+<!----------------------------------QUE ES---------------------------------->
+<div id="divTecnologia" class="SeccionModelo">
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes3Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="../../Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Lunes a Viernes</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Izquierda">
+			<img src="img/Empresa06.jpg" class="imgResponsiva" />
+			<h5>
+				Lunes a Viernes
+			</h5>
+			<h5>
+				8:00 a 12:00 hs.<br />
+				15:30 a 19:30 hs.
+			</h5>
+			<p>
+
+			</p>
+		</div>
+
+		<hr class="hrSeparadorItemsSeccion" />
+
+		<div class="iconoDesplegarSeccion">
+			<img src="../../Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Sábados</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Centro">
+			<img src="img/Empresa07.jpg" class="imgResponsiva" />
+			<h5>
+				Sábados
+			</h5>
+			<h5>
+				8:00 a 12:00 hs.
+			</h5>
+			<p>
+
+			</p>
+		</div>
+
+		<hr class="hrSeparadorItemsSeccion" />
+
+		<div class="iconoDesplegarSeccion">
+			<img src="../../Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Asistencia VW 24 hs.</span>
+		</div>
+
+		<div class="Imagenes3Columnas-Derecha">
+			<img src="img/Empresa08.jpg" class="imgResponsiva" />
+			<h5>
+				Asistencia VW 24 hs.
+			</h5>
+			<h5>
+				0800-666-3434<br />
+				(011) 4129-8100<br />
+				<br />
+				Via cobro revertido:<br />
+				(54 11) 4129 8100
+			</h5>
+			<p>
+
+			</p>
+		</div>
+
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>

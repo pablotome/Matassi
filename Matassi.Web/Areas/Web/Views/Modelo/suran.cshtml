@@ -1,0 +1,599 @@
+﻿@{
+	ViewBag.Title = "up";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+@section scripts {
+	@Styles.Render("~/bundles/estilosCSSModelo")
+	@Scripts.Render("~/bundles/funcionesModelo")
+}
+
+<div id="divBannerTituloModelo">
+	<span id="spnTituloModelo">
+		Suran
+	</span>
+</div>
+<div id="divBannerTituloCaracteristicasModelo">
+	<ul id="ulListaCaracteristicasModelo">
+		<li class="liConfort" data-divmodelos="divConfort">Confort</li>
+		<li class="liSeguridad" data-divmodelos="divSeguridad">Seguridad</li>
+		<li class="liTecnología" data-divmodelos="divTecnologia">Tecnología</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+<div id="divImagenModelo">
+	<img src="~/Content/info_modelos/suran/Suran.jpg" class="imgResponsiva" />
+</div>
+
+<div id="divTituloModelo">
+	Tu naturaleza te distingue. Tu espíritu te renueva.
+</div>
+
+<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+	<div class="iconoDesplegar">
+		<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+		<span>
+			Selecciona categoria
+		</span>
+	</div>
+	<ul class="oculto">
+		<li class="liConfort" data-divmodelos="divConfort">Confort</li>
+		<li class="liSeguridad" data-divmodelos="divSeguridad">Seguridad</li>
+		<li class="liTecnología" data-divmodelos="divTecnologia">Tecnología</li>
+		<li class="liVersiones" data-divmodelos="divVersiones">Versiones</li>
+	</ul>
+</div>
+
+
+<!----------------------------------CONFORT---------------------------------->
+<div id="divConfort" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Confort
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Diseño interior</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/suran/Confort/Confort01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Diseño interior
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Pensado para cada uno de tus viajes
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					El interior del Suran fue totalmente diseñado bajo el concepto “Built Around the Passenger”. Es por eso que se destaca su gran espacio interior y su volante multifunción, garantizando una experiencia de manejo placentera, funcional y práctica.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/suran/Confort/Confort01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Nuevos componentes</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/suran/Confort/Confort02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/suran/Deportividad/Deportividad02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Nuevos componentes
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Líder en comodidad y tecnología
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Todo en el Suran está dispuesto para brindar una experiencia única e irrepetible. Entre sus componentes más funcionales se encuentran su volante multifunción, dirección eléctrica, computadora de abordo y control de velocidad crucero.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+
+</div>
+
+<!----------------------------------SEGURIDAD---------------------------------->
+<div id="divSeguridad" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Seguridad
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Seguro y confiable</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/suran/Seguridad/Seguridad01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Seguro y confiable
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					El mejor acompañante para tus viajes
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Los componentes interiores del Suran suman a convertir tus viajes en la opción más segura sobre la ruta. Manejá tranquilo sabiendo que el Suran está equipado con doble airbag para conductor y acompañante, apoyacabezas traseros y sistema de anclaje para sillas de niños.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/suran/Seguridad/Seguridad01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Eficacia y estabilidad</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/suran/Seguridad/Seguridad02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/suran/Seguridad/Seguridad02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Eficacia y estabilidad
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Disfrutá de tus viajes como nunca antes
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Controles ESC y ASR, frenos ABS, sistemas EDS y HHC, y faros antiniebla con luz de curva estática en seguridad. Estos componentes exteriores del Suran no sólo suman a la seguridad de tus viajes sino que te permite disfrutar una experiencia placentera al volante como nunca antes.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------TECNOLOGIA---------------------------------->
+<div id="divTecnologia" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Tecnología
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Desempeño</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/suran/Tecnologia/Tecnologia01.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/suran/Tecnologia/Tecnologia01.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Desempeño
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Vanguardia en tu segmento
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					Equipado con un Motor 1.6 MSI 16V de 110 CV, una transmisión de 6 velocidades y dirección eléctrica. Además, mantiene la transmisión automatizada I-Motion de 5 velocidades. Juntas, estas novedades aportan al Suran una performance técnica de avanzada que permite reducir el consumo y aumentar el confort de marcha.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+	<div class="Imagenes2Columnas">
+
+		<div class="iconoDesplegarSeccion">
+			<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva" />
+			<span>Conectividad</span>
+		</div>
+
+		<div class="Imagenes2Columnas-Izquierda">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen visibleCelular">
+				<img src="~/Content/info_modelos/suran/Tecnologia/Tecnologia02.jpg" class="imgResponsiva" />
+			</div>
+			<div class="infoTextoColumna">
+				<h5>
+					Conectividad
+				</h5>
+				<h3 class="div-Tecnologia-Imagenes-Zig-Zag-SubTitulo">
+					Conectado con el mundo que te rodea
+				</h3>
+				<p class="div-Tecnologia-Imagenes-Zig-Zag-Texto">
+					App Connect es un sistema que combina MirrorLink, CarPlay y Google Android Auto. Estas aplicaciones permiten espejar las pantallas de los teléfonos móviles con comandos fáciles e intuitivos, de forma tal que todas las pantallas del teléfono se duplican directamente en la pantalla de la central multimedia.
+				</p>
+			</div>
+		</div>
+
+		<div class="Imagenes2Columnas-Derecha ocultoCelular">
+			<div class="div-Tecnologia-Imagenes-Zig-Zag-Imagen">
+				<img src="~/Content/info_modelos/suran/Tecnologia/Tecnologia02.jpg" class="imgResponsiva" />
+			</div>
+		</div>
+	</div>
+
+	<hr class="hrSeparadorItemsSeccion" />
+
+</div>
+
+<!----------------------------------VERSIONES---------------------------------->
+<div id="divVersiones" class="SeccionModelo">
+	<div class="TituloSeccion">
+		Versiones
+	</div>
+
+	<!-- COMFORTLINE -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/suran/Versiones/Versiones01.png" class="imgResponsiva" />
+			<h4>Comfortline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Frenos delanteros de disco</li>
+				<li>Dirección asistida electrónica</li>
+				<li>Inmovilizador electrónico</li>
+				<li>Display multifuncional con mando</li>
+				<li>Llantas de acero 15”</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Comfortline">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Comfortline">
+		<h1>Comfortline</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/suran/InfoTecnica/InfoTecnica01.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Frenos delanteros de disco</li>
+					<li>Dirección asistida electrónica</li>
+					<li>Inmovilizador electrónico</li>
+					<li>Display multifuncional con mando</li>
+					<li>Llantas de acero 15”</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Suran Comfortline 1.6 Nafta 101 CV Manual 4P</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de acero 15”</li>
+
+					<li><b>Interior</b></li>
+					<li>Paquete Cromo (Versión 2)</li>
+					<li>Pomo/empuñadura de la palanca de cambio confort</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tubo de escape final detrás (estándar)</li>
+					<li>Componentes sin superficie especial</li>
+					<li>Barras longitudinales en el techo</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Sin spoiler delantero</li>
+					<li>Sin spoiler posterior</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Sin juego de siglas y emblemas (sin denominación de tipo)</li>
+					<li>4 puertas</li>
+
+					<li><b>Espejos</b></li>
+					<li>Regulación interna manual espejos exter.</li>
+					<li>Espejo interior de seguridad antideslumbrante</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Sin activación especial de las luces de marcha</li>
+					<li>Faros dobles, circulación por la derecha, con faros de largo alcance integrados</li>
+					<li>Sin regulación alcance faros</li>
+					<li>Sin faros antiniebla</li>
+					<li>Conjunto pilotos posteriores de color oscuro</li>
+					<li>Sin limpialavafaros</li>
+					<li>Limpiaparabrisas a intervalos, sin regulación</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Suspensión/amortiguación estándar</li>
+					<li>Sin ayuda de aparcamiento</li>
+					<li>Sin regulador de velocidad (GRA)</li>
+					<li>Sin sistema de cámaras/vigilancia sensorial del entorno</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Asiento posterior y respaldo no partido</li>
+					<li>Aire acondicionado con regulación mecánica</li>
+					<li>Regulación en altura manual del asiento anterior izquierdo</li>
+					<li>Asientos no calefaccionables</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Sin multimedia" en el vehículo</li>
+					<li>Sin interface eléctrico</li>
+					<li>4 altavoces (pasivos) y 2 altavoces para agudos</li>
+					<li>MIB2-G básico PQ/MQB radio resto del mundo</li>
+
+					<li><b>Navegación</b></li>
+					<li>Display multifuncional con mando</li>
+					<li>Sin sistema de navegación</li>
+					<li>Sin preparación/montaje de auto-teléfono</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante para sistema airbag</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante</li>
+					<li>Frenos traseros a tambor</li>
+					<li>Frenos delanteros de disco</li>
+					<li>Inmovilizador electrónico</li>
+					<li>Sin control de presión de los neumáticos</li>
+					<li>Sin airbag lateral</li>
+					<li>Cierre centralizado</li>
+					<li>Dirección asistida electrónica</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/suran/Colores/Colores01.png" class="imgResponsiva" /><br />Plata Sirius</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/suran/Colores/Colores02.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/suran/Colores/Colores03.png" class="imgResponsiva" /><br />Gris Indy</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/suran/Colores/Colores04.png" class="imgResponsiva" /><br />Negro Universal</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/suran/Colores/Colores05.png" class="imgResponsiva" /><br />Blanco Cristal</li>
+
+					<li style="clear:both;">&nbsp;</li>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>PRL</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<!-- HIGHLINE -->
+	<div class="div-version-modelo">
+		<div class="div-version-modelo-auto">
+			<img src="~/Content/info_modelos/suran/Versiones/Versiones02.png" class="imgResponsiva" />
+			<h4>Highline</h4>
+		</div>
+		<div class="div-version-modelo-texto">
+			<ul>
+				<li>Sistema antibloqueo de frenos (ABS) con ESP</li>
+				<li>Frenos traseros a tambor</li>
+				<li>Frenos delanteros de disco</li>
+				<li>Alzacristales eléctricos delanteros y traseros</li>
+				<li>Llantas de aleación 16”</li>
+			</ul>
+		</div>
+		<div class="div-version-modelo-botones">
+			<div class="div-boton-info-tecnica" data-modelo="Highline">
+				<div>Información Técnica</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-info-tecnica-modelo oculto" id="div-Info-Tecnica-Highline">
+		<h1>Comfortline</h1>
+		<div class="div-info-tecnica-modelo-imagen">
+			<img src="~/Content/info_modelos/suran/InfoTecnica/InfoTecnica01.png" class="imgResponsiva" />
+		</div>
+		<div class="div-items-informacion-tecnica">
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Características
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li>Sistema antibloqueo de frenos (ABS) con ESP</li>
+					<li>Frenos traseros a tambor</li>
+					<li>Frenos delanteros de disco</li>
+					<li>Alzacristales eléctricos delanteros y traseros</li>
+					<li>Llantas de aleación 16”</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Datos técnicos
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde">Suran Highline 1.6 Nafta 110 CV Manual 4P</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento de serie
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>Llantas de aleación 16”</li>
+
+					<li><b>Interior</b></li>
+					<li>Paquete Aluminio</li>
+					<li>Pomo de la palanca de cambio deportivo</li>
+
+					<li><b>Exterior</b></li>
+					<li>Tubo de escape final detrás</li>
+					<li>Carcasas espejos exteriores y diversos componentes en color carrocería</li>
+					<li>Barras longitudinales en el techo</li>
+					<li>Sin apertura para techo (techo estándar)</li>
+					<li>Sin spoiler delantero</li>
+					<li>Spoiler posterior en el color de la carrocería</li>
+					<li>Cristales laterales y luneta posterior antitérmicas</li>
+					<li>Inscripción "1.6 SMFI"</li>
+					<li>4 puertas</li>
+
+					<li><b>Espejos</b></li>
+					<li>Retrovisor exterior con ajuste eléctrico (versión 2)</li>
+					<li>Espejo interior de seguridad antideslumbrante</li>
+
+					<li><b>Iluminación</b></li>
+					<li>Sin activación especial de las luces de marcha</li>
+					<li>Faros dobles, circulación por la derecha, con faros de largo alcance integrados</li>
+					<li>Sin regulación alcance faros</li>
+					<li>Luces de giro</li>
+					<li>Conjunto pilotos posteriores de color oscuro</li>
+					<li>Sin limpialavafaros</li>
+					<li>Limpiaparabrisas a intervalos, sin regulación</li>
+
+					<li><b>Confort de marcha</b></li>
+					<li>Suspensión/amortiguación estándar</li>
+					<li>Ayuda de aparcamiento delante y detrás</li>
+					<li>Sistema de regulación de velocidad (GRA) electrónico</li>
+					<li>Sin sistema de cámaras/vigilancia sensorial del entorno</li>
+
+					<li><b>Confort de asiento</b></li>
+					<li>Asiento posterior y respaldo no partido</li>
+					<li>Aire acondicionado con regulación mecánica</li>
+					<li>Regulación en altura manual del asiento anterior izquierdo</li>
+					<li>Asientos no calefaccionables</li>
+
+					<li><b>Infotainment</b></li>
+					<li>Mirror LinkSin interface eléctrico</li>
+					<li>4 altavoces (pasivos) y 2 altavoces para agudos</li>
+					<li>MIB2-G estándar plus PQ/MQB radio resto del mundo/China (GP)</li>
+
+					<li><b>Navegación</b></li>
+					<li>Display multifuncional con mando</li>
+					<li>Sin sistema de navegación</li>
+					<li>Sin preparación/montaje de auto-teléfono</li>
+
+					<li><b>Volantes</b></li>
+					<li>Volante multifuncional de cuero</li>
+
+					<li><b>Seguridad</b></li>
+					<li>Airbag para conductor y acompañante</li>
+					<li>Frenos traseros a tambor</li>
+					<li>Frenos delanteros de disco</li>
+					<li>Inmovilizador electrónico, con alarma antirrobo y control del habitáculo</li>
+					<li>Sin control de presión de los neumáticos</li>
+					<li>Sin airbag lateral</li>
+					<li>Cierre centralizado con comando a distancia</li>
+					<li>Dirección asistida electrónica</li>
+				</ul>
+			</div>
+			<h3>
+				<img src="~/Content/img/iconos/flechaDerecha.svg" class="svg" />
+				Equipamiento opcional
+			</h3>
+			<div class="div-item-informacion-tecnica">
+				<ul>
+					<li class="sin-borde"><b>Color Exterior</b></li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/suran/Colores/Colores01.png" class="imgResponsiva" /><br />Plata Sirius</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/suran/Colores/Colores02.png" class="imgResponsiva" /><br />??</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/suran/Colores/Colores03.png" class="imgResponsiva" /><br />Gris Indy</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/suran/Colores/Colores04.png" class="imgResponsiva" /><br />Negro Universal</li>
+					<li class="li-info-tecnica-imagen sin-borde poca-altura"><img src="~/Content/info_modelos/suran/Colores/Colores05.png" class="imgResponsiva" /><br />Blanco Cristal</li>
+
+					<li style="clear:both;">&nbsp;</li>
+					<li><b>Llantas/Neumáticos</b></li>
+					<li>PRL</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div-items-informacion-tecnica-cerrar">
+			<img src="~/Content/img/iconos/cruz.svg" class="imgResponsiva svg" />
+		</div>
+	</div>
+
+	<p class="paginadorVersiones visibleCelular">
+		<a href="#1" class="active">&nbsp;</a>
+		<a href="#2">&nbsp;</a>
+	</p>
+</div>
+
+
+<!--BROCHURE-->
+<div id="divBrochure">
+	<div id="div-Brochure-Info">
+		<h2>Brochure<br />de Suran</h2>
+		<a href="~/Content/info_modelos/suran/Brochure/Brochure.pdf" rel="external" class="linkDescargarBrochure" target="_blank">
+			<div id="div-Brochure-Boton">
+				<div id="div-Brochure-Boton-Inner">Descargalo</div>
+			</div>
+		</a>
+	</div>
+
+	<div id="div-Brochure-Imagen">
+		<img src="~/Content/info_modelos/suran/Brochure/Brochure.jpg" class="imgResponsiva" />
+	</div>
+</div>

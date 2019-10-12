@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Matassi e Imperiale | Concesionario Oficial Volkswagen</title>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+	<link href="../../Content/css/normalize.css" rel="stylesheet" />
+
+	<link rel="stylesheet" href="../../Content/css/matassi.css?v=2" />
+	<link rel="stylesheet" media="screen and (max-width:767px)" href="../../Content/css/matassi-celular.css?v=2" />
+	<link rel="stylesheet" media="screen and (min-width:768px)" href="../../Content/css/estilo-modelo.css" />
+	<link rel="stylesheet" media="screen and (max-width:767px)" href="../../Content/css/estilo-modelo-celular.css" />
+	<link rel="stylesheet" media="screen and (min-width:768px)" href="../../Content/css/matassi-modelo.css" />
+
+	<link href="../../Content/css/slick.css" rel="stylesheet" />
+	<link href="../../Content/css/slick-theme.css" rel="stylesheet" />
+	<link href="autoahorro.css" rel="stylesheet" />
+
+	<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="../../Content/js/jquery.mobile-1.4.5.js"></script>
+	<script src="../../Content/js/jquery.touchwipe.1.1.1.js"></script>
+
+	<script src="../../Content/js/slick.js"></script>
+
+	<script src="../../Content/js/matassi.js"></script>
+	<script src="../../Content/js/matassi-modelo.js"></script>
+	<script src="autoahorro.js"></script>
+
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+			CargarPlanes();
+		});
+
+	</script>
+
+</head>
+<body>
+	<header>
+		<nav id="menu">
+			<ul id="menu_ul"></ul>
+		</nav>
+		<div id="divMenuCelular">
+			<ul></ul>
+		</div>
+	</header>
+	<div id="content">
+		<div id="divIconoVWCell">
+			<a href="/index.html" rel="external">
+				<img src="../../Content/img/LogoVWChico.png" class="svg" alt="Matassi e Imperiale">
+			</a>
+		</div>
+		<div id="divIconoMenuCell">
+			<div id="divMostrarMenuCelular" onclick="openNav()"><img src="../../Content/img/iconos/menuCel.svg" class="svg imgImagenIcono" style="fill: #0099da;" /></div>
+			<div id="divOcultarMenuCelular" onclick="closeNav()" class="oculto"><img src="../../Content/img/iconos/cruz.svg" class="svg imgImagenIcono" style="fill: #0099da;" /></div>
+		</div>
+
+		<div id="divBannerTituloModelo">
+			<span id="spnTituloModelo">
+				Planes
+			</span>
+		</div>
+		<div id="divBannerTituloCaracteristicasModelo">
+			<ul id="ulListaPaginasHermanas">
+				<li><a href="index.html" rel="external">Qué es</a></li>
+				<li><a href="mediosPago.html" rel="external">Medios de Pago</a></li>
+				<li><a href="ganadores.html" rel="external">Ganadores</a></li>
+				<li class="seleccionado">Planes</li>
+				<li><a href="ofertas.html" rel="external">Ofertas</a></li>
+				<li><a href="emisiones.html" rel="external">Emisiones</a></li>
+				<li><a href="formularios.html" rel="external">Formularios</a></li>
+			</ul>
+		</div>
+
+		<div id="divImagenEncabezado">
+			<img src="img/Autoahorro01.jpg" class="imgResponsiva" />
+		</div>
+
+		<div id="divTituloModelo">
+			Planes de autoahorro
+		</div>
+
+		<!----------------------------------LISTA DE CARACTERISTICAS---------------------------------->
+		<div class="CaracteristicasCelular" id="divHeaderCaracteristicas">
+			<div class="iconoDesplegar">
+				<img src="../../Content/img/iconos/flechaDerecha.svg" class="svg imgResponsiva abajo" />
+				<span>
+					Más información
+				</span>
+			</div>
+			<ul class="oculto">
+				<li><a href="index.html" rel="external">Qué es</a></li>
+				<li><a href="mediosPago.html" rel="external">Medios de Pago</a></li>
+				<li><a href="ganadores.html" rel="external">Ganadores</a></li>
+				<li class="seleccionado">Planes</li>
+				<li><a href="ofertas.html" rel="external">Ofertas</a></li>
+				<li><a href="emisiones.html" rel="external">Emisiones</a></li>
+				<li><a href="formularios.html" rel="external">Formularios</a></li>
+			</ul>
+		</div>
+
+		<!----------------------------------QUE ES---------------------------------->
+		<!--<ul style="width: 80%; margin: auto; background-color: blue; margin-top: 40px;" id="divPlanesAutoahorro"></ul>-->
+
+		<ul id="divPlanesAutoahorro">
+			<li class="divPlanAutoAhorro">
+				<div class="divTituloPlanAutoAhorro">
+					Gol Trend Trendline My18 - 5 Ptas
+				</div>
+				<div class="divImagenPlanAutoAhorro">
+					<img src="/Autoahorro/VerImagenPlanAutoahorro?codPlanAutoahorro=1">
+				</div><div class="divSubTituloPlanAutoAhorro">
+					Plan 80/20
+				</div>
+				<div class="divCaracteristicasPlanAutoAhorro">
+					<ul>
+						<li>Precio: $529.900</li>
+						<li>80% Financiado: $423.920</li>
+						<li>20% Alicuota: $105.980</li>
+						<li>Cuota Promedio: $5126</li>
+					</ul>
+				</div>
+			</li>
+			<li class="divPlanAutoAhorro">
+				<div class="divTituloPlanAutoAhorro">
+					Voyage 1.6 Trendline My17
+				</div><div class="divImagenPlanAutoAhorro">
+					<img src="/Autoahorro/VerImagenPlanAutoahorro?codPlanAutoahorro=2">
+				</div><div class="divSubTituloPlanAutoAhorro">
+					Plan 100%
+				</div>
+				<div class="divCaracteristicasPlanAutoAhorro">
+					<ul>
+						<li>Precio: $546.700</li>
+						<li>Financiado: $546.700</li>
+						<li>Cuota promedio: $6.222</li>
+					</ul>
+				</div>
+			</li>
+			<li class="divPlanAutoAhorro">
+				<div class="divTituloPlanAutoAhorro">
+					Suran Comfortline
+				</div><div class="divImagenPlanAutoAhorro">
+					<img src="/Autoahorro/VerImagenPlanAutoahorro?codPlanAutoahorro=3">
+				</div><div class="divSubTituloPlanAutoAhorro">
+					Plan 100%
+				</div><div class="divCaracteristicasPlanAutoAhorro">
+					<ul>
+						<li>
+							Precio: $681.700
+						</li>
+						<li>Financiado: $681.700</li>
+						<li>Cuota promedio: $11.095</li>
+					</ul>
+				</div>
+			</li>
+			<li class="divPlanAutoAhorro">
+				<div class="divTituloPlanAutoAhorro">
+					Saveiro Cabina Simple 1.6 My18
+				</div><div class="divImagenPlanAutoAhorro">
+					<img src="/Autoahorro/VerImagenPlanAutoahorro?codPlanAutoahorro=4">
+				</div><div class="divSubTituloPlanAutoAhorro">
+					Plan 100%
+				</div><div class="divCaracteristicasPlanAutoAhorro">
+					<ul>
+						<li>
+							Precio: $606.200
+						</li>
+						<li>Financiado: $606.200</li>
+						<li>Cuota promedio: $8050</li>
+					</ul>
+				</div>
+			</li>
+			<li class="divPlanAutoAhorro">
+				<div class="divTituloPlanAutoAhorro">
+					Amarok DC 2.0 TDI 140CV Trend 4X2
+				</div><div class="divImagenPlanAutoAhorro">
+					<img src="/Autoahorro/VerImagenPlanAutoahorro?codPlanAutoahorro=7">
+				</div><div class="divSubTituloPlanAutoAhorro">
+					Plan 70 / 30
+				</div><div class="divCaracteristicasPlanAutoAhorro">
+					<ul>
+						<li>
+							Precio: $1.005.980
+						</li>
+						<li>70% Financiado: $704.186</li>
+						<li>30% Alicuota Extra: $301.794</li>
+						<li>Cuota promedio: $10.896</li>
+					</ul>
+				</div>
+			</li>
+			<li class="divPlanAutoAhorro">
+				<div class="divTituloPlanAutoAhorro">
+					Move Up! 5 Puertas
+				</div><div class="divImagenPlanAutoAhorro">
+					<img src="/Autoahorro/VerImagenPlanAutoahorro?codPlanAutoahorro=8">
+				</div><div class="divSubTituloPlanAutoAhorro">
+					Plan 70 / 30
+				</div><div class="divCaracteristicasPlanAutoAhorro">
+					<ul>
+						<li>
+							Precio: $509.400
+						</li>
+						<li>70% Financiado: $356.580</li>
+						<li>30% Alicuota Extra: $152.820</li>
+						<li>Cuota promedio: $4.144</li>
+					</ul>
+				</div>
+			</li>
+			<li class="divPlanAutoAhorro">
+				<div class="divTituloPlanAutoAhorro">
+					Take Up! 5 Puertas
+				</div><div class="divImagenPlanAutoAhorro">
+					<img src="/Autoahorro/VerImagenPlanAutoahorro?codPlanAutoahorro=9">
+				</div><div class="divSubTituloPlanAutoAhorro">
+					Plan 100%
+				</div><div class="divCaracteristicasPlanAutoAhorro">
+					<ul>
+						<li>
+							Precio: $469.600
+						</li>
+						<li>Financiado: $469.600</li>
+						<li>Cuota promedio: $4.887</li>
+					</ul>
+				</div>
+			</li>
+			<li class="divPlanAutoAhorro">
+				<div class="divTituloPlanAutoAhorro">
+					Polo 1.6 Trendline
+				</div><div class="divImagenPlanAutoAhorro">
+					<img src="/Autoahorro/VerImagenPlanAutoahorro?codPlanAutoahorro=10">
+				</div><div class="divSubTituloPlanAutoAhorro">
+					Plan 100%
+				</div><div class="divCaracteristicasPlanAutoAhorro">
+					<ul>
+						<li>
+							Precio: $604.300
+						</li>
+						<li>Financiado: $604.300</li>
+						<li>Cuota promedio: $7.302</li>
+					</ul>
+				</div>
+			</li>
+			<li class="divPlanAutoAhorro">
+				<div class="divTituloPlanAutoAhorro">
+					Virtus 1.6 Trendline
+				</div><div class="divImagenPlanAutoAhorro">
+					<img src="/Autoahorro/VerImagenPlanAutoahorro?codPlanAutoahorro=11">
+				</div><div class="divSubTituloPlanAutoAhorro">
+					Plan 100%
+				</div><div class="divCaracteristicasPlanAutoAhorro">
+					<ul>
+						<li>
+							Precio: $631.200
+						</li>
+						<li>Financiado: $631.200</li>
+						<li>Cuota promedio: $7627</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+
+	</div>
+
+	<div style="clear: both;" />
+
+
+	<a class="volverArriba oculto">
+		<div>
+			<img src="../../Content/img/iconos/flechaArribaDoble.svg" class="imgResponsiva svg" />
+		</div>
+	</a>
+
+	<footer id="footer">
+		<div id="divBarraSeparadora">
+			<div id="divTextoVolver">
+				Volver arriba&nbsp;<img src="../../Content/img/iconos/flechaArriba.svg" class="svg imgFlechitaArriba" />
+			</div>
+		</div>
+		<div id="divInfoFooter">
+			<div id="divItemsInfoFooter">
+				<div class="divItemInfoFooter">(*) Las imágenes publicadas en este sitio son de carácter ilustrativo.<br />*FOTO NO CONTRACTUAL.</div>
+				<div class="divItemInfoFooter">Política de privacidad</div>
+				<div class="divItemInfoFooter">
+					<a href="http://qr.afip.gob.ar/?qr=WN90VbQmJ36XGAHXQhNO9w,," target="_F960AFIPInfo">
+						<img src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg" border="0" style="width:40px;">
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<br /><br />
+	<div id="divScreen">
+		<div class="centrado">
+			<img src="/Content/img/LogoVWGrande.png" />
+			<br />CARGANDO...
+		</div>
+	</div>
+</body>
+</html>

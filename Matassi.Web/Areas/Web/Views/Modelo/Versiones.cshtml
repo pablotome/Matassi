@@ -1,0 +1,127 @@
+﻿@using Matassi.Dominio
+@model List<Matassi.Dominio.VersionModelo>
+
+@{
+	ViewBag.Title = "Versiones";
+	Layout = "~/Areas/Web/Views/Shared/_LayoutMatassi.cshtml";
+}
+
+<style type="text/css">
+	.row {
+		display: -webkit-flex;
+		display: flex;
+		margin-top: 3px;
+		margin-bottom: 5px;
+	}
+	.col, .colVacio {
+		-webkit-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+		height: auto;
+		background-color: rgb(234, 238, 237);
+		margin-left: 6px;
+		margin-right: 6px;
+		padding-bottom: 10px;
+	}
+	.colVacio {
+		background-color: rgb(255, 255, 255);
+	}
+</style>
+
+<div class="infoModelo">
+	<a href="#" class="modeloActual">@Model[0].Modelo.Nombre</a>
+	<div class="infoModeloTitulos">
+		<ul class="">
+			<li>|</li>
+			<li>
+				<a href="~/Modelo/@Model[0].Modelo.NombreClave">Galería</a>
+			</li>
+			<li>|</li>
+			<li>
+				<span>Versiones</span>
+			</li>
+			<li>|</li>
+			<li>
+				<a href="~/Modelo/Asesoramiento/@Model[0].Modelo.NombreClave">Asesoramiento Comercial</a>
+			</li>
+			@if (Model[0].Modelo.Accesorios != null && Model[0].Modelo.Accesorios.Count > 0)
+			{
+				<li>|</li>
+				<li>
+					<a href="~/Modelo/Accesorios/@Model[0].Modelo.NombreClave">Accesorios</a>
+				</li>
+			}
+		</ul>
+	</div>
+</div>
+
+
+@{
+	int filasCompletas = Model.Count / 4;
+	int columnasFaltantes = 4 - Model.Count % 4;
+	
+	if (columnasFaltantes == 4)
+	{ 
+		columnasFaltantes = 0;
+	}
+
+	for (int fila = 0; fila < filasCompletas+1; fila += 1)
+	{
+		@Html.Raw("<div class=\"row\">")
+		for (int columna = (4 * fila); columna < 4 + (4 * fila); columna++)
+		{
+			if (columna < Model.Count)
+			{ 
+				<div class="col">
+					<div class="dataListItem">
+						<div class="versionModelo-Modelo">@Model[columna].Modelo.Nombre</div>
+						<div class="versionModelo-Imagen">
+							<img src='@Url.Action("VerImagenVersionModelo", new { id = Model[columna].CodVersionModelo })' />
+						</div>
+						<div class="versionModelo-Nombre">
+							@Model[columna].Nombre<br />
+						</div>
+						<div class="versionModelo-Bajada">
+							@Model[columna].Bajada<br />
+						</div>
+						<div class="versionModelo-Caracteristicas">
+							<ul>
+								@foreach (CaracteristicaModelo caracteristicaModelo in Model[columna].Caracteristicas)
+								{
+									<li>@caracteristicaModelo.DesCaracteristicaModelo</li>
+								}
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			}
+			else
+			{
+				@Html.Raw("<div class=\"colVacio\"></div>")
+			}
+		}
+		@Html.Raw("</div>")
+	}
+
+
+
+
+}
+
+
+
+
+
+
+	<style>
+		#contractCoverablesGrid
+		{
+			margin-top: 0px;
+			padding-bottom: 10px;
+			margin-bottom: 10px;
+		}
+		.dataListItem {
+			height: auto;
+		}
+	</style>

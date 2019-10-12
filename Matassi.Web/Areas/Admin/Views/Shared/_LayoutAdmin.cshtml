@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title</title>
+	@Styles.Render("~/Content/bootstrap")
+	@Styles.Render("~/Content/cssAdmin")
+	@RenderSection("ViewStyles", required: false)
+	@RenderSection("styleCSS", required: false)
+</head>
+<body>
+	<header>
+		@if (WebSecurity.IsAuthenticated)
+		{
+			Html.RenderPartial("~/Areas/Admin/Views/_Menu2.cshtml");
+		}
+	</header>
+	<div id="body">
+		@RenderSection("featured", required: false)
+		@RenderBody()
+	</div>
+	<footer>
+		<div class="content-wrapper">
+			<div class="float-right">
+				<p>&copy; @DateTime.Now.Year - Administrador <a href="http://www.matassi.com.ar" target="_blank">www.matassi.com.ar</a></p>
+			</div>
+		</div>
+	</footer>
+
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/bootstrap")
+
+	@RenderSection("scripts", required: false)
+
+	<script>
+		$(document).ready(function () {
+			$('.dropdown-toggle').dropdown();
+		});
+	</script>
+	@RenderSection("scriptJS", required: false)
+</body>
+</html>

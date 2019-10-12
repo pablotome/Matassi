@@ -1,0 +1,61 @@
+﻿@using Matassi.Dominio
+@model Matassi.Dominio.ServicioMantenimiento
+
+@{
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			<h2>@ViewBag.Title</h2>
+		</td>
+	</tr>
+</table>
+
+<table class="table tabla-centrada">
+	<tr>
+		<td>
+			@using (Html.BeginForm("ServiciosInspeccion_Crear", "PostVenta", FormMethod.Post, new { @class = "form-horizontal" }))
+			{
+				@Html.AntiForgeryToken()
+
+				@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.DesServicioMantenimiento, "Descripción", htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-md-8">
+						@Html.EditorFor(model => model.DesServicioMantenimiento, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.DesServicioMantenimiento, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Orden, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-md-8">
+						@Html.EditorFor(model => model.Orden, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.ValidationMessageFor(model => model.Orden, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+				<div class="form-group">
+					@Html.LabelFor(model => model.Vigente, htmlAttributes: new { @class = "col-sm-3 control-label" })
+					<div class="col-md-8">
+						<div class="checkbox">
+							@Html.EditorFor(model => model.Vigente)
+							@Html.ValidationMessageFor(model => model.Vigente, "", new { @class = "text-danger" })
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group btnGuardar">
+					<div class="col-md-offset-3 col-md-8">
+						<input type="submit" value="Guardar" class="btn btn-primary" />
+						@Html.ActionLink("Cancelar", "ServiciosInspeccion_Lista", null, new { @class = "btn btn-default" })
+					</div>
+				</div>
+			}
+		</td>
+	</tr>
+</table>
